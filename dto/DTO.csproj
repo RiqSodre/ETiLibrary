@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB25B746-A26C-4D14-917E-F0098A701265}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DTO</RootNamespace>
+    <AssemblyName>DTO</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Emprestimos\Emprestimo.cs" />
+    <Compile Include="Emprestimos\EmprestimoList.cs" />
+    <Compile Include="Emprestimos\MidiaEmprestimo.cs" />
+    <Compile Include="Emprestimos\MidiaEmprestimoList.cs" />
+    <Compile Include="Extravio\Extravio.cs" />
+    <Compile Include="Extravio\ExtravioList.cs" />
+    <Compile Include="Infraestrutura de Midia\Area.cs" />
+    <Compile Include="Infraestrutura de Midia\AreaList.cs" />
+    <Compile Include="Infraestrutura de Midia\Assunto.cs" />
+    <Compile Include="Infraestrutura de Midia\AssuntoList.cs" />
+    <Compile Include="Infraestrutura de Midia\Editora.cs" />
+    <Compile Include="Infraestrutura de Midia\EditoraList.cs" />
+    <Compile Include="Infraestrutura de Midia\Genero.cs" />
+    <Compile Include="Infraestrutura de Midia\GeneroList.cs" />
+    <Compile Include="Infraestrutura de Midia\Jornal.cs" />
+    <Compile Include="Infraestrutura de Midia\JornalList.cs" />
+    <Compile Include="Infraestrutura de Midia\Revista.cs" />
+    <Compile Include="Infraestrutura de Midia\RevistaList.cs" />
+    <Compile Include="Infraestrutura de Midia\Autor.cs" />
+    <Compile Include="Infraestrutura de Midia\AutorList.cs" />
+    <Compile Include="Infraestrutura de Pessoa\Cargo.cs" />
+    <Compile Include="Infraestrutura de Pessoa\CargoList.cs" />
+    <Compile Include="Infraestrutura de Pessoa\Curso.cs" />
+    <Compile Include="Infraestrutura de Pessoa\CursoList.cs" />
+    <Compile Include="Infraestrutura de Pessoa\Telefone.cs" />
+    <Compile Include="Infraestrutura de Pessoa\Turma.cs" />
+    <Compile Include="Infraestrutura de Pessoa\TurmaList.cs" />
+    <Compile Include="Midia\CD_DVD.cs" />
+    <Compile Include="Midia\CD_DVDList.cs" />
+    <Compile Include="Midia\JornalEx.cs" />
+    <Compile Include="Midia\JornalExList.cs" />
+    <Compile Include="Midia\Livro.cs" />
+    <Compile Include="Midia\LivroList.cs" />
+    <Compile Include="Midia\Mapa.cs" />
+    <Compile Include="Midia\MapaList.cs" />
+    <Compile Include="Midia\Midia.cs" />
+    <Compile Include="Midia\RevistaEx.cs" />
+    <Compile Include="Midia\RevistaExList.cs" />
+    <Compile Include="Midia\Tcc.cs" />
+    <Compile Include="Midia\TccList.cs" />
+    <Compile Include="Multa\Multa.cs" />
+    <Compile Include="Multa\MultaList.cs" />
+    <Compile Include="Pessoas\Aluno.cs" />
+    <Compile Include="Pessoas\AlunoList.cs" />
+    <Compile Include="Pessoas\Funcionario.cs" />
+    <Compile Include="Pessoas\FuncionarioList.cs" />
+    <Compile Include="Pessoas\Pessoa.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pessoas\UsuarioSistema.cs" />
+    <Compile Include="Relatórios\HistoricoEmprestimo.cs" />
+    <Compile Include="Relatórios\HistoricoEmprestimoList.cs" />
+    <Compile Include="Relatórios\MidiasCadEmp.cs" />
+    <Compile Include="Relatórios\UsuariosCad.cs" />
+    <Compile Include="Relatórios\UsuariosDevedor.cs" />
+    <Compile Include="Relatórios\UsuariosDevedorList.cs" />
+    <Compile Include="Reserva\Reserva.cs" />
+    <Compile Include="Reserva\ReservaList.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

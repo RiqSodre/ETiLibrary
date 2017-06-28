@@ -1,0 +1,10 @@
+C:\Users\Pichau\Desktop\ETiLibrary\BLL\bin\Release\BLL.dll
+C:\Users\Pichau\Desktop\ETiLibrary\BLL\bin\Release\BLL.pdb
+C:\Users\Pichau\Desktop\ETiLibrary\BLL\bin\Release\DAL.dll
+C:\Users\Pichau\Desktop\ETiLibrary\BLL\bin\Release\DTO.dll
+C:\Users\Pichau\Desktop\ETiLibrary\BLL\bin\Release\MySql.Data.dll
+C:\Users\Pichau\Desktop\ETiLibrary\BLL\bin\Release\DAL.pdb
+C:\Users\Pichau\Desktop\ETiLibrary\BLL\bin\Release\DTO.pdb
+C:\Users\Pichau\Desktop\ETiLibrary\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Pichau\Desktop\ETiLibrary\BLL\obj\Release\BLL.dll
+C:\Users\Pichau\Desktop\ETiLibrary\BLL\obj\Release\BLL.pdb

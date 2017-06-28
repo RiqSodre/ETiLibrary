@@ -1,0 +1,7 @@
+C:\Users\Pichau\Desktop\ETiLibrary\DAL\bin\Release\DAL.dll.config
+C:\Users\Pichau\Desktop\ETiLibrary\DAL\bin\Release\DAL.dll
+C:\Users\Pichau\Desktop\ETiLibrary\DAL\bin\Release\DAL.pdb
+C:\Users\Pichau\Desktop\ETiLibrary\DAL\bin\Release\MySql.Data.dll
+C:\Users\Pichau\Desktop\ETiLibrary\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Pichau\Desktop\ETiLibrary\DAL\obj\Release\DAL.dll
+C:\Users\Pichau\Desktop\ETiLibrary\DAL\obj\Release\DAL.pdb

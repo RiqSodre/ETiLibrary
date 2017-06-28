@@ -1,0 +1,671 @@
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\bin\Debug\Tech Lab.exe.config
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\bin\Debug\Tech Lab.exe
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\bin\Debug\Tech Lab.pdb
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\bin\Debug\MetroFramework.Design.dll
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\bin\Debug\MetroFramework.dll
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\obj\Debug\Interface.csprojResolveAssemblyReference.cache
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCargo.resources
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCurso.resources
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadEmprestimo.resources
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadFuncionario.resources
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadJornal.resources
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadPessoa.resources
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCdDvd.resources
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadLivro.resources
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadTurma.resources
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaAcervo.resources
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaAluno.resources
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaFuncionario.resources
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmCadBase.resources
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmCadBaseInfraestrutura.resources
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmConsultaBase.resources
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmListaBase.resources
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Sistema.FrmLogin.resources
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Sistema.FrmMenu.resources
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\obj\Debug\Tech_Lab.Properties.Resources.resources
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\obj\Debug\Interface.csproj.GenerateResource.Cache
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\obj\Debug\Tech Lab.exe
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\obj\Debug\Tech Lab.pdb
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\bin\Debug\BLL.dll
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\bin\Debug\DTO.dll
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\bin\Debug\DAL.dll
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\bin\Debug\MySql.Data.dll
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\bin\Debug\BLL.pdb
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\bin\Debug\DTO.pdb
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\bin\Debug\DAL.pdb
+C:\Users\Ricardo\Desktop\Tech Lab\Tech Lab\obj\Debug\Tech_Lab.Formularios.Modelos.FrmPonte.resources
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\Tech Lab.exe.config
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Tech Lab.exe
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Tech Lab.pdb
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\Tech Lab.exe
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\Tech Lab.pdb
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\BLL.dll
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\DTO.dll
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\MetroFramework.Design.dll
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\MetroFramework.dll
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\DAL.dll
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\MySql.Data.dll
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\BLL.pdb
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\DTO.pdb
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\DAL.pdb
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.csprojResolveAssemblyReference.cache
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCargo.resources
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCurso.resources
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadEmprestimo.resources
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadFuncionario.resources
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadJornal.resources
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadPessoa.resources
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCdDvd.resources
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadLivro.resources
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadTurma.resources
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Tech_Lab.Formularios.Modelos.FrmPonte.resources
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaAcervo.resources
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaAluno.resources
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaFuncionario.resources
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmCadBase.resources
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmCadBaseInfraestrutura.resources
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmConsultaBase.resources
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmListaBase.resources
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Sistema.FrmLogin.resources
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Sistema.FrmMenu.resources
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Tech_Lab.Properties.Resources.resources
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.csproj.GenerateResource.Cache
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Tech_Lab.Formularios.Cadastros.FrmAlterarCad.resources
+C:\Users\Ricardo\Downloads\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Tech_Lab.Formularios.Cadastros.FrmExcluirCad.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\Tech Lab.exe.config
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Tech Lab.exe
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Tech Lab.pdb
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.csprojResolveAssemblyReference.cache
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCargo.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCurso.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadEmprestimo.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadFuncionario.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadJornal.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadPessoa.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCdDvd.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadLivro.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadTurma.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaAcervo.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaAluno.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaFuncionario.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmCadBase.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmCadBaseInfraestrutura.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmConsultaBase.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmListaBase.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Sistema.FrmLogin.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Sistema.FrmMenu.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.csproj.GenerateResource.Cache
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\Tech Lab.exe
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\Tech Lab.pdb
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\BLL.dll
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\DTO.dll
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\MetroFramework.Design.dll
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\MetroFramework.dll
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\DAL.dll
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\MySql.Data.dll
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\BLL.pdb
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\DTO.pdb
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\DAL.pdb
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\Tech Lab.exe.config
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Tech Lab.exe
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Tech Lab.pdb
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\Tech Lab.exe
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\Tech Lab.pdb
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\BLL.dll
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\DTO.dll
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\MetroFramework.Design.dll
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\MetroFramework.dll
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\DAL.dll
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\MySql.Data.dll
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\BLL.pdb
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\DTO.pdb
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\DAL.pdb
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.csprojResolveAssemblyReference.cache
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCargo.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCurso.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadEmprestimo.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadFuncionario.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadJornal.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadPessoa.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCdDvd.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadLivro.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadTurma.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Tech_Lab.Formularios.Cadastros.FrmPonteAluno.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Tech_Lab.Formularios.Modelos.FrmPonte.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaAcervo.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaAluno.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaFuncionario.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmCadBase.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmCadBaseInfraestrutura.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmConsultaBase.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmListaBase.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Sistema.FrmLogin.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Sistema.FrmMenu.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Tech_Lab.Properties.Resources.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.csproj.GenerateResource.Cache
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Tech_Lab.Formularios.Cadastros.FrmPonteFuncionario.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Tech_Lab.Formularios.Cadastros.FrmPonteCargo.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Tech_Lab.Formularios.Cadastros.FrmPonteCdDvd.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Tech_Lab.Formularios.Cadastros.FrmPonteCurso.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Tech_Lab.Formularios.Cadastros.FrmPonteJornal.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Tech_Lab.Formularios.Cadastros.FrmPonteLivro.resources
+C:\Users\Ricardo\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Tech_Lab.Formularios.Cadastros.FrmPonteTurma.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadArea.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAluno.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCargo.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCdDvd.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCurso.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteFuncionario.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteJornal.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteLivro.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteTurma.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmPonte.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Properties.Resources.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteArea.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadEditora.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadGenero.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteEditora.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadAssunto.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadAutores.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadExtravio.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAssunto.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAutores.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteExtravio.resources
+C:\Users\rm02812\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteGenero.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\Tech Lab.exe.config
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Tech Lab.exe
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Tech Lab.pdb
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.csprojResolveAssemblyReference.cache
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadArea.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadAssunto.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadAutores.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCargo.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCurso.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadEditora.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadEmprestimo.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadExtravio.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadFuncionario.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadGenero.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadJornal.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadPessoa.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCdDvd.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadLivro.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadTurma.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAluno.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteArea.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAssunto.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAutores.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCargo.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCdDvd.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCurso.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteEditora.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteExtravio.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteFuncionario.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteGenero.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteJornal.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteLivro.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteTurma.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmPonte.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaAcervo.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaAluno.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaFuncionario.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmCadBase.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmCadBaseInfraestrutura.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmConsultaBase.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmListaBase.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Sistema.FrmLogin.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Formularios.Sistema.FrmMenu.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.Properties.Resources.resources
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\obj\Debug\Interface.csproj.GenerateResource.Cache
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\Tech Lab.exe
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\Tech Lab.pdb
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\BLL.dll
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\DTO.dll
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\MetroFramework.Design.dll
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\MetroFramework.dll
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\DAL.dll
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\MySql.Data.dll
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\BLL.pdb
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\DTO.pdb
+C:\Users\Pichau\Desktop\ETiLibrary\Tech Lab\Tech Lab\bin\Debug\DAL.pdb
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\Tech Lab.exe.config
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Tech Lab.exe
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Tech Lab.pdb
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\Tech Lab.exe
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\Tech Lab.pdb
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\BLL.dll
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\DTO.dll
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\MetroFramework.Design.dll
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\MetroFramework.dll
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\DAL.dll
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\MySql.Data.dll
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\BLL.pdb
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\DTO.pdb
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\DAL.pdb
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.csprojResolveAssemblyReference.cache
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadArea.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadAssunto.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadAutores.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCargo.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCurso.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadEditora.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadEmprestimo.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadExtravio.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadFuncionario.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadGenero.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadJornal.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadAluno.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCdDvd.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadLivro.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadTurma.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAluno.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteArea.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAssunto.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAutores.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCargo.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCdDvd.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCurso.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteEditora.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteExtravio.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteFuncionario.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteGenero.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteJornal.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteLivro.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteRM.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteTurma.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmPonte.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaAcervo.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaAluno.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaFuncionario.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmCadBase.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmCadBaseInfraestrutura.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmConsultaBase.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmListaBase.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Sistema.FrmLogin.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Sistema.FrmMenu.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Properties.Resources.resources
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.csproj.GenerateResource.Cache
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\Tech Lab.exe.config
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Tech Lab.exe
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Tech Lab.pdb
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\Tech Lab.exe
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\Tech Lab.pdb
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\BLL.dll
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\DTO.dll
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\MetroFramework.Design.dll
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\MetroFramework.dll
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\DAL.dll
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\MySql.Data.dll
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\BLL.pdb
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\DTO.pdb
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\DAL.pdb
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.csprojResolveAssemblyReference.cache
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadArea.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadAssunto.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadAutores.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCargo.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCurso.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadEditora.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadEmprestimo.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadExtravio.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadFuncionario.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadGenero.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadJornal.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadAluno.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCdDvd.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadLivro.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadTurma.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAluno.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteArea.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAssunto.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAutores.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCargo.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCdDvd.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCurso.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteEditora.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteExtravio.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteFuncionario.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteGenero.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteJornal.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteLivro.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteTurma.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmPonte.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaAcervo.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaAluno.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaFuncionario.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmCadBase.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmCadBaseInfraestrutura.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmConsultaBase.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmListaBase.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Sistema.FrmLogin.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Sistema.FrmMenu.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Properties.Resources.resources
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.csproj.GenerateResource.Cache
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\Tech Lab.exe.config
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Tech Lab.exe
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Tech Lab.pdb
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.csprojResolveAssemblyReference.cache
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadArea.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadAssunto.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadAutores.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCargo.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCurso.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadEditora.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadEmprestimo.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadExtravio.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadFuncionario.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadGenero.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadJornal.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadAluno.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCdDvd.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadLivro.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadTurma.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAluno.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteArea.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAssunto.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAutores.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCargo.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCdDvd.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCurso.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteEditora.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteExtravio.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteFuncionario.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteGenero.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteJornal.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteLivro.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteTurma.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmPonte.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaAcervo.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaAluno.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaFuncionario.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmCadBase.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmCadBaseInfraestrutura.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmConsultaBase.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmListaBase.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Sistema.FrmLogin.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Sistema.FrmMenu.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Properties.Resources.resources
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.csproj.GenerateResource.Cache
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\Tech Lab.exe
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\Tech Lab.pdb
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\BLL.dll
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\DTO.dll
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\MetroFramework.Design.dll
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\MetroFramework.dll
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\DAL.dll
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\MySql.Data.dll
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\BLL.pdb
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\DTO.pdb
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\bin\Debug\DAL.pdb
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadFuncionarioBiblioteca.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\bin\Debug\Tech Lab.exe.config
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Tech Lab.exe
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Tech Lab.pdb
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\bin\Debug\Tech Lab.exe
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\bin\Debug\Tech Lab.pdb
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\bin\Debug\BLL.dll
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\bin\Debug\DTO.dll
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\bin\Debug\MetroFramework.Design.dll
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\bin\Debug\MetroFramework.dll
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\bin\Debug\DAL.dll
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\bin\Debug\MySql.Data.dll
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\bin\Debug\BLL.pdb
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\bin\Debug\DTO.pdb
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\bin\Debug\DAL.pdb
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.csprojResolveAssemblyReference.cache
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadArea.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadAssunto.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadAutores.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCargo.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCurso.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadEditora.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadEmprestimo.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadExtravio.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadFuncionario.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadFuncionarioBiblioteca.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadGenero.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadJornal.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadAluno.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadCdDvd.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadLivro.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmCadTurma.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAluno.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteArea.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAssunto.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAutores.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCargo.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCdDvd.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCurso.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteEditora.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteExtravio.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteFuncionario.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteGenero.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteJornal.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteLivro.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Cadastros.FrmPonteTurma.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmPonte.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaAcervo.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaAluno.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Consultas.FrmConsultaFuncionario.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmCadBase.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmCadBaseInfraestrutura.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmConsultaBase.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Modelos.FrmListaBase.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Sistema.FrmLogin.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Formularios.Sistema.FrmMenu.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.Properties.Resources.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\Tech Lab\obj\Debug\Interface.csproj.GenerateResource.Cache
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\bin\Debug\Tech Lab.exe.config
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Tech Lab.exe
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Tech Lab.pdb
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\bin\Debug\Tech Lab.exe
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\bin\Debug\Tech Lab.pdb
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\bin\Debug\BLL.dll
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\bin\Debug\DTO.dll
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\bin\Debug\MetroFramework.Design.dll
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\bin\Debug\MetroFramework.dll
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\bin\Debug\DAL.dll
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\bin\Debug\MySql.Data.dll
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\bin\Debug\BLL.pdb
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\bin\Debug\DTO.pdb
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\bin\Debug\DAL.pdb
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.csprojResolveAssemblyReference.cache
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadArea.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadAssunto.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadAutores.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadCargo.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadCurso.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadEditora.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadEmprestimo.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadExtravio.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadFuncionario.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadFuncionarioBiblioteca.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadGenero.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadJornal.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadAluno.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadCdDvd.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadLivro.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadMidiaEmprestimo.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadTurma.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAluno.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteArea.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAssunto.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAutores.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCargo.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCdDvd.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCurso.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteEditora.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteEmprestimo.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteExtravio.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteFuncionario.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteGenero.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteJornal.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteLivro.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteTurma.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Sistema.FrmRecSenha.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Modelos.FrmPonte.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmConsultaAcervo.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmConsultaAluno.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmConsultaFuncionario.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Modelos.FrmCadBase.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Modelos.FrmCadBaseInfraestrutura.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Modelos.FrmConsultaBase.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Modelos.FrmMidiaBase.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Sistema.FrmLogin.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Sistema.FrmMenu.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Properties.Resources.resources
+C:\Users\rm02766\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.csproj.GenerateResource.Cache
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\bin\Debug\Tech Lab.exe.config
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\bin\Debug\Tech Lab.exe
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\bin\Debug\Tech Lab.pdb
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\bin\Debug\BLL.dll
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\bin\Debug\DTO.dll
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\bin\Debug\MetroFramework.Design.dll
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\bin\Debug\MetroFramework.dll
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\bin\Debug\DAL.dll
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\bin\Debug\MySql.Data.dll
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\bin\Debug\BLL.pdb
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\bin\Debug\DTO.pdb
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\bin\Debug\DAL.pdb
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.csprojResolveAssemblyReference.cache
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadArea.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadAssunto.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadAutores.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadCargo.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadCurso.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadEditora.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadEmprestimo.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadExtravio.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadFuncionario.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadFuncionarioBiblioteca.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadGenero.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadJornal.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadAluno.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadCdDvd.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadLivro.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadMidiaEmprestimo.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadTurma.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAluno.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteArea.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAssunto.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAutores.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCargo.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCdDvd.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCurso.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteEditora.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteEmprestimo.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteExtravio.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteFuncionario.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteGenero.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteJornal.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteLivro.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteTurma.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmConsultaAluno.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmConsultaEmprestimo.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmConsultaFuncionario.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmPCAluno.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmPCAutor.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmPCEmprestimo.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmPCExJornal.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmPCExtravio.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmPCFuncionario.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmPCLivro.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Modelos.FrmListaBase.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Modelos.FrmPCBase.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Sistema.FrmRecSenha.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Modelos.FrmPonte.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Modelos.FrmCadBase.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Modelos.FrmCadBaseInfraestrutura.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Modelos.FrmConsultaBase.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Sistema.FrmLogin.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Sistema.FrmMenu.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Properties.Resources.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.csproj.GenerateResource.Cache
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Tech Lab.exe
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Tech Lab.pdb
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmConsultaMidiaEmprestimo.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmPCCDVD.resources
+C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmConsultaLivro.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\bin\Debug\Tech Lab.exe.config
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Tech Lab.exe
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Tech Lab.pdb
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\bin\Debug\Tech Lab.exe
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\bin\Debug\Tech Lab.pdb
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\bin\Debug\BLL.dll
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\bin\Debug\DTO.dll
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\bin\Debug\MetroFramework.Design.dll
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\bin\Debug\MetroFramework.dll
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\bin\Debug\DAL.dll
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\bin\Debug\MySql.Data.dll
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\bin\Debug\BLL.pdb
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\bin\Debug\DTO.pdb
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\bin\Debug\DAL.pdb
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.csprojResolveAssemblyReference.cache
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadArea.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadAssunto.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadAutores.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadCargo.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadCurso.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadEditora.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadEmprestimo.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadExtravio.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadFuncionario.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadFuncionarioBiblioteca.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadGenero.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadJornal.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadAluno.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadCdDvd.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadLivro.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadMidiaEmprestimo.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadTurma.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAluno.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteArea.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAssunto.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAutores.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCargo.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCdDvd.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteCurso.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteEditora.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteEmprestimo.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteExtravio.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteFuncionario.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteGenero.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteJornal.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteLivro.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteTurma.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmConsultaAluno.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmConsultaEmprestimo.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmConsultaLivro.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmConsultaFuncionario.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmConsultaMidiaEmprestimo.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmPCAluno.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmPCAutor.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmPCCDVD.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmPCEmprestimo.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmPCExJornal.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmPCExtravio.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmPCFuncionario.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmPCLivro.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Modelos.FrmListaBase.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Modelos.FrmPCBase.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Sistema.FrmRecSenha.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Modelos.FrmPonte.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Modelos.FrmCadBase.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Modelos.FrmCadBaseInfraestrutura.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Modelos.FrmConsultaBase.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Sistema.FrmLogin.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Sistema.FrmMenu.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Properties.Resources.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.csproj.GenerateResource.Cache

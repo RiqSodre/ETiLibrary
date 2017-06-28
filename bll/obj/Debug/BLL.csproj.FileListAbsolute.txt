@@ -1,0 +1,80 @@
+C:\Users\Pichau\Desktop\Tech Lab\DTO\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Pichau\Desktop\Tech Lab\DTO\BLL\bin\Debug\BLL.dll
+C:\Users\Pichau\Desktop\Tech Lab\DTO\BLL\bin\Debug\BLL.pdb
+C:\Users\Pichau\Desktop\Tech Lab\DTO\BLL\bin\Debug\DAL.dll
+C:\Users\Pichau\Desktop\Tech Lab\DTO\BLL\bin\Debug\DTO.dll
+C:\Users\Pichau\Desktop\Tech Lab\DTO\BLL\bin\Debug\MySql.Data.dll
+C:\Users\Pichau\Desktop\Tech Lab\DTO\BLL\bin\Debug\DAL.pdb
+C:\Users\Pichau\Desktop\Tech Lab\DTO\BLL\bin\Debug\DTO.pdb
+C:\Users\Pichau\Desktop\Tech Lab\DTO\BLL\obj\Debug\BLL.dll
+C:\Users\Pichau\Desktop\Tech Lab\DTO\BLL\obj\Debug\BLL.pdb
+C:\Users\Ricardo\Downloads\ETiLibrary\BLL\bin\Debug\BLL.dll
+C:\Users\Ricardo\Downloads\ETiLibrary\BLL\bin\Debug\BLL.pdb
+C:\Users\Ricardo\Downloads\ETiLibrary\BLL\bin\Debug\DAL.dll
+C:\Users\Ricardo\Downloads\ETiLibrary\BLL\bin\Debug\DTO.dll
+C:\Users\Ricardo\Downloads\ETiLibrary\BLL\bin\Debug\MySql.Data.dll
+C:\Users\Ricardo\Downloads\ETiLibrary\BLL\bin\Debug\DAL.pdb
+C:\Users\Ricardo\Downloads\ETiLibrary\BLL\bin\Debug\DTO.pdb
+C:\Users\Ricardo\Downloads\ETiLibrary\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Ricardo\Downloads\ETiLibrary\BLL\obj\Debug\BLL.dll
+C:\Users\Ricardo\Downloads\ETiLibrary\BLL\obj\Debug\BLL.pdb
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\BLL\bin\Debug\BLL.dll
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\BLL\bin\Debug\BLL.pdb
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\BLL\bin\Debug\DAL.dll
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\BLL\bin\Debug\DTO.dll
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\BLL\bin\Debug\MySql.Data.dll
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\BLL\bin\Debug\DAL.pdb
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\BLL\bin\Debug\DTO.pdb
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\BLL\obj\Debug\BLL.dll
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\BLL\obj\Debug\BLL.pdb
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\BLL\bin\Debug\BLL.dll
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\BLL\bin\Debug\BLL.pdb
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\BLL\bin\Debug\DAL.dll
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\BLL\bin\Debug\DTO.dll
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\BLL\bin\Debug\MySql.Data.dll
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\BLL\bin\Debug\DAL.pdb
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\BLL\bin\Debug\DTO.pdb
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\BLL\obj\Debug\BLL.dll
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\BLL\obj\Debug\BLL.pdb
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\BLL\bin\Debug\BLL.dll
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\BLL\bin\Debug\BLL.pdb
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\BLL\bin\Debug\DAL.dll
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\BLL\bin\Debug\DTO.dll
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\BLL\bin\Debug\MySql.Data.dll
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\BLL\bin\Debug\DAL.pdb
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\BLL\bin\Debug\DTO.pdb
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\BLL\obj\Debug\BLL.dll
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\BLL\obj\Debug\BLL.pdb
+C:\Users\rm02766\Desktop\ETiLibrary\BLL\bin\Debug\BLL.dll
+C:\Users\rm02766\Desktop\ETiLibrary\BLL\bin\Debug\BLL.pdb
+C:\Users\rm02766\Desktop\ETiLibrary\BLL\bin\Debug\DAL.dll
+C:\Users\rm02766\Desktop\ETiLibrary\BLL\bin\Debug\DTO.dll
+C:\Users\rm02766\Desktop\ETiLibrary\BLL\bin\Debug\MySql.Data.dll
+C:\Users\rm02766\Desktop\ETiLibrary\BLL\bin\Debug\DAL.pdb
+C:\Users\rm02766\Desktop\ETiLibrary\BLL\bin\Debug\DTO.pdb
+C:\Users\rm02766\Desktop\ETiLibrary\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\rm02766\Desktop\ETiLibrary\BLL\obj\Debug\BLL.dll
+C:\Users\rm02766\Desktop\ETiLibrary\BLL\obj\Debug\BLL.pdb
+C:\Users\Pichau\Desktop\ETiLibrary\BLL\bin\Debug\BLL.dll
+C:\Users\Pichau\Desktop\ETiLibrary\BLL\bin\Debug\BLL.pdb
+C:\Users\Pichau\Desktop\ETiLibrary\BLL\bin\Debug\DAL.dll
+C:\Users\Pichau\Desktop\ETiLibrary\BLL\bin\Debug\DTO.dll
+C:\Users\Pichau\Desktop\ETiLibrary\BLL\bin\Debug\MySql.Data.dll
+C:\Users\Pichau\Desktop\ETiLibrary\BLL\bin\Debug\DAL.pdb
+C:\Users\Pichau\Desktop\ETiLibrary\BLL\bin\Debug\DTO.pdb
+C:\Users\Pichau\Desktop\ETiLibrary\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Pichau\Desktop\ETiLibrary\BLL\obj\Debug\BLL.dll
+C:\Users\Pichau\Desktop\ETiLibrary\BLL\obj\Debug\BLL.pdb
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\BLL\bin\Debug\BLL.dll
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\BLL\bin\Debug\BLL.pdb
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\BLL\bin\Debug\DAL.dll
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\BLL\bin\Debug\DTO.dll
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\BLL\bin\Debug\MySql.Data.dll
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\BLL\bin\Debug\DAL.pdb
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\BLL\bin\Debug\DTO.pdb
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\BLL\obj\Debug\BLL.dll
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\BLL\obj\Debug\BLL.pdb

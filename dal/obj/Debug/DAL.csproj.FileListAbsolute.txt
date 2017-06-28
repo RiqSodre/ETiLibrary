@@ -1,0 +1,45 @@
+C:\Users\Pichau\Desktop\Tech Lab\DAL\bin\Debug\DAL.dll.config
+C:\Users\Pichau\Desktop\Tech Lab\DAL\bin\Debug\DAL.dll
+C:\Users\Pichau\Desktop\Tech Lab\DAL\bin\Debug\DAL.pdb
+C:\Users\Pichau\Desktop\Tech Lab\DAL\bin\Debug\MySql.Data.dll
+C:\Users\Pichau\Desktop\Tech Lab\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Pichau\Desktop\Tech Lab\DAL\obj\Debug\DAL.dll
+C:\Users\Pichau\Desktop\Tech Lab\DAL\obj\Debug\DAL.pdb
+C:\Users\Ricardo\Downloads\ETiLibrary\DAL\bin\Debug\DAL.dll.config
+C:\Users\Ricardo\Downloads\ETiLibrary\DAL\bin\Debug\DAL.dll
+C:\Users\Ricardo\Downloads\ETiLibrary\DAL\bin\Debug\DAL.pdb
+C:\Users\Ricardo\Downloads\ETiLibrary\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Ricardo\Downloads\ETiLibrary\DAL\obj\Debug\DAL.dll
+C:\Users\Ricardo\Downloads\ETiLibrary\DAL\obj\Debug\DAL.pdb
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\DAL\bin\Debug\DAL.dll.config
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\DAL\bin\Debug\DAL.dll
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\DAL\bin\Debug\DAL.pdb
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\DAL\bin\Debug\MySql.Data.dll
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\DAL\obj\Debug\DAL.dll
+C:\Users\Pichau\Desktop\ETiLibraryCamadasGi\DAL\obj\Debug\DAL.pdb
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\DAL\bin\Debug\DAL.dll.config
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\DAL\bin\Debug\DAL.dll
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\DAL\bin\Debug\DAL.pdb
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\DAL\obj\Debug\DAL.dll
+C:\Users\Ricardo\Desktop\ETiLibraryCamadasGi\DAL\obj\Debug\DAL.pdb
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\DAL\bin\Debug\DAL.dll.config
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\DAL\bin\Debug\DAL.dll
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\DAL\bin\Debug\DAL.pdb
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\DAL\obj\Debug\DAL.dll
+C:\Users\Manutencao\Desktop\ETiLibraryCamadasGi\DAL\obj\Debug\DAL.pdb
+C:\Users\rm02766\Desktop\ETiLibrary\DAL\bin\Debug\DAL.dll.config
+C:\Users\rm02766\Desktop\ETiLibrary\DAL\bin\Debug\DAL.dll
+C:\Users\rm02766\Desktop\ETiLibrary\DAL\bin\Debug\DAL.pdb
+C:\Users\rm02766\Desktop\ETiLibrary\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\rm02766\Desktop\ETiLibrary\DAL\obj\Debug\DAL.dll
+C:\Users\rm02766\Desktop\ETiLibrary\DAL\obj\Debug\DAL.pdb
+C:\Users\Pichau\Desktop\ETiLibrary\DAL\bin\Debug\DAL.dll.config
+C:\Users\Pichau\Desktop\ETiLibrary\DAL\bin\Debug\DAL.dll
+C:\Users\Pichau\Desktop\ETiLibrary\DAL\bin\Debug\DAL.pdb
+C:\Users\Pichau\Desktop\ETiLibrary\DAL\bin\Debug\MySql.Data.dll
+C:\Users\Pichau\Desktop\ETiLibrary\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Pichau\Desktop\ETiLibrary\DAL\obj\Debug\DAL.dll
+C:\Users\Pichau\Desktop\ETiLibrary\DAL\obj\Debug\DAL.pdb
