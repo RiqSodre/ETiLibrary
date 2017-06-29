@@ -28,12 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2.SuspendLayout();
+            this.pnl.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnFechar
-            // 
-            this.btnFechar.FlatAppearance.BorderSize = 0;
             // 
             // txtTexto
             // 
@@ -41,25 +37,50 @@
             // 
             // 
             this.txtTexto.CustomButton.Image = null;
-            this.txtTexto.CustomButton.Location = new System.Drawing.Point(203, 1);
+            this.txtTexto.CustomButton.Location = new System.Drawing.Point(271, 1);
+            this.txtTexto.CustomButton.Margin = new System.Windows.Forms.Padding(5);
             this.txtTexto.CustomButton.Name = "";
-            this.txtTexto.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtTexto.CustomButton.Size = new System.Drawing.Size(28, 26);
             this.txtTexto.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtTexto.CustomButton.TabIndex = 1;
             this.txtTexto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtTexto.CustomButton.UseSelectable = true;
             this.txtTexto.CustomButton.Visible = false;
             this.txtTexto.Lines = new string[0];
+            this.txtTexto.Location = new System.Drawing.Point(68, 142);
+            this.txtTexto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTexto_KeyPress);
+            // 
+            // lblTexto
+            // 
+            this.lblTexto.Location = new System.Drawing.Point(65, 102);
+            this.lblTexto.Size = new System.Drawing.Size(307, 24);
+            this.lblTexto.Text = "Digite aqui o código do funcionário:";
+            // 
+            // btnAcao
+            // 
+            this.btnAcao.Text = "Carregar";
+            this.btnAcao.Click += new System.EventHandler(this.btnAcao_Click);
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.FlatAppearance.BorderSize = 0;
+            // 
+            // lblForm
+            // 
+            this.lblForm.Size = new System.Drawing.Size(174, 20);
+            this.lblForm.Text = "Cadastro: Funcionario";
             // 
             // FrmPonteFuncionario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AcceptButton = this.btnAcao;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(327, 223);
+            this.ClientSize = new System.Drawing.Size(436, 274);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmPonteFuncionario";
-            this.Load += new System.EventHandler(this.FrmPonteFuncionario_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.Padding = new System.Windows.Forms.Padding(36, 91, 36, 31);
+            this.pnl.ResumeLayout(false);
+            this.pnl.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -41,7 +41,6 @@ namespace BLL
                           aluno.Turma.Descricao = xmlnode["Turma"].InnerText;
                           aluno.Telefone.Numero = xmlnode["Telefone"].InnerText;
                           aluno.Celular.Numero = xmlnode["Celular"].InnerText;
-                         
                       }
                   }
 
@@ -271,8 +270,16 @@ namespace BLL
                     aluno.Turma.CodTurma = (int)dataRow["CodTurma"];
                     aluno.Turma.Descricao = (string)dataRow["Turma"];
                     aluno.Turma.Periodo = (string)dataRow["Periodo"];
-                    aluno.Telefone.Numero = (string)dataRow["Telefone"];
-                    aluno.Telefone.TelefoneTipo = (string)dataRow["Tipo Telefone"];
+                    if (((string)dataRow["Tipo Telefone"]).Equals("Telefone"))
+                    {
+                        aluno.Telefone.Numero = (string)dataRow["Telefone"];
+                        aluno.Telefone.TelefoneTipo = (string)dataRow["Tipo Telefone"];
+                    }
+                    else
+                    {
+                        aluno.Celular.Numero = (string)dataRow["Telefone"];
+                        aluno.Celular.TelefoneTipo = (string)dataRow["Tipo Telefone"];
+                    }
 
                     alunoList.Add(AlunoCursoTurma(aluno));
                 }
@@ -432,7 +439,18 @@ namespace BLL
 
                     funcionario.Cpf = (string)dataRow["CPF"];
                     funcionario.DataCadastro = (DateTime)dataRow["DataCadastro"];
+                    funcionario.Cargo.CodCargo = (int)dataRow["CodCargo"];
                     funcionario.Cargo.Descricao = (string)dataRow["Cargo"];
+                    if (((string)dataRow["Tipo Telefone"]).Equals("Telefone"))
+                    {
+                        funcionario.Telefone.Numero = (string)dataRow["Telefone"];
+                        funcionario.Telefone.TelefoneTipo = (string)dataRow["Tipo Telefone"];
+                    }
+                    else
+                    {
+                        funcionario.Celular.Numero = (string)dataRow["Telefone"];
+                        funcionario.Celular.TelefoneTipo = (string)dataRow["Tipo Telefone"];
+                    }
 
                     funcionarioList.Add(funcionario);
                 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2.SuspendLayout();
+            this.pnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnFechar
@@ -58,8 +58,8 @@
             this.ClientSize = new System.Drawing.Size(327, 223);
             this.Name = "FrmPonteJornal";
             this.Load += new System.EventHandler(this.FrmPonteJornal_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnl.ResumeLayout(false);
+            this.pnl.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

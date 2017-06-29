@@ -12,17 +12,15 @@ namespace Interface.Formularios.Cadastros
         private FrmCadAluno frmCadAlunoBase = new FrmCadAluno();
         private Aluno aluno = new Aluno();
 
-        //Carrega o form
+        //Carrega o form ponte aluno
         public FrmPonteAluno(FrmCadAluno frmCadAluno, string textoFrm)
         {
             InitializeComponent();
-
             frmCadAlunoBase = frmCadAluno;
             aluno = frmCadAlunoBase.Aluno;
-            lblForm.Text += " - "+ textoFrm;
-        }
-        
-        //Carrega o aluno
+            lblForm.Text +=" - "+textoFrm;
+        }       
+        //Carrega os dados do aluno que serão passsados para o form de cadastro
         protected override void btnAcao_Click(object sender, EventArgs e)
         {
             try
@@ -36,27 +34,30 @@ namespace Interface.Formularios.Cadastros
                 else
                 {
                     aluno = pessoaBLL.AlunoConsulta_PorCod(Convert.ToInt32(txtTexto.Text));
-
                     if (aluno.CodPessoa == null)
                     {
                         MessageBox.Show(this, "Nenhum registro encontrado, certifique-se que o código do aluno foi digitado corretamente.", "Atenção", MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
                         return;
                     }
-
-                    aluno.Celular = pessoaBLL.PessoaTelefone(aluno.CodPessoa);
+                    if (aluno.Celular.Numero == null)
+                    {
+                        aluno.Celular = pessoaBLL.PessoaTelefone(aluno.CodPessoa);
+                    }
+                    else
+                    {
+                        aluno.Telefone = pessoaBLL.PessoaTelefone(aluno.CodPessoa);
+                    }
                     frmCadAlunoBase.Aluno = aluno;
                     DialogResult = DialogResult.OK;
                 }
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        //Faz o Campo aceitar apenas números
+        //Faz o Campo do código do aluno aceitar apenas números
         private void txtTexto_KeyPress(object sender, KeyPressEventArgs e)
         {
             try
@@ -69,7 +70,6 @@ namespace Interface.Formularios.Cadastros
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

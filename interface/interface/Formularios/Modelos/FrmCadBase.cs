@@ -6,17 +6,16 @@ namespace Interface.Formularios.Modelos
 {
     public partial class FrmCadBase : MetroFramework.Forms.MetroForm
     {
+        //Construtor padrão
         public FrmCadBase()
         {
             InitializeComponent();
         }
-
-        //Botão fechar
+        //Botão que fecha o form
         private void btnFechar_Click(object sender, EventArgs e)
         {
             Close();
         }
-
         //Limpar componentes do form
         protected void LimparComponentes()
         {
@@ -63,7 +62,6 @@ namespace Interface.Formularios.Modelos
             }
             btnAcao.Text = "&Salvar";
         }
-
         //Habilitar/Desabilitar componentes do form
         protected void Habilita(bool estado)
         {

@@ -11,7 +11,6 @@ namespace Interface.Formularios.Cadastros
         private PessoaBLL pessoaBLL = new PessoaBLL();
         private Funcionario funcionario = new Funcionario();
         private CargoBLL cargoBLL = new CargoBLL();
-
         public Funcionario Funcionario
         {
             get
@@ -24,208 +23,324 @@ namespace Interface.Formularios.Cadastros
                 funcionario = value;
             }
         }
+        private string resultado;
+
+        //Contrutor padrão
         public FrmCadFuncionario()
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
+                cbCargo.DataSource = cargoBLL.CarregaCargos();
+                Habilita(true);
+                LimparComponentes();
+                txtNome.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
-        private void FrmCadFuncionario_Load(object sender, EventArgs e)
+        //Construtor carregando cadastro do funcionario no form
+        public FrmCadFuncionario(Funcionario funcionario)
         {
-            cbSexo.SelectedIndex = 0;
-            //cbCargo.DataSource = cargoBLL.CarregaCargos();
-            
+            try
+            {
+                InitializeComponent();
+                cbCargo.DataSource = cargoBLL.CarregaCargos();
+                Habilita(true);
+                CarregaCampos(funcionario);
+                txtNome.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
-        private void btnAlterar_Click(object sender, EventArgs e)
+        //Botão de ação do form Salvar/Alterar/Excluir - Implementar
+        private void btnAcao_Click(object sender, EventArgs e)
         {
-           /* FrmPonteAluno ponteAluno = new FrmPonteAluno(this);
-            if (ponteAluno.ShowDialog() == DialogResult.OK)
+            if (btnAcao.Text == "&Salvar" || btnAcao.Text == "&Alterar")
             {
-                txtNome.Text = funcionario.Nome;
-                cbSexo.SelectedItem = funcionario.Sexo;
-                txtCpf.Text = funcionario.Cpf;
-                txtTelefone.Text = funcionario.Telefone.Numero;
-                txtCelular.Text = funcionario.Celular.Numero;
-
-                btnAcao.Text = "Alterar";
-            }*/
-        }
-
-        private void btnExcluir_Click(object sender, EventArgs e)
-        {
-            /*
-            FrmPonteAluno ponteAluno = new FrmPonteAluno(this);
-            if (ponteAluno.ShowDialog() == DialogResult.OK)
-            {
-                txtNome.Text = funcionario.Nome;
-                cbSexo.SelectedItem = funcionario.Sexo;
-                txtCpf.Text = funcionario.Cpf;
-                txtTelefone.Text = funcionario.Telefone.Numero;
-                txtCelular.Text = funcionario.Celular.Numero;
-
-                btnAcao.Text = "Excluir";
-            }*/
-        }
-
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-            int parsable;
-
-            if (txtNome.Text.Length == 0)
-            {
-                MessageBox.Show(this, "O campo nome é obrigatório.", "Atenção", MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-                return;
-            }
-            else if (txtNome.Text.Length < 8)
-            {
-                MessageBox.Show(this, "O campo nome deve conter no minimo oito letras.", "Atenção", MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-                return;
-            }
-            else if (int.TryParse(txtNome.Text, out parsable))
-            {
-                MessageBox.Show(this, "Insira um nome valido.", "Atenção", MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-                return;
-            }
-            else if (txtNome.Text.Length > 50)
-            {
-                MessageBox.Show(this, "O campo nome pode conter no maximo cinquenta caracteres.", "Atenção", MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-                return;
-            }
-            else
-            {
-                Funcionario.Nome = txtNome.Text;
-            }
-
-            Funcionario.Sexo = cbSexo.Text;
-
-            if (txtCpf.Text.Length == 0)
-            {
-                MessageBox.Show(this, "O campo CPF é obrigatório.", "Atenção", MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-                return;
-            }
-            else if (txtCpf.Text.Length != 11)
-            {
-                MessageBox.Show(this, "O campo CPF deve conter onze caracteres.", "Atenção", MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-                return;
-            }
-            else
-            {
-                Funcionario.Celular.Numero = txtCelular.Text;
-            }
-
-            if (btnAcao.Text == "Salvar")
-            {
-                MessageBox.Show(pessoaBLL.FuncionarioInserir(Funcionario));
-            }
-            else if (btnAcao.Text == "Alterar")
-            {
-                MessageBox.Show(pessoaBLL.FuncionarioAlterar(Funcionario));
-            }
-            else
-            {
-                MessageBox.Show(pessoaBLL.PessoaExcluir(Funcionario.CodPessoa));
-            }
-
-            if (txtTelefone.Text.Length == 0 && txtCelular.Text.Length == 0)
-            {
-                MessageBox.Show(this, "É necessário inserir pelo menos um número para contato.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                if (txtTelefone.Text.Length < 10)
+                if (txtNome.Text.Length == 0)
                 {
-                    MessageBox.Show(this, "O campo telefone deve conter onze digitos.", "Atenção", MessageBoxButtons.OK,
-                           MessageBoxIcon.Warning);
+                    MessageBox.Show(this, "O campo nome é obrigatório.", "Atenção", MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                    return;
+                }
+                else if (txtNome.Text.Length < 8)
+                {
+                    MessageBox.Show(this, "O campo nome deve conter no minimo oito letras.", "Atenção", MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                    return;
+                }
+                else if (txtNome.Text.Length > 50)
+                {
+                    MessageBox.Show(this, "O campo nome pode conter no maximo cinquenta caracteres.", "Atenção", MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
                     return;
                 }
                 else
                 {
-                    Funcionario.Telefone.Numero = txtTelefone.Text;
+                    Funcionario.Nome = txtNome.Text;
                 }
-
-                if (txtCelular.Text.Length < 11)
+                if (cbSexo.SelectedIndex == -1)
                 {
-                    MessageBox.Show(this, "O campo telefone deve conter onze digitos.", "Atenção", MessageBoxButtons.OK,
-                           MessageBoxIcon.Warning);
+                    MessageBox.Show(this, "Selecione o sexo do funcionário.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 else
                 {
-                    Funcionario.Celular.Numero = txtCelular.Text;
+                    Funcionario.Sexo = cbSexo.Text;
+                }
+                if (txtCpf.Text.Length == 0)
+                {
+                    MessageBox.Show(this, "O campo CPF é obrigatório.", "Atenção", MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                    return;
+                }
+                else if (txtCpf.Text.Length != 11)
+                {
+                    MessageBox.Show(this, "O campo CPF deve conter onze caracteres.", "Atenção", MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                    return;
+                }
+                else
+                {
+                    funcionario.Cpf = txtCpf.Text;
+                }
+                if (cbCargo.SelectedIndex == -1)
+                {
+                    MessageBox.Show(this, "Selecione um cargo.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                else
+                {
+                    funcionario.Cargo.CodCargo = Convert.ToInt32(cbCargo.SelectedValue);
+                }
+                //Telefone e Celular
+                if (txtTelefone.Text.Length == 0 && txtCelular.Text.Length == 0)
+                {
+                    MessageBox.Show(this, "É necessário inserir pelo menos um número para contato.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                else
+                {
+                    if (txtTelefone.Text.Length == 0 || txtTelefone.Text.Length == 10)
+                    {
+                        Funcionario.Telefone.Numero = txtTelefone.Text;
+                    }
+                    else
+                    {
+                        MessageBox.Show(this, "O campo telefone deve conter dez digitos.", "Atenção", MessageBoxButtons.OK,
+                               MessageBoxIcon.Warning);
+                        return;
+                    }
+                    if (txtCelular.Text.Length == 0 || txtCelular.Text.Length == 11)
+                    {
+                        Funcionario.Celular.Numero = txtCelular.Text;
+                    }
+                    else
+                    {
+                        MessageBox.Show(this, "O campo celular deve conter onze digitos.", "Atenção", MessageBoxButtons.OK,
+                               MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+                if (btnAcao.Text == "&Salvar")
+                {
+                    resultado = pessoaBLL.FuncionarioInserir(funcionario);
+                    MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
+                               MessageBoxIcon.Information);
+                    if (resultado.Contains("sucesso"))
+                    {
+                        Habilita(false);
+                        LimparComponentes();
+                    }
+                }
+                else 
+                {
+                    resultado = pessoaBLL.FuncionarioAlterar(funcionario);
+                    MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
+                               MessageBoxIcon.Information);
+                    if (resultado.Contains("sucesso"))
+                    {
+                        Habilita(false);
+                        LimparComponentes();
+                    }
                 }
             }
-            LimparComponentes();
-
-            Habilita();
-
-            }
-
-            public void Desabilita()
+            else
             {
-            //Desabilita os campos quando o cadastro é realizado
-            txtNome.Enabled = false;
-            cbSexo.Enabled = false;
-            txtCpf.Enabled = false;
-            txtTelefone.Enabled = false;
-            txtCelular.Enabled = false;
+                resultado = pessoaBLL.PessoaExcluir(funcionario.CodPessoa);
+                MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
+                           MessageBoxIcon.Information);
+                if (resultado.Contains("sucesso"))
+                {
+                    Habilita(false);
+                    LimparComponentes();
+                }
             }
-
-            public void Habilita()
-            {
-            //Habilita os campos para novo cadastro
-            txtNome.Enabled = true;
-            cbSexo.Enabled = true;
-            txtCpf.Enabled = true;
-            txtTelefone.Enabled = true;
-            txtCelular.Enabled = true;
-            }
-
+        }
+        //Botão Carcelar - limpa o form de trava os componentes
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            Dispose();
+            try
+            {
+                LimparComponentes();
+                Habilita(false);
+                btnNovo.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
-        private void cbCargo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //cbCargo.DataSource = cargoBLL.CarregaCargos(Convert.ToInt32(cbCargo.SelectedValue));
-            //cbCargo.SelectedIndex = 0;
-        }
-
+        //Botão que habilita e limpa os componentes do form
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            Habilita();
+            try
+            {
+                LimparComponentes();
+                Habilita(true);
+                txtNome.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
+        //Botão Alterar - Abre o form ponte de funcionário e carrega o funcionário no form 
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FrmPonteFuncionario ponteFuncionario = new FrmPonteFuncionario(this, "Alterar");
+                if (ponteFuncionario.ShowDialog() == DialogResult.OK)
+                {
+                    CarregaCampos(funcionario);
+                    btnAcao.Text = "&Alterar";
+                    Habilita(true);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }            
+        }
+        //Botão Excluir - Abre o form ponte de funcionário e carrega o funcionário no form 
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FrmPonteFuncionario ponteFuncionario = new FrmPonteFuncionario(this, "Excluir");
+                if (ponteFuncionario.ShowDialog() == DialogResult.OK)
+                {
+                    CarregaCampos(funcionario);
+                    btnAcao.Text = "&Excluir";
+                    Habilita(true);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        //Faz o Campo nome aceitar apenas letras
+        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (!char.IsLetter(e.KeyChar) && !(e.KeyChar == (char)Keys.Back) && !(e.KeyChar == (char)Keys.Space))
+                {
+                    e.Handled = true;
+                    MessageBox.Show("O campo Nome aceita apenas letras!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        //Faz o Campo cpf aceitar apenas números
         private void txtCpf_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            try
             {
-                e.Handled = true;
-                MessageBox.Show("O campo CPF aceita apenas Números!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+                {
+                    e.Handled = true;
+                    MessageBox.Show("O campo CPF aceita apenas números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        //Faz o Campo rm aceitar apenas números
+        private void txtRm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+                {
+                    e.Handled = true;
+                    MessageBox.Show("O campo RM aceita apenas números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        //Faz o Campo telefone aceitar apenas números
         private void txtTelefone_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            try
             {
-                e.Handled = true;
-                MessageBox.Show("O campo Telefone aceita apenas Números!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+                {
+                    e.Handled = true;
+                    MessageBox.Show("O campo Telefone aceita apenas números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        //Faz o Campo celular aceitar apenas números
         private void txtCelular_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            try
             {
-                e.Handled = true;
-                MessageBox.Show("O campo Celular aceita apenas Números!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+                {
+                    e.Handled = true;
+                    MessageBox.Show("O campo Celular aceita apenas números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        //Carrega o cadastro do funcionário no form
+        private void CarregaCampos(Funcionario funcionario)
+        {
+            try
+            {
+                txtNome.Text = funcionario.Nome;
+                cbSexo.SelectedItem = funcionario.Sexo;
+                cbCargo.SelectedValue = funcionario.Cargo.CodCargo;
+                txtCpf.Text = funcionario.Cpf;
+                txtTelefone.Text = funcionario.Telefone.Numero;
+                txtCelular.Text = funcionario.Celular.Numero;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); ;
             }
         }
     }

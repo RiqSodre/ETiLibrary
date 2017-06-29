@@ -55,3 +55,10 @@ C:\Users\Pichau\Desktop\ETiLibrary\DTO\obj\Debug\DTO.Properties.Resources.resour
 C:\Users\Pichau\Desktop\ETiLibrary\DTO\obj\Debug\DTO.csproj.GenerateResource.Cache
 C:\Users\Pichau\Desktop\ETiLibrary\DTO\obj\Debug\DTO.dll
 C:\Users\Pichau\Desktop\ETiLibrary\DTO\obj\Debug\DTO.pdb
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\DTO\bin\Debug\DTO.dll.config
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\DTO\bin\Debug\DTO.dll
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\DTO\bin\Debug\DTO.pdb
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\DTO\obj\Debug\DTO.Properties.Resources.resources
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\DTO\obj\Debug\DTO.csproj.GenerateResource.Cache
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\DTO\obj\Debug\DTO.dll
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\DTO\obj\Debug\DTO.pdb

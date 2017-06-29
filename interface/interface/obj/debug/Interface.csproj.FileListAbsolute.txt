@@ -598,8 +598,6 @@ C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formu
 C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmPCCDVD.resources
 C:\Users\Pichau\Desktop\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmConsultaLivro.resources
 C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\bin\Debug\Tech Lab.exe.config
-C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Tech Lab.exe
-C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Tech Lab.pdb
 C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\bin\Debug\Tech Lab.exe
 C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\bin\Debug\Tech Lab.pdb
 C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\bin\Debug\BLL.dll
@@ -669,3 +667,5 @@ C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\
 C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Sistema.FrmMenu.resources
 C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Properties.Resources.resources
 C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.csproj.GenerateResource.Cache
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Tech Lab.exe
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Tech Lab.pdb

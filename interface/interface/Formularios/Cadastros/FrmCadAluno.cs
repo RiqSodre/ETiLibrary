@@ -13,7 +13,6 @@ namespace Interface.Formularios.Cadastros
         private TurmaBLL turmaBLL = new TurmaBLL();
         private Aluno alunoBase = new Aluno();
         private string resultado;
-
         public Aluno Aluno
         {
             get
@@ -27,32 +26,15 @@ namespace Interface.Formularios.Cadastros
             }
         }
 
-        //Carrega aluno
-        public FrmCadAluno(Aluno aluno)
-        {
-            try
-            {
-                InitializeComponent();
-                Habilita(true);
-                cbSexo.SelectedIndex = 0;
-                cbCurso.DataSource = cursoBLL.CarregaCursos();
-                txtNome.Focus();
-                CarregaCampos(aluno);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
+        //Construtor padrão
         public FrmCadAluno()
         {
             try
             {
                 InitializeComponent();
-                Habilita(true);
-                cbSexo.SelectedIndex = 0;
                 cbCurso.DataSource = cursoBLL.CarregaCursos();
+                Habilita(true);
+                LimparComponentes();
                 txtNome.Focus();
             }
             catch (Exception ex)
@@ -60,9 +42,23 @@ namespace Interface.Formularios.Cadastros
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
-
-        //Botão Acao
+        //Construtor carregando cadastro do aluno no form
+        public FrmCadAluno(Aluno aluno)
+        {
+            try
+            {
+                InitializeComponent();
+                cbCurso.DataSource = cursoBLL.CarregaCursos();
+                Habilita(true);
+                CarregaCampos(aluno);
+                txtNome.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        //Botão de ação do form Salvar/Alterar/Excluir
         private void btnAcao_Click(object sender, EventArgs e)
         {
             try
@@ -91,8 +87,15 @@ namespace Interface.Formularios.Cadastros
                     {
                         Aluno.Nome = txtNome.Text;
                     }
-                    Aluno.Sexo = cbSexo.Text;
-
+                    if (cbSexo.SelectedIndex == -1)
+                    {
+                        MessageBox.Show(this, "Selecione o sexo do aluno.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    else
+                    {
+                        Aluno.Sexo = cbSexo.Text;
+                    }
                     if (txtCpf.Text.Length != 0)
                     {
                         if (txtCpf.Text.Length != 11)
@@ -101,14 +104,12 @@ namespace Interface.Formularios.Cadastros
                                 MessageBoxIcon.Warning);
                             return;
                         }
-
                         Aluno.Cpf = txtCpf.Text;
                     }
                     else
                     {
                         Aluno.Cpf = "";
                     }
-
                     if (txtRm.Text.Length > 0)
                     {
                         Aluno.Rm = txtRm.Text;
@@ -117,13 +118,11 @@ namespace Interface.Formularios.Cadastros
                     {
                         Aluno.Rm = "";
                     }
-
                     if (cbCurso.SelectedIndex == -1)
                     {
                         MessageBox.Show(this, "Selecione um curso.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
-
                     if (cbTurma.SelectedIndex == -1)
                     {
                         MessageBox.Show(this, "Selecione uma turma.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -133,7 +132,6 @@ namespace Interface.Formularios.Cadastros
                     {
                         Aluno.Turma.CodTurma = Convert.ToInt32(cbTurma.SelectedValue);
                     }
-
                     //Telefone e Celular
                     if (txtTelefone.Text.Length == 0 && txtCelular.Text.Length == 0)
                     {
@@ -152,7 +150,6 @@ namespace Interface.Formularios.Cadastros
                                    MessageBoxIcon.Warning);
                             return;
                         }
-
                         if (txtCelular.Text.Length == 0 || txtCelular.Text.Length == 11)
                         {
                             Aluno.Celular.Numero = txtCelular.Text;
@@ -163,27 +160,23 @@ namespace Interface.Formularios.Cadastros
                                    MessageBoxIcon.Warning);
                             return;
                         }
-
                     }
-
                     if (btnAcao.Text == "&Salvar")
                     {
                         resultado = pessoaBLL.AlunoInserir(Aluno);
                         MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
                                    MessageBoxIcon.Information);
-
                         if (resultado.Contains("sucesso"))
                         {
                             Habilita(false);
                             LimparComponentes();
                         }
                     }
-                    else if (btnAcao.Text == "&Alterar")
+                    else
                     {
                         resultado = pessoaBLL.AlunoAlterar(Aluno);
                         MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
                                    MessageBoxIcon.Information);
-
                         if (resultado.Contains("sucesso"))
                         {
                             Habilita(false);
@@ -196,7 +189,6 @@ namespace Interface.Formularios.Cadastros
                     resultado = pessoaBLL.PessoaExcluir(Aluno.CodPessoa);
                     MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
                                MessageBoxIcon.Information);
-
                     if (resultado.Contains("sucesso"))
                     {
                         Habilita(false);
@@ -209,8 +201,7 @@ namespace Interface.Formularios.Cadastros
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        //Botão Cancelar
+        //Botão Carcelar - limpa o form de trava os componentes
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             try
@@ -224,8 +215,21 @@ namespace Interface.Formularios.Cadastros
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        //Botão Alterar
+        //Botão que habilita e limpa os componentes do form
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                LimparComponentes();
+                Habilita(true);
+                txtNome.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        //Botão Alterar - Abre o form ponte de aluno e carrega o aluno no form
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             try
@@ -234,7 +238,6 @@ namespace Interface.Formularios.Cadastros
                 if (ponteAluno.ShowDialog() == DialogResult.OK)
                 {
                     CarregaCampos(alunoBase);
-
                     btnAcao.Text = "&Alterar";
                     Habilita(true);
                 }
@@ -244,8 +247,7 @@ namespace Interface.Formularios.Cadastros
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        //Botão Excluir
+        //Botão Excluir - Abre o form ponte de aluno e carrega o aluno no form
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             try
@@ -254,7 +256,6 @@ namespace Interface.Formularios.Cadastros
                 if (ponteAluno.ShowDialog() == DialogResult.OK)
                 {
                     CarregaCampos(alunoBase);
-
                     btnAcao.Text = "Excluir";
                     Habilita(true);
                 }
@@ -263,33 +264,8 @@ namespace Interface.Formularios.Cadastros
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        //Botão de Cadastrar por RM
-        private void btnCadastraRM_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                alunoBase = pessoaBLL.AlunoCarregarXML(txtRm.Text);
-
-                if (alunoBase.Nome == "" || alunoBase.Nome == null)
-                {
-                    MessageBox.Show(this, "Nenhum registro encontrado, certifique-se que o R.M foi digitado corretamente.", "Atenção", MessageBoxButtons.OK,
-                   MessageBoxIcon.Warning);
-                    return;
-                }
-                else
-                {
-                    CarregaCampos(alunoBase);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        //Carrega Cursos
+        }       
+        //Carrega as turmas do curso selecionado na combobox de turmas
         private void cbCurso_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -304,75 +280,8 @@ namespace Interface.Formularios.Cadastros
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        //Botão Novo Cadastro
-        private void btnNovo_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                LimparComponentes();
-                Habilita(true);
-                txtNome.Focus();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        //Faz o Campo aceitar apenas números
-        private void txtCpf_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            try
-            {
-                if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
-                {
-                    e.Handled = true;
-                    MessageBox.Show("O campo CPF aceita apenas números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        //Faz o Campo aceitar apenas números
-        private void txtTelefone_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            try
-            {
-                if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
-                {
-                    e.Handled = true;
-                    MessageBox.Show("O campo Telefone aceita apenas números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        //Faz o Campo aceitar apenas números
-        private void txtCelular_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            try
-            {
-                if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
-                {
-                    e.Handled = true;
-                    MessageBox.Show("O campo Celular aceita apenas números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        //Faz o Campo aceitar apenas letras
+        }       
+        //Faz o Campo nome aceitar apenas letras
         private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
         {
             try
@@ -388,8 +297,23 @@ namespace Interface.Formularios.Cadastros
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        //Faz o Campo aceitar apenas números
+        //Faz o Campo cpf aceitar apenas números
+        private void txtCpf_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+                {
+                    e.Handled = true;
+                    MessageBox.Show("O campo CPF aceita apenas números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        //Faz o Campo rm aceitar apenas números
         private void txtRm_KeyPress(object sender, KeyPressEventArgs e)
         {
             try
@@ -405,14 +329,43 @@ namespace Interface.Formularios.Cadastros
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        //Carrega campos do aluno
+        //Faz o Campo telefone aceitar apenas números
+        private void txtTelefone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+                {
+                    e.Handled = true;
+                    MessageBox.Show("O campo Telefone aceita apenas números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        //Faz o Campo celular aceitar apenas números
+        private void txtCelular_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+                {
+                    e.Handled = true;
+                    MessageBox.Show("O campo Celular aceita apenas números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }       
+        //Carrega o cadastro do aluno no form
         private void CarregaCampos(Aluno aluno)
         {
             try
             {
-                aluno.Celular = pessoaBLL.PessoaTelefone(aluno.CodPessoa);
-
                 txtNome.Text = aluno.Nome;
                 cbSexo.SelectedItem = aluno.Sexo;
                 txtCpf.Text = aluno.Cpf;
@@ -421,6 +374,29 @@ namespace Interface.Formularios.Cadastros
                 cbTurma.SelectedValue = aluno.Turma.CodTurma;
                 txtTelefone.Text = aluno.Telefone.Numero;
                 txtCelular.Text = aluno.Celular.Numero;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        /*Botão de Cadastrar por RM - Carrega o aluno no form através de seu rm 
+         * pelo arquivo XML disponibilizado pela ETEC*/
+        private void btnCadastraRM_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                alunoBase = pessoaBLL.AlunoCarregarXML(txtRm.Text);
+                if (alunoBase.Nome == "" || alunoBase.Nome == null)
+                {
+                    MessageBox.Show(this, "Nenhum registro encontrado, certifique-se que o R.M foi digitado corretamente.", "Atenção", MessageBoxButtons.OK,
+                   MessageBoxIcon.Warning);
+                    return;
+                }
+                else
+                {
+                    CarregaCampos(alunoBase);
+                }
             }
             catch (Exception ex)
             {
