@@ -45,6 +45,10 @@
             this.pnlPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
+            // pnl
+            // 
+            this.pnl.TabIndex = 3;
+            // 
             // lblForm
             // 
             this.lblForm.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -54,41 +58,45 @@
             // btnFechar
             // 
             this.btnFechar.FlatAppearance.BorderSize = 0;
-            this.btnFechar.TabIndex = 4;
+            this.btnFechar.TabIndex = 0;
             // 
             // pnlBase
             // 
-            this.pnlBase.TabIndex = 0;
+            this.pnlBase.TabIndex = 4;
             // 
             // btnExcluir
             // 
             this.btnExcluir.FlatAppearance.BorderSize = 0;
-            this.btnExcluir.TabIndex = 3;
+            this.btnExcluir.TabIndex = 2;
+            this.btnExcluir.Text = "&Excluir";
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
             this.btnAlterar.FlatAppearance.BorderSize = 0;
-            this.btnAlterar.TabIndex = 2;
+            this.btnAlterar.TabIndex = 1;
+            this.btnAlterar.Text = "&Alterar";
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnNovo
             // 
             this.btnNovo.FlatAppearance.BorderSize = 0;
-            this.btnNovo.TabIndex = 1;
+            this.btnNovo.TabIndex = 0;
+            this.btnNovo.Text = "&Novo";
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(321, 370);
-            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAcao
             // 
             this.btnAcao.Location = new System.Drawing.Point(198, 370);
-            this.btnAcao.TabIndex = 2;
+            this.btnAcao.TabIndex = 1;
+            this.btnAcao.Text = "&Salvar";
             this.btnAcao.Click += new System.EventHandler(this.btnAcao_Click);
             // 
             // pnlPrincipal
@@ -106,7 +114,7 @@
             this.pnlPrincipal.Controls.Add(this.lblNome);
             this.pnlPrincipal.Controls.Add(this.cbSexo);
             this.pnlPrincipal.Size = new System.Drawing.Size(299, 259);
-            this.pnlPrincipal.TabIndex = 1;
+            this.pnlPrincipal.TabIndex = 0;
             // 
             // lblCelular
             // 
@@ -145,7 +153,7 @@
             this.txtNome.SelectionStart = 0;
             this.txtNome.ShortcutsEnabled = true;
             this.txtNome.Size = new System.Drawing.Size(195, 28);
-            this.txtNome.TabIndex = 1;
+            this.txtNome.TabIndex = 0;
             this.txtNome.UseSelectable = true;
             this.txtNome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtNome.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -179,7 +187,7 @@
             this.txtCelular.Mask = "(99) 00000-0000";
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(132, 22);
-            this.txtCelular.TabIndex = 6;
+            this.txtCelular.TabIndex = 5;
             this.txtCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCelular_KeyPress);
             // 
@@ -191,7 +199,7 @@
             this.txtTelefone.Mask = "(99) 0000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(132, 22);
-            this.txtTelefone.TabIndex = 5;
+            this.txtTelefone.TabIndex = 4;
             this.txtTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefone_KeyPress);
             // 
@@ -213,7 +221,7 @@
             this.txtCpf.Mask = "000\\.000\\.000\\-00";
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(132, 22);
-            this.txtCpf.TabIndex = 4;
+            this.txtCpf.TabIndex = 3;
             this.txtCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCpf_KeyPress);
             // 
@@ -236,7 +244,7 @@
             this.cbCargo.Margin = new System.Windows.Forms.Padding(4);
             this.cbCargo.Name = "cbCargo";
             this.cbCargo.Size = new System.Drawing.Size(160, 24);
-            this.cbCargo.TabIndex = 3;
+            this.cbCargo.TabIndex = 2;
             this.cbCargo.ValueMember = "CodCargo";
             // 
             // lblNome
@@ -260,7 +268,7 @@
             this.cbSexo.Margin = new System.Windows.Forms.Padding(4);
             this.cbSexo.Name = "cbSexo";
             this.cbSexo.Size = new System.Drawing.Size(160, 24);
-            this.cbSexo.TabIndex = 2;
+            this.cbSexo.TabIndex = 1;
             // 
             // FrmCadFuncionario
             // 

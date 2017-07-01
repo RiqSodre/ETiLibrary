@@ -39,7 +39,7 @@ namespace Interface.Formularios.Consultas
                 cbPesquisa1.DisplayMember = "Descricao";
                 cbPesquisa1.ValueMember = "CodCargo";
 
-                cbPesquisa1.DataSource = cargoBLL.CarregaCargos();
+                cbPesquisa1.DataSource = cargoBLL.CarregaCargos("SELECT CodCargo, Descricao FROM tblCargo");
                 if (cbPesquisa1.Items.Count > 0)
                 {
                     cbPesquisa1.SelectedIndex = 0;

@@ -89,6 +89,7 @@ namespace Interface.Formularios.Consultas
                 aluno.Telefone.TelefoneTipo = (string)dataGridAlunos.CurrentRow.Cells["clnTelefoneTipo"].Value;
 
                 FrmCadAluno frmCadAluno = new FrmCadAluno(aluno);
+                frmCadAluno.MdiParent = this.MdiParent;
                 frmCadAluno.Show();
                 Hide();
             }

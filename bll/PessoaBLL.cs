@@ -582,6 +582,5 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
     }
 }

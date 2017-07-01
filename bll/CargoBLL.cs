@@ -58,7 +58,7 @@ namespace BLL
         }
 
         //Carrega a lista de cargos
-        public CargoList CarregaCargos()
+        public CargoList CarregaCargos(string consulta)
         {
             try
             {
@@ -66,7 +66,7 @@ namespace BLL
 
                 acesso.LimparParametros();
                 DataTable dataTableCargos = acesso.ExecutarConsulta(CommandType.Text,
-                    "SELECT CodCargo, Descricao FROM tblCargo");
+                    consulta);
 
                 foreach(DataRow dataRow in dataTableCargos.Rows)
                 {

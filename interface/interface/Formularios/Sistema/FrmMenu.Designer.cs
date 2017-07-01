@@ -448,7 +448,7 @@ namespace Interface.Formularios.Sistema
             // 
             // lblData
             // 
-            this.lblData.Location = new System.Drawing.Point(15, 753);
+            this.lblData.Location = new System.Drawing.Point(15, 750);
             this.lblData.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblData.Name = "lblData";
             this.lblData.Size = new System.Drawing.Size(133, 28);
@@ -479,7 +479,7 @@ namespace Interface.Formularios.Sistema
             // lblHora
             // 
             this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblHora.Location = new System.Drawing.Point(17, 784);
+            this.lblHora.Location = new System.Drawing.Point(17, 780);
             this.lblHora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(128, 23);
@@ -611,11 +611,11 @@ namespace Interface.Formularios.Sistema
             this.Controls.Add(this.menuPrincipal);
             this.Controls.Add(this.pnlBase);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FrmMenu";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "E-Tech Lab";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;

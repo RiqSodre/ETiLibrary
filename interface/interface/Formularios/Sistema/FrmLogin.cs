@@ -12,6 +12,7 @@ namespace Interface.Formularios.Sistema
         private AutenticacaoBLL auntenticacaoBLL = new AutenticacaoBLL();
         private PessoaBLL pessoaBLL = new PessoaBLL();
 
+        //Construtor Padrão
         public FrmLogin()
         {
             InitializeComponent();

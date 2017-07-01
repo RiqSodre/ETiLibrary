@@ -34,7 +34,7 @@ namespace Interface.Formularios.Cadastros
                 else
                 {
                     funcionario = pessoaBLL.FuncionarioConsulta_PorCod(Convert.ToInt32(txtTexto.Text));
-                    if (funcionario.CodPessoa == null)
+                    if (funcionario.CodPessoa == null || funcionario.Cargo.CodCargo == 3)
                     {
                         MessageBox.Show(this, "Nenhum registro encontrado, certifique-se que o código do funcionário foi digitado corretamente.", "Atenção", MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);

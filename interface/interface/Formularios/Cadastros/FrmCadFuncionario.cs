@@ -8,19 +8,20 @@ namespace Interface.Formularios.Cadastros
 {
     public partial class FrmCadFuncionario : FrmCadBase
     {
-        private PessoaBLL pessoaBLL = new PessoaBLL();
-        private Funcionario funcionario = new Funcionario();
+        private PessoaBLL pessoaBLL = new PessoaBLL();       
         private CargoBLL cargoBLL = new CargoBLL();
+        private AutenticacaoBLL autenticacaoBLL = new AutenticacaoBLL();
+        private Funcionario funcionarioBase = new Funcionario();
         public Funcionario Funcionario
         {
             get
             {
-                return funcionario;
+                return funcionarioBase;
             }
 
             set
             {
-                funcionario = value;
+                funcionarioBase = value;
             }
         }
         private string resultado;
@@ -31,10 +32,9 @@ namespace Interface.Formularios.Cadastros
             try
             {
                 InitializeComponent();
-                cbCargo.DataSource = cargoBLL.CarregaCargos();
+                cbCargo.DataSource = cargoBLL.CarregaCargos("SELECT CodCargo, Descricao FROM tblCargo WHERE CodCargo != 3");
                 Habilita(true);
                 LimparComponentes();
-                txtNome.Focus();
             }
             catch (Exception ex)
             {
@@ -42,13 +42,10 @@ namespace Interface.Formularios.Cadastros
             }
         }
         //Construtor carregando cadastro do funcionario no form
-        public FrmCadFuncionario(Funcionario funcionario)
+        public FrmCadFuncionario(Funcionario funcionario) : this()
         {
             try
             {
-                InitializeComponent();
-                cbCargo.DataSource = cargoBLL.CarregaCargos();
-                Habilita(true);
                 CarregaCampos(funcionario);
                 txtNome.Focus();
             }
@@ -107,7 +104,17 @@ namespace Interface.Formularios.Cadastros
                 }
                 else
                 {
-                    funcionario.Cpf = txtCpf.Text;
+                    Funcionario.Cpf = txtCpf.Text;
+                    /*if (autenticacaoBLL.ValidarCPF(txtCpf.Text))
+                     {
+                         Funcionario.Cpf = txtCpf.Text;
+                     }
+                     else
+                     {
+                         MessageBox.Show(this, "Informe um CPF válido.", "Atenção", MessageBoxButtons.OK,
+                             MessageBoxIcon.Warning);
+                         return;
+                     }*/
                 }
                 if (cbCargo.SelectedIndex == -1)
                 {
@@ -116,7 +123,7 @@ namespace Interface.Formularios.Cadastros
                 }
                 else
                 {
-                    funcionario.Cargo.CodCargo = Convert.ToInt32(cbCargo.SelectedValue);
+                    Funcionario.Cargo.CodCargo = Convert.ToInt32(cbCargo.SelectedValue);
                 }
                 //Telefone e Celular
                 if (txtTelefone.Text.Length == 0 && txtCelular.Text.Length == 0)
@@ -149,7 +156,7 @@ namespace Interface.Formularios.Cadastros
                 }
                 if (btnAcao.Text == "&Salvar")
                 {
-                    resultado = pessoaBLL.FuncionarioInserir(funcionario);
+                    resultado = pessoaBLL.FuncionarioInserir(Funcionario);
                     MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
                                MessageBoxIcon.Information);
                     if (resultado.Contains("sucesso"))
@@ -160,7 +167,7 @@ namespace Interface.Formularios.Cadastros
                 }
                 else 
                 {
-                    resultado = pessoaBLL.FuncionarioAlterar(funcionario);
+                    resultado = pessoaBLL.FuncionarioAlterar(Funcionario);
                     MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
                                MessageBoxIcon.Information);
                     if (resultado.Contains("sucesso"))
@@ -172,13 +179,17 @@ namespace Interface.Formularios.Cadastros
             }
             else
             {
-                resultado = pessoaBLL.PessoaExcluir(funcionario.CodPessoa);
-                MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
-                           MessageBoxIcon.Information);
-                if (resultado.Contains("sucesso"))
+                if (MessageBox.Show(this, "Deseja excluir este funcionário?", "Atenção", MessageBoxButtons.YesNo,
+                              MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    Habilita(false);
-                    LimparComponentes();
+                    resultado = pessoaBLL.PessoaExcluir(Funcionario.CodPessoa);
+                    MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
+                               MessageBoxIcon.Information);
+                    if (resultado.Contains("sucesso"))
+                    {
+                        Habilita(false);
+                        LimparComponentes();
+                    }
                 }
             }
         }
@@ -218,9 +229,10 @@ namespace Interface.Formularios.Cadastros
                 FrmPonteFuncionario ponteFuncionario = new FrmPonteFuncionario(this, "Alterar");
                 if (ponteFuncionario.ShowDialog() == DialogResult.OK)
                 {
-                    CarregaCampos(funcionario);
+                    CarregaCampos(Funcionario);
                     btnAcao.Text = "&Alterar";
                     Habilita(true);
+                    txtNome.Focus();
                 }
             }
             catch (Exception ex)
@@ -236,9 +248,10 @@ namespace Interface.Formularios.Cadastros
                 FrmPonteFuncionario ponteFuncionario = new FrmPonteFuncionario(this, "Excluir");
                 if (ponteFuncionario.ShowDialog() == DialogResult.OK)
                 {
-                    CarregaCampos(funcionario);
+                    CarregaCampos(Funcionario);
                     btnAcao.Text = "&Excluir";
                     Habilita(true);
+                    btnAcao.Focus();
                 }
             }
             catch (Exception ex)

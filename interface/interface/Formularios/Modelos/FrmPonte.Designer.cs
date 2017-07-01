@@ -65,7 +65,7 @@
             this.txtTexto.SelectionStart = 0;
             this.txtTexto.ShortcutsEnabled = true;
             this.txtTexto.Size = new System.Drawing.Size(300, 28);
-            this.txtTexto.TabIndex = 105;
+            this.txtTexto.TabIndex = 0;
             this.txtTexto.UseSelectable = true;
             this.txtTexto.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtTexto.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -87,7 +87,7 @@
             this.btnAcao.Margin = new System.Windows.Forms.Padding(4);
             this.btnAcao.Name = "btnAcao";
             this.btnAcao.Size = new System.Drawing.Size(100, 28);
-            this.btnAcao.TabIndex = 107;
+            this.btnAcao.TabIndex = 1;
             this.btnAcao.Text = "Ação";
             this.btnAcao.UseSelectable = true;
             // 
@@ -96,13 +96,14 @@
             this.btnFechar.BackColor = System.Drawing.Color.Transparent;
             this.btnFechar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFechar.BackgroundImage")));
             this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnFechar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.Location = new System.Drawing.Point(397, 1);
             this.btnFechar.Margin = new System.Windows.Forms.Padding(4);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(33, 27);
-            this.btnFechar.TabIndex = 46;
+            this.btnFechar.TabIndex = 2;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
@@ -131,9 +132,11 @@
             // 
             // FrmPonte
             // 
+            this.AcceptButton = this.btnAcao;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
+            this.CancelButton = this.btnFechar;
             this.ClientSize = new System.Drawing.Size(436, 274);
             this.Controls.Add(this.btnAcao);
             this.Controls.Add(this.pnl);

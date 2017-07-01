@@ -10,6 +10,7 @@ namespace Interface.Formularios.Sistema
         AutenticacaoBLL autenticaBLL = new AutenticacaoBLL();
         private string retorno;
 
+        //Construtor Padrão
         public FrmRecSenha()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace Interface.Formularios.Sistema
             try
             {
                 Cursor.Current = Cursors.WaitCursor;
-                if (ValidarEmail(txtEmail.Text))
+                if (autenticaBLL.ValidarEmail(txtEmail.Text))
                 {
                     retorno = autenticaBLL.RecuperarUsuario(txtEmail.Text);
                     MessageBox.Show(this, retorno, "Atenção",
@@ -50,26 +51,6 @@ namespace Interface.Formularios.Sistema
             finally
             {
                 Cursor.Current = Cursors.Default;
-            }
-        }
-        //Validar Email
-        private bool ValidarEmail(string email)
-        {
-            try
-            {
-                try
-                {
-                    var mail = new MailAddress(email);
-                    return true;
-                }
-                catch
-                {
-                    return false;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
             }
         }
     }

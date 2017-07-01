@@ -11,8 +11,8 @@ namespace Interface.Formularios.Cadastros
         private PessoaBLL pessoaBLL = new PessoaBLL();
         private CursoBLL cursoBLL = new CursoBLL();
         private TurmaBLL turmaBLL = new TurmaBLL();
+        private AutenticacaoBLL autenticacaoBLL = new AutenticacaoBLL();
         private Aluno alunoBase = new Aluno();
-        private string resultado;
         public Aluno Aluno
         {
             get
@@ -25,7 +25,8 @@ namespace Interface.Formularios.Cadastros
                 alunoBase = value;
             }
         }
-
+        private string resultado;
+       
         //Construtor padrão
         public FrmCadAluno()
         {
@@ -35,7 +36,6 @@ namespace Interface.Formularios.Cadastros
                 cbCurso.DataSource = cursoBLL.CarregaCursos();
                 Habilita(true);
                 LimparComponentes();
-                txtNome.Focus();
             }
             catch (Exception ex)
             {
@@ -43,13 +43,10 @@ namespace Interface.Formularios.Cadastros
             }
         }
         //Construtor carregando cadastro do aluno no form
-        public FrmCadAluno(Aluno aluno)
+        public FrmCadAluno(Aluno aluno) : this()
         {
             try
             {
-                InitializeComponent();
-                cbCurso.DataSource = cursoBLL.CarregaCursos();
-                Habilita(true);
                 CarregaCampos(aluno);
                 txtNome.Focus();
             }
@@ -105,6 +102,16 @@ namespace Interface.Formularios.Cadastros
                             return;
                         }
                         Aluno.Cpf = txtCpf.Text;
+                        /*if (autenticacaoBLL.ValidarCPF(txtCpf.Text))
+                          {
+                              Aluno.Cpf = txtCpf.Text;
+                          }
+                          else
+                          {
+                              MessageBox.Show(this, "Informe um CPF válido.", "Atenção", MessageBoxButtons.OK,
+                                  MessageBoxIcon.Warning);
+                              return;
+                          }*/
                     }
                     else
                     {
@@ -186,14 +193,18 @@ namespace Interface.Formularios.Cadastros
                 }
                 else
                 {
-                    resultado = pessoaBLL.PessoaExcluir(Aluno.CodPessoa);
-                    MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
-                               MessageBoxIcon.Information);
-                    if (resultado.Contains("sucesso"))
+                    if(MessageBox.Show(this, "Deseja excluir este aluno?", "Atenção", MessageBoxButtons.YesNo,
+                               MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        Habilita(false);
-                        LimparComponentes();
-                    }
+                        resultado = pessoaBLL.PessoaExcluir(Aluno.CodPessoa);
+                        MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
+                                   MessageBoxIcon.Information);
+                        if (resultado.Contains("sucesso"))
+                        {
+                            Habilita(false);
+                            LimparComponentes();
+                        }
+                    }                    
                 }
             }
             catch (Exception ex)
@@ -237,9 +248,10 @@ namespace Interface.Formularios.Cadastros
                 FrmPonteAluno ponteAluno = new FrmPonteAluno(this, "Alterar");
                 if (ponteAluno.ShowDialog() == DialogResult.OK)
                 {
-                    CarregaCampos(alunoBase);
+                    CarregaCampos(Aluno);
                     btnAcao.Text = "&Alterar";
                     Habilita(true);
+                    txtNome.Focus();
                 }
             }
             catch (Exception ex)
@@ -255,9 +267,10 @@ namespace Interface.Formularios.Cadastros
                 FrmPonteAluno ponteAluno = new FrmPonteAluno(this, "Excluir");
                 if (ponteAluno.ShowDialog() == DialogResult.OK)
                 {
-                    CarregaCampos(alunoBase);
-                    btnAcao.Text = "Excluir";
+                    CarregaCampos(Aluno);
+                    btnAcao.Text = "&Excluir";
                     Habilita(true);
+                    btnAcao.Focus();
                 }
             }
             catch (Exception ex)
@@ -386,8 +399,8 @@ namespace Interface.Formularios.Cadastros
         {
             try
             {
-                alunoBase = pessoaBLL.AlunoCarregarXML(txtRm.Text);
-                if (alunoBase.Nome == "" || alunoBase.Nome == null)
+                Aluno = pessoaBLL.AlunoCarregarXML(txtRm.Text);
+                if (Aluno.Nome == "" || Aluno.Nome == null)
                 {
                     MessageBox.Show(this, "Nenhum registro encontrado, certifique-se que o R.M foi digitado corretamente.", "Atenção", MessageBoxButtons.OK,
                    MessageBoxIcon.Warning);
@@ -395,7 +408,7 @@ namespace Interface.Formularios.Cadastros
                 }
                 else
                 {
-                    CarregaCampos(alunoBase);
+                    CarregaCampos(Aluno);
                 }
             }
             catch (Exception ex)

@@ -52,7 +52,7 @@
             // 
             // pnl
             // 
-            this.pnl.TabIndex = 0;
+            this.pnl.TabIndex = 3;
             // 
             // lblForm
             // 
@@ -65,42 +65,41 @@
             // 
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.TabIndex = 0;
-            this.btnFechar.TabStop = false;
             // 
             // pnlBase
             // 
-            this.pnlBase.TabIndex = 3;
+            this.pnlBase.TabIndex = 4;
             // 
             // btnExcluir
             // 
             this.btnExcluir.FlatAppearance.BorderSize = 0;
-            this.btnExcluir.TabIndex = 3;
+            this.btnExcluir.TabIndex = 2;
             this.btnExcluir.Text = "&Excluir";
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
             this.btnAlterar.FlatAppearance.BorderSize = 0;
-            this.btnAlterar.TabIndex = 2;
+            this.btnAlterar.TabIndex = 1;
             this.btnAlterar.Text = "&Alterar";
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnNovo
             // 
             this.btnNovo.FlatAppearance.BorderSize = 0;
-            this.btnNovo.TabIndex = 1;
+            this.btnNovo.TabIndex = 0;
             this.btnNovo.Text = "&Novo";
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAcao
             // 
-            this.btnAcao.TabIndex = 2;
+            this.btnAcao.TabIndex = 1;
             this.btnAcao.Text = "&Salvar";
             this.btnAcao.Click += new System.EventHandler(this.btnAcao_Click);
             // 
@@ -124,9 +123,9 @@
             this.pnlPrincipal.Controls.Add(this.cbSexo);
             this.pnlPrincipal.Controls.Add(this.cbTurma);
             this.pnlPrincipal.Location = new System.Drawing.Point(9, 87);
-            this.pnlPrincipal.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pnlPrincipal.Margin = new System.Windows.Forms.Padding(5);
             this.pnlPrincipal.Size = new System.Drawing.Size(295, 304);
-            this.pnlPrincipal.TabIndex = 1;
+            this.pnlPrincipal.TabIndex = 0;
             // 
             // cbCurso
             // 
@@ -134,10 +133,10 @@
             this.cbCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCurso.FormattingEnabled = true;
             this.cbCurso.Location = new System.Drawing.Point(96, 160);
-            this.cbCurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbCurso.Margin = new System.Windows.Forms.Padding(4);
             this.cbCurso.Name = "cbCurso";
             this.cbCurso.Size = new System.Drawing.Size(160, 24);
-            this.cbCurso.TabIndex = 6;
+            this.cbCurso.TabIndex = 5;
             this.cbCurso.ValueMember = "CodCurso";
             this.cbCurso.SelectedIndexChanged += new System.EventHandler(this.cbCurso_SelectedIndexChanged);
             // 
@@ -147,10 +146,10 @@
             this.cbTurma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTurma.FormattingEnabled = true;
             this.cbTurma.Location = new System.Drawing.Point(96, 199);
-            this.cbTurma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbTurma.Margin = new System.Windows.Forms.Padding(4);
             this.cbTurma.Name = "cbTurma";
             this.cbTurma.Size = new System.Drawing.Size(160, 24);
-            this.cbTurma.TabIndex = 7;
+            this.cbTurma.TabIndex = 6;
             this.cbTurma.ValueMember = "CodTurma";
             // 
             // cbSexo
@@ -161,10 +160,10 @@
             "Masculino",
             "Feminino"});
             this.cbSexo.Location = new System.Drawing.Point(96, 50);
-            this.cbSexo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbSexo.Margin = new System.Windows.Forms.Padding(4);
             this.cbSexo.Name = "cbSexo";
             this.cbSexo.Size = new System.Drawing.Size(160, 24);
-            this.cbSexo.TabIndex = 2;
+            this.cbSexo.TabIndex = 1;
             // 
             // txtRm
             // 
@@ -172,10 +171,10 @@
             // 
             // 
             this.txtRm.CustomButton.Image = null;
-            this.txtRm.CustomButton.Location = new System.Drawing.Point(83, 2);
-            this.txtRm.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRm.CustomButton.Location = new System.Drawing.Point(62, 2);
+            this.txtRm.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtRm.CustomButton.Name = "";
-            this.txtRm.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.txtRm.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txtRm.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtRm.CustomButton.TabIndex = 1;
             this.txtRm.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -183,7 +182,7 @@
             this.txtRm.CustomButton.Visible = false;
             this.txtRm.Lines = new string[0];
             this.txtRm.Location = new System.Drawing.Point(96, 121);
-            this.txtRm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRm.Margin = new System.Windows.Forms.Padding(4);
             this.txtRm.MaxLength = 32767;
             this.txtRm.Name = "txtRm";
             this.txtRm.PasswordChar = '\0';
@@ -193,7 +192,7 @@
             this.txtRm.SelectionStart = 0;
             this.txtRm.ShortcutsEnabled = true;
             this.txtRm.Size = new System.Drawing.Size(88, 28);
-            this.txtRm.TabIndex = 4;
+            this.txtRm.TabIndex = 3;
             this.txtRm.UseSelectable = true;
             this.txtRm.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtRm.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -203,11 +202,11 @@
             // 
             this.txtCpf.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             this.txtCpf.Location = new System.Drawing.Point(96, 86);
-            this.txtCpf.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCpf.Margin = new System.Windows.Forms.Padding(4);
             this.txtCpf.Mask = "000\\.000\\.000\\-00";
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(132, 22);
-            this.txtCpf.TabIndex = 3;
+            this.txtCpf.TabIndex = 2;
             this.txtCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCpf_KeyPress);
             // 
@@ -215,11 +214,11 @@
             // 
             this.txtTelefone.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             this.txtTelefone.Location = new System.Drawing.Point(96, 236);
-            this.txtTelefone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefone.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefone.Mask = "(99) 0000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(132, 22);
-            this.txtTelefone.TabIndex = 8;
+            this.txtTelefone.TabIndex = 7;
             this.txtTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefone_KeyPress);
             // 
@@ -227,22 +226,22 @@
             // 
             this.txtCelular.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             this.txtCelular.Location = new System.Drawing.Point(96, 272);
-            this.txtCelular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCelular.Margin = new System.Windows.Forms.Padding(4);
             this.txtCelular.Mask = "(99) 00000-0000";
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(132, 22);
-            this.txtCelular.TabIndex = 9;
+            this.txtCelular.TabIndex = 8;
             this.txtCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCelular_KeyPress);
             // 
             // btnCadRM
             // 
             this.btnCadRM.Location = new System.Drawing.Point(193, 121);
-            this.btnCadRM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCadRM.Margin = new System.Windows.Forms.Padding(4);
             this.btnCadRM.Name = "btnCadRM";
             this.btnCadRM.Size = new System.Drawing.Size(36, 28);
-            this.btnCadRM.TabIndex = 5;
-            this.btnCadRM.Text = "&C";
+            this.btnCadRM.TabIndex = 4;
+            this.btnCadRM.Text = "C";
             this.btnCadRM.UseSelectable = true;
             this.btnCadRM.Click += new System.EventHandler(this.btnCadastraRM_Click);
             // 
@@ -252,10 +251,10 @@
             // 
             // 
             this.txtNome.CustomButton.Image = null;
-            this.txtNome.CustomButton.Location = new System.Drawing.Point(225, 2);
-            this.txtNome.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNome.CustomButton.Location = new System.Drawing.Point(169, 2);
+            this.txtNome.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.CustomButton.Name = "";
-            this.txtNome.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.txtNome.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txtNome.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtNome.CustomButton.TabIndex = 1;
             this.txtNome.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -263,7 +262,7 @@
             this.txtNome.CustomButton.Visible = false;
             this.txtNome.Lines = new string[0];
             this.txtNome.Location = new System.Drawing.Point(96, 11);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.MaxLength = 32767;
             this.txtNome.Name = "txtNome";
             this.txtNome.PasswordChar = '\0';
@@ -273,7 +272,7 @@
             this.txtNome.SelectionStart = 0;
             this.txtNome.ShortcutsEnabled = true;
             this.txtNome.Size = new System.Drawing.Size(195, 28);
-            this.txtNome.TabIndex = 1;
+            this.txtNome.TabIndex = 0;
             this.txtNome.UseSelectable = true;
             this.txtNome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtNome.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -364,7 +363,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(452, 480);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmCadAluno";
             this.Padding = new System.Windows.Forms.Padding(36, 91, 36, 31);
             this.Text = "Cadastro: Aluno";

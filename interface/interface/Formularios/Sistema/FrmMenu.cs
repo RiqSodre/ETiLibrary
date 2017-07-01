@@ -11,6 +11,7 @@ namespace Interface.Formularios.Sistema
     {
         private bool existe;
 
+        //Construtor Padrão
         public FrmMenu()
         {
             InitializeComponent();
