@@ -55,10 +55,11 @@ namespace Interface.Formularios.Cadastros
             }
         }
         //Botão de ação do form Salvar/Alterar/Excluir - Implementar
-        private void btnAcao_Click(object sender, EventArgs e)
+        protected override void btnAcao_Click(object sender, EventArgs e)
         {
-            if (btnAcao.Text == "&Salvar" || btnAcao.Text == "&Alterar")
+            if (btnAcao.Text == "Salvar" || btnAcao.Text == "Alterar")
             {
+                //Validações campo Nome
                 if (txtNome.Text.Length == 0)
                 {
                     MessageBox.Show(this, "O campo nome é obrigatório.", "Atenção", MessageBoxButtons.OK,
@@ -71,16 +72,11 @@ namespace Interface.Formularios.Cadastros
                         MessageBoxIcon.Warning);
                     return;
                 }
-                else if (txtNome.Text.Length > 50)
-                {
-                    MessageBox.Show(this, "O campo nome pode conter no maximo cinquenta caracteres.", "Atenção", MessageBoxButtons.OK,
-                        MessageBoxIcon.Warning);
-                    return;
-                }
                 else
                 {
                     Funcionario.Nome = txtNome.Text;
                 }
+                //Validações campo Sexo
                 if (cbSexo.SelectedIndex == -1)
                 {
                     MessageBox.Show(this, "Selecione o sexo do funcionário.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -90,6 +86,7 @@ namespace Interface.Formularios.Cadastros
                 {
                     Funcionario.Sexo = cbSexo.Text;
                 }
+                //Validações campo Cpf
                 if (txtCpf.Text.Length == 0)
                 {
                     MessageBox.Show(this, "O campo CPF é obrigatório.", "Atenção", MessageBoxButtons.OK,
@@ -116,6 +113,7 @@ namespace Interface.Formularios.Cadastros
                          return;
                      }*/
                 }
+                //Validações campo Cargo
                 if (cbCargo.SelectedIndex == -1)
                 {
                     MessageBox.Show(this, "Selecione um cargo.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -125,7 +123,7 @@ namespace Interface.Formularios.Cadastros
                 {
                     Funcionario.Cargo.CodCargo = Convert.ToInt32(cbCargo.SelectedValue);
                 }
-                //Telefone e Celular
+                //Validações campos Telefone e Celular
                 if (txtTelefone.Text.Length == 0 && txtCelular.Text.Length == 0)
                 {
                     MessageBox.Show(this, "É necessário inserir pelo menos um número para contato.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -154,7 +152,8 @@ namespace Interface.Formularios.Cadastros
                         return;
                     }
                 }
-                if (btnAcao.Text == "&Salvar")
+                //Execução
+                if (btnAcao.Text == "Salvar")
                 {
                     resultado = pessoaBLL.FuncionarioInserir(Funcionario);
                     MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
@@ -176,10 +175,10 @@ namespace Interface.Formularios.Cadastros
                         LimparComponentes();
                     }
                 }
-            }
+            }//Execução
             else
             {
-                if (MessageBox.Show(this, "Deseja excluir este funcionário?", "Atenção", MessageBoxButtons.YesNo,
+                if (MessageBox.Show(this, "Deseja excluir este funcionário(a)?", "Atenção", MessageBoxButtons.YesNo,
                               MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     resultado = pessoaBLL.PessoaExcluir(Funcionario.CodPessoa);
@@ -191,20 +190,6 @@ namespace Interface.Formularios.Cadastros
                         LimparComponentes();
                     }
                 }
-            }
-        }
-        //Botão Carcelar - limpa o form de trava os componentes
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                LimparComponentes();
-                Habilita(false);
-                btnNovo.Focus();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         //Botão que habilita e limpa os componentes do form
@@ -230,7 +215,7 @@ namespace Interface.Formularios.Cadastros
                 if (ponteFuncionario.ShowDialog() == DialogResult.OK)
                 {
                     CarregaCampos(Funcionario);
-                    btnAcao.Text = "&Alterar";
+                    btnAcao.Text = "Alterar";
                     Habilita(true);
                     txtNome.Focus();
                 }
@@ -249,7 +234,7 @@ namespace Interface.Formularios.Cadastros
                 if (ponteFuncionario.ShowDialog() == DialogResult.OK)
                 {
                     CarregaCampos(Funcionario);
-                    btnAcao.Text = "&Excluir";
+                    btnAcao.Text = "Excluir";
                     Habilita(true);
                     btnAcao.Focus();
                 }
@@ -284,22 +269,6 @@ namespace Interface.Formularios.Cadastros
                 {
                     e.Handled = true;
                     MessageBox.Show("O campo CPF aceita apenas números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        //Faz o Campo rm aceitar apenas números
-        private void txtRm_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            try
-            {
-                if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
-                {
-                    e.Handled = true;
-                    MessageBox.Show("O campo RM aceita apenas números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)

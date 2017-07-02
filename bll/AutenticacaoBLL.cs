@@ -152,6 +152,7 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
+        /*
         //Criptografar Senha
         public string CripSenha(string txtBase)
         {
@@ -161,11 +162,11 @@ namespace BLL
 
                 UTF8Encoding UTF8 = new UTF8Encoding();
                 MD5CryptoServiceProvider HashProvider = new MD5CryptoServiceProvider();
-                chaveAlg = HashProvider.ComputeHash(UTF8.GetBytes("122628"));
+                chaveAlg = HashProvider.ComputeHash(UTF8.GetBytes("12345"));
                 TripleDESCryptoServiceProvider TDESAlgorithm = new TripleDESCryptoServiceProvider();
                 TDESAlgorithm.Key = chaveAlg;
-                TDESAlgorithm.Mode = CipherMode.ECB;
-                TDESAlgorithm.Padding = PaddingMode.PKCS7;
+                TDESAlgorithm.Mode = CipherMode.OFB;
+                TDESAlgorithm.Padding = PaddingMode.ISO10126;
                 bitsTxtPuro = UTF8.GetBytes(txtBase);
                 try
                 {
@@ -216,5 +217,6 @@ namespace BLL
                 throw new Exception(ex.Message);
             }          
         }
+        */
     }
 }

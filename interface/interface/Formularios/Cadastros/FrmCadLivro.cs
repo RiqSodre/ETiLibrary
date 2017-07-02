@@ -711,7 +711,7 @@ namespace Interface.Formularios.Cadastros
         }
 
         //Botão Ação 
-        private void btnAcao_Click(object sender, EventArgs e)
+        protected override void btnAcao_Click(object sender, EventArgs e)
         {
             try
             {

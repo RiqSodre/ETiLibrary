@@ -11,6 +11,25 @@ namespace Interface.Formularios.Modelos
         {
             InitializeComponent();
         }
+        //Botao responsável pela ação
+        protected virtual void btnAcao_Click(object sender, EventArgs e)
+        {
+            //Implementar método   
+        }
+        //Botão Carcelar - limpa o form e trava os componentes
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                LimparComponentes();
+                Habilita(false);
+                btnNovo.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         //Botão que fecha o form
         private void btnFechar_Click(object sender, EventArgs e)
         {
@@ -60,7 +79,7 @@ namespace Interface.Formularios.Modelos
                     (control as DataGridView).Rows.Clear();
                 }
             }
-            btnAcao.Text = "&Salvar";
+            btnAcao.Text = "Salvar";
         }
         //Habilitar/Desabilitar componentes do form
         protected void Habilita(bool estado)

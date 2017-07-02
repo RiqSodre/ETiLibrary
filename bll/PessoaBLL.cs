@@ -463,20 +463,20 @@ namespace BLL
         }
 
         //Inserir funcionario da Biblioteca
-        public string FuncionarioBiblioInserir(UsuarioSistema usuarioSistema)
+        public string FuncionarioBiblioInserir(Funcionario funcionario)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Nome", usuarioSistema.Nome);
-                acesso.AdicionarParametros("@Sexo", usuarioSistema.Sexo);
-                acesso.AdicionarParametros("@CPF", usuarioSistema.Cpf);
-                acesso.AdicionarParametros("@Telefone", usuarioSistema.Telefone);
-                acesso.AdicionarParametros("@Celular", usuarioSistema.Celular);
-                acesso.AdicionarParametros("@Login", usuarioSistema.Login);
-                acesso.AdicionarParametros("@Senha", usuarioSistema.Senha);
-                acesso.AdicionarParametros("@Admin", usuarioSistema.Admin);
-                acesso.AdicionarParametros("@Email", usuarioSistema.Email);
+                acesso.AdicionarParametros("@Nome", funcionario.Nome);
+                acesso.AdicionarParametros("@Sexo", funcionario.Sexo);
+                acesso.AdicionarParametros("@CPF", funcionario.Cpf);
+                acesso.AdicionarParametros("@Telefone", funcionario.Telefone.Numero);
+                acesso.AdicionarParametros("@Celular", funcionario.Celular.Numero);
+                acesso.AdicionarParametros("@Login", funcionario.Login);
+                acesso.AdicionarParametros("@Senha", funcionario.Senha);
+                acesso.AdicionarParametros("@Admin", funcionario.Admin);
+                acesso.AdicionarParametros("@Email", funcionario.Email);
                 return acesso.ExecutarManipulacao(CommandType.StoredProcedure, "uspFuncionarioBiblioInserir").ToString();
             }
             catch (Exception ex)
@@ -486,22 +486,22 @@ namespace BLL
         }
 
         //Alterar funcionario da Biblioteca
-        public string FuncionarioBiblioAlterar(UsuarioSistema usuarioSistema)
+        public string FuncionarioBiblioAlterar(Funcionario funcionario)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@CodPessoa", usuarioSistema.CodPessoa);
-                acesso.AdicionarParametros("@Nome", usuarioSistema.Nome);
-                acesso.AdicionarParametros("@Sexo", usuarioSistema.Sexo);
-                acesso.AdicionarParametros("@CPF", usuarioSistema.Cpf);
-                acesso.AdicionarParametros("@Telefone", usuarioSistema.Telefone);
-                acesso.AdicionarParametros("@Celular", usuarioSistema.Celular);
-                acesso.AdicionarParametros("@Login", usuarioSistema.Login);
-                acesso.AdicionarParametros("@Senha", usuarioSistema.Senha);
-                acesso.AdicionarParametros("@Admin", usuarioSistema.Admin);
-                acesso.AdicionarParametros("@Habilitado", usuarioSistema.Habilitado);
-                acesso.AdicionarParametros("@Email", usuarioSistema.Email);
+                acesso.AdicionarParametros("@CodPessoa", funcionario.CodPessoa);
+                acesso.AdicionarParametros("@Nome", funcionario.Nome);
+                acesso.AdicionarParametros("@Sexo", funcionario.Sexo);
+                acesso.AdicionarParametros("@CPF", funcionario.Cpf);
+                acesso.AdicionarParametros("@Telefone", funcionario.Telefone.Numero);
+                acesso.AdicionarParametros("@Celular", funcionario.Celular.Numero);
+                acesso.AdicionarParametros("@Login", funcionario.Login);
+                acesso.AdicionarParametros("@Senha", funcionario.Senha);
+                acesso.AdicionarParametros("@Admin", funcionario.Admin);
+                acesso.AdicionarParametros("@Habilitado", funcionario.Habilitado);
+                acesso.AdicionarParametros("@Email", funcionario.Email);
                 return acesso.ExecutarManipulacao(CommandType.StoredProcedure, "uspFuncionarioBiblioAlterar").ToString();
             }
             catch (Exception ex)
@@ -511,11 +511,11 @@ namespace BLL
         }
 
         //Seleciona os dados do funcionario da Biblioteca informado
-        public UsuarioSistema FuncionarioBiblioSelect(int CodFuncionario)
+        public Funcionario FuncionarioBiblioSelect(int CodFuncionario)
         {
             try
             {
-                UsuarioSistema usuarioSistema = new UsuarioSistema();
+                Funcionario funcionario = new Funcionario();
 
                 acesso.LimparParametros();
                 acesso.AdicionarParametros("@CodFuncionario", CodFuncionario);
@@ -524,19 +524,30 @@ namespace BLL
 
                 foreach (DataRow dataRow in dataTableFuncionarioBiblio.Rows)
                 {
-                    usuarioSistema.Cargo.Descricao = (string)dataRow["Cargo"];
-                    usuarioSistema.CodPessoa = (int)dataRow["CodPessoa"];
-                    usuarioSistema.Nome = (string)dataRow["Nome"];
-                    usuarioSistema.Sexo = (string)dataRow["Sexo"];
-                    usuarioSistema.Cpf = (string)dataRow["CPF"];
-                    usuarioSistema.DataCadastro = (DateTime)dataRow["DataCadastro"];
-                    usuarioSistema.Login = (string)dataRow["Login"];
-                    usuarioSistema.Senha = (string)dataRow["Senha"];
-                    usuarioSistema.Admin = (bool)dataRow["Admin"];
-                    usuarioSistema.Habilitado = (bool)dataRow["Habilitado"];
-                    usuarioSistema.Email = (string)dataRow["Email"];
+                    funcionario.Cargo.CodCargo = (int)dataRow["CodCargo"];
+                    funcionario.Cargo.Descricao = (string)dataRow["Cargo"];
+                    funcionario.CodPessoa = (int)dataRow["CodPessoa"];
+                    funcionario.Nome = (string)dataRow["Nome"];
+                    funcionario.Sexo = (string)dataRow["Sexo"];
+                    funcionario.Cpf = (string)dataRow["CPF"];
+                    funcionario.DataCadastro = (DateTime)dataRow["DataCadastro"];
+                    funcionario.Login = (string)dataRow["Login"];
+                    funcionario.Senha = (string)dataRow["Senha"];
+                    funcionario.Admin = (bool)dataRow["Admin"];
+                    funcionario.Habilitado = (bool)dataRow["Habilitado"];
+                    funcionario.Email = (string)dataRow["Email"];
+                    if (((string)dataRow["Tipo Telefone"]).Equals("Telefone"))
+                    {
+                        funcionario.Telefone.Numero = (string)dataRow["Telefone"];
+                        funcionario.Telefone.TelefoneTipo = (string)dataRow["Tipo Telefone"];
+                    }
+                    else
+                    {
+                        funcionario.Celular.Numero = (string)dataRow["Telefone"];
+                        funcionario.Celular.TelefoneTipo = (string)dataRow["Tipo Telefone"];
+                    }
                 }
-                return usuarioSistema;
+                return funcionario;
             }
             catch (Exception ex)
             {

@@ -56,12 +56,13 @@ namespace Interface.Formularios.Cadastros
             }
         }
         //Botão de ação do form Salvar/Alterar/Excluir
-        private void btnAcao_Click(object sender, EventArgs e)
+        protected override void btnAcao_Click(object sender, EventArgs e)
         {
             try
             {
-                if (btnAcao.Text == "&Salvar" || btnAcao.Text == "&Alterar")
+                if (btnAcao.Text == "Salvar" || btnAcao.Text == "Alterar")
                 {
+                    //Validações campo Nome
                     if (txtNome.Text.Length == 0)
                     {
                         MessageBox.Show(this, "O campo nome é obrigatório.", "Atenção", MessageBoxButtons.OK,
@@ -74,16 +75,11 @@ namespace Interface.Formularios.Cadastros
                             MessageBoxIcon.Warning);
                         return;
                     }
-                    else if (txtNome.Text.Length > 50)
-                    {
-                        MessageBox.Show(this, "O campo nome pode conter no maximo cinquenta caracteres.", "Atenção", MessageBoxButtons.OK,
-                            MessageBoxIcon.Warning);
-                        return;
-                    }
                     else
                     {
                         Aluno.Nome = txtNome.Text;
                     }
+                    //Validações campo Sexo
                     if (cbSexo.SelectedIndex == -1)
                     {
                         MessageBox.Show(this, "Selecione o sexo do aluno.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -93,6 +89,7 @@ namespace Interface.Formularios.Cadastros
                     {
                         Aluno.Sexo = cbSexo.Text;
                     }
+                    //Validações campo Cpf
                     if (txtCpf.Text.Length != 0)
                     {
                         if (txtCpf.Text.Length != 11)
@@ -117,6 +114,7 @@ namespace Interface.Formularios.Cadastros
                     {
                         Aluno.Cpf = "";
                     }
+                    //Validações campo Rm
                     if (txtRm.Text.Length > 0)
                     {
                         Aluno.Rm = txtRm.Text;
@@ -125,11 +123,13 @@ namespace Interface.Formularios.Cadastros
                     {
                         Aluno.Rm = "";
                     }
+                    //Validações campo Curso 
                     if (cbCurso.SelectedIndex == -1)
                     {
                         MessageBox.Show(this, "Selecione um curso.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
+                    //Validações campo Turma
                     if (cbTurma.SelectedIndex == -1)
                     {
                         MessageBox.Show(this, "Selecione uma turma.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -139,7 +139,7 @@ namespace Interface.Formularios.Cadastros
                     {
                         Aluno.Turma.CodTurma = Convert.ToInt32(cbTurma.SelectedValue);
                     }
-                    //Telefone e Celular
+                    //Validações campos Telefone e Celular
                     if (txtTelefone.Text.Length == 0 && txtCelular.Text.Length == 0)
                     {
                         MessageBox.Show(this, "É necessário inserir pelo menos um número para contato.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -168,7 +168,8 @@ namespace Interface.Formularios.Cadastros
                             return;
                         }
                     }
-                    if (btnAcao.Text == "&Salvar")
+                    //Execução
+                    if (btnAcao.Text == "Salvar")
                     {
                         resultado = pessoaBLL.AlunoInserir(Aluno);
                         MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
@@ -190,10 +191,10 @@ namespace Interface.Formularios.Cadastros
                             LimparComponentes();
                         }
                     }
-                }
+                }//Execução
                 else
                 {
-                    if(MessageBox.Show(this, "Deseja excluir este aluno?", "Atenção", MessageBoxButtons.YesNo,
+                    if(MessageBox.Show(this, "Deseja excluir este aluno(a)?", "Atenção", MessageBoxButtons.YesNo,
                                MessageBoxIcon.Information) == DialogResult.Yes)
                     {
                         resultado = pessoaBLL.PessoaExcluir(Aluno.CodPessoa);
@@ -206,20 +207,6 @@ namespace Interface.Formularios.Cadastros
                         }
                     }                    
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        //Botão Carcelar - limpa o form de trava os componentes
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                LimparComponentes();
-                Habilita(false);
-                btnNovo.Focus();
             }
             catch (Exception ex)
             {
@@ -249,7 +236,7 @@ namespace Interface.Formularios.Cadastros
                 if (ponteAluno.ShowDialog() == DialogResult.OK)
                 {
                     CarregaCampos(Aluno);
-                    btnAcao.Text = "&Alterar";
+                    btnAcao.Text = "Alterar";
                     Habilita(true);
                     txtNome.Focus();
                 }
@@ -268,7 +255,7 @@ namespace Interface.Formularios.Cadastros
                 if (ponteAluno.ShowDialog() == DialogResult.OK)
                 {
                     CarregaCampos(Aluno);
-                    btnAcao.Text = "&Excluir";
+                    btnAcao.Text = "Excluir";
                     Habilita(true);
                     btnAcao.Focus();
                 }

@@ -95,7 +95,6 @@
     <Compile Include="Pessoas\FuncionarioList.cs" />
     <Compile Include="Pessoas\Pessoa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Pessoas\UsuarioSistema.cs" />
     <Compile Include="Relatórios\HistoricoEmprestimo.cs" />
     <Compile Include="Relatórios\HistoricoEmprestimoList.cs" />
     <Compile Include="Relatórios\MidiasCadEmp.cs" />

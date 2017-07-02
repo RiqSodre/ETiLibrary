@@ -52,7 +52,7 @@
             // 
             // lblTexto
             // 
-            this.lblTexto.Location = new System.Drawing.Point(65, 102);
+            this.lblTexto.Location = new System.Drawing.Point(61, 100);
             this.lblTexto.Size = new System.Drawing.Size(307, 24);
             this.lblTexto.Text = "Digite aqui o código do funcionário:";
             // 
@@ -68,7 +68,11 @@
             // lblForm
             // 
             this.lblForm.Size = new System.Drawing.Size(174, 20);
-            this.lblForm.Text = "Cadastro: Funcionario";
+            this.lblForm.Text = "Cadastro: Funcionário";
+            // 
+            // pnl
+            // 
+            this.pnl.Location = new System.Drawing.Point(-1, 6);
             // 
             // FrmPonteFuncionario
             // 

@@ -65,7 +65,7 @@ namespace Interface.Formularios.Sistema
                     }
                     else
                     {
-                        UsuarioSistema funcionario = pessoaBLL.FuncionarioBiblioSelect(codUsuario);
+                        Funcionario funcionario = pessoaBLL.FuncionarioBiblioSelect(codUsuario);
                         Settings.Default.Nome = funcionario.Nome;
                         Settings.Default.Login = funcionario.Login;
                         Settings.Default.Senha = funcionario.Senha;

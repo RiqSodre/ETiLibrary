@@ -95,12 +95,10 @@
             // 
             this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "&Cancelar";
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAcao
             // 
             this.btnAcao.TabIndex = 1;
-            this.btnAcao.Text = "&Salvar";
             this.btnAcao.Click += new System.EventHandler(this.btnAcao_Click);
             // 
             // pnlPrincipal
@@ -183,7 +181,7 @@
             this.txtRm.Lines = new string[0];
             this.txtRm.Location = new System.Drawing.Point(96, 121);
             this.txtRm.Margin = new System.Windows.Forms.Padding(4);
-            this.txtRm.MaxLength = 32767;
+            this.txtRm.MaxLength = 7;
             this.txtRm.Name = "txtRm";
             this.txtRm.PasswordChar = '\0';
             this.txtRm.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -263,7 +261,7 @@
             this.txtNome.Lines = new string[0];
             this.txtNome.Location = new System.Drawing.Point(96, 11);
             this.txtNome.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNome.MaxLength = 32767;
+            this.txtNome.MaxLength = 50;
             this.txtNome.Name = "txtNome";
             this.txtNome.PasswordChar = '\0';
             this.txtNome.ScrollBars = System.Windows.Forms.ScrollBars.None;

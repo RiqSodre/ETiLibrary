@@ -60,6 +60,7 @@
             // pnl
             // 
             this.pnl.Size = new System.Drawing.Size(562, 32);
+            this.pnl.TabIndex = 3;
             // 
             // lblForm
             // 
@@ -70,38 +71,49 @@
             // 
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.Location = new System.Drawing.Point(525, 1);
+            this.btnFechar.TabIndex = 0;
             // 
             // pnlBase
             // 
             this.pnlBase.Size = new System.Drawing.Size(555, 43);
+            this.pnlBase.TabIndex = 4;
             // 
             // btnExcluir
             // 
             this.btnExcluir.FlatAppearance.BorderSize = 0;
             this.btnExcluir.Location = new System.Drawing.Point(341, -4);
+            this.btnExcluir.TabIndex = 2;
             this.btnExcluir.Text = "&Excluir";
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
             this.btnAlterar.FlatAppearance.BorderSize = 0;
             this.btnAlterar.Location = new System.Drawing.Point(219, -4);
+            this.btnAlterar.TabIndex = 1;
             this.btnAlterar.Text = "&Alterar";
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnNovo
             // 
             this.btnNovo.FlatAppearance.BorderSize = 0;
             this.btnNovo.Location = new System.Drawing.Point(97, -4);
+            this.btnNovo.TabIndex = 0;
             this.btnNovo.Text = "&Novo";
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(438, 428);
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "&Cancelar";
             // 
             // btnAcao
             // 
             this.btnAcao.Location = new System.Drawing.Point(315, 428);
+            this.btnAcao.TabIndex = 1;
             this.btnAcao.Text = "&Salvar";
+            this.btnAcao.Click += new System.EventHandler(this.btnAcao_Click);
             // 
             // pnlPrincipal
             // 
@@ -130,6 +142,7 @@
             this.pnlPrincipal.Controls.Add(this.lblDadosP);
             this.pnlPrincipal.Controls.Add(this.cbSexo);
             this.pnlPrincipal.Size = new System.Drawing.Size(544, 333);
+            this.pnlPrincipal.TabIndex = 0;
             // 
             // lblCelular
             // 
@@ -159,7 +172,7 @@
             this.txtNome.Lines = new string[0];
             this.txtNome.Location = new System.Drawing.Point(99, 45);
             this.txtNome.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNome.MaxLength = 32767;
+            this.txtNome.MaxLength = 50;
             this.txtNome.Name = "txtNome";
             this.txtNome.PasswordChar = '\0';
             this.txtNome.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -168,10 +181,11 @@
             this.txtNome.SelectionStart = 0;
             this.txtNome.ShortcutsEnabled = true;
             this.txtNome.Size = new System.Drawing.Size(195, 28);
-            this.txtNome.TabIndex = 24;
+            this.txtNome.TabIndex = 0;
             this.txtNome.UseSelectable = true;
             this.txtNome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtNome.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // lblTelefone
             // 
@@ -201,8 +215,9 @@
             this.txtCelular.Mask = "(99) 00000-0000";
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(132, 22);
-            this.txtCelular.TabIndex = 29;
+            this.txtCelular.TabIndex = 5;
             this.txtCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCelular_KeyPress);
             // 
             // txtTelefone
             // 
@@ -212,8 +227,9 @@
             this.txtTelefone.Mask = "(99) 0000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(132, 22);
-            this.txtTelefone.TabIndex = 28;
+            this.txtTelefone.TabIndex = 4;
             this.txtTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefone_KeyPress);
             // 
             // lblCPF
             // 
@@ -233,8 +249,9 @@
             this.txtCpf.Mask = "000\\.000\\.000\\-00";
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(132, 22);
-            this.txtCpf.TabIndex = 27;
+            this.txtCpf.TabIndex = 3;
             this.txtCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCpf_KeyPress);
             // 
             // lblSexo
             // 
@@ -248,16 +265,15 @@
             // 
             // cbCargo
             // 
-            this.cbCargo.DisplayMember = "Descricao";
             this.cbCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCargo.Enabled = false;
             this.cbCargo.FormattingEnabled = true;
             this.cbCargo.Location = new System.Drawing.Point(99, 128);
             this.cbCargo.Margin = new System.Windows.Forms.Padding(4);
             this.cbCargo.Name = "cbCargo";
-            this.cbCargo.Size = new System.Drawing.Size(160, 24);
-            this.cbCargo.TabIndex = 26;
-            this.cbCargo.ValueMember = "CodCargo";
+            this.cbCargo.Size = new System.Drawing.Size(172, 24);
+            this.cbCargo.TabIndex = 2;
+            this.cbCargo.TabStop = false;
             // 
             // lblDadosP
             // 
@@ -281,7 +297,7 @@
             this.cbSexo.Margin = new System.Windows.Forms.Padding(4);
             this.cbSexo.Name = "cbSexo";
             this.cbSexo.Size = new System.Drawing.Size(160, 24);
-            this.cbSexo.TabIndex = 25;
+            this.cbSexo.TabIndex = 1;
             // 
             // metroLabel1
             // 
@@ -309,7 +325,7 @@
             // 
             // 
             this.txtEmail.CustomButton.Image = null;
-            this.txtEmail.CustomButton.Location = new System.Drawing.Point(169, 2);
+            this.txtEmail.CustomButton.Location = new System.Drawing.Point(229, 2);
             this.txtEmail.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.CustomButton.Name = "";
             this.txtEmail.CustomButton.Size = new System.Drawing.Size(23, 23);
@@ -321,7 +337,7 @@
             this.txtEmail.Lines = new string[0];
             this.txtEmail.Location = new System.Drawing.Point(99, 285);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmail.MaxLength = 32767;
+            this.txtEmail.MaxLength = 50;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -329,8 +345,8 @@
             this.txtEmail.SelectionLength = 0;
             this.txtEmail.SelectionStart = 0;
             this.txtEmail.ShortcutsEnabled = true;
-            this.txtEmail.Size = new System.Drawing.Size(195, 28);
-            this.txtEmail.TabIndex = 39;
+            this.txtEmail.Size = new System.Drawing.Size(255, 28);
+            this.txtEmail.TabIndex = 6;
             this.txtEmail.UseSelectable = true;
             this.txtEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -374,7 +390,7 @@
             this.txtLogin.Lines = new string[0];
             this.txtLogin.Location = new System.Drawing.Point(383, 45);
             this.txtLogin.Margin = new System.Windows.Forms.Padding(4);
-            this.txtLogin.MaxLength = 32767;
+            this.txtLogin.MaxLength = 20;
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.PasswordChar = '\0';
             this.txtLogin.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -383,10 +399,11 @@
             this.txtLogin.SelectionStart = 0;
             this.txtLogin.ShortcutsEnabled = true;
             this.txtLogin.Size = new System.Drawing.Size(144, 28);
-            this.txtLogin.TabIndex = 41;
+            this.txtLogin.TabIndex = 7;
             this.txtLogin.UseSelectable = true;
             this.txtLogin.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtLogin.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLogin_KeyPress);
             // 
             // lblSenha
             // 
@@ -416,7 +433,7 @@
             this.txtSenha.Lines = new string[0];
             this.txtSenha.Location = new System.Drawing.Point(383, 88);
             this.txtSenha.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSenha.MaxLength = 32767;
+            this.txtSenha.MaxLength = 20;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -425,10 +442,11 @@
             this.txtSenha.SelectionStart = 0;
             this.txtSenha.ShortcutsEnabled = true;
             this.txtSenha.Size = new System.Drawing.Size(144, 28);
-            this.txtSenha.TabIndex = 43;
+            this.txtSenha.TabIndex = 8;
             this.txtSenha.UseSelectable = true;
             this.txtSenha.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtSenha.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSenha_KeyPress);
             // 
             // checkMSenha
             // 
@@ -437,7 +455,8 @@
             this.checkMSenha.Location = new System.Drawing.Point(383, 122);
             this.checkMSenha.Name = "checkMSenha";
             this.checkMSenha.Size = new System.Drawing.Size(18, 17);
-            this.checkMSenha.TabIndex = 45;
+            this.checkMSenha.TabIndex = 9;
+            this.checkMSenha.TabStop = false;
             this.checkMSenha.UseVisualStyleBackColor = true;
             this.checkMSenha.CheckedChanged += new System.EventHandler(this.checkMSenha_CheckedChanged);
             // 
@@ -467,17 +486,18 @@
             // 
             this.checkAdmin.AutoSize = true;
             this.checkAdmin.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkAdmin.Location = new System.Drawing.Point(384, 148);
+            this.checkAdmin.Location = new System.Drawing.Point(383, 148);
             this.checkAdmin.Name = "checkAdmin";
             this.checkAdmin.Size = new System.Drawing.Size(18, 17);
-            this.checkAdmin.TabIndex = 208;
+            this.checkAdmin.TabIndex = 10;
+            this.checkAdmin.TabStop = false;
             this.checkAdmin.UseVisualStyleBackColor = true;
             // 
             // FrmCadFuncionarioBiblioteca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 491);
+            this.ClientSize = new System.Drawing.Size(555, 485);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmCadFuncionarioBiblioteca";
             this.Padding = new System.Windows.Forms.Padding(36, 91, 36, 31);
