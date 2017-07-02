@@ -390,7 +390,7 @@
             this.txtLogin.Lines = new string[0];
             this.txtLogin.Location = new System.Drawing.Point(383, 45);
             this.txtLogin.Margin = new System.Windows.Forms.Padding(4);
-            this.txtLogin.MaxLength = 20;
+            this.txtLogin.MaxLength = 12;
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.PasswordChar = '\0';
             this.txtLogin.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -433,7 +433,7 @@
             this.txtSenha.Lines = new string[0];
             this.txtSenha.Location = new System.Drawing.Point(383, 88);
             this.txtSenha.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSenha.MaxLength = 20;
+            this.txtSenha.MaxLength = 12;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.ScrollBars = System.Windows.Forms.ScrollBars.None;

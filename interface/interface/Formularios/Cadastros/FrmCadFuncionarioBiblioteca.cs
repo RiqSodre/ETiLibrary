@@ -186,8 +186,8 @@ namespace Interface.Formularios.Cadastros
                 }
                 else
                 {
-                    //Funcionario.Senha = autenticacaoBLL.CripSenha(txtSenha.Text);
-                    Funcionario.Senha = txtSenha.Text;
+                    Funcionario.Senha = autenticacaoBLL.CripSenha(txtSenha.Text);
+                    //Funcionario.Senha = txtSenha.Text;
                 }
                 //Validações campo Admin
                 if (checkAdmin.Checked)
@@ -419,7 +419,7 @@ namespace Interface.Formularios.Cadastros
                 txtCelular.Text = funcionario.Celular.Numero;
                 txtEmail.Text = funcionario.Email;
                 txtLogin.Text = funcionario.Login;
-                txtSenha.Text = funcionario.Senha;
+                txtSenha.Text = autenticacaoBLL.DecripSenha(funcionario.Senha);
                 if (funcionario.Admin)
                 {
                     checkAdmin.Checked = true;

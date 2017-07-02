@@ -12,6 +12,10 @@ namespace BLL
     public class AutenticacaoBLL
     {
         AcessoDadosSqlServer acesso = new AcessoDadosSqlServer();
+        //Variaveis para os métodos de criptografia
+        private static byte[] bIV = {0x50, 0x08, 0xF1, 0xDD, 0xDE, 0x3C, 0xF2, 0x18,
+        0x44, 0x74, 0x19, 0x2C, 0x53, 0x49, 0xAB, 0xBC};
+        private const string chaveAlg ="Q3JpcHRvZ3JhZmlhcyBjb20gUmluamRhZWwgLyBBRVM=";
 
         //Autentica o usuario
         public int AutenticarUsuario(string login, string senha)
@@ -50,7 +54,7 @@ namespace BLL
                 }
                 else
                 {
-                    return EnviarEmail(email, Convert.ToString(dataTableRecupera.Rows[0][0]), Convert.ToString(dataTableRecupera.Rows[0][1]));
+                    return EnviarEmail(email, Convert.ToString(dataTableRecupera.Rows[0][0]), DecripSenha(Convert.ToString(dataTableRecupera.Rows[0][1])));
                 }
             }
             catch (Exception ex)
@@ -152,71 +156,48 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-        /*
-        //Criptografar Senha
-        public string CripSenha(string txtBase)
+        //Encripta a senha
+        public string CripSenha(string txtPuro)
         {
             try
-            {
-                byte[] resultado, chaveAlg, bitsTxtPuro;
-
-                UTF8Encoding UTF8 = new UTF8Encoding();
-                MD5CryptoServiceProvider HashProvider = new MD5CryptoServiceProvider();
-                chaveAlg = HashProvider.ComputeHash(UTF8.GetBytes("12345"));
-                TripleDESCryptoServiceProvider TDESAlgorithm = new TripleDESCryptoServiceProvider();
-                TDESAlgorithm.Key = chaveAlg;
-                TDESAlgorithm.Mode = CipherMode.OFB;
-                TDESAlgorithm.Padding = PaddingMode.ISO10126;
-                bitsTxtPuro = UTF8.GetBytes(txtBase);
-                try
-                {
-                    ICryptoTransform Encryptor = TDESAlgorithm.CreateEncryptor();
-                    resultado = Encryptor.TransformFinalBlock(bitsTxtPuro, 0, bitsTxtPuro.Length);
-                }
-                finally
-                {
-                    TDESAlgorithm.Clear();
-                    HashProvider.Clear();
-                }
-                return Convert.ToBase64String(resultado);
+            {              
+                byte[] bChave = Convert.FromBase64String(chaveAlg);
+                byte[] bTxt = new UTF8Encoding().GetBytes(txtPuro);
+                Rijndael rijndael = new RijndaelManaged();                
+                rijndael.KeySize = 256;               
+                MemoryStream mStream = new MemoryStream();
+                CryptoStream encryptor = new CryptoStream(mStream, rijndael.CreateEncryptor(bChave, bIV),
+                    CryptoStreamMode.Write);
+                encryptor.Write(bTxt, 0, bTxt.Length);
+                encryptor.FlushFinalBlock();               
+                return Convert.ToBase64String(mStream.ToArray());
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
-            }          
-        }
-        //Descriptografar Senha
-        public string DescripSenha(string txtBase)
+            }
+        }     
+        //Decripta a senha
+        public string DecripSenha(string txtCifrado)
         {
             try
-            {
-                byte[] resultado, chaveAlg, bitsTxtPuro;
-
-                UTF8Encoding UTF8 = new UTF8Encoding();
-                MD5CryptoServiceProvider HashProvider = new MD5CryptoServiceProvider();
-                chaveAlg = HashProvider.ComputeHash(UTF8.GetBytes("122628"));
-                TripleDESCryptoServiceProvider TDESAlgorithm = new TripleDESCryptoServiceProvider();
-                TDESAlgorithm.Key = chaveAlg;
-                TDESAlgorithm.Mode = CipherMode.ECB;
-                TDESAlgorithm.Padding = PaddingMode.PKCS7;
-                bitsTxtPuro = Convert.FromBase64String(txtBase);
-                try
-                {
-                    ICryptoTransform Decryptor = TDESAlgorithm.CreateDecryptor();
-                    resultado = Decryptor.TransformFinalBlock(bitsTxtPuro, 0, bitsTxtPuro.Length);
-                }
-                finally
-                {
-                    TDESAlgorithm.Clear();
-                    HashProvider.Clear();
-                }
-                return UTF8.GetString(resultado);
+            {               
+                    byte[] bChave = Convert.FromBase64String(chaveAlg);
+                    byte[] bTxt = Convert.FromBase64String(txtCifrado);             
+                    Rijndael rijndael = new RijndaelManaged();              
+                    rijndael.KeySize = 256;               
+                    MemoryStream mStream = new MemoryStream();    
+                    CryptoStream decryptor = new CryptoStream(mStream, rijndael.CreateDecryptor(bChave, bIV),
+                        CryptoStreamMode.Write);  
+                    decryptor.Write(bTxt, 0, bTxt.Length);     
+                    decryptor.FlushFinalBlock();        
+                    UTF8Encoding utf8 = new UTF8Encoding();       
+                    return utf8.GetString(mStream.ToArray());
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
-            }          
+            }
         }
-        */
     }
 }
