@@ -31,7 +31,7 @@
             this.btnPesquisa4 = new System.Windows.Forms.Button();
             this.txtCPF = new System.Windows.Forms.MaskedTextBox();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnPesquisa3
@@ -126,7 +126,7 @@
             this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.btnPesquisa4);
             this.Name = "FrmPCFuncionario";
-            this.Controls.SetChildIndex(this.panel2, 0);
+            this.Controls.SetChildIndex(this.pnlForm, 0);
             this.Controls.SetChildIndex(this.panel3, 0);
             this.Controls.SetChildIndex(this.btnPesquisa3, 0);
             this.Controls.SetChildIndex(this.btnPesquisa1, 0);
@@ -142,8 +142,8 @@
             this.Controls.SetChildIndex(this.txtCPF, 0);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlForm.ResumeLayout(false);
+            this.pnlForm.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

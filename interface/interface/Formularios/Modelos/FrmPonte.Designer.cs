@@ -34,8 +34,8 @@
             this.btnAcao = new MetroFramework.Controls.MetroButton();
             this.btnFechar = new System.Windows.Forms.Button();
             this.lblForm = new System.Windows.Forms.Label();
-            this.pnl = new System.Windows.Forms.Panel();
-            this.pnl.SuspendLayout();
+            this.pnlForm = new System.Windows.Forms.Panel();
+            this.pnlForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtTexto
@@ -119,16 +119,17 @@
             this.lblForm.TabIndex = 48;
             this.lblForm.Text = "Nome";
             // 
-            // pnl
+            // pnlForm
             // 
-            this.pnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pnl.Controls.Add(this.lblForm);
-            this.pnl.Controls.Add(this.btnFechar);
-            this.pnl.Location = new System.Drawing.Point(0, 6);
-            this.pnl.Margin = new System.Windows.Forms.Padding(4);
-            this.pnl.Name = "pnl";
-            this.pnl.Size = new System.Drawing.Size(439, 32);
-            this.pnl.TabIndex = 106;
+            this.pnlForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlForm.Controls.Add(this.lblForm);
+            this.pnlForm.Controls.Add(this.btnFechar);
+            this.pnlForm.Location = new System.Drawing.Point(0, 6);
+            this.pnlForm.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlForm.Name = "pnlForm";
+            this.pnlForm.Size = new System.Drawing.Size(439, 32);
+            this.pnlForm.TabIndex = 106;
+            this.pnlForm.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_MouseMove);
             // 
             // FrmPonte
             // 
@@ -139,7 +140,7 @@
             this.CancelButton = this.btnFechar;
             this.ClientSize = new System.Drawing.Size(436, 274);
             this.Controls.Add(this.btnAcao);
-            this.Controls.Add(this.pnl);
+            this.Controls.Add(this.pnlForm);
             this.Controls.Add(this.txtTexto);
             this.Controls.Add(this.lblTexto);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -147,8 +148,8 @@
             this.Name = "FrmPonte";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
-            this.pnl.ResumeLayout(false);
-            this.pnl.PerformLayout();
+            this.pnlForm.ResumeLayout(false);
+            this.pnlForm.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,6 +161,6 @@
         public MetroFramework.Controls.MetroButton btnAcao;
         public System.Windows.Forms.Button btnFechar;
         public System.Windows.Forms.Label lblForm;
-        public System.Windows.Forms.Panel pnl;
+        public System.Windows.Forms.Panel pnlForm;
     }
 }

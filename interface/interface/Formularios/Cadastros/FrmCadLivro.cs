@@ -1,18 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Interface.Formularios.Cadastros;
 using Interface.Formularios.Modelos;
-using MetroFramework;
 using DTO.Infraestrutura_de_Midia;
 using BLL;
-using System.Threading;
 using DTO.Midia;
 
 namespace Interface.Formularios.Cadastros
@@ -134,10 +125,7 @@ namespace Interface.Formularios.Cadastros
                 cbEditora.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
                 cbEditora.AutoCompleteSource = AutoCompleteSource.CustomSource;
                 cbEditora.AutoCompleteCustomSource = dicEditora;
-
-
-                cbArea.DisplayMember = "Descricao";
-                cbArea.ValueMember = "CodArea";
+                
                 cbArea.DataSource = areaBLL.CarregaAreas();
             }
             catch (Exception ex)

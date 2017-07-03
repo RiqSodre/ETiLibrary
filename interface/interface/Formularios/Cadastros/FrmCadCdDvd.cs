@@ -3,44 +3,36 @@ using DTO.Midia;
 using Interface.Formularios.Modelos;
 using System;
 using System.Drawing;
-using System.Windows.Forms;
 
 namespace Interface.Formularios.Cadastros
 {
     public partial class FrmCadCdDvd : FrmCadBase
     {
-
-
-        public FrmCadCdDvd()
+        AreaBLL areaBLL = new AreaBLL();
+        MidiaBLL midiaBLL = new MidiaBLL();
+        private CD_DVD cdvdBase;
+        public CD_DVD CD_DVD
         {
-            InitializeComponent();
-        }
-        
-        private void FrmCadCdDvd_Load(object sender, EventArgs e)
-        {
-            lblForm.Text = "Cadastro: CD e DVD";
-        }
-
-        private void txtObservacao_Leave(object sender, EventArgs e)
-        {
-            if (txtObservacao.Text == "" || txtObservacao.Text == null)
+            get
             {
-                txtObservacao.Width = 290;
-                txtObservacao.Height = 25;
-                this.Height = 348;
-                btnAcao.Location = new Point(149, 302);
-                btnCancelar.Location = new Point(241, 302);
+                return cdvdBase;
+            }
+
+            set
+            {
+                cdvdBase = value;
             }
         }
 
-        private void txtObservacao_Click(object sender, EventArgs e)
+        //Construtor Padrão
+        public FrmCadCdDvd()
         {
-            txtObservacao.Width = 290;
-            txtObservacao.Height = 90;
-            this.Height = 416;
-            btnAcao.Location = new Point(149, 372);
-            btnCancelar.Location = new Point(241, 372);
+            InitializeComponent();
+            cbArea.DataSource = areaBLL.CarregaAreas();
+            Habilita(true);
+            LimparComponentes();
         }
+        
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
@@ -60,6 +52,28 @@ namespace Interface.Formularios.Cadastros
         private void btnNovo_Click(object sender, EventArgs e)
         {
             Habilita(true);
+        }
+
+        //Aumenta o tamanho do Campo Observação
+        private void txtObservacao_Click(object sender, EventArgs e)
+        {
+            txtObservacao.Height = 75;
+            pnlPrincipal.Height = 324;
+            this.Height = 395;
+            btnAcao.Location = new Point(149, 353);
+            btnCancelar.Location = new Point(241, 353);
+        }
+        //Retorna o tamanho do Campo Observação ao original
+        private void txtObservacao_Leave(object sender, EventArgs e)
+        {
+            if (txtObservacao.Text == "" || txtObservacao.Text == null)
+            {
+                txtObservacao.Height = 25;
+                pnlPrincipal.Height = 274;
+                this.Height = 345;
+                btnAcao.Location = new Point(149, 303);
+                btnCancelar.Location = new Point(241, 303);
+            }
         }
     }
 }

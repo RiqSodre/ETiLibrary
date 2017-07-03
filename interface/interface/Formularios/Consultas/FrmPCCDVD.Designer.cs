@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnPesquisa3
@@ -96,8 +96,8 @@
             this.Name = "FrmPCCDCVD";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlForm.ResumeLayout(false);
+            this.pnlForm.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -46,7 +46,7 @@
             this.clnData = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnMulta = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.clnCondicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2.SuspendLayout();
+            this.pnlForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEmprestimo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -211,12 +211,12 @@
             this.Name = "FrmConsultaEmprestimo";
             this.Text = "Consulta: Empréstimo";
             this.Controls.SetChildIndex(this.panel1, 0);
-            this.Controls.SetChildIndex(this.panel2, 0);
+            this.Controls.SetChildIndex(this.pnlForm, 0);
             this.Controls.SetChildIndex(this.btnSelecionar, 0);
             this.Controls.SetChildIndex(this.btnFechar2, 0);
             this.Controls.SetChildIndex(this.dataGridEmprestimo, 0);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlForm.ResumeLayout(false);
+            this.pnlForm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEmprestimo)).EndInit();
             this.ResumeLayout(false);
 

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2.SuspendLayout();
+            this.pnlForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnMini
@@ -46,8 +46,8 @@
             this.Name = "FrmConsultaFuncionario";
             this.Text = "Consulta: Funcionário";
             this.Load += new System.EventHandler(this.FrmConsultaFuncionário_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlForm.ResumeLayout(false);
+            this.pnlForm.PerformLayout();
             this.ResumeLayout(false);
 
         }

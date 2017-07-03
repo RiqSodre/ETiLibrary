@@ -1,133 +1,46 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Interface.Formularios.Modelos;
 using Interface.Formularios.Cadastros;
 using Interface.Formularios.Consultas;
+using System.Runtime.InteropServices;
 
 namespace Interface.Formularios.Modelos
 {
     public partial class FrmListaBase : MetroFramework.Forms.MetroForm
     {
         private EnumModo enumodo;
+        //Variaveis utilizadas para mover o form através dos paineis
+        protected int WM_NCLBUTTONDOWN = 0xA1;
+        protected int HT_CAPTION = 0x2;
 
-        //Carrega o formulário com os parametros passados.
-        public FrmListaBase(EnumModo modo, string textoform, string texto)
-        {
-            InitializeComponent();
-            enumodo = modo;
-            lblTextoForm.Text = textoform;
-            lblTexto.Text = texto;
-        }
-
-        //Botão Fechar
-        private void btnFechar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void FrmListaBase_DoubleClick(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Normal;
-        }
-
-        //Abre o formulário de cadastro ou consulta de livro
-        private void btnCadLivro_Click(object sender, EventArgs e)
+        //Carrega o form de acordo com o modo a ser utilizado
+        public FrmListaBase(EnumModo modo, string txtForm, string txt)
         {
             try
             {
-                bool existe = false;
-
-                if (enumodo == EnumModo.Cadastro)
-                {
-                    foreach (Form form in this.MdiChildren)
-                    {
-                        if (form.Name == "FrmCadLivro")
-                        {
-                            form.Activate();
-
-                            if (form.Visible == false)
-                            {
-                                form.Close();
-                            }
-                            else
-                            {
-                                existe = true;
-                            }
-                            break;
-                        }
-                    }
-                    if (!existe)
-                    {
-                        FrmCadLivro cadlivro = new FrmCadLivro();
-                        cadlivro.MdiParent = MdiParent;
-                        cadlivro.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Você já abriu essa janela!");
-                    }
-                    this.Dispose();
-                }
-                else
-                {
-                    foreach (Form form in this.MdiChildren)
-                    {
-                        if (form.Name == "FrmPCLivro")
-                        {
-                            form.Activate();
-
-                            if (form.Visible == false)
-                            {
-                                form.Close();
-                            }
-                            else
-                            {
-                                existe = true;
-                            }
-                            break;
-                        }
-                    }
-                    if (!existe)
-                    {
-                        FrmPCLivro pclivro = new FrmPCLivro();
-                        pclivro.MdiParent = MdiParent;
-                        pclivro.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Você já abriu essa janela!");
-                    }
-                    this.Dispose();
-                }
+                InitializeComponent();
+                enumodo = modo;
+                lblForm.Text = txtForm;
+                lblTexto.Text = txt;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        //Abre o form de cadastro ou consulta de CD_DVD
         private void btnCadCdDvd_Click(object sender, EventArgs e)
         {
-            
             try
             {
                 bool existe = false;
-
                 if (enumodo == EnumModo.Cadastro)
                 {
-                    foreach (Form form in this.MdiChildren)
+                    foreach (Form form in (this.MdiParent).MdiChildren)
                     {
-                        if (form.Name == " FrmCadCdDvd")
+                        if (form.Name == "FrmCadCdDvd")
                         {
                             form.Activate();
-
                             if (form.Visible == false)
                             {
                                 form.Close();
@@ -147,18 +60,17 @@ namespace Interface.Formularios.Modelos
                     }
                     else
                     {
-                        MessageBox.Show("Você já abriu essa janela!");
+                        MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     this.Dispose();
                 }
                 else
                 {
-                    foreach (Form form in this.MdiChildren)
+                    foreach (Form form in (this.MdiParent).MdiChildren)
                     {
                         if (form.Name == "FrmPCCDVD")
                         {
                             form.Activate();
-
                             if (form.Visible == false)
                             {
                                 form.Close();
@@ -178,7 +90,7 @@ namespace Interface.Formularios.Modelos
                     }
                     else
                     {
-                        MessageBox.Show("Você já abriu essa janela!");
+                        MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     this.Dispose();
                 }
@@ -188,7 +100,7 @@ namespace Interface.Formularios.Modelos
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        //Abre o form de cadastro ou consulta de Jornal
         private void btnCadJornal_Click(object sender, EventArgs e)
         {
             try
@@ -200,7 +112,79 @@ namespace Interface.Formularios.Modelos
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        //Abre o form de cadastro ou consulta de Livro
+        private void btnCadLivro_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bool existe = false;
+                if (enumodo == EnumModo.Cadastro)
+                {
+                    foreach (Form form in (this.MdiParent).MdiChildren)
+                    {
+                        if (form.Name == "FrmCadLivro")
+                        {
+                            form.Activate();
+                            if (form.Visible == false)
+                            {
+                                form.Close();
+                            }
+                            else
+                            {
+                                existe = true;
+                            }
+                            break;
+                        }
+                    }
+                    if (!existe)
+                    {
+                        FrmCadLivro cadlivro = new FrmCadLivro();
+                        cadlivro.MdiParent = MdiParent;
+                        cadlivro.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    this.Dispose();
+                }
+                else
+                {
+                    foreach (Form form in (this.MdiParent).MdiChildren)
+                    {
+                        if (form.Name == "FrmPCLivro")
+                        {
+                            form.Activate();
+                            if (form.Visible == false)
+                            {
+                                form.Close();
+                            }
+                            else
+                            {
+                                existe = true;
+                            }
+                            break;
+                        }
+                    }
+                    if (!existe)
+                    {
+                        FrmPCLivro pclivro = new FrmPCLivro();
+                        pclivro.MdiParent = MdiParent;
+                        pclivro.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    this.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        //Abre o form de cadastro ou consulta de Mapa
         private void btnCadMap_Click(object sender, EventArgs e)
         {
             try
@@ -212,7 +196,7 @@ namespace Interface.Formularios.Modelos
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        //Abre o form de cadastro ou consulta de Revista
         private void btnCadRevista_Click(object sender, EventArgs e)
         {
             try
@@ -224,7 +208,7 @@ namespace Interface.Formularios.Modelos
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        //Abre o form de cadastro ou consulta de TCC
         private void btnCadTcc_Click(object sender, EventArgs e)
         {
             try
@@ -234,6 +218,25 @@ namespace Interface.Formularios.Modelos
             catch (Exception ex)
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        //Botão que fecha o form
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        //Métodos para mover o form através dos paneis
+        [DllImportAttribute("user32.dll")]
+        protected static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        protected static extern bool ReleaseCapture();
+        //Move o form através do painel
+        private void pnl_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
     }

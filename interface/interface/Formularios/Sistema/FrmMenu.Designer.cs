@@ -458,6 +458,7 @@ namespace Interface.Formularios.Sistema
             // 
             // lblMensagem
             // 
+            this.lblMensagem.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.lblMensagem.Location = new System.Drawing.Point(4, 26);
             this.lblMensagem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMensagem.Name = "lblMensagem";
@@ -468,6 +469,7 @@ namespace Interface.Formularios.Sistema
             // 
             // lblNome
             // 
+            this.lblNome.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.lblNome.Location = new System.Drawing.Point(4, 57);
             this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNome.Name = "lblNome";
@@ -617,7 +619,7 @@ namespace Interface.Formularios.Sistema
             this.MaximizeBox = false;
             this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ETi Library";
+            this.Text = "E-Tech. Library";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMenu_FormClosing);
             this.Load += new System.EventHandler(this.FrmMenu_Load);

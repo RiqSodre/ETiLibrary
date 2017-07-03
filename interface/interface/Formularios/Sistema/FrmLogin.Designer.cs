@@ -98,7 +98,7 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblUsuario.Location = new System.Drawing.Point(35, 228);
+            this.lblUsuario.Location = new System.Drawing.Point(26, 228);
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(136, 20);
@@ -110,7 +110,7 @@
             // 
             this.lblSenha.AutoSize = true;
             this.lblSenha.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblSenha.Location = new System.Drawing.Point(35, 300);
+            this.lblSenha.Location = new System.Drawing.Point(26, 300);
             this.lblSenha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(55, 20);

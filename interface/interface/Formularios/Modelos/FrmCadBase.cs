@@ -1,11 +1,16 @@
 ﻿using MetroFramework.Controls;
 using System;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Interface.Formularios.Modelos
 {
     public partial class FrmCadBase : MetroFramework.Forms.MetroForm
     {
+        //Variaveis utilizadas para mover o form através dos paineis
+        protected int WM_NCLBUTTONDOWN = 0xA1;
+        protected int HT_CAPTION = 0x2;
+
         //Construtor padrão
         public FrmCadBase()
         {
@@ -94,6 +99,20 @@ namespace Interface.Formularios.Modelos
                 {
                     (btn as MetroButton).Enabled = estado;
                 }
+            }
+        }
+        //Métodos para mover o form através dos paneis
+        [DllImportAttribute("user32.dll")]
+        protected static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        protected static extern bool ReleaseCapture();
+        //Move o form através do painel
+        private void pnl_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
     }

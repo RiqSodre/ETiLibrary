@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnl.SuspendLayout();
+            this.pnlForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.pnl.TabIndex = 1000;
+            this.pnlForm.TabIndex = 1000;
             // 
             // lblForm
             // 
@@ -79,8 +79,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(327, 223);
             this.Name = "FrmPonteEmprestimo";
-            this.pnl.ResumeLayout(false);
-            this.pnl.PerformLayout();
+            this.pnlForm.ResumeLayout(false);
+            this.pnlForm.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

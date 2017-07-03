@@ -53,6 +53,7 @@
             this.pnl.Name = "pnl";
             this.pnl.Size = new System.Drawing.Size(463, 32);
             this.pnl.TabIndex = 102;
+            this.pnl.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_MouseMove);
             // 
             // lblForm
             // 
@@ -158,6 +159,7 @@
             this.pnlPrincipal.Name = "pnlPrincipal";
             this.pnlPrincipal.Size = new System.Drawing.Size(436, 326);
             this.pnlPrincipal.TabIndex = 105;
+            this.pnlPrincipal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_MouseMove);
             // 
             // FrmCadBase
             // 

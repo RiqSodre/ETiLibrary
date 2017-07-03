@@ -59,7 +59,7 @@
             this.clnGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnAssuntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnAutores = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2.SuspendLayout();
+            this.pnlForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLivro)).BeginInit();
             this.SuspendLayout();
             // 
@@ -364,12 +364,12 @@
             this.Controls.Add(this.dataGridLivro);
             this.Name = "FrmConsultaLivro";
             this.Controls.SetChildIndex(this.panel1, 0);
-            this.Controls.SetChildIndex(this.panel2, 0);
+            this.Controls.SetChildIndex(this.pnlForm, 0);
             this.Controls.SetChildIndex(this.btnSelecionar, 0);
             this.Controls.SetChildIndex(this.btnFechar2, 0);
             this.Controls.SetChildIndex(this.dataGridLivro, 0);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlForm.ResumeLayout(false);
+            this.pnlForm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLivro)).EndInit();
             this.ResumeLayout(false);
 

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnl.SuspendLayout();
+            this.pnlForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtTexto
@@ -81,8 +81,8 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmPonteAluno";
             this.Padding = new System.Windows.Forms.Padding(36, 91, 36, 31);
-            this.pnl.ResumeLayout(false);
-            this.pnl.PerformLayout();
+            this.pnlForm.ResumeLayout(false);
+            this.pnlForm.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

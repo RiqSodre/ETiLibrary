@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnl.SuspendLayout();
+            this.pnlForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnFechar
@@ -58,8 +58,8 @@
             this.ClientSize = new System.Drawing.Size(327, 223);
             this.Name = "FrmPonteGenero";
             this.Load += new System.EventHandler(this.FrmPonteGenero_Load);
-            this.pnl.ResumeLayout(false);
-            this.pnl.PerformLayout();
+            this.pnlForm.ResumeLayout(false);
+            this.pnlForm.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -30,7 +30,7 @@
         {
             this.btnPesquisa4 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnPesquisa3
@@ -110,7 +110,7 @@
             this.ClientSize = new System.Drawing.Size(345, 261);
             this.Controls.Add(this.btnPesquisa4);
             this.Name = "FrmPCExJornal";
-            this.Controls.SetChildIndex(this.panel2, 0);
+            this.Controls.SetChildIndex(this.pnlForm, 0);
             this.Controls.SetChildIndex(this.panel3, 0);
             this.Controls.SetChildIndex(this.btnPesquisa3, 0);
             this.Controls.SetChildIndex(this.btnPesquisa1, 0);
@@ -125,8 +125,8 @@
             this.Controls.SetChildIndex(this.btnPesquisa4, 0);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlForm.ResumeLayout(false);
+            this.pnlForm.PerformLayout();
             this.ResumeLayout(false);
 
         }
