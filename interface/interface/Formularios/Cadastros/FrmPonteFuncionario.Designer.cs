@@ -52,13 +52,12 @@
             // 
             // lblTexto
             // 
-            this.lblTexto.Location = new System.Drawing.Point(61, 100);
+            this.lblTexto.Location = new System.Drawing.Point(61, 102);
             this.lblTexto.Size = new System.Drawing.Size(307, 24);
             this.lblTexto.Text = "Digite aqui o código do funcionário:";
             // 
             // btnAcao
             // 
-            this.btnAcao.Text = "Carregar";
             this.btnAcao.Click += new System.EventHandler(this.btnAcao_Click);
             // 
             // btnFechar
@@ -70,7 +69,7 @@
             this.lblForm.Size = new System.Drawing.Size(174, 20);
             this.lblForm.Text = "Cadastro: Funcionário";
             // 
-            // pnl
+            // pnlForm
             // 
             this.pnlForm.Location = new System.Drawing.Point(-1, 6);
             // 

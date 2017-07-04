@@ -441,7 +441,7 @@ namespace Interface.Formularios.Sistema
             this.btnCadAluno.Name = "btnCadAluno";
             this.btnCadAluno.Size = new System.Drawing.Size(164, 118);
             this.btnCadAluno.TabIndex = 1;
-            this.btnCadAluno.Text = "Cadastro Alunos";
+            this.btnCadAluno.Text = "&Cadastro Alunos";
             this.btnCadAluno.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCadAluno.UseVisualStyleBackColor = false;
             this.btnCadAluno.Click += new System.EventHandler(this.alunosToolStripMenuItem_Click);
@@ -502,7 +502,7 @@ namespace Interface.Formularios.Sistema
             this.btnEmprestimo.Name = "btnEmprestimo";
             this.btnEmprestimo.Size = new System.Drawing.Size(164, 118);
             this.btnEmprestimo.TabIndex = 2;
-            this.btnEmprestimo.Text = "Empréstimo";
+            this.btnEmprestimo.Text = "&Empréstimo";
             this.btnEmprestimo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEmprestimo.UseVisualStyleBackColor = false;
             this.btnEmprestimo.Click += new System.EventHandler(this.btnEmprestimo_Click);
@@ -538,7 +538,7 @@ namespace Interface.Formularios.Sistema
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(164, 118);
             this.btnSair.TabIndex = 5;
-            this.btnSair.Text = "Sair";
+            this.btnSair.Text = "&Sair";
             this.btnSair.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
@@ -556,7 +556,7 @@ namespace Interface.Formularios.Sistema
             this.btnAcervo.Name = "btnAcervo";
             this.btnAcervo.Size = new System.Drawing.Size(164, 118);
             this.btnAcervo.TabIndex = 3;
-            this.btnAcervo.Text = "Acervo";
+            this.btnAcervo.Text = "&Acervo";
             this.btnAcervo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAcervo.UseVisualStyleBackColor = false;
             this.btnAcervo.Click += new System.EventHandler(this.acervoToolStripMenuItem_Click);

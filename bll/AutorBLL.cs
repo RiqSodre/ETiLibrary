@@ -143,7 +143,7 @@ namespace BLL
         }
 
         //Consultar autor por Livro
-        public AutorList AutorConsultar_PorLivro(int CodLivro)
+        public AutorList AutorConsultar_PorLivro(int? CodLivro)
         {
             try
             {

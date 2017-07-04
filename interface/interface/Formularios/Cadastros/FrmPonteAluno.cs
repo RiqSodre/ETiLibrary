@@ -13,12 +13,19 @@ namespace Interface.Formularios.Cadastros
         private Aluno aluno = new Aluno();
 
         //Carrega o form ponte aluno
-        public FrmPonteAluno(FrmCadAluno frmCadAluno, string textoFrm)
+        public FrmPonteAluno(FrmCadAluno frmCadAluno, string txtFrm)
         {
-            InitializeComponent();
-            frmCadAlunoBase = frmCadAluno;
-            aluno = frmCadAlunoBase.Aluno;
-            lblForm.Text +=" - "+textoFrm;
+            try
+            {
+                InitializeComponent();
+                frmCadAlunoBase = frmCadAluno;
+                aluno = frmCadAlunoBase.Aluno;
+                lblForm.Text += " - " + txtFrm;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }       
         //Carrega os dados do aluno que serão passsados para o form de cadastro
         protected override void btnAcao_Click(object sender, EventArgs e)

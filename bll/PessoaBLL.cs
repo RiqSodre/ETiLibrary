@@ -93,11 +93,6 @@ namespace BLL
             }
         }
 
-        public string AlunoAlterar(Funcionario funcionario)
-        {
-            throw new NotImplementedException();
-        }
-
         //Consultar aluno por Nome
         public AlunoList AlunoConsulta_PorNome(string Nome)
         {

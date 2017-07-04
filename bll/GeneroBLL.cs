@@ -114,7 +114,7 @@ namespace BLL
         }
 
         //Carrega generos por livro
-        public GeneroList CarregaGenerosLivro(int CodLivro)
+        public GeneroList CarregaGenerosLivro(int? CodLivro)
         {
             try
             {

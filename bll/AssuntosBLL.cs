@@ -114,7 +114,7 @@ namespace BLL
         }
 
         //Carrega assuntos por livro
-        public AssuntoList AssuntoConsultar(int CodLivro)
+        public AssuntoList AssuntoConsultar(int? CodLivro)
         {
             try
             {

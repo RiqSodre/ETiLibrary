@@ -53,14 +53,13 @@
             // 
             // lblTexto
             // 
-            this.lblTexto.Location = new System.Drawing.Point(83, 103);
+            this.lblTexto.Location = new System.Drawing.Point(83, 102);
             this.lblTexto.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTexto.Size = new System.Drawing.Size(261, 24);
             this.lblTexto.Text = "Digite aqui o código do aluno:";
             // 
             // btnAcao
             // 
-            this.btnAcao.Text = "Carregar";
             this.btnAcao.Click += new System.EventHandler(this.btnAcao_Click);
             // 
             // btnFechar

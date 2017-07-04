@@ -132,7 +132,7 @@ namespace Interface.Formularios.Cadastros
                     if (frmMidiaEmprestimo.ShowDialog() == DialogResult.OK)
                     {
                         midiaEmprestimo.Descricao = midiaEmprestimoBase.Descricao;
-                        midiaEmprestimo.CodMidia = livro.CodMidia;
+                        midiaEmprestimo.CodMidia = (int)livro.CodMidia;
                         midiaEmprestimo.TipoMidia = cbMidia.Text;
                         midiaEmprestimo.DataDevolucao = midiaEmprestimoBase.DataDevolucao;
                         midiaEmprestimo.Devolvido = false;
@@ -161,7 +161,7 @@ namespace Interface.Formularios.Cadastros
                     if (frmMidiaEmprestimo.ShowDialog() == DialogResult.OK)
                     {
                         midiaEmprestimo.Descricao = midiaEmprestimoBase.Descricao;
-                        midiaEmprestimo.CodMidia = cdvd.CodMidia;
+                        midiaEmprestimo.CodMidia = (int)cdvd.CodMidia;
                         midiaEmprestimo.TipoMidia = cbMidia.Text;
                         midiaEmprestimo.DataDevolucao = midiaEmprestimoBase.DataDevolucao;
                         midiaEmprestimo.Devolvido = false;
@@ -190,7 +190,7 @@ namespace Interface.Formularios.Cadastros
                     if (frmMidiaEmprestimo.ShowDialog() == DialogResult.OK)
                     {
                         midiaEmprestimo.Descricao = midiaEmprestimoBase.Descricao;
-                        midiaEmprestimo.CodMidia = mapa.CodMidia;
+                        midiaEmprestimo.CodMidia = (int)mapa.CodMidia;
                         midiaEmprestimo.TipoMidia = cbMidia.Text;
                         midiaEmprestimo.DataDevolucao = midiaEmprestimoBase.DataDevolucao;
                         midiaEmprestimo.Devolvido = false;
@@ -219,7 +219,7 @@ namespace Interface.Formularios.Cadastros
                     if (frmMidiaEmprestimo.ShowDialog() == DialogResult.OK)
                     {
                         midiaEmprestimo.Descricao = midiaEmprestimoBase.Descricao;
-                        midiaEmprestimo.CodMidia = jornal.CodMidia;
+                        midiaEmprestimo.CodMidia = (int)jornal.CodMidia;
                         midiaEmprestimo.TipoMidia = cbMidia.Text;
                         midiaEmprestimo.DataDevolucao = midiaEmprestimoBase.DataDevolucao;
                         midiaEmprestimo.Devolvido = false;
@@ -250,7 +250,7 @@ namespace Interface.Formularios.Cadastros
                     if (frmMidiaEmprestimo.ShowDialog() == DialogResult.OK)
                     {
                         midiaEmprestimo.Descricao = midiaEmprestimoBase.Descricao;
-                        midiaEmprestimo.CodMidia = revista.CodMidia;
+                        midiaEmprestimo.CodMidia = (int)revista.CodMidia;
                         midiaEmprestimo.TipoMidia = cbMidia.Text;
                         midiaEmprestimo.DataDevolucao = midiaEmprestimoBase.DataDevolucao;
                         midiaEmprestimo.Devolvido = false;

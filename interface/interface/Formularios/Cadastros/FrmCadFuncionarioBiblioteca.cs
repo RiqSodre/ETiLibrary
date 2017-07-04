@@ -56,13 +56,13 @@ namespace Interface.Formularios.Cadastros
                 //Validações campo Nome
                 if (txtNome.Text.Length == 0)
                 {
-                    MessageBox.Show(this, "O campo nome é obrigatório.", "Atenção", MessageBoxButtons.OK,
+                    MessageBox.Show(this, "O campo Nome é obrigatório.", "Atenção", MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
                     return;
                 }
                 else if (txtNome.Text.Length < 8)
                 {
-                    MessageBox.Show(this, "O campo nome deve conter no minimo oito letras.", "Atenção", MessageBoxButtons.OK,
+                    MessageBox.Show(this, "O campo Nome deve conter no minimo oito letras.", "Atenção", MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
                     return;
                 }
@@ -122,7 +122,7 @@ namespace Interface.Formularios.Cadastros
                     }
                     else
                     {
-                        MessageBox.Show(this, "O campo telefone deve conter dez digitos.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Telefone deve conter dez digitos.", "Atenção", MessageBoxButtons.OK,
                                MessageBoxIcon.Warning);
                         return;
                     }
@@ -132,7 +132,7 @@ namespace Interface.Formularios.Cadastros
                     }
                     else
                     {
-                        MessageBox.Show(this, "O campo celular deve conter onze digitos.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Celular deve conter onze digitos.", "Atenção", MessageBoxButtons.OK,
                                MessageBoxIcon.Warning);
                         return;
                     }
@@ -379,7 +379,7 @@ namespace Interface.Formularios.Cadastros
                 if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)8 && !char.IsLetter(e.KeyChar) && !(e.KeyChar == (char)Keys.Back))
                 {
                     e.Handled = true;
-                    MessageBox.Show("O campo Login aceita apenas letras e números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("O campo Senha aceita apenas letras e números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -423,6 +423,9 @@ namespace Interface.Formularios.Cadastros
                 if (funcionario.Admin)
                 {
                     checkAdmin.Checked = true;
+                }else
+                {
+                    checkAdmin.Checked = false;
                 }
             }
             catch (Exception ex)

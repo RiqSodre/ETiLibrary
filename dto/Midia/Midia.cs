@@ -5,7 +5,7 @@ namespace DTO.Midia
 {
     public class Midia
     {
-        private int codMidia;
+        private int? codMidia = null;
         private int tombo;
         private Area area = new Area();
         private bool disponivel;
@@ -17,7 +17,7 @@ namespace DTO.Midia
         private string observacao;
         private int quantidade;
 
-        public int CodMidia
+        public int? CodMidia
         {
             get
             {

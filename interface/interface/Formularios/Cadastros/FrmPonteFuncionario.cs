@@ -15,22 +15,36 @@ namespace Interface.Formularios.Cadastros
         private bool funcBiblioteca;
 
         //Carrega o form ponte funcionario
-        public FrmPonteFuncionario(FrmCadFuncionario frmCadFuncionario, string textoFrm)
+        public FrmPonteFuncionario(FrmCadFuncionario frmCadFuncionario, string txtFrm)
         {
-            InitializeComponent();
-            frmCadFuncionarioBase = frmCadFuncionario;
-            funcionario = frmCadFuncionario.Funcionario;
-            funcBiblioteca = false;
-            lblForm.Text +=" - "+textoFrm;
+            try
+            {
+                InitializeComponent();
+                frmCadFuncionarioBase = frmCadFuncionario;
+                funcionario = frmCadFuncionario.Funcionario;
+                funcBiblioteca = false;
+                lblForm.Text += " - " + txtFrm;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         //Carrega o form ponte funcionario Biblioteca
-        public FrmPonteFuncionario(FrmCadFuncionarioBiblioteca frmCadFuncionarioBiblioteca, string textoFrm)
+        public FrmPonteFuncionario(FrmCadFuncionarioBiblioteca frmCadFuncionarioBiblioteca, string txtFrm)
         {
-            InitializeComponent();
-            frmCadFuncionarioBibliotecaBase = frmCadFuncionarioBiblioteca;
-            funcionario = frmCadFuncionarioBiblioteca.Funcionario;
-            funcBiblioteca = true;
-            lblForm.Text += " Biblioteca - " + textoFrm;
+            try
+            {
+                InitializeComponent();
+                frmCadFuncionarioBibliotecaBase = frmCadFuncionarioBiblioteca;
+                funcionario = frmCadFuncionarioBiblioteca.Funcionario;
+                funcBiblioteca = true;
+                lblForm.Text += " Biblioteca - " + txtFrm;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         //Carrega os dados do funcionario que serão passsados para o form de cadastro
         protected override void btnAcao_Click(object sender, EventArgs e)
@@ -77,7 +91,7 @@ namespace Interface.Formularios.Cadastros
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Faz o Campo do código do aluno aceitar apenas números
+        //Faz o Campo do código do funcionário aceitar apenas números
         private void txtTexto_KeyPress(object sender, KeyPressEventArgs e)
         {
             try

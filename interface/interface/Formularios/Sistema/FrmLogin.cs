@@ -22,13 +22,13 @@ namespace Interface.Formularios.Sistema
         {
             if (txtNome.Text.Length == 0)
             {
-                MessageBox.Show(this, "O campo nome é obrigatório.", "Atenção", MessageBoxButtons.OK,
+                MessageBox.Show(this, "O campo Nome do Usuário é obrigatório.", "Atenção", MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
                 return false;
             }
             else if (txtSenha.Text.Length == 0)
             {
-                MessageBox.Show(this, "O campo senha é obrigatório.", "Atenção", MessageBoxButtons.OK,
+                MessageBox.Show(this, "O campo Senha é obrigatório.", "Atenção", MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
                 return false;
             }

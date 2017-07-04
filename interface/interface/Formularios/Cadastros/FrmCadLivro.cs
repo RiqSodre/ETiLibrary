@@ -142,6 +142,7 @@ namespace Interface.Formularios.Cadastros
             {
                 LimparComponentes();
                 Habilita(true);
+                cbLingua.SelectedIndex = 42;
                 txtTitulo.Focus();
             }
             catch (Exception ex)

@@ -88,7 +88,7 @@
             this.btnAcao.Name = "btnAcao";
             this.btnAcao.Size = new System.Drawing.Size(100, 28);
             this.btnAcao.TabIndex = 1;
-            this.btnAcao.Text = "Ação";
+            this.btnAcao.Text = "Carregar";
             this.btnAcao.UseSelectable = true;
             // 
             // btnFechar

@@ -31,7 +31,7 @@ namespace BLL
         }
 
         //Excluir Midia
-        public string MidiaExcluir(int Tombo, string TipoMidia)
+        public string MidiaExcluir(int? Tombo, string TipoMidia)
         {
             try
             {
@@ -970,7 +970,7 @@ namespace BLL
             {
                 acesso.LimparParametros();
                 acesso.AdicionarParametros("@Titulo", cdvd.Titulo);
-                acesso.AdicionarParametros("@Descricao", cdvd.Descricao);
+                acesso.AdicionarParametros("@Descricao", "");
                 acesso.AdicionarParametros("@CodArea", cdvd.Area.CodArea);
                 acesso.AdicionarParametros("@Disponivel", cdvd.Disponivel);
                 acesso.AdicionarParametros("@Localizacao", cdvd.Localizacao);
@@ -995,7 +995,7 @@ namespace BLL
                 acesso.LimparParametros();
                 acesso.AdicionarParametros("@CodMidia", cdvd.CodMidia);
                 acesso.AdicionarParametros("@Titulo", cdvd.Titulo);
-                acesso.AdicionarParametros("@Descricao", cdvd.Descricao);
+                acesso.AdicionarParametros("@Descricao", "");
                 acesso.AdicionarParametros("@CodArea", cdvd.Area.CodArea);
                 acesso.AdicionarParametros("@Disponivel", cdvd.Disponivel);
                 acesso.AdicionarParametros("@Localizacao", cdvd.Localizacao);
@@ -1155,6 +1155,7 @@ namespace BLL
                     cdvd.Disponivel = (bool)dataRow["Disponivel"];
                     cdvd.Tombo = (int)dataRow["Tombo"];
                     cdvd.Observacao = (string)dataRow["Observacao"];
+                    cdvd.Area.CodArea = (int)dataRow["CodArea"];
                     cdvd.Area.Descricao = (string)dataRow["Área"];
 
                     cdvdList.Add(cdvd);

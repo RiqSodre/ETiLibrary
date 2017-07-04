@@ -62,13 +62,13 @@ namespace Interface.Formularios.Cadastros
                 //Validações campo Nome
                 if (txtNome.Text.Length == 0)
                 {
-                    MessageBox.Show(this, "O campo nome é obrigatório.", "Atenção", MessageBoxButtons.OK,
+                    MessageBox.Show(this, "O campo Nome é obrigatório.", "Atenção", MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
                     return;
                 }
                 else if (txtNome.Text.Length < 8)
                 {
-                    MessageBox.Show(this, "O campo nome deve conter no minimo oito letras.", "Atenção", MessageBoxButtons.OK,
+                    MessageBox.Show(this, "O campo Nome deve conter no minimo oito letras.", "Atenção", MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
                     return;
                 }
@@ -137,7 +137,7 @@ namespace Interface.Formularios.Cadastros
                     }
                     else
                     {
-                        MessageBox.Show(this, "O campo telefone deve conter dez digitos.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Telefone deve conter dez digitos.", "Atenção", MessageBoxButtons.OK,
                                MessageBoxIcon.Warning);
                         return;
                     }
@@ -147,7 +147,7 @@ namespace Interface.Formularios.Cadastros
                     }
                     else
                     {
-                        MessageBox.Show(this, "O campo celular deve conter onze digitos.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Celular deve conter onze digitos.", "Atenção", MessageBoxButtons.OK,
                                MessageBoxIcon.Warning);
                         return;
                     }
