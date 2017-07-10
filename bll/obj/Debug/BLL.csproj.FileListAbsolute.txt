@@ -68,13 +68,3 @@ C:\Users\Pichau\Desktop\ETiLibrary\BLL\bin\Debug\DTO.pdb
 C:\Users\Pichau\Desktop\ETiLibrary\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 C:\Users\Pichau\Desktop\ETiLibrary\BLL\obj\Debug\BLL.dll
 C:\Users\Pichau\Desktop\ETiLibrary\BLL\obj\Debug\BLL.pdb
-C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\BLL\bin\Debug\BLL.dll
-C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\BLL\bin\Debug\BLL.pdb
-C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\BLL\bin\Debug\DAL.dll
-C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\BLL\bin\Debug\DTO.dll
-C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\BLL\bin\Debug\MySql.Data.dll
-C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\BLL\bin\Debug\DAL.pdb
-C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\BLL\bin\Debug\DTO.pdb
-C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
-C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\BLL\obj\Debug\BLL.dll
-C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\BLL\obj\Debug\BLL.pdb

@@ -126,11 +126,11 @@
     <Compile Include="Formularios\Cadastros\FrmCadGenero.Designer.cs">
       <DependentUpon>FrmCadGenero.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmCadJornal.cs">
+    <Compile Include="Formularios\Cadastros\FrmCadJornalEx.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmCadJornal.Designer.cs">
-      <DependentUpon>FrmCadJornal.cs</DependentUpon>
+    <Compile Include="Formularios\Cadastros\FrmCadJornalEx.Designer.cs">
+      <DependentUpon>FrmCadJornalEx.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Cadastros\FrmCadAluno.cs">
       <SubType>Form</SubType>
@@ -234,11 +234,11 @@
     <Compile Include="Formularios\Cadastros\FrmPonteGenero.Designer.cs">
       <DependentUpon>FrmPonteGenero.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmPonteJornal.cs">
+    <Compile Include="Formularios\Cadastros\FrmPonteJornalEx.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmPonteJornal.Designer.cs">
-      <DependentUpon>FrmPonteJornal.cs</DependentUpon>
+    <Compile Include="Formularios\Cadastros\FrmPonteJornalEx.Designer.cs">
+      <DependentUpon>FrmPonteJornalEx.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Cadastros\FrmPonteLivro.cs">
       <SubType>Form</SubType>
@@ -420,8 +420,8 @@
     <EmbeddedResource Include="Formularios\Cadastros\FrmCadGenero.resx">
       <DependentUpon>FrmCadGenero.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Cadastros\FrmCadJornal.resx">
-      <DependentUpon>FrmCadJornal.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Cadastros\FrmCadJornalEx.resx">
+      <DependentUpon>FrmCadJornalEx.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cadastros\FrmCadAluno.resx">
       <DependentUpon>FrmCadAluno.cs</DependentUpon>
@@ -474,8 +474,8 @@
     <EmbeddedResource Include="Formularios\Cadastros\FrmPonteGenero.resx">
       <DependentUpon>FrmPonteGenero.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Cadastros\FrmPonteJornal.resx">
-      <DependentUpon>FrmPonteJornal.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Cadastros\FrmPonteJornalEx.resx">
+      <DependentUpon>FrmPonteJornalEx.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cadastros\FrmPonteLivro.resx">
       <DependentUpon>FrmPonteLivro.cs</DependentUpon>

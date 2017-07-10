@@ -24,7 +24,6 @@ namespace Interface.Formularios.Cadastros
                 funcionarioBase = value;
             }
         }
-        private string resultado;
 
         //Construtor Padrão
         public FrmCadFuncionarioBiblioteca()
@@ -307,7 +306,7 @@ namespace Interface.Formularios.Cadastros
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Faz o Campo Cpf aceitar apenas números
+        //Faz o campo Cpf aceitar apenas números
         private void txtCpf_KeyPress(object sender, KeyPressEventArgs e)
         {
             try
@@ -427,6 +426,8 @@ namespace Interface.Formularios.Cadastros
                 {
                     checkAdmin.Checked = false;
                 }
+                toolExibe(txtNome, txtNome.Text);
+                toolExibe(txtEmail, txtEmail.Text);
             }
             catch (Exception ex)
             {

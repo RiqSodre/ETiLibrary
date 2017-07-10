@@ -105,7 +105,35 @@ namespace Interface.Formularios.Modelos
         {
             try
             {
-                //Implementar
+                bool existe = false;
+
+                foreach(Form form in (this.MdiParent).MdiChildren)
+                {
+                    if(form.Name == "FrmCadJornal")
+                    {
+                        form.Activate();
+                        if (form.Visible == false)
+                        {
+                            form.Close();
+                        }
+                        else
+                        {
+                            existe = true;
+                        }
+                        break;
+                    }
+                }
+                if (!existe)
+                {
+                    FrmCadJornalEx cadjornalex = new FrmCadJornalEx();
+                    cadjornalex.MdiParent = MdiParent;
+                    cadjornalex.Show();
+                }
+                else
+                {
+                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                this.Dispose();
             }
             catch (Exception ex)
             {

@@ -41,10 +41,9 @@
             this.lblEmail.BackColor = System.Drawing.Color.Black;
             this.lblEmail.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblEmail.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblEmail.Location = new System.Drawing.Point(144, 74);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmail.Location = new System.Drawing.Point(108, 60);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(140, 20);
+            this.lblEmail.Size = new System.Drawing.Size(133, 19);
             this.lblEmail.TabIndex = 99999;
             this.lblEmail.Text = "Informe seu email:";
             this.lblEmail.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -55,18 +54,16 @@
             // 
             // 
             this.txtEmail.CustomButton.Image = null;
-            this.txtEmail.CustomButton.Location = new System.Drawing.Point(267, 2);
-            this.txtEmail.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.CustomButton.Location = new System.Drawing.Point(148, 1);
             this.txtEmail.CustomButton.Name = "";
-            this.txtEmail.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.txtEmail.CustomButton.Size = new System.Drawing.Size(16, 17);
             this.txtEmail.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtEmail.CustomButton.TabIndex = 1;
             this.txtEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtEmail.CustomButton.UseSelectable = true;
             this.txtEmail.CustomButton.Visible = false;
             this.txtEmail.Lines = new string[0];
-            this.txtEmail.Location = new System.Drawing.Point(67, 112);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Location = new System.Drawing.Point(50, 91);
             this.txtEmail.MaxLength = 32767;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
@@ -75,7 +72,7 @@
             this.txtEmail.SelectionLength = 0;
             this.txtEmail.SelectionStart = 0;
             this.txtEmail.ShortcutsEnabled = true;
-            this.txtEmail.Size = new System.Drawing.Size(293, 28);
+            this.txtEmail.Size = new System.Drawing.Size(220, 23);
             this.txtEmail.TabIndex = 0;
             this.txtEmail.UseSelectable = true;
             this.txtEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -86,10 +83,9 @@
             this.btnRecuperar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRecuperar.BackgroundImage")));
             this.btnRecuperar.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.btnRecuperar.ForeColor = System.Drawing.Color.White;
-            this.btnRecuperar.Location = new System.Drawing.Point(155, 182);
-            this.btnRecuperar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRecuperar.Location = new System.Drawing.Point(116, 148);
             this.btnRecuperar.Name = "btnRecuperar";
-            this.btnRecuperar.Size = new System.Drawing.Size(120, 25);
+            this.btnRecuperar.Size = new System.Drawing.Size(90, 20);
             this.btnRecuperar.TabIndex = 1;
             this.btnRecuperar.Text = "Recuperar";
             this.btnRecuperar.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -103,10 +99,9 @@
             this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.Location = new System.Drawing.Point(391, 9);
-            this.btnFechar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFechar.Location = new System.Drawing.Point(293, 7);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(33, 31);
+            this.btnFechar.Size = new System.Drawing.Size(25, 25);
             this.btnFechar.TabIndex = 3;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
@@ -114,21 +109,19 @@
             // FrmRecSenha
             // 
             this.AcceptButton = this.btnRecuperar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(427, 252);
+            this.ClientSize = new System.Drawing.Size(320, 205);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnRecuperar);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblEmail);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Movable = false;
             this.Name = "FrmRecSenha";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.TopMost = true;

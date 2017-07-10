@@ -7,7 +7,7 @@ namespace Interface.Formularios.Sistema
 {
     public partial class FrmRecSenha : MetroFramework.Forms.MetroForm
     {
-        AutenticacaoBLL autenticaBLL = new AutenticacaoBLL();
+        private AutenticacaoBLL autenticaBLL = new AutenticacaoBLL();
         private string retorno;
 
         //Construtor Padrão

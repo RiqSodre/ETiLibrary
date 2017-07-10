@@ -56,8 +56,8 @@
             // 
             // lblForm
             // 
-            this.lblForm.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblForm.Size = new System.Drawing.Size(129, 20);
+            this.lblForm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblForm.Size = new System.Drawing.Size(103, 16);
             this.lblForm.TabIndex = 0;
             this.lblForm.Text = "Cadastro: Aluno";
             // 
@@ -93,11 +93,13 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Location = new System.Drawing.Point(239, 342);
             this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "&Cancelar";
             // 
             // btnAcao
             // 
+            this.btnAcao.Location = new System.Drawing.Point(146, 342);
             this.btnAcao.TabIndex = 1;
             this.btnAcao.Click += new System.EventHandler(this.btnAcao_Click);
             // 
@@ -116,24 +118,24 @@
             this.pnlPrincipal.Controls.Add(this.lblCPF);
             this.pnlPrincipal.Controls.Add(this.txtCpf);
             this.pnlPrincipal.Controls.Add(this.lblSexo);
-            this.pnlPrincipal.Controls.Add(this.cbCurso);
             this.pnlPrincipal.Controls.Add(this.lblNome);
             this.pnlPrincipal.Controls.Add(this.cbSexo);
             this.pnlPrincipal.Controls.Add(this.cbTurma);
-            this.pnlPrincipal.Location = new System.Drawing.Point(9, 87);
-            this.pnlPrincipal.Margin = new System.Windows.Forms.Padding(5);
-            this.pnlPrincipal.Size = new System.Drawing.Size(295, 304);
+            this.pnlPrincipal.Controls.Add(this.cbCurso);
+            this.pnlPrincipal.Location = new System.Drawing.Point(7, 71);
+            this.pnlPrincipal.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlPrincipal.Size = new System.Drawing.Size(325, 247);
             this.pnlPrincipal.TabIndex = 0;
             // 
             // cbCurso
             // 
             this.cbCurso.DisplayMember = "Descricao";
             this.cbCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCurso.Font = new System.Drawing.Font("Calibri", 9.75F);
             this.cbCurso.FormattingEnabled = true;
-            this.cbCurso.Location = new System.Drawing.Point(96, 160);
-            this.cbCurso.Margin = new System.Windows.Forms.Padding(4);
+            this.cbCurso.Location = new System.Drawing.Point(72, 130);
             this.cbCurso.Name = "cbCurso";
-            this.cbCurso.Size = new System.Drawing.Size(160, 24);
+            this.cbCurso.Size = new System.Drawing.Size(149, 23);
             this.cbCurso.TabIndex = 5;
             this.cbCurso.ValueMember = "CodCurso";
             this.cbCurso.SelectedIndexChanged += new System.EventHandler(this.cbCurso_SelectedIndexChanged);
@@ -142,25 +144,25 @@
             // 
             this.cbTurma.DisplayMember = "Descricao";
             this.cbTurma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTurma.Font = new System.Drawing.Font("Calibri", 9.75F);
             this.cbTurma.FormattingEnabled = true;
-            this.cbTurma.Location = new System.Drawing.Point(96, 199);
-            this.cbTurma.Margin = new System.Windows.Forms.Padding(4);
+            this.cbTurma.Location = new System.Drawing.Point(72, 162);
             this.cbTurma.Name = "cbTurma";
-            this.cbTurma.Size = new System.Drawing.Size(160, 24);
+            this.cbTurma.Size = new System.Drawing.Size(100, 23);
             this.cbTurma.TabIndex = 6;
             this.cbTurma.ValueMember = "CodTurma";
             // 
             // cbSexo
             // 
             this.cbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSexo.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSexo.FormattingEnabled = true;
             this.cbSexo.Items.AddRange(new object[] {
             "Masculino",
             "Feminino"});
-            this.cbSexo.Location = new System.Drawing.Point(96, 50);
-            this.cbSexo.Margin = new System.Windows.Forms.Padding(4);
+            this.cbSexo.Location = new System.Drawing.Point(72, 41);
             this.cbSexo.Name = "cbSexo";
-            this.cbSexo.Size = new System.Drawing.Size(160, 24);
+            this.cbSexo.Size = new System.Drawing.Size(85, 23);
             this.cbSexo.TabIndex = 1;
             // 
             // txtRm
@@ -169,18 +171,16 @@
             // 
             // 
             this.txtRm.CustomButton.Image = null;
-            this.txtRm.CustomButton.Location = new System.Drawing.Point(62, 2);
-            this.txtRm.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRm.CustomButton.Location = new System.Drawing.Point(44, 1);
             this.txtRm.CustomButton.Name = "";
-            this.txtRm.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.txtRm.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtRm.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtRm.CustomButton.TabIndex = 1;
             this.txtRm.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtRm.CustomButton.UseSelectable = true;
             this.txtRm.CustomButton.Visible = false;
             this.txtRm.Lines = new string[0];
-            this.txtRm.Location = new System.Drawing.Point(96, 121);
-            this.txtRm.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRm.Location = new System.Drawing.Point(72, 98);
             this.txtRm.MaxLength = 7;
             this.txtRm.Name = "txtRm";
             this.txtRm.PasswordChar = '\0';
@@ -189,7 +189,7 @@
             this.txtRm.SelectionLength = 0;
             this.txtRm.SelectionStart = 0;
             this.txtRm.ShortcutsEnabled = true;
-            this.txtRm.Size = new System.Drawing.Size(88, 28);
+            this.txtRm.Size = new System.Drawing.Size(66, 23);
             this.txtRm.TabIndex = 3;
             this.txtRm.UseSelectable = true;
             this.txtRm.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -199,11 +199,11 @@
             // txtCpf
             // 
             this.txtCpf.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
-            this.txtCpf.Location = new System.Drawing.Point(96, 86);
-            this.txtCpf.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCpf.Font = new System.Drawing.Font("Calibri", 9.75F);
+            this.txtCpf.Location = new System.Drawing.Point(72, 70);
             this.txtCpf.Mask = "000\\.000\\.000\\-00";
             this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(132, 22);
+            this.txtCpf.Size = new System.Drawing.Size(100, 23);
             this.txtCpf.TabIndex = 2;
             this.txtCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCpf_KeyPress);
@@ -211,11 +211,11 @@
             // txtTelefone
             // 
             this.txtTelefone.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
-            this.txtTelefone.Location = new System.Drawing.Point(96, 236);
-            this.txtTelefone.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTelefone.Font = new System.Drawing.Font("Calibri", 9.75F);
+            this.txtTelefone.Location = new System.Drawing.Point(72, 192);
             this.txtTelefone.Mask = "(99) 0000-0000";
             this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(132, 22);
+            this.txtTelefone.Size = new System.Drawing.Size(100, 23);
             this.txtTelefone.TabIndex = 7;
             this.txtTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefone_KeyPress);
@@ -223,21 +223,20 @@
             // txtCelular
             // 
             this.txtCelular.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
-            this.txtCelular.Location = new System.Drawing.Point(96, 272);
-            this.txtCelular.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCelular.Font = new System.Drawing.Font("Calibri", 9.75F);
+            this.txtCelular.Location = new System.Drawing.Point(72, 221);
             this.txtCelular.Mask = "(99) 00000-0000";
             this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(132, 22);
+            this.txtCelular.Size = new System.Drawing.Size(100, 23);
             this.txtCelular.TabIndex = 8;
             this.txtCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCelular_KeyPress);
             // 
             // btnCadRM
             // 
-            this.btnCadRM.Location = new System.Drawing.Point(193, 121);
-            this.btnCadRM.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCadRM.Location = new System.Drawing.Point(145, 98);
             this.btnCadRM.Name = "btnCadRM";
-            this.btnCadRM.Size = new System.Drawing.Size(36, 28);
+            this.btnCadRM.Size = new System.Drawing.Size(27, 23);
             this.btnCadRM.TabIndex = 4;
             this.btnCadRM.Text = "C";
             this.btnCadRM.UseSelectable = true;
@@ -249,18 +248,16 @@
             // 
             // 
             this.txtNome.CustomButton.Image = null;
-            this.txtNome.CustomButton.Location = new System.Drawing.Point(169, 2);
-            this.txtNome.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNome.CustomButton.Location = new System.Drawing.Point(173, 1);
             this.txtNome.CustomButton.Name = "";
-            this.txtNome.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.txtNome.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtNome.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtNome.CustomButton.TabIndex = 1;
             this.txtNome.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtNome.CustomButton.UseSelectable = true;
             this.txtNome.CustomButton.Visible = false;
             this.txtNome.Lines = new string[0];
-            this.txtNome.Location = new System.Drawing.Point(96, 11);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNome.Location = new System.Drawing.Point(72, 9);
             this.txtNome.MaxLength = 50;
             this.txtNome.Name = "txtNome";
             this.txtNome.PasswordChar = '\0';
@@ -269,7 +266,7 @@
             this.txtNome.SelectionLength = 0;
             this.txtNome.SelectionStart = 0;
             this.txtNome.ShortcutsEnabled = true;
-            this.txtNome.Size = new System.Drawing.Size(195, 28);
+            this.txtNome.Size = new System.Drawing.Size(195, 23);
             this.txtNome.TabIndex = 0;
             this.txtNome.UseSelectable = true;
             this.txtNome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -279,91 +276,83 @@
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(15, 14);
-            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNome.Location = new System.Drawing.Point(11, 11);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(51, 20);
+            this.lblNome.Size = new System.Drawing.Size(49, 19);
             this.lblNome.TabIndex = 4;
             this.lblNome.Text = "Nome:";
             // 
             // lblSexo
             // 
             this.lblSexo.AutoSize = true;
-            this.lblSexo.Location = new System.Drawing.Point(15, 52);
-            this.lblSexo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSexo.Location = new System.Drawing.Point(11, 42);
             this.lblSexo.Name = "lblSexo";
-            this.lblSexo.Size = new System.Drawing.Size(41, 20);
+            this.lblSexo.Size = new System.Drawing.Size(40, 19);
             this.lblSexo.TabIndex = 5;
             this.lblSexo.Text = "Sexo:";
             // 
             // lblCPF
             // 
             this.lblCPF.AutoSize = true;
-            this.lblCPF.Location = new System.Drawing.Point(15, 87);
-            this.lblCPF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCPF.Location = new System.Drawing.Point(11, 71);
             this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(36, 20);
+            this.lblCPF.Size = new System.Drawing.Size(36, 19);
             this.lblCPF.TabIndex = 6;
             this.lblCPF.Text = "CPF:";
             // 
             // lblRm
             // 
             this.lblRm.AutoSize = true;
-            this.lblRm.Location = new System.Drawing.Point(15, 123);
-            this.lblRm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRm.Location = new System.Drawing.Point(11, 100);
             this.lblRm.Name = "lblRm";
-            this.lblRm.Size = new System.Drawing.Size(32, 20);
+            this.lblRm.Size = new System.Drawing.Size(32, 19);
             this.lblRm.TabIndex = 7;
             this.lblRm.Text = "RM:";
             // 
             // lblCurso
             // 
             this.lblCurso.AutoSize = true;
-            this.lblCurso.Location = new System.Drawing.Point(15, 161);
-            this.lblCurso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCurso.Location = new System.Drawing.Point(11, 131);
             this.lblCurso.Name = "lblCurso";
-            this.lblCurso.Size = new System.Drawing.Size(48, 20);
+            this.lblCurso.Size = new System.Drawing.Size(46, 19);
             this.lblCurso.TabIndex = 8;
             this.lblCurso.Text = "Curso:";
             // 
             // lblTurma
             // 
             this.lblTurma.AutoSize = true;
-            this.lblTurma.Location = new System.Drawing.Point(15, 201);
-            this.lblTurma.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTurma.Location = new System.Drawing.Point(11, 163);
             this.lblTurma.Name = "lblTurma";
-            this.lblTurma.Size = new System.Drawing.Size(50, 20);
+            this.lblTurma.Size = new System.Drawing.Size(48, 19);
             this.lblTurma.TabIndex = 9;
             this.lblTurma.Text = "Turma:";
             // 
             // lblTelefone
             // 
             this.lblTelefone.AutoSize = true;
-            this.lblTelefone.Location = new System.Drawing.Point(15, 238);
-            this.lblTelefone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTelefone.Location = new System.Drawing.Point(11, 193);
             this.lblTelefone.Name = "lblTelefone";
-            this.lblTelefone.Size = new System.Drawing.Size(65, 20);
+            this.lblTelefone.Size = new System.Drawing.Size(60, 19);
             this.lblTelefone.TabIndex = 10;
             this.lblTelefone.Text = "Telefone:";
             // 
             // lblCelular
             // 
             this.lblCelular.AutoSize = true;
-            this.lblCelular.Location = new System.Drawing.Point(15, 273);
-            this.lblCelular.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCelular.Location = new System.Drawing.Point(11, 222);
             this.lblCelular.Name = "lblCelular";
-            this.lblCelular.Size = new System.Drawing.Size(56, 20);
+            this.lblCelular.Size = new System.Drawing.Size(54, 19);
             this.lblCelular.TabIndex = 11;
             this.lblCelular.Text = "Celular:";
             // 
             // FrmCadAluno
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 480);
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.ClientSize = new System.Drawing.Size(339, 390);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmCadAluno";
-            this.Padding = new System.Windows.Forms.Padding(36, 91, 36, 31);
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Text = "Cadastro: Aluno";
             this.pnl.ResumeLayout(false);
             this.pnl.PerformLayout();

@@ -1,6 +1,6 @@
 ﻿namespace Interface.Formularios.Cadastros
 {
-    partial class FrmPonteJornal
+    partial class FrmPonteJornalEx
     {
         /// <summary>
         /// Required designer variable.
@@ -31,10 +31,6 @@
             this.pnlForm.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnFechar
-            // 
-            this.btnFechar.FlatAppearance.BorderSize = 0;
-            // 
             // txtTexto
             // 
             // 
@@ -51,13 +47,30 @@
             this.txtTexto.CustomButton.Visible = false;
             this.txtTexto.Lines = new string[0];
             // 
-            // FrmPonteJornal
+            // lblTexto
+            // 
+            this.lblTexto.Size = new System.Drawing.Size(206, 18);
+            this.lblTexto.Text = "Digite aqui o tombo do Jornal:";
+            // 
+            // btnAcao
+            // 
+            this.btnAcao.Click += new System.EventHandler(this.btnAcao_Click);
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.FlatAppearance.BorderSize = 0;
+            // 
+            // lblForm
+            // 
+            this.lblForm.Size = new System.Drawing.Size(106, 16);
+            this.lblForm.Text = "Cadastro: Jornal";
+            // 
+            // FrmPonteJornalEx
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(327, 223);
-            this.Name = "FrmPonteJornal";
-            this.Load += new System.EventHandler(this.FrmPonteJornal_Load);
+            this.Name = "FrmPonteJornalEx";
             this.pnlForm.ResumeLayout(false);
             this.pnlForm.PerformLayout();
             this.ResumeLayout(false);

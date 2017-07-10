@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadBase));
             this.pnl = new System.Windows.Forms.Panel();
             this.lblForm = new System.Windows.Forms.Label();
@@ -39,6 +40,7 @@
             this.btnCancelar = new MetroFramework.Controls.MetroButton();
             this.btnAcao = new MetroFramework.Controls.MetroButton();
             this.pnlPrincipal = new System.Windows.Forms.Panel();
+            this.toolBase = new System.Windows.Forms.ToolTip(this.components);
             this.pnl.SuspendLayout();
             this.pnlBase.SuspendLayout();
             this.SuspendLayout();
@@ -48,10 +50,9 @@
             this.pnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pnl.Controls.Add(this.lblForm);
             this.pnl.Controls.Add(this.btnFechar);
-            this.pnl.Location = new System.Drawing.Point(-7, 6);
-            this.pnl.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl.Location = new System.Drawing.Point(-5, 5);
             this.pnl.Name = "pnl";
-            this.pnl.Size = new System.Drawing.Size(463, 32);
+            this.pnl.Size = new System.Drawing.Size(347, 26);
             this.pnl.TabIndex = 102;
             this.pnl.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_MouseMove);
             // 
@@ -60,10 +61,9 @@
             this.lblForm.AutoSize = true;
             this.lblForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblForm.ForeColor = System.Drawing.Color.White;
-            this.lblForm.Location = new System.Drawing.Point(12, 5);
-            this.lblForm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblForm.Location = new System.Drawing.Point(9, 4);
             this.lblForm.Name = "lblForm";
-            this.lblForm.Size = new System.Drawing.Size(82, 20);
+            this.lblForm.Size = new System.Drawing.Size(66, 16);
             this.lblForm.TabIndex = 48;
             this.lblForm.Text = "Cadastro:";
             // 
@@ -74,10 +74,9 @@
             this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.Location = new System.Drawing.Point(416, 1);
-            this.btnFechar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFechar.Location = new System.Drawing.Point(312, 1);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(33, 27);
+            this.btnFechar.Size = new System.Drawing.Size(25, 22);
             this.btnFechar.TabIndex = 46;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
@@ -89,20 +88,18 @@
             this.pnlBase.Controls.Add(this.btnExcluir);
             this.pnlBase.Controls.Add(this.btnAlterar);
             this.pnlBase.Controls.Add(this.btnNovo);
-            this.pnlBase.Location = new System.Drawing.Point(0, 36);
-            this.pnlBase.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlBase.Location = new System.Drawing.Point(0, 29);
             this.pnlBase.Name = "pnlBase";
-            this.pnlBase.Size = new System.Drawing.Size(451, 44);
+            this.pnlBase.Size = new System.Drawing.Size(339, 36);
             this.pnlBase.TabIndex = 101;
             // 
             // btnExcluir
             // 
             this.btnExcluir.FlatAppearance.BorderSize = 0;
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluir.Location = new System.Drawing.Point(285, -4);
-            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExcluir.Location = new System.Drawing.Point(214, -3);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(117, 50);
+            this.btnExcluir.Size = new System.Drawing.Size(88, 41);
             this.btnExcluir.TabIndex = 26;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -111,10 +108,9 @@
             // 
             this.btnAlterar.FlatAppearance.BorderSize = 0;
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlterar.Location = new System.Drawing.Point(165, -4);
-            this.btnAlterar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAlterar.Location = new System.Drawing.Point(124, -3);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(117, 50);
+            this.btnAlterar.Size = new System.Drawing.Size(88, 41);
             this.btnAlterar.TabIndex = 25;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
@@ -123,20 +119,18 @@
             // 
             this.btnNovo.FlatAppearance.BorderSize = 0;
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovo.Location = new System.Drawing.Point(44, -4);
-            this.btnNovo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNovo.Location = new System.Drawing.Point(33, -3);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(117, 50);
+            this.btnNovo.Size = new System.Drawing.Size(88, 41);
             this.btnNovo.TabIndex = 24;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(327, 421);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Location = new System.Drawing.Point(245, 342);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(100, 28);
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 104;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseSelectable = true;
@@ -144,38 +138,38 @@
             // 
             // btnAcao
             // 
-            this.btnAcao.Location = new System.Drawing.Point(204, 421);
-            this.btnAcao.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAcao.Location = new System.Drawing.Point(153, 342);
             this.btnAcao.Name = "btnAcao";
-            this.btnAcao.Size = new System.Drawing.Size(100, 28);
+            this.btnAcao.Size = new System.Drawing.Size(75, 23);
             this.btnAcao.TabIndex = 103;
             this.btnAcao.Text = "Salvar";
             this.btnAcao.UseSelectable = true;
             // 
             // pnlPrincipal
             // 
-            this.pnlPrincipal.Location = new System.Drawing.Point(7, 87);
-            this.pnlPrincipal.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlPrincipal.Location = new System.Drawing.Point(5, 71);
             this.pnlPrincipal.Name = "pnlPrincipal";
-            this.pnlPrincipal.Size = new System.Drawing.Size(436, 326);
+            this.pnlPrincipal.Size = new System.Drawing.Size(327, 265);
             this.pnlPrincipal.TabIndex = 105;
             this.pnlPrincipal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_MouseMove);
+            // 
+            // toolBase
+            // 
+            this.toolBase.AutomaticDelay = 200;
             // 
             // FrmCadBase
             // 
             this.AcceptButton = this.btnAcao;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(452, 480);
+            this.ClientSize = new System.Drawing.Size(339, 390);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAcao);
             this.Controls.Add(this.pnl);
             this.Controls.Add(this.pnlBase);
             this.Controls.Add(this.pnlPrincipal);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmCadBase";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation;
@@ -199,5 +193,6 @@
         public MetroFramework.Controls.MetroButton btnCancelar;
         public MetroFramework.Controls.MetroButton btnAcao;
         public System.Windows.Forms.Panel pnlPrincipal;
+        private System.Windows.Forms.ToolTip toolBase;
     }
 }

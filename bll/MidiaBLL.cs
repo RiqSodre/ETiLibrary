@@ -671,8 +671,9 @@ namespace BLL
 
                     jornal.CodMidia = (int)dataRow["CodJornalEx"];
                     jornal.Manchete = (string)dataRow["Manchete"];
-                    jornal.DataPublicacao = (DateTime)dataRow["DataPublicacao"];
+                    jornal.DataPublicacao = (DateTime)dataRow["Data de publicação"];
                     jornal.Jornal_.Nome = (string)dataRow["Jornal"];
+                    jornal.Jornal_.CodJornal = (int)dataRow["CodJornal"];
                     jornal.Localizacao = (string)dataRow["Localizacao"];
                     jornal.Lingua = (string)dataRow["Lingua"];
                     jornal.DataCadastro = (DateTime)dataRow["DataCadastro"];
@@ -681,6 +682,7 @@ namespace BLL
                     jornal.Tombo = (int)dataRow["Tombo"];
                     jornal.Observacao = (string)dataRow["Observacao"];
                     jornal.Area.Descricao = (string)dataRow["Área"];
+                    jornal.Area.CodArea = (int)dataRow["CodArea"];
 
                     jornalList.Add(jornal);
                 }

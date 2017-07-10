@@ -1,39 +1,41 @@
-﻿using BLL;
-using DTO.Emprestimos;
-using DTO.Midia;
-using Interface.Formularios.Modelos;
-using System;
+﻿using System;
 using System.Drawing;
+using Interface.Formularios.Modelos;
+using BLL;
 using System.Windows.Forms;
+using DTO.Midia;
+using DTO.Emprestimos;
 
 namespace Interface.Formularios.Cadastros
 {
-    public partial class FrmCadCdDvd : FrmCadBase
+    public partial class FrmCadJornalEx : FrmCadBase
     {
         private AreaBLL areaBLL = new AreaBLL();
+        private JornalBLL jornalBLL = new JornalBLL();
         private MidiaBLL midiaBLL = new MidiaBLL();
-        private CD_DVD cdvdBase = new CD_DVD();
-        public CD_DVD CD_DVD
+        private JornalEx jornalExBase = new JornalEx();
+        public JornalEx JornalEx
         {
             get
             {
-                return cdvdBase;
+                return jornalExBase;
             }
 
             set
             {
-                cdvdBase = value;
+                jornalExBase = value;
             }
         }
 
         //Construtor Padrão
-        public FrmCadCdDvd()
+        public FrmCadJornalEx()
         {
             try
             {
                 InitializeComponent();
                 txtObservacao.GotFocus += txtObservacao_Focus;
                 cbArea.DataSource = areaBLL.CarregaAreas();
+                cbJornal.DataSource = jornalBLL.CarregaJornais();
                 Habilita(true);
                 LimparComponentes();
                 cbLingua.SelectedIndex = 42;
@@ -43,13 +45,13 @@ namespace Interface.Formularios.Cadastros
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Construtor carregando cadastro do CD / DVD no form
-        public FrmCadCdDvd(CD_DVD cdvd) : this()
+        //Construtor carregando cadastro do Jornal no form
+        public FrmCadJornalEx(JornalEx jornal) : this()
         {
             try
             {
-                CarregaCampos(cdvd);
-                txtTitulo.Focus();
+                CarregaCampos(jornal);
+                txtManchete.Focus();
             }
             catch (Exception ex)
             {
@@ -61,28 +63,37 @@ namespace Interface.Formularios.Cadastros
         {
             try
             {
-                if (btnAcao.Text.Equals("Salvar") || btnAcao.Text.Equals("Alterar"))
-                {
-                    //Validações campo Titulo
-                    if (txtTitulo.Text.Length == 0)
+                if(btnAcao.Text.Equals("Salvar") || btnAcao.Text.Equals("Alterar"))
+                { 
+                    //Validações campo Manchete
+                    if(txtManchete.Text.Length == 0)
                     {
-                        MessageBox.Show(this, "O campo Titulo é obrigatório.", "Atenção", MessageBoxButtons.OK,
-                            MessageBoxIcon.Warning);
+                        MessageBox.Show(this, "O campo Manchete é obrigatório.", "Atenção", MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
                         return;
                     }
-                    if (txtTitulo.Text.Length < 6)
+                    else if (txtManchete.Text.Length < 10)
                     {
-                        MessageBox.Show(this, "O titulo deve conter no minimo seis digitos.", "Atenção", MessageBoxButtons.OK,
-                            MessageBoxIcon.Warning);
+                        MessageBox.Show(this, "O campo Manchete deve conter no mínimo dez digitos.", "Atenção", MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
                         return;
                     }
                     else
                     {
-
-                        CD_DVD.Titulo = txtTitulo.Text;
+                        JornalEx.Manchete = txtManchete.Text;
+                    }
+                    //Validações campo Data de Pulicação
+                    if (dtDataPublicacao.Value > DateTime.Now)
+                    {
+                        MessageBox.Show(this, "Informe uma data valida.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    else
+                    {
+                        JornalEx.DataPublicacao = dtDataPublicacao.Value;
                     }
                     //Campo Lingua
-                    CD_DVD.Lingua = cbLingua.Text;
+                    JornalEx.Lingua = cbLingua.Text;
                     //Validações campo Localização
                     if (txtLocalizacao.Text.Length != 0)
                     {
@@ -92,11 +103,11 @@ namespace Interface.Formularios.Cadastros
                                 MessageBoxIcon.Warning);
                             return;
                         }
-                        CD_DVD.Localizacao = txtLocalizacao.Text;
+                        JornalEx.Localizacao = txtLocalizacao.Text;
                     }
                     else
                     {
-                        CD_DVD.Localizacao = "";
+                        JornalEx.Localizacao = "";
                     }
                     //Validações campo Área
                     if ((int)cbArea.SelectedValue < 0)
@@ -106,35 +117,35 @@ namespace Interface.Formularios.Cadastros
                     }
                     else
                     {
-                        CD_DVD.Area.CodArea = (int)cbArea.SelectedValue;
+                        JornalEx.Area.CodArea = (int)cbArea.SelectedValue;
                     }
                     //Validações campo Tipo Tombo
-                    if(cbTipoTombo.Text == "")
+                    if (cbTipoTombo.Text == "")
                     {
                         MessageBox.Show(this, "Selecione um tipo de tombo.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     else
                     {
-                        CD_DVD.TipoTombo = cbTipoTombo.Text;
+                        JornalEx.TipoTombo = cbTipoTombo.Text;
                     }
                     //CheckBox Disponivel
-                    if(btnAcao.Text.Equals("Alterar"))
+                    if (btnAcao.Text.Equals("Alterar"))
                     {
-                        if(CD_DVD.Disponivel != checkDisponivel.Checked)
+                        if (JornalEx.Disponivel != checkDisponivel.Checked)
                         {
                             EmprestimoBLL emprestimoBLL = new EmprestimoBLL();
-                            EmprestimoList emprestimoList = emprestimoBLL.EmprestimoConsultar_PorTombo(CD_DVD.Tombo, "CD_DVD");
-                            foreach(Emprestimo emprestimo in emprestimoList)
+                            EmprestimoList emprestimoList = emprestimoBLL.EmprestimoConsultar_PorTombo(JornalEx.Tombo, "Jornal");
+                            foreach (Emprestimo emprestimo in emprestimoList)
                             {
-                                if(emprestimo.Fechado == false)
+                                if (emprestimo.Fechado == false)
                                 {
                                     MidiaEmprestimoList midiaEmprestimoList = emprestimoBLL.EmprestimoMidiaConsultar_PorCodEmprestimo(emprestimo.CodEmprestimo);
-                                    foreach(MidiaEmprestimo midia in midiaEmprestimoList)
+                                    foreach (MidiaEmprestimo midia in midiaEmprestimoList)
                                     {
-                                        if(midia.CodMidia == CD_DVD.CodMidia && midia.Devolvido == false)
+                                        if (midia.CodMidia == JornalEx.CodMidia && midia.Devolvido == false)
                                         {
-                                            if (MessageBox.Show(this, "Este CD/DVD encontra-se emprestado, por isso não é possivel alterar sua disponibilidade." +
+                                            if (MessageBox.Show(this, "Este Jornal encontra-se emprestado, por isso não é possivel alterar sua disponibilidade." +
                                                 "Deseja abrir a paginá do empréstimo?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                                             {
                                                 FrmCadEmprestimo frmCadEmprestimo = new FrmCadEmprestimo(emprestimo);
@@ -148,13 +159,23 @@ namespace Interface.Formularios.Cadastros
                             }
                         }
                     }
-                    CD_DVD.Disponivel = checkDisponivel.Checked;
+                    JornalEx.Disponivel = checkDisponivel.Checked;
+                    //Validações campo Jornal
+                    if ((int)cbJornal.SelectedValue < 0)
+                    {
+                        MessageBox.Show(this, "Selecione um jornal da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    else
+                    {
+                        JornalEx.Jornal_.CodJornal = (int)cbJornal.SelectedValue;
+                    }
                     //Campo Observação
-                    CD_DVD.Observacao = txtObservacao.Text;
+                    JornalEx.Observacao = txtObservacao.Text;
                     //Execução
                     if (btnAcao.Text.Equals("Salvar"))
                     {
-                        resultado = midiaBLL.CDVDInserir(CD_DVD);
+                        resultado = midiaBLL.JornalInserir(JornalEx);
                         MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
                                   MessageBoxIcon.Information);
                         if (resultado.Contains("sucesso"))
@@ -165,7 +186,7 @@ namespace Interface.Formularios.Cadastros
                     }
                     else
                     {
-                        resultado = midiaBLL.CDVDAlterar(CD_DVD);
+                        resultado = midiaBLL.JornalAlterar(JornalEx);
                         MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
                                  MessageBoxIcon.Information);
                         if (resultado.Contains("sucesso"))
@@ -177,20 +198,20 @@ namespace Interface.Formularios.Cadastros
                 }
                 else
                 {
-                    if (MessageBox.Show(this, "Deseja excluir este CD/DVD?", "Atenção", MessageBoxButtons.YesNo,
-                              MessageBoxIcon.Information) == DialogResult.Yes)
+                if (MessageBox.Show(this, "Deseja excluir este Jornal?", "Atenção", MessageBoxButtons.YesNo,
+                          MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    resultado = midiaBLL.MidiaExcluir(JornalEx.CodMidia, "Jornal");
+                    MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
+                               MessageBoxIcon.Information);
+                    if (resultado.Contains("sucesso"))
                     {
-                        resultado = midiaBLL.MidiaExcluir(CD_DVD.CodMidia, "CD_DVD");
-                        MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
-                                   MessageBoxIcon.Information);
-                        if (resultado.Contains("sucesso"))
-                        {
-                            Habilita(false);
-                            LimparComponentes();
-                        }
+                        Habilita(false);
+                        LimparComponentes();
                     }
                 }
             }
+        }
             catch (Exception ex)
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -204,25 +225,25 @@ namespace Interface.Formularios.Cadastros
                 Habilita(true);
                 LimparComponentes();
                 cbLingua.SelectedIndex = 42;
-                txtTitulo.Focus();
+                txtManchete.Focus();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Botão Alterar - Abre o form ponte de CD_DVD e carrega o CD_DVD no form
+        //Botão Alterar - Abre o form ponte de Jornal e carrega o exemplar no form
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             try
             {
-                FrmPonteCdDvd ponteCdvd = new FrmPonteCdDvd(this, "Alterar");
-                if(ponteCdvd.ShowDialog() == DialogResult.OK)
+                FrmPonteJornalEx ponteJornalEx = new FrmPonteJornalEx(this, "Alterar");
+                if (ponteJornalEx.ShowDialog() == DialogResult.OK)
                 {
-                    CarregaCampos(CD_DVD);
+                    CarregaCampos(JornalEx);
                     btnAcao.Text = "Alterar";
                     Habilita(true);
-                    txtTitulo.Focus();
+                    txtManchete.Focus();
                 }
             }
             catch (Exception ex)
@@ -230,15 +251,15 @@ namespace Interface.Formularios.Cadastros
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Botão Excluir - Abre o form ponte de CD_DVD e carrega o CD_DVD no form
+        //Botão Excluir - Abre o form ponte de Jornal e carrega o exemplar no form
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             try
             {
-                FrmPonteCdDvd ponteCdvd = new FrmPonteCdDvd(this, "Excluir");
-                if (ponteCdvd.ShowDialog() == DialogResult.OK)
+                FrmPonteJornalEx ponteJornalEx = new FrmPonteJornalEx(this, "Excluir");
+                if (ponteJornalEx.ShowDialog() == DialogResult.OK)
                 {
-                    CarregaCampos(CD_DVD);
+                    CarregaCampos(JornalEx);
                     btnAcao.Text = "Excluir";
                     Habilita(true);
                     btnAcao.Focus();
@@ -249,19 +270,20 @@ namespace Interface.Formularios.Cadastros
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Carrega o cadastro do CD ou DVD no form
-        private void CarregaCampos(CD_DVD cdvd)
+        //Carrega o cadastro do Jornal no form
+        private void CarregaCampos(JornalEx jornal)
         {
             try
             {
-                txtTitulo.Text = cdvd.Titulo;
-                txtTombo.Text = cdvd.Tombo.ToString();
-                txtLocalizacao.Text = cdvd.Localizacao;
-                cbLingua.SelectedItem = cdvd.Lingua;
-                cbTipoTombo.SelectedItem = cdvd.TipoTombo;
-                cbArea.SelectedValue = cdvd.Area.CodArea;
-                txtObservacao.Text = cdvd.Observacao;
-                if (cdvd.Disponivel)
+                txtManchete.Text = jornal.Manchete;
+                txtTombo.Text = jornal.Tombo.ToString();
+                txtLocalizacao.Text = jornal.Localizacao;
+                cbLingua.SelectedItem = jornal.Lingua;
+                cbTipoTombo.SelectedItem = jornal.TipoTombo;
+                cbArea.SelectedValue = jornal.Area.CodArea;
+                cbJornal.SelectedValue = jornal.Jornal_.CodJornal;
+                txtObservacao.Text = jornal.Observacao;
+                if (jornal.Disponivel)
                 {
                     checkDisponivel.Checked = true;
                 }
@@ -269,7 +291,7 @@ namespace Interface.Formularios.Cadastros
                 {
                     checkDisponivel.Checked = false;
                 }
-                toolExibe(txtTitulo, txtTitulo.Text);
+                toolExibe(txtManchete, txtManchete.Text);
             }
             catch (Exception ex)
             {
@@ -288,14 +310,26 @@ namespace Interface.Formularios.Cadastros
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        //Mostra o conteúdo da combobox
+        private void cbJornal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                toolExibe(cbJornal, cbJornal.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         //Aumenta o tamanho do campo Observação
         private void txtObservacao_Focus(object sender, EventArgs e)
         {
             txtObservacao.Height = 75;
-            pnlPrincipal.Height = 324;
-            this.Height = 395;
-            btnAcao.Location = new Point(149, 353);
-            btnCancelar.Location = new Point(241, 353);
+            pnlPrincipal.Height = 424;
+            this.Height = 495;
+            btnAcao.Location = new Point(149, 453);
+            btnCancelar.Location = new Point(241, 453);
         }
         //Retorna o tamanho do campo Observação ao original
         private void txtObservacao_Leave(object sender, EventArgs e)
@@ -303,10 +337,10 @@ namespace Interface.Formularios.Cadastros
             if (txtObservacao.Text == "" || txtObservacao.Text == null)
             {
                 txtObservacao.Height = 25;
-                pnlPrincipal.Height = 274;
-                this.Height = 345;
-                btnAcao.Location = new Point(149, 303);
-                btnCancelar.Location = new Point(241, 303);
+                pnlPrincipal.Height = 374;
+                this.Height = 445;
+                btnAcao.Location = new Point(149, 403);
+                btnCancelar.Location = new Point(241, 403);
             }
         }
     }

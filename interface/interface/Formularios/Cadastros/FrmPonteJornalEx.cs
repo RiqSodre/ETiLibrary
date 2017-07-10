@@ -1,53 +1,46 @@
-﻿using System;
-using Interface.Formularios.Modelos;
-using DTO.Midia;
+﻿using Interface.Formularios.Modelos;
 using BLL;
+using DTO.Midia;
+using System;
 using System.Windows.Forms;
 
 namespace Interface.Formularios.Cadastros
 {
-    public partial class FrmPonteCdDvd : FrmPonte
+    public partial class FrmPonteJornalEx : FrmPonte
     {
         private MidiaBLL midiaBLL = new MidiaBLL();
-        private FrmCadCdDvd FrmCadCdDvdBase = new FrmCadCdDvd();
-        private CD_DVD cdvd = new CD_DVD();
+        private FrmCadJornalEx frmCadJornalExBase = new FrmCadJornalEx();
+        private JornalEx jornalEx = new JornalEx();
 
-        //Carrega o form ponte CD/DVD
-        public FrmPonteCdDvd(FrmCadCdDvd frmCadCDvd, string txtFrm)
+        //Carrega o form ponte JornalEx
+        public FrmPonteJornalEx(FrmCadJornalEx frmCadJornalEx, string txtForm)
         {
-            try
-            {
-                InitializeComponent();
-                FrmCadCdDvdBase = frmCadCDvd;
-                cdvd = FrmCadCdDvdBase.CD_DVD;
-                lblForm.Text += " - " + txtFrm;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            InitializeComponent();
+            frmCadJornalExBase = frmCadJornalEx;
+            jornalEx = frmCadJornalExBase.JornalEx;
+            lblForm.Text += " - " + txtForm;
         }
-        //Carrega os dados do CD/DVD que serão passsados para o form de cadastro
+        //Carrega os dados do Jornal que serão passsados para o form de cadastro
         protected override void btnAcao_Click(object sender, EventArgs e)
         {
             try
             {
                 if (txtTexto.Text.Length == 0)
                 {
-                    MessageBox.Show(this, "Digite o tombo do CD/DVD no campo informado.", "Atenção", MessageBoxButtons.OK,
+                    MessageBox.Show(this, "Digite o tombo do Jornal no campo informado.", "Atenção", MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
                     return;
                 }
                 else
                 {
-                    cdvd = midiaBLL.CDVDConsultar_PorTombo(Convert.ToInt32(txtTexto.Text));
-                    if (cdvd.CodMidia == null)
+                    jornalEx = midiaBLL.JornalConsultar_PorTombo(Convert.ToInt32(txtTexto.Text));
+                    if (jornalEx.CodMidia == null)
                     {
-                        MessageBox.Show(this, "Nenhum registro encontrado, certifique-se que o tombo do CD/DVD foi digitado corretamente.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "Nenhum registro encontrado, certifique-se que o tombo do Jornal foi digitado corretamente.", "Atenção", MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
                         return;
                     }
-                    FrmCadCdDvdBase.CD_DVD = cdvd;
+                    frmCadJornalExBase.JornalEx = jornalEx;
                     DialogResult = DialogResult.OK;
                 }
             }
@@ -56,7 +49,7 @@ namespace Interface.Formularios.Cadastros
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Faz o campo do tombo do CD/DVD aceitar apenas números
+        //Faz o Campo do tombo do Jornal aceitar apenas números
         private void txtTexto_KeyPress(object sender, KeyPressEventArgs e)
         {
             try

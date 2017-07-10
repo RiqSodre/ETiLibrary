@@ -37,9 +37,9 @@
             this.lblSenha = new MetroFramework.Controls.MetroLabel();
             this.lblRecSenha = new MetroFramework.Controls.MetroLink();
             this.lblSistema = new MetroFramework.Controls.MetroLabel();
-            this.txtSenha = new System.Windows.Forms.TextBox();
-            this.txtNome = new System.Windows.Forms.TextBox();
             this.btnEntrar = new MetroFramework.Controls.MetroButton();
+            this.txtNome = new MetroFramework.Controls.MetroTextBox();
+            this.txtSenha = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picboxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSistema)).BeginInit();
             this.SuspendLayout();
@@ -47,20 +47,18 @@
             // picboxLogo
             // 
             this.picboxLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picboxLogo.BackgroundImage")));
-            this.picboxLogo.Location = new System.Drawing.Point(192, 36);
-            this.picboxLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.picboxLogo.Location = new System.Drawing.Point(144, 29);
             this.picboxLogo.Name = "picboxLogo";
-            this.picboxLogo.Size = new System.Drawing.Size(95, 112);
+            this.picboxLogo.Size = new System.Drawing.Size(71, 91);
             this.picboxLogo.TabIndex = 26;
             this.picboxLogo.TabStop = false;
             // 
             // picBoxSistema
             // 
             this.picBoxSistema.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxSistema.BackgroundImage")));
-            this.picBoxSistema.Location = new System.Drawing.Point(72, 162);
-            this.picBoxSistema.Margin = new System.Windows.Forms.Padding(4);
+            this.picBoxSistema.Location = new System.Drawing.Point(54, 132);
             this.picBoxSistema.Name = "picBoxSistema";
-            this.picBoxSistema.Size = new System.Drawing.Size(347, 26);
+            this.picBoxSistema.Size = new System.Drawing.Size(260, 21);
             this.picBoxSistema.TabIndex = 25;
             this.picBoxSistema.TabStop = false;
             // 
@@ -71,10 +69,9 @@
             this.btnMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnMin.FlatAppearance.BorderSize = 0;
             this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMin.Location = new System.Drawing.Point(404, 7);
-            this.btnMin.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMin.Location = new System.Drawing.Point(303, 6);
             this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(33, 31);
+            this.btnMin.Size = new System.Drawing.Size(25, 25);
             this.btnMin.TabIndex = 3;
             this.btnMin.UseVisualStyleBackColor = false;
             this.btnMin.Click += new System.EventHandler(this.btnMini_Click);
@@ -86,10 +83,9 @@
             this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.Location = new System.Drawing.Point(445, 7);
-            this.btnFechar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFechar.Location = new System.Drawing.Point(334, 6);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(33, 31);
+            this.btnFechar.Size = new System.Drawing.Size(25, 25);
             this.btnFechar.TabIndex = 4;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
@@ -98,10 +94,9 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblUsuario.Location = new System.Drawing.Point(26, 228);
-            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsuario.Location = new System.Drawing.Point(20, 185);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(136, 20);
+            this.lblUsuario.Size = new System.Drawing.Size(131, 19);
             this.lblUsuario.TabIndex = 99999;
             this.lblUsuario.Text = "Nome do Usuário:";
             this.lblUsuario.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -110,10 +105,9 @@
             // 
             this.lblSenha.AutoSize = true;
             this.lblSenha.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblSenha.Location = new System.Drawing.Point(26, 300);
-            this.lblSenha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSenha.Location = new System.Drawing.Point(20, 245);
             this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(55, 20);
+            this.lblSenha.Size = new System.Drawing.Size(53, 19);
             this.lblSenha.TabIndex = 999999;
             this.lblSenha.Text = "Senha:";
             this.lblSenha.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -122,10 +116,9 @@
             // 
             this.lblRecSenha.DisplayFocus = true;
             this.lblRecSenha.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblRecSenha.Location = new System.Drawing.Point(157, 373);
-            this.lblRecSenha.Margin = new System.Windows.Forms.Padding(4);
+            this.lblRecSenha.Location = new System.Drawing.Point(118, 303);
             this.lblRecSenha.Name = "lblRecSenha";
-            this.lblRecSenha.Size = new System.Drawing.Size(167, 28);
+            this.lblRecSenha.Size = new System.Drawing.Size(125, 23);
             this.lblRecSenha.TabIndex = 0;
             this.lblRecSenha.TabStop = false;
             this.lblRecSenha.Text = "Esqueci minha senha";
@@ -142,59 +135,102 @@
             this.lblSistema.FontSize = MetroFramework.MetroLabelSize.Small;
             this.lblSistema.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblSistema.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblSistema.Location = new System.Drawing.Point(11, 522);
-            this.lblSistema.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSistema.Location = new System.Drawing.Point(8, 424);
             this.lblSistema.Name = "lblSistema";
-            this.lblSistema.Size = new System.Drawing.Size(249, 17);
+            this.lblSistema.Size = new System.Drawing.Size(221, 15);
             this.lblSistema.TabIndex = 999999;
             this.lblSistema.Text = "2017 Copyrigth - Essentials Technology";
             this.lblSistema.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.lblSistema.UseCustomForeColor = true;
-            // 
-            // txtSenha
-            // 
-            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(33, 327);
-            this.txtSenha.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSenha.MaxLength = 20;
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(419, 37);
-            this.txtSenha.TabIndex = 1;
-            this.txtSenha.UseSystemPasswordChar = true;
-            // 
-            // txtNome
-            // 
-            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(33, 255);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNome.MaxLength = 20;
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(419, 37);
-            this.txtNome.TabIndex = 0;
             // 
             // btnEntrar
             // 
             this.btnEntrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEntrar.BackgroundImage")));
             this.btnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnEntrar.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btnEntrar.Location = new System.Drawing.Point(33, 411);
-            this.btnEntrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEntrar.Location = new System.Drawing.Point(25, 334);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(420, 46);
+            this.btnEntrar.Size = new System.Drawing.Size(315, 37);
             this.btnEntrar.TabIndex = 2;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btnEntrar.UseSelectable = true;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
+            // txtNome
+            // 
+            // 
+            // 
+            // 
+            this.txtNome.CustomButton.Image = null;
+            this.txtNome.CustomButton.Location = new System.Drawing.Point(287, 2);
+            this.txtNome.CustomButton.Name = "";
+            this.txtNome.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtNome.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtNome.CustomButton.TabIndex = 1;
+            this.txtNome.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtNome.CustomButton.UseSelectable = true;
+            this.txtNome.CustomButton.Visible = false;
+            this.txtNome.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtNome.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtNome.Lines = new string[0];
+            this.txtNome.Location = new System.Drawing.Point(25, 205);
+            this.txtNome.MaxLength = 20;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.PasswordChar = '\0';
+            this.txtNome.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtNome.SelectedText = "";
+            this.txtNome.SelectionLength = 0;
+            this.txtNome.SelectionStart = 0;
+            this.txtNome.ShortcutsEnabled = true;
+            this.txtNome.Size = new System.Drawing.Size(315, 25);
+            this.txtNome.TabIndex = 0;
+            this.txtNome.UseSelectable = true;
+            this.txtNome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtNome.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txtSenha
+            // 
+            // 
+            // 
+            // 
+            this.txtSenha.CustomButton.Image = null;
+            this.txtSenha.CustomButton.Location = new System.Drawing.Point(287, 2);
+            this.txtSenha.CustomButton.Name = "";
+            this.txtSenha.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtSenha.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSenha.CustomButton.TabIndex = 1;
+            this.txtSenha.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSenha.CustomButton.UseSelectable = true;
+            this.txtSenha.CustomButton.Visible = false;
+            this.txtSenha.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtSenha.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtSenha.Lines = new string[0];
+            this.txtSenha.Location = new System.Drawing.Point(25, 265);
+            this.txtSenha.MaxLength = 12;
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
+            this.txtSenha.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSenha.SelectedText = "";
+            this.txtSenha.SelectionLength = 0;
+            this.txtSenha.SelectionStart = 0;
+            this.txtSenha.ShortcutsEnabled = true;
+            this.txtSenha.Size = new System.Drawing.Size(315, 25);
+            this.txtSenha.TabIndex = 1;
+            this.txtSenha.UseSelectable = true;
+            this.txtSenha.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSenha.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // FrmLogin
             // 
             this.AcceptButton = this.btnEntrar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(481, 551);
+            this.ClientSize = new System.Drawing.Size(361, 448);
             this.ControlBox = false;
+            this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.lblSistema);
             this.Controls.Add(this.lblRecSenha);
@@ -204,14 +240,10 @@
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.picboxLogo);
             this.Controls.Add(this.picBoxSistema);
-            this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.txtSenha);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmLogin";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.TopMost = true;
@@ -231,8 +263,8 @@
         private MetroFramework.Controls.MetroLabel lblSenha;
         private MetroFramework.Controls.MetroLink lblRecSenha;
         private MetroFramework.Controls.MetroLabel lblSistema;
-        private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.TextBox txtNome;
         private MetroFramework.Controls.MetroButton btnEntrar;
+        private MetroFramework.Controls.MetroTextBox txtNome;
+        private MetroFramework.Controls.MetroTextBox txtSenha;
     }
 }

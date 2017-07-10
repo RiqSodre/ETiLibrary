@@ -24,7 +24,6 @@ namespace Interface.Formularios.Cadastros
                 funcionarioBase = value;
             }
         }
-        private string resultado;
 
         //Contrutor padrão
         public FrmCadFuncionario()
@@ -244,7 +243,7 @@ namespace Interface.Formularios.Cadastros
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Faz o Campo nome aceitar apenas letras
+        //Faz o campo Nome aceitar apenas letras
         private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
         {
             try
@@ -260,7 +259,7 @@ namespace Interface.Formularios.Cadastros
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Faz o Campo cpf aceitar apenas números
+        //Faz o campo Cpf aceitar apenas números
         private void txtCpf_KeyPress(object sender, KeyPressEventArgs e)
         {
             try
@@ -276,7 +275,7 @@ namespace Interface.Formularios.Cadastros
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Faz o Campo telefone aceitar apenas números
+        //Faz o campo Telefone aceitar apenas números
         private void txtTelefone_KeyPress(object sender, KeyPressEventArgs e)
         {
             try
@@ -292,7 +291,7 @@ namespace Interface.Formularios.Cadastros
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Faz o Campo celular aceitar apenas números
+        //Faz o campo Celular aceitar apenas números
         private void txtCelular_KeyPress(object sender, KeyPressEventArgs e)
         {
             try
@@ -319,6 +318,7 @@ namespace Interface.Formularios.Cadastros
                 txtCpf.Text = funcionario.Cpf;
                 txtTelefone.Text = funcionario.Telefone.Numero;
                 txtCelular.Text = funcionario.Celular.Numero;
+                toolExibe(txtNome, txtNome.Text);
             }
             catch (Exception ex)
             {
