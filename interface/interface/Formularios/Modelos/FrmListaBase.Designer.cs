@@ -51,11 +51,11 @@
             this.pnlForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pnlForm.Controls.Add(this.lblForm);
             this.pnlForm.Controls.Add(this.btnFechar);
-            this.pnlForm.Location = new System.Drawing.Point(0, 5);
-            this.pnlForm.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.pnlForm.Location = new System.Drawing.Point(0, 4);
+            this.pnlForm.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pnlForm.Name = "pnlForm";
-            this.pnlForm.Size = new System.Drawing.Size(458, 32);
-            this.pnlForm.TabIndex = 101;
+            this.pnlForm.Size = new System.Drawing.Size(344, 26);
+            this.pnlForm.TabIndex = 6;
             this.pnlForm.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_MouseMove);
             // 
             // lblForm
@@ -63,10 +63,10 @@
             this.lblForm.AutoSize = true;
             this.lblForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblForm.ForeColor = System.Drawing.Color.White;
-            this.lblForm.Location = new System.Drawing.Point(11, 5);
-            this.lblForm.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblForm.Location = new System.Drawing.Point(8, 4);
+            this.lblForm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblForm.Name = "lblForm";
-            this.lblForm.Size = new System.Drawing.Size(50, 20);
+            this.lblForm.Size = new System.Drawing.Size(42, 16);
             this.lblForm.TabIndex = 44;
             this.lblForm.Text = "Texto";
             // 
@@ -77,11 +77,11 @@
             this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.Location = new System.Drawing.Point(416, 1);
-            this.btnFechar.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnFechar.Location = new System.Drawing.Point(312, 1);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(32, 27);
-            this.btnFechar.TabIndex = 46;
+            this.btnFechar.Size = new System.Drawing.Size(24, 22);
+            this.btnFechar.TabIndex = 0;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
@@ -93,19 +93,19 @@
             this.pnl.Controls.Add(this.btnCadLivro);
             this.pnl.Controls.Add(this.btnCadJornal);
             this.pnl.Controls.Add(this.btnCadCdDvd);
-            this.pnl.Location = new System.Drawing.Point(94, 79);
-            this.pnl.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.pnl.Location = new System.Drawing.Point(70, 64);
+            this.pnl.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pnl.Name = "pnl";
-            this.pnl.Size = new System.Drawing.Size(264, 249);
-            this.pnl.TabIndex = 102;
+            this.pnl.Size = new System.Drawing.Size(198, 202);
+            this.pnl.TabIndex = 0;
             // 
             // btnCadTcc
             // 
             this.btnCadTcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadTcc.Location = new System.Drawing.Point(0, 210);
-            this.btnCadTcc.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnCadTcc.Location = new System.Drawing.Point(0, 171);
+            this.btnCadTcc.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnCadTcc.Name = "btnCadTcc";
-            this.btnCadTcc.Size = new System.Drawing.Size(264, 37);
+            this.btnCadTcc.Size = new System.Drawing.Size(198, 30);
             this.btnCadTcc.TabIndex = 5;
             this.btnCadTcc.Text = "TCC";
             this.btnCadTcc.UseVisualStyleBackColor = true;
@@ -114,10 +114,10 @@
             // btnCadRevista
             // 
             this.btnCadRevista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadRevista.Location = new System.Drawing.Point(0, 175);
-            this.btnCadRevista.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnCadRevista.Location = new System.Drawing.Point(0, 142);
+            this.btnCadRevista.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnCadRevista.Name = "btnCadRevista";
-            this.btnCadRevista.Size = new System.Drawing.Size(264, 37);
+            this.btnCadRevista.Size = new System.Drawing.Size(198, 30);
             this.btnCadRevista.TabIndex = 4;
             this.btnCadRevista.Text = "Revista";
             this.btnCadRevista.UseVisualStyleBackColor = true;
@@ -126,10 +126,10 @@
             // btnCadMap
             // 
             this.btnCadMap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadMap.Location = new System.Drawing.Point(0, 139);
-            this.btnCadMap.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnCadMap.Location = new System.Drawing.Point(0, 113);
+            this.btnCadMap.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnCadMap.Name = "btnCadMap";
-            this.btnCadMap.Size = new System.Drawing.Size(264, 37);
+            this.btnCadMap.Size = new System.Drawing.Size(198, 30);
             this.btnCadMap.TabIndex = 3;
             this.btnCadMap.Text = "Mapa";
             this.btnCadMap.UseVisualStyleBackColor = true;
@@ -138,10 +138,10 @@
             // btnCadLivro
             // 
             this.btnCadLivro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadLivro.Location = new System.Drawing.Point(0, 103);
-            this.btnCadLivro.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnCadLivro.Location = new System.Drawing.Point(0, 84);
+            this.btnCadLivro.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnCadLivro.Name = "btnCadLivro";
-            this.btnCadLivro.Size = new System.Drawing.Size(264, 37);
+            this.btnCadLivro.Size = new System.Drawing.Size(198, 30);
             this.btnCadLivro.TabIndex = 2;
             this.btnCadLivro.Text = "Livro";
             this.btnCadLivro.UseVisualStyleBackColor = true;
@@ -150,10 +150,10 @@
             // btnCadJornal
             // 
             this.btnCadJornal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadJornal.Location = new System.Drawing.Point(0, 68);
-            this.btnCadJornal.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnCadJornal.Location = new System.Drawing.Point(0, 55);
+            this.btnCadJornal.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnCadJornal.Name = "btnCadJornal";
-            this.btnCadJornal.Size = new System.Drawing.Size(264, 37);
+            this.btnCadJornal.Size = new System.Drawing.Size(198, 30);
             this.btnCadJornal.TabIndex = 1;
             this.btnCadJornal.Text = "Jornal";
             this.btnCadJornal.UseVisualStyleBackColor = true;
@@ -162,10 +162,10 @@
             // btnCadCdDvd
             // 
             this.btnCadCdDvd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadCdDvd.Location = new System.Drawing.Point(0, 32);
-            this.btnCadCdDvd.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnCadCdDvd.Location = new System.Drawing.Point(0, 26);
+            this.btnCadCdDvd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnCadCdDvd.Name = "btnCadCdDvd";
-            this.btnCadCdDvd.Size = new System.Drawing.Size(264, 37);
+            this.btnCadCdDvd.Size = new System.Drawing.Size(198, 30);
             this.btnCadCdDvd.TabIndex = 0;
             this.btnCadCdDvd.Text = "CD/DVD";
             this.btnCadCdDvd.UseVisualStyleBackColor = true;
@@ -175,36 +175,36 @@
             // 
             this.pnlLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pnlLbl.Controls.Add(this.lblTexto);
-            this.pnlLbl.Location = new System.Drawing.Point(94, 77);
-            this.pnlLbl.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.pnlLbl.Location = new System.Drawing.Point(70, 63);
+            this.pnlLbl.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pnlLbl.Name = "pnlLbl";
-            this.pnlLbl.Size = new System.Drawing.Size(264, 34);
+            this.pnlLbl.Size = new System.Drawing.Size(198, 28);
             this.pnlLbl.TabIndex = 103;
             // 
             // lblTexto
             // 
             this.lblTexto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTexto.ForeColor = System.Drawing.Color.White;
-            this.lblTexto.Location = new System.Drawing.Point(0, 7);
-            this.lblTexto.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblTexto.Location = new System.Drawing.Point(0, 6);
+            this.lblTexto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTexto.Name = "lblTexto";
-            this.lblTexto.Size = new System.Drawing.Size(264, 20);
+            this.lblTexto.Size = new System.Drawing.Size(198, 16);
             this.lblTexto.TabIndex = 48;
             this.lblTexto.Text = "Texto";
             this.lblTexto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmListaBase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(450, 390);
+            this.ClientSize = new System.Drawing.Size(338, 317);
             this.Controls.Add(this.pnlLbl);
             this.Controls.Add(this.pnl);
             this.Controls.Add(this.pnlForm);
-            this.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "FrmListaBase";
-            this.Padding = new System.Windows.Forms.Padding(27, 75, 27, 25);
+            this.Padding = new System.Windows.Forms.Padding(20, 61, 20, 20);
             this.Resizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation;
             this.pnlForm.ResumeLayout(false);

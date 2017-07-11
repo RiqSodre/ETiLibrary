@@ -53,6 +53,10 @@
             this.pnlPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
+            // pnl
+            // 
+            this.pnl.TabIndex = 3;
+            // 
             // lblForm
             // 
             this.lblForm.Size = new System.Drawing.Size(106, 16);
@@ -61,33 +65,43 @@
             // btnFechar
             // 
             this.btnFechar.FlatAppearance.BorderSize = 0;
+            this.btnFechar.TabIndex = 0;
+            // 
+            // pnlBase
+            // 
+            this.pnlBase.TabIndex = 4;
             // 
             // btnExcluir
             // 
             this.btnExcluir.FlatAppearance.BorderSize = 0;
+            this.btnExcluir.TabIndex = 2;
             this.btnExcluir.Text = "&Excluir";
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
             this.btnAlterar.FlatAppearance.BorderSize = 0;
+            this.btnAlterar.TabIndex = 1;
             this.btnAlterar.Text = "&Alterar";
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnNovo
             // 
             this.btnNovo.FlatAppearance.BorderSize = 0;
+            this.btnNovo.TabIndex = 0;
             this.btnNovo.Text = "&Novo";
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(241, 403);
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "&Cancelar";
             // 
             // btnAcao
             // 
             this.btnAcao.Location = new System.Drawing.Point(149, 403);
+            this.btnAcao.TabIndex = 1;
             this.btnAcao.Click += new System.EventHandler(this.btnAcao_Click);
             // 
             // pnlPrincipal
@@ -113,6 +127,7 @@
             this.pnlPrincipal.Controls.Add(this.cbLingua);
             this.pnlPrincipal.Controls.Add(this.lblLingua);
             this.pnlPrincipal.Size = new System.Drawing.Size(326, 323);
+            this.pnlPrincipal.TabIndex = 0;
             // 
             // lblTombo
             // 
@@ -149,7 +164,7 @@
             this.txtTombo.SelectionStart = 0;
             this.txtTombo.ShortcutsEnabled = true;
             this.txtTombo.Size = new System.Drawing.Size(95, 23);
-            this.txtTombo.TabIndex = 237;
+            this.txtTombo.TabIndex = 2;
             this.txtTombo.TabStop = false;
             this.txtTombo.UseSelectable = true;
             this.txtTombo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -188,7 +203,7 @@
             this.cbTipoTombo.Location = new System.Drawing.Point(174, 182);
             this.cbTipoTombo.Name = "cbTipoTombo";
             this.cbTipoTombo.Size = new System.Drawing.Size(100, 23);
-            this.cbTipoTombo.TabIndex = 226;
+            this.cbTipoTombo.TabIndex = 6;
             // 
             // txtObservacao
             // 
@@ -198,7 +213,7 @@
             this.txtObservacao.Multiline = true;
             this.txtObservacao.Name = "txtObservacao";
             this.txtObservacao.Size = new System.Drawing.Size(290, 25);
-            this.txtObservacao.TabIndex = 228;
+            this.txtObservacao.TabIndex = 8;
             this.txtObservacao.Leave += new System.EventHandler(this.txtObservacao_Leave);
             // 
             // lblObs
@@ -229,7 +244,7 @@
             this.cbArea.Location = new System.Drawing.Point(21, 182);
             this.cbArea.Name = "cbArea";
             this.cbArea.Size = new System.Drawing.Size(142, 23);
-            this.cbArea.TabIndex = 227;
+            this.cbArea.TabIndex = 5;
             this.cbArea.ValueMember = "CodArea";
             this.cbArea.SelectedIndexChanged += new System.EventHandler(this.cbArea_SelectedIndexChanged);
             // 
@@ -267,7 +282,7 @@
             this.txtLocalizacao.SelectionStart = 0;
             this.txtLocalizacao.ShortcutsEnabled = true;
             this.txtLocalizacao.Size = new System.Drawing.Size(123, 23);
-            this.txtLocalizacao.TabIndex = 224;
+            this.txtLocalizacao.TabIndex = 4;
             this.txtLocalizacao.UseSelectable = true;
             this.txtLocalizacao.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtLocalizacao.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -306,7 +321,7 @@
             this.txtManchete.SelectionStart = 0;
             this.txtManchete.ShortcutsEnabled = true;
             this.txtManchete.Size = new System.Drawing.Size(290, 23);
-            this.txtManchete.TabIndex = 223;
+            this.txtManchete.TabIndex = 0;
             this.txtManchete.UseSelectable = true;
             this.txtManchete.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtManchete.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -384,7 +399,7 @@
             this.cbLingua.Location = new System.Drawing.Point(21, 130);
             this.cbLingua.Name = "cbLingua";
             this.cbLingua.Size = new System.Drawing.Size(100, 23);
-            this.cbLingua.TabIndex = 225;
+            this.cbLingua.TabIndex = 3;
             // 
             // lblLingua
             // 
@@ -411,7 +426,7 @@
             this.dtDataPublicacao.Location = new System.Drawing.Point(21, 78);
             this.dtDataPublicacao.Name = "dtDataPublicacao";
             this.dtDataPublicacao.Size = new System.Drawing.Size(123, 23);
-            this.dtDataPublicacao.TabIndex = 239;
+            this.dtDataPublicacao.TabIndex = 1;
             // 
             // cbJornal
             // 
@@ -478,7 +493,7 @@
             this.cbJornal.Location = new System.Drawing.Point(21, 234);
             this.cbJornal.Name = "cbJornal";
             this.cbJornal.Size = new System.Drawing.Size(100, 23);
-            this.cbJornal.TabIndex = 241;
+            this.cbJornal.TabIndex = 7;
             this.cbJornal.ValueMember = "CodJornal";
             this.cbJornal.SelectedIndexChanged += new System.EventHandler(this.cbJornal_SelectedIndexChanged);
             // 

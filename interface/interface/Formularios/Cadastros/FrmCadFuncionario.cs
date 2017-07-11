@@ -310,20 +310,13 @@ namespace Interface.Formularios.Cadastros
         //Carrega o cadastro do funcionário no form
         private void CarregaCampos(Funcionario funcionario)
         {
-            try
-            {
-                txtNome.Text = funcionario.Nome;
-                cbSexo.SelectedItem = funcionario.Sexo;
-                cbCargo.SelectedValue = funcionario.Cargo.CodCargo;
-                txtCpf.Text = funcionario.Cpf;
-                txtTelefone.Text = funcionario.Telefone.Numero;
-                txtCelular.Text = funcionario.Celular.Numero;
-                toolExibe(txtNome, txtNome.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); ;
-            }
+            txtNome.Text = funcionario.Nome;
+            cbSexo.SelectedItem = funcionario.Sexo;
+            cbCargo.SelectedValue = funcionario.Cargo.CodCargo;
+            txtCpf.Text = funcionario.Cpf;
+            txtTelefone.Text = funcionario.Telefone.Numero;
+            txtCelular.Text = funcionario.Celular.Numero;
+            toolExibe(txtNome, txtNome.Text);
         }
     }
 }

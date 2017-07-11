@@ -7,6 +7,7 @@ namespace Interface.Formularios.Modelos
 {
     public partial class FrmCadBase : MetroFramework.Forms.MetroForm
     {
+        protected string resultado;
         //Variaveis utilizadas para mover o form através dos paineis
         protected int WM_NCLBUTTONDOWN = 0xA1;
         protected int HT_CAPTION = 0x2;
@@ -114,6 +115,11 @@ namespace Interface.Formularios.Modelos
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+        //Exibe o conteudo completo da combobox na tooltip
+        protected void toolExibe(Control ctrl, string txtTool)
+        {
+            toolBase.SetToolTip(ctrl, txtTool);
         }
     }
 }

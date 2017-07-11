@@ -78,7 +78,6 @@ namespace Interface.Formularios.Cadastros
                     }
                     else
                     {
-
                         CD_DVD.Titulo = txtTitulo.Text;
                     }
                     //Campo Lingua
@@ -88,7 +87,7 @@ namespace Interface.Formularios.Cadastros
                     {
                         if (txtLocalizacao.Text.Length < 4)
                         {
-                            MessageBox.Show(this, "O campo Localização deve conter no minimo quatro digitor", "Atenção", MessageBoxButtons.OK,
+                            MessageBox.Show(this, "O campo Localização deve conter no minimo quatro digitos.", "Atenção", MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
                             return;
                         }
@@ -252,29 +251,22 @@ namespace Interface.Formularios.Cadastros
         //Carrega o cadastro do CD ou DVD no form
         private void CarregaCampos(CD_DVD cdvd)
         {
-            try
+            txtTitulo.Text = cdvd.Titulo;
+            txtTombo.Text = cdvd.Tombo.ToString();
+            txtLocalizacao.Text = cdvd.Localizacao;
+            cbLingua.SelectedItem = cdvd.Lingua;
+            cbTipoTombo.SelectedItem = cdvd.TipoTombo;
+            cbArea.SelectedValue = cdvd.Area.CodArea;
+            txtObservacao.Text = cdvd.Observacao;
+            if (cdvd.Disponivel)
             {
-                txtTitulo.Text = cdvd.Titulo;
-                txtTombo.Text = cdvd.Tombo.ToString();
-                txtLocalizacao.Text = cdvd.Localizacao;
-                cbLingua.SelectedItem = cdvd.Lingua;
-                cbTipoTombo.SelectedItem = cdvd.TipoTombo;
-                cbArea.SelectedValue = cdvd.Area.CodArea;
-                txtObservacao.Text = cdvd.Observacao;
-                if (cdvd.Disponivel)
-                {
-                    checkDisponivel.Checked = true;
-                }
-                else
-                {
-                    checkDisponivel.Checked = false;
-                }
-                toolExibe(txtTitulo, txtTitulo.Text);
+                checkDisponivel.Checked = true;
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                checkDisponivel.Checked = false;
             }
+            toolExibe(txtTitulo, txtTitulo.Text);
         }
         //Mostra o conteúdo da combobox
         private void cbArea_SelectedIndexChanged(object sender, EventArgs e)

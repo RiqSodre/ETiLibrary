@@ -9,7 +9,7 @@ namespace Interface.Formularios.Cadastros
     public partial class FrmPonteCdDvd : FrmPonte
     {
         private MidiaBLL midiaBLL = new MidiaBLL();
-        private FrmCadCdDvd FrmCadCdDvdBase = new FrmCadCdDvd();
+        private FrmCadCdDvd frmCadCdDvdBase = new FrmCadCdDvd();
         private CD_DVD cdvd = new CD_DVD();
 
         //Carrega o form ponte CD/DVD
@@ -18,8 +18,8 @@ namespace Interface.Formularios.Cadastros
             try
             {
                 InitializeComponent();
-                FrmCadCdDvdBase = frmCadCDvd;
-                cdvd = FrmCadCdDvdBase.CD_DVD;
+                frmCadCdDvdBase = frmCadCDvd;
+                cdvd = frmCadCdDvdBase.CD_DVD;
                 lblForm.Text += " - " + txtFrm;
             }
             catch (Exception ex)
@@ -47,7 +47,7 @@ namespace Interface.Formularios.Cadastros
                         MessageBoxIcon.Warning);
                         return;
                     }
-                    FrmCadCdDvdBase.CD_DVD = cdvd;
+                    frmCadCdDvdBase.CD_DVD = cdvd;
                     DialogResult = DialogResult.OK;
                 }
             }

@@ -364,22 +364,15 @@ namespace Interface.Formularios.Cadastros
         //Carrega o cadastro do aluno no form
         private void CarregaCampos(Aluno aluno)
         {
-            try
-            {
-                txtNome.Text = aluno.Nome;
-                cbSexo.SelectedItem = aluno.Sexo;
-                txtCpf.Text = aluno.Cpf;
-                txtRm.Text = aluno.Rm;
-                cbCurso.SelectedValue = aluno.Turma.Curso.CodCurso;
-                cbTurma.SelectedValue = aluno.Turma.CodTurma;
-                txtTelefone.Text = aluno.Telefone.Numero;
-                txtCelular.Text = aluno.Celular.Numero;
-                toolExibe(txtNome, txtNome.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            txtNome.Text = aluno.Nome;
+            cbSexo.SelectedItem = aluno.Sexo;
+            txtCpf.Text = aluno.Cpf;
+            txtRm.Text = aluno.Rm;
+            cbCurso.SelectedValue = aluno.Turma.Curso.CodCurso;
+            cbTurma.SelectedValue = aluno.Turma.CodTurma;
+            txtTelefone.Text = aluno.Telefone.Numero;
+            txtCelular.Text = aluno.Celular.Numero;
+            toolExibe(txtNome, txtNome.Text);
         }
         /*Botão de Cadastrar por RM - Carrega o aluno no form através de seu rm 
          * pelo arquivo XML disponibilizado pela ETEC*/

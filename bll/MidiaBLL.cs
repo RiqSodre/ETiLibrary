@@ -576,7 +576,6 @@ namespace BLL
             try
             {
                 JornalEx jornal = new JornalEx();
-                jornal.CodMidia = 0;
 
                 acesso.LimparParametros();
                 acesso.AdicionarParametros("@Tombo", Tombo);

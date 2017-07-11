@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace Interface.Formularios.Consultas
 {
-    public partial class FrmPCExJornal : FrmPCBase
+    public partial class FrmPCJornalEx : FrmPCBase
     {
 
         AreaBLL areaBLL = new AreaBLL();
@@ -22,7 +22,7 @@ namespace Interface.Formularios.Consultas
         JornalList jornalList = new JornalList();
 
 
-        public FrmPCExJornal()
+        public FrmPCJornalEx()
         {
             InitializeComponent();
         }

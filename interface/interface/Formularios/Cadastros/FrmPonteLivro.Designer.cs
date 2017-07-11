@@ -31,15 +31,6 @@
             this.pnlForm.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblForm
-            // 
-            this.lblForm.Size = new System.Drawing.Size(98, 16);
-            this.lblForm.Text = "Cadastro: Livro";
-            // 
-            // btnFechar
-            // 
-            this.btnFechar.FlatAppearance.BorderSize = 0;
-            // 
             // txtTexto
             // 
             // 
@@ -56,18 +47,26 @@
             this.txtTexto.CustomButton.Visible = false;
             this.txtTexto.Lines = new string[0];
             this.txtTexto.Location = new System.Drawing.Point(51, 115);
-            this.txtTexto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTexto_KeyPress_1);
+            this.txtTexto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTexto_KeyPress);
             // 
             // lblTexto
             // 
             this.lblTexto.Location = new System.Drawing.Point(65, 85);
             this.lblTexto.Size = new System.Drawing.Size(197, 18);
-            this.lblTexto.Text = "Digite aqui o Tombo do livro:";
+            this.lblTexto.Text = "Digite aqui o tombo do Livro:";
             // 
             // btnAcao
             // 
-            this.btnAcao.Text = "Carregar";
-            this.btnAcao.Click += new System.EventHandler(this.btnAcao_Click_1);
+            this.btnAcao.Click += new System.EventHandler(this.btnAcao_Click);
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.FlatAppearance.BorderSize = 0;
+            // 
+            // lblForm
+            // 
+            this.lblForm.Size = new System.Drawing.Size(98, 16);
+            this.lblForm.Text = "Cadastro: Livro";
             // 
             // FrmPonteLivro
             // 

@@ -49,15 +49,7 @@ namespace Interface.Formularios.Sistema
                 {
                     if (form.Name == "FrmCadAluno")
                     {
-                        form.Activate();
-                        if (form.Visible == false)
-                        {
-                            form.Close();
-                        }
-                        else
-                        {
-                            existe = true;
-                        }
+                        existe = VerificaForm(form, existe);
                         break;
                     }
                 }
@@ -88,15 +80,7 @@ namespace Interface.Formularios.Sistema
                 {
                     if (form.Name == "FrmCadFuncionario")
                     {
-                        form.Activate();
-                        if (form.Visible == false)
-                        {
-                            form.Close();
-                        }
-                        else
-                        {
-                            existe = true;
-                        }
+                        existe = VerificaForm(form, existe);
                         break;
                     }
                 }
@@ -127,15 +111,7 @@ namespace Interface.Formularios.Sistema
                 {
                     if (form.Name == "FrmCadFuncionarioBiblioteca")
                     {
-                        form.Activate();
-                        if (form.Visible == false)
-                        {
-                            form.Close();
-                        }
-                        else
-                        {
-                            existe = true;
-                        }
+                        existe = VerificaForm(form, existe);
                         break;
                     }
                 }
@@ -166,15 +142,7 @@ namespace Interface.Formularios.Sistema
                 {
                     if (form.Name == "FrmListaBase")
                     {
-                        form.Activate();
-                        if (form.Visible == false)
-                        {
-                            form.Close();
-                        }
-                        else
-                        {
-                            existe = true;
-                        }
+                        existe = VerificaForm(form, existe);
                         break;
                     }
                 }
@@ -205,15 +173,7 @@ namespace Interface.Formularios.Sistema
                 {
                     if (form.Name == "FrmCadCargo")
                     {
-                        form.Activate();
-                        if (form.Visible == false)
-                        {
-                            form.Close();
-                        }
-                        else
-                        {
-                            existe = true;
-                        }
+                        existe = VerificaForm(form, existe);
                         break;
                     }
                 }
@@ -245,15 +205,7 @@ namespace Interface.Formularios.Sistema
                 {
                     if (form.Name == "FrmCadCurso")
                     {
-                        form.Activate();
-                        if (form.Visible == false)
-                        {
-                            form.Close();
-                        }
-                        else
-                        {
-                            existe = true;
-                        }
+                        existe = VerificaForm(form, existe);
                         break;
                     }
                 }
@@ -284,15 +236,7 @@ namespace Interface.Formularios.Sistema
                 {
                     if (form.Name == "FrmCadTurma")
                     {
-                        form.Activate();
-                        if (form.Visible == false)
-                        {
-                            form.Close();
-                        }
-                        else
-                        {
-                            existe = true;
-                        }
+                        existe = VerificaForm(form, existe);
                         break;
                     }
                 }
@@ -323,15 +267,7 @@ namespace Interface.Formularios.Sistema
                 {
                     if (form.Name == "FrmCadArea")
                     {
-                        form.Activate();
-                        if (form.Visible == false)
-                        {
-                            form.Close();
-                        }
-                        else
-                        {
-                            existe = true;
-                        }
+                        existe = VerificaForm(form, existe);
                         break;
                     }
                 }
@@ -388,15 +324,7 @@ namespace Interface.Formularios.Sistema
                 {
                     if (form.Name == "FrmCadEditora")
                     {
-                        form.Activate();
-                        if (form.Visible == false)
-                        {
-                            form.Close();
-                        }
-                        else
-                        {
-                            existe = true;
-                        }
+                        existe = VerificaForm(form, existe);
                         break;
                     }
                 }
@@ -427,15 +355,7 @@ namespace Interface.Formularios.Sistema
                 {
                     if (form.Name == "FrmCadGenero")
                     {
-                        form.Activate();
-                        if (form.Visible == false)
-                        {
-                            form.Close();
-                        }
-                        else
-                        {
-                            existe = true;
-                        }
+                        existe = VerificaForm(form, existe);
                         break;
                     }
                 }
@@ -466,15 +386,7 @@ namespace Interface.Formularios.Sistema
                 {
                     if (form.Name == "FrmCadAutores")
                     {
-                        form.Activate();
-                        if (form.Visible == false)
-                        {
-                            form.Close();
-                        }
-                        else
-                        {
-                            existe = true;
-                        }
+                        existe = VerificaForm(form, existe);
                         break;
                     }
                 }
@@ -505,15 +417,7 @@ namespace Interface.Formularios.Sistema
                 {
                     if (form.Name == "FrmCadExtravio")
                     {
-                        form.Activate();
-                        if (form.Visible == false)
-                        {
-                            form.Close();
-                        }
-                        else
-                        {
-                            existe = true;
-                        }
+                        existe = VerificaForm(form, existe);
                         break;
                     }
                 }
@@ -544,15 +448,7 @@ namespace Interface.Formularios.Sistema
                 {
                     if (form.Name == "FrmCadAssunto")
                     {
-                        form.Activate();
-                        if (form.Visible == false)
-                        {
-                            form.Close();
-                        }
-                        else
-                        {
-                            existe = true;
-                        }
+                        existe = VerificaForm(form, existe);
                         break;
                     }
                 }
@@ -583,15 +479,7 @@ namespace Interface.Formularios.Sistema
                 {
                     if (form.Name == "FrmConsultaAluno")
                     {
-                        form.Activate();
-                        if (form.Visible == false)
-                        {
-                            form.Close();
-                        }
-                        else
-                        {
-                            existe = true;
-                        }
+                        existe = VerificaForm(form, existe);
                         break;
                     }
                 }
@@ -622,15 +510,7 @@ namespace Interface.Formularios.Sistema
                 {
                     if (form.Name == "FrmConsultaFuncionario")
                     {
-                        form.Activate();
-                        if (form.Visible == false)
-                        {
-                            form.Close();
-                        }
-                        else
-                        {
-                            existe = true;
-                        }
+                        existe = VerificaForm(form, existe);
                         break;
                     }
                 }
@@ -661,15 +541,7 @@ namespace Interface.Formularios.Sistema
                 {
                     if (form.Name == "FrmListaBase")
                     {
-                        form.Activate();
-                        if (form.Visible == false)
-                        {
-                            form.Close();
-                        }
-                        else
-                        {
-                            existe = true;
-                        }
+                        existe = VerificaForm(form, existe);
                         break;
                     }
                 }
@@ -752,15 +624,7 @@ namespace Interface.Formularios.Sistema
                 {
                     if (form.Name == "FrmPCEmprestimo")
                     {
-                        form.Activate();
-                        if (form.Visible == false)
-                        {
-                            form.Close();
-                        }
-                        else
-                        {
-                            existe = true;
-                        }
+                        existe = VerificaForm(form, existe);
                         break;
                     }
                 }
@@ -856,15 +720,7 @@ namespace Interface.Formularios.Sistema
                 {
                     if (form.Name == "FrmPonteEmprestimo")
                     {
-                        form.Activate();
-                        if (form.Visible == false)
-                        {
-                            form.Close();
-                        }
-                        else
-                        {
-                            existe = true;
-                        }
+                        existe = VerificaForm(form, existe);
                         break;
                     }
                 }
@@ -932,6 +788,20 @@ namespace Interface.Formularios.Sistema
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK,
                                        MessageBoxIcon.Error);
             }
+        }
+        //Verifica o estado do form encontrado
+        private bool VerificaForm(Form form, bool existe)
+        {
+            form.Activate();
+            if (form.Visible == false)
+            {
+                form.Close();
+            }
+            else
+            {
+                existe = true;
+            }
+            return existe;
         }
         //Relógio
         private void hora_Tick(object sender, EventArgs e)

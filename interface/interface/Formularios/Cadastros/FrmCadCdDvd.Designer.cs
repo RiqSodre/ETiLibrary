@@ -200,7 +200,7 @@
             this.cbLingua.Location = new System.Drawing.Point(21, 80);
             this.cbLingua.Name = "cbLingua";
             this.cbLingua.Size = new System.Drawing.Size(100, 23);
-            this.cbLingua.TabIndex = 2;
+            this.cbLingua.TabIndex = 1;
             // 
             // lblLingua
             // 
@@ -293,7 +293,7 @@
             this.txtLocalizacao.SelectionStart = 0;
             this.txtLocalizacao.ShortcutsEnabled = true;
             this.txtLocalizacao.Size = new System.Drawing.Size(124, 23);
-            this.txtLocalizacao.TabIndex = 1;
+            this.txtLocalizacao.TabIndex = 2;
             this.txtLocalizacao.UseSelectable = true;
             this.txtLocalizacao.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtLocalizacao.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -308,7 +308,7 @@
             this.cbArea.Location = new System.Drawing.Point(21, 132);
             this.cbArea.Name = "cbArea";
             this.cbArea.Size = new System.Drawing.Size(142, 23);
-            this.cbArea.TabIndex = 4;
+            this.cbArea.TabIndex = 3;
             this.cbArea.ValueMember = "CodArea";
             this.cbArea.SelectedIndexChanged += new System.EventHandler(this.cbArea_SelectedIndexChanged);
             // 
@@ -342,7 +342,7 @@
             this.cbTipoTombo.Location = new System.Drawing.Point(174, 132);
             this.cbTipoTombo.Name = "cbTipoTombo";
             this.cbTipoTombo.Size = new System.Drawing.Size(100, 23);
-            this.cbTipoTombo.TabIndex = 3;
+            this.cbTipoTombo.TabIndex = 4;
             // 
             // checkDisponivel
             // 
@@ -363,7 +363,7 @@
             this.lblDisponivel.Name = "lblDisponivel";
             this.lblDisponivel.Size = new System.Drawing.Size(71, 19);
             this.lblDisponivel.TabIndex = 220;
-            this.lblDisponivel.Text = "Disponivel:";
+            this.lblDisponivel.Text = "Disponível:";
             // 
             // lblTombo
             // 

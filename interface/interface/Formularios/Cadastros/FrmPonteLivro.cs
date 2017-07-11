@@ -12,7 +12,7 @@ namespace Interface.Formularios.Cadastros
         private FrmCadLivro frmCadLivroBase = new FrmCadLivro();
         private Livro livro = new Livro();
 
-        //Carrega o form
+        //Carrega o form ponte Livro
         public FrmPonteLivro(FrmCadLivro frmCadLivro, string txtFrm)
         {
             InitializeComponent();
@@ -21,41 +21,29 @@ namespace Interface.Formularios.Cadastros
             livro = frmCadLivroBase.Livro;
             lblForm.Text += " - " + txtFrm;
         }
-
-        //Carrega o Livro
-        private void btnAcao_Click_1(object sender, EventArgs e)
+        //Carrega os dados do Livro que serão passsados para o form de cadastro
+        protected override void btnAcao_Click(object sender, EventArgs e)
         {
-            try
+            if (txtTexto.Text.Length == 0)
             {
-                if (txtTexto.Text.Length == 0)
+                MessageBox.Show(this, "Digite o tombo do livro no campo informado.", "Atenção", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                livro = midiaBLL.LivroConsultar_PorTombo(Convert.ToInt32(txtTexto.Text));
+                if (livro.CodMidia == 0)
                 {
-                    MessageBox.Show(this, "Digite o tombo do livro no campo informado.", "Atenção", MessageBoxButtons.OK,
-                        MessageBoxIcon.Warning);
+                    MessageBox.Show(this, "Nenhum registro encontrado, certifique-se que tombo foi digitado corretamente.", "Atenção", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
                     return;
                 }
-                else
-                {
-                    livro = midiaBLL.LivroConsultar_PorTombo(Convert.ToInt32(txtTexto.Text));
-
-                    if (livro.CodMidia == 0)
-                    {
-                        MessageBox.Show(this, "Nenhum registro encontrado, certifique-se que tombo foi digitado corretamente.", "Atenção", MessageBoxButtons.OK,
-                        MessageBoxIcon.Warning);
-                        return;
-                    }
-
-                    frmCadLivroBase.Livro = livro;
-                    DialogResult = DialogResult.OK;
-                }
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                frmCadLivroBase.Livro = livro;
+                DialogResult = DialogResult.OK;
             }
         }
-
-        //Faz o Campo aceitar apenas números
+        //Faz o campo do tombo do Livro aceitar apenas números
         private void txtTexto_KeyPress(object sender, KeyPressEventArgs e)
         {
             try
@@ -68,14 +56,9 @@ namespace Interface.Formularios.Cadastros
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void txtTexto_KeyPress_1(object sender, KeyPressEventArgs e)
-        {
-
-        }
     }
 }
+

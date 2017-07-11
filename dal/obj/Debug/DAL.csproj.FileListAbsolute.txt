@@ -43,3 +43,10 @@ C:\Users\Pichau\Desktop\ETiLibrary\DAL\bin\Debug\MySql.Data.dll
 C:\Users\Pichau\Desktop\ETiLibrary\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\Pichau\Desktop\ETiLibrary\DAL\obj\Debug\DAL.dll
 C:\Users\Pichau\Desktop\ETiLibrary\DAL\obj\Debug\DAL.pdb
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\DAL\bin\Debug\DAL.dll.config
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\DAL\bin\Debug\DAL.dll
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\DAL\bin\Debug\DAL.pdb
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\DAL\bin\Debug\MySql.Data.dll
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\DAL\obj\Debug\DAL.dll
+C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\DAL\obj\Debug\DAL.pdb

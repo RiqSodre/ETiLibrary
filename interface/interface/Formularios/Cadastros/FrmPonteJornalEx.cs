@@ -49,7 +49,7 @@ namespace Interface.Formularios.Cadastros
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Faz o Campo do tombo do Jornal aceitar apenas números
+        //Faz o campo do tombo do Jornal aceitar apenas números
         private void txtTexto_KeyPress(object sender, KeyPressEventArgs e)
         {
             try

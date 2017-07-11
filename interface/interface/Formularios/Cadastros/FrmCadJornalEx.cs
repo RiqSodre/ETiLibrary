@@ -11,8 +11,8 @@ namespace Interface.Formularios.Cadastros
     public partial class FrmCadJornalEx : FrmCadBase
     {
         private AreaBLL areaBLL = new AreaBLL();
-        private JornalBLL jornalBLL = new JornalBLL();
         private MidiaBLL midiaBLL = new MidiaBLL();
+        private JornalBLL jornalBLL = new JornalBLL();
         private JornalEx jornalExBase = new JornalEx();
         public JornalEx JornalEx
         {
@@ -63,10 +63,10 @@ namespace Interface.Formularios.Cadastros
         {
             try
             {
-                if(btnAcao.Text.Equals("Salvar") || btnAcao.Text.Equals("Alterar"))
-                { 
+                if (btnAcao.Text.Equals("Salvar") || btnAcao.Text.Equals("Alterar"))
+                {
                     //Validações campo Manchete
-                    if(txtManchete.Text.Length == 0)
+                    if (txtManchete.Text.Length == 0)
                     {
                         MessageBox.Show(this, "O campo Manchete é obrigatório.", "Atenção", MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
@@ -198,20 +198,20 @@ namespace Interface.Formularios.Cadastros
                 }
                 else
                 {
-                if (MessageBox.Show(this, "Deseja excluir este Jornal?", "Atenção", MessageBoxButtons.YesNo,
-                          MessageBoxIcon.Information) == DialogResult.Yes)
-                {
-                    resultado = midiaBLL.MidiaExcluir(JornalEx.CodMidia, "Jornal");
-                    MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
-                               MessageBoxIcon.Information);
-                    if (resultado.Contains("sucesso"))
+                    if (MessageBox.Show(this, "Deseja excluir este Jornal?", "Atenção", MessageBoxButtons.YesNo,
+                              MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        Habilita(false);
-                        LimparComponentes();
+                        resultado = midiaBLL.MidiaExcluir(JornalEx.CodMidia, "Jornal");
+                        MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
+                                   MessageBoxIcon.Information);
+                        if (resultado.Contains("sucesso"))
+                        {
+                            Habilita(false);
+                            LimparComponentes();
+                        }
                     }
                 }
             }
-        }
             catch (Exception ex)
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -273,30 +273,23 @@ namespace Interface.Formularios.Cadastros
         //Carrega o cadastro do Jornal no form
         private void CarregaCampos(JornalEx jornal)
         {
-            try
+            txtManchete.Text = jornal.Manchete;
+            txtTombo.Text = jornal.Tombo.ToString();
+            txtLocalizacao.Text = jornal.Localizacao;
+            cbLingua.SelectedItem = jornal.Lingua;
+            cbTipoTombo.SelectedItem = jornal.TipoTombo;
+            cbArea.SelectedValue = jornal.Area.CodArea;
+            cbJornal.SelectedValue = jornal.Jornal_.CodJornal;
+            txtObservacao.Text = jornal.Observacao;
+            if (jornal.Disponivel)
             {
-                txtManchete.Text = jornal.Manchete;
-                txtTombo.Text = jornal.Tombo.ToString();
-                txtLocalizacao.Text = jornal.Localizacao;
-                cbLingua.SelectedItem = jornal.Lingua;
-                cbTipoTombo.SelectedItem = jornal.TipoTombo;
-                cbArea.SelectedValue = jornal.Area.CodArea;
-                cbJornal.SelectedValue = jornal.Jornal_.CodJornal;
-                txtObservacao.Text = jornal.Observacao;
-                if (jornal.Disponivel)
-                {
-                    checkDisponivel.Checked = true;
-                }
-                else
-                {
-                    checkDisponivel.Checked = false;
-                }
-                toolExibe(txtManchete, txtManchete.Text);
+                checkDisponivel.Checked = true;
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                checkDisponivel.Checked = false;
             }
+            toolExibe(txtManchete, txtManchete.Text);
         }
         //Mostra o conteúdo da combobox
         private void cbArea_SelectedIndexChanged(object sender, EventArgs e)

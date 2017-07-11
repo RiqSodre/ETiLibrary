@@ -1,6 +1,6 @@
 ﻿namespace Interface.Formularios.Consultas
 {
-    partial class FrmPCExJornal
+    partial class FrmPCJornalEx
     {
         /// <summary>
         /// Required designer variable.

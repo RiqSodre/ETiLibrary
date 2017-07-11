@@ -408,31 +408,25 @@ namespace Interface.Formularios.Cadastros
         //Carrega o cadastro do funcionário no form
         private void CarregaCampos(Funcionario funcionario)
         {
-            try
+            txtNome.Text = funcionario.Nome;
+            cbSexo.SelectedItem = funcionario.Sexo;
+            cbCargo.SelectedIndex = 0;
+            txtCpf.Text = funcionario.Cpf;
+            txtTelefone.Text = funcionario.Telefone.Numero;
+            txtCelular.Text = funcionario.Celular.Numero;
+            txtEmail.Text = funcionario.Email;
+            txtLogin.Text = funcionario.Login;
+            txtSenha.Text = autenticacaoBLL.DecripSenha(funcionario.Senha);
+            if(funcionario.Admin)
             {
-                txtNome.Text = funcionario.Nome;
-                cbSexo.SelectedItem = funcionario.Sexo;
-                cbCargo.SelectedIndex = 0;
-                txtCpf.Text = funcionario.Cpf;
-                txtTelefone.Text = funcionario.Telefone.Numero;
-                txtCelular.Text = funcionario.Celular.Numero;
-                txtEmail.Text = funcionario.Email;
-                txtLogin.Text = funcionario.Login;
-                txtSenha.Text = autenticacaoBLL.DecripSenha(funcionario.Senha);
-                if (funcionario.Admin)
-                {
-                    checkAdmin.Checked = true;
-                }else
-                {
-                    checkAdmin.Checked = false;
-                }
-                toolExibe(txtNome, txtNome.Text);
-                toolExibe(txtEmail, txtEmail.Text);
+                checkAdmin.Checked = true;
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); ;
+                checkAdmin.Checked = false;
             }
+            toolExibe(txtNome, txtNome.Text);
+            toolExibe(txtEmail, txtEmail.Text);
         }
     }
 }

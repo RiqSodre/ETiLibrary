@@ -11,12 +11,12 @@ namespace Interface.Formularios.Cadastros
 {
     public partial class FrmCadLivro : FrmCadBase
     {
+        private AreaBLL areaBLL = new AreaBLL();
+        private MidiaBLL midiaBLL = new MidiaBLL();
         private AutorBLL autorBLL = new AutorBLL();
         private AssuntosBLL assuntoBLL = new AssuntosBLL();
         private GeneroBLL generoBLL = new GeneroBLL();
         private EditoraBLL editoraBLL = new EditoraBLL();
-        private AreaBLL areaBLL = new AreaBLL();
-        private MidiaBLL midiaBLL = new MidiaBLL();
         private Livro livroBase = new Livro();
         public Livro Livro
         {
@@ -41,6 +41,8 @@ namespace Interface.Formularios.Cadastros
                 cbGenero.GotFocus += cbGenero_Focus;
                 cbAutor.GotFocus += cbAutor_Focus;
                 cbAssunto.GotFocus += cbAssunto_Focus;
+                LimparComponentes();
+                txtValor.Text = "R$ 0,00";
                 cbLingua.SelectedIndex = 42;
                 txtTitulo.Focus();
             }
@@ -362,6 +364,7 @@ namespace Interface.Formularios.Cadastros
             {
                 LimparComponentes();
                 Habilita(true);
+                txtValor.Text = "R$ 0,00";
                 cbLingua.SelectedIndex = 42;
                 txtTitulo.Focus();
             }
@@ -377,7 +380,7 @@ namespace Interface.Formularios.Cadastros
             {
                 Livro = midiaBLL.LimpaListas(Livro);
                 FrmPonteLivro ponteLivro = new FrmPonteLivro(this, "Alterar");
-                if(ponteLivro.ShowDialog() == DialogResult.OK)
+                if (ponteLivro.ShowDialog() == DialogResult.OK)
                 {
                     LimparComponentes();
                     CarregaCampos(livroBase);
@@ -479,104 +482,89 @@ namespace Interface.Formularios.Cadastros
         //Carrega campos do livro
         private void CarregaCampos(Livro livro)
         {
-            try
+            txtTitulo.Text = livro.Titulo;
+            txtSubtitulo.Text = livro.Subtitulo;
+            txtColecao.Text = livro.Serie_Colecao;
+            txtVolume.Text = livro.Volume;
+            txtEdicao.Text = livro.Edicao;
+            dtDataPublicacao.Value = (DateTime)livro.DataPublicacao;
+            txtLocal.Text = livro.Local;
+            txtNdePaginas.Text = livro.Npags;
+            txtTombo.Text = livro.Tombo.ToString();
+            txtValor.Text = Convert.ToDouble(livro.Valor).ToString("C");
+            cbTipoLivro.SelectedItem = livro.TipoLivro;
+            cbTipoTombo.SelectedItem = livro.TipoTombo;
+            txtLocalizacao.Text = livro.Localizacao;
+            cbLingua.SelectedItem = livro.Lingua;
+            cbEditora.Text = livro.Editora.Nome;
+            cbArea.SelectedValue = livro.Area.CodArea;
+            checkDisponivel.Checked = Livro.Disponivel;
+            foreach (Genero genero in livro.GeneroList)
             {
-                txtTitulo.Text = livro.Titulo;
-                txtSubtitulo.Text = livro.Subtitulo;
-                txtColecao.Text = livro.Serie_Colecao;
-                txtVolume.Text = livro.Volume;
-                txtEdicao.Text = livro.Edicao;
-                dtDataPublicacao.Value = (DateTime)livro.DataPublicacao;
-                txtLocal.Text = livro.Local;
-                txtNdePaginas.Text = livro.Npags;
-                txtTombo.Text = livro.Tombo.ToString();
-                txtValor.Text = Convert.ToDouble(livro.Valor).ToString("C");
-                cbTipoLivro.SelectedItem = livro.TipoLivro;
-                cbTipoTombo.SelectedItem = livro.TipoTombo;
-                txtLocalizacao.Text = livro.Localizacao;
-                cbLingua.SelectedItem = livro.Lingua;
-                cbEditora.Text = livro.Editora.Nome;
-                cbArea.SelectedValue = livro.Area.CodArea;
-                checkDisponivel.Checked = Livro.Disponivel;
-                foreach(Genero genero in livro.GeneroList)
-                {
-                    dataGridGeneros.Rows.Add(genero.CodGenero, genero.Descricao);
-                }
-                foreach (Assunto assunto in livro.AssuntoList)
-                {
-                    dataGridAssuntos.Rows.Add(assunto.CodAssunto, assunto.Descricao);
-                }
-                foreach (Autor autor in livro.AutoreList)
-                {
-                    dataGridAutores.Rows.Add(autor.CodAutor, autor.Nome);
-                }
-                toolExibe(txtTitulo, txtTitulo.Text);
-                toolExibe(txtSubtitulo, txtSubtitulo.Text);
-                toolExibe(txtVolume, txtVolume.Text);
-                toolExibe(txtLocal, txtLocal.Text);
-                toolExibe(txtEdicao, txtEdicao.Text);
-                toolExibe(txtColecao, txtColecao.Text);
+                dataGridGeneros.Rows.Add(genero.CodGenero, genero.Descricao);
             }
-            catch (Exception ex)
+            foreach (Assunto assunto in livro.AssuntoList)
             {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dataGridAssuntos.Rows.Add(assunto.CodAssunto, assunto.Descricao);
             }
+            foreach (Autor autor in livro.AutoreList)
+            {
+                dataGridAutores.Rows.Add(autor.CodAutor, autor.Nome);
+            }
+            toolExibe(txtTitulo, txtTitulo.Text);
+            toolExibe(txtSubtitulo, txtSubtitulo.Text);
+            toolExibe(txtVolume, txtVolume.Text);
+            toolExibe(txtLocal, txtLocal.Text);
+            toolExibe(txtEdicao, txtEdicao.Text);
+            toolExibe(txtColecao, txtColecao.Text);
         }
         //Carrega as combobox com seu conteúdo
         private void CarregaCombo()
         {
-            try
+            //Cria o autocomplete da combobox Autorres
+            AutoCompleteStringCollection dicAutor = new AutoCompleteStringCollection();
+            foreach (Autor autor in autorBLL.CarregaAutores())
             {
-                //Cria o autocomplete da combobox Autorres
-                AutoCompleteStringCollection dicAutor = new AutoCompleteStringCollection();
-                foreach (Autor autor in autorBLL.CarregaAutores())
-                {
-                    dicAutor.Add(autor.Nome);
-                }
-                cbAutor.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                cbAutor.AutoCompleteSource = AutoCompleteSource.CustomSource;
-                cbAutor.AutoCompleteCustomSource = dicAutor;
-                //Cria o autocomplete da combobox Assuntos
-                AutoCompleteStringCollection dicAssunto = new AutoCompleteStringCollection();
-                foreach (Assunto assunto in assuntoBLL.CarregaAssuntos())
-                {
-                    dicAssunto.Add(assunto.Descricao);
-                }
-                cbAssunto.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                cbAssunto.AutoCompleteSource = AutoCompleteSource.CustomSource;
-                cbAssunto.AutoCompleteCustomSource = dicAssunto;
-                //Cria o autocomplete da combobox Genêros
-                AutoCompleteStringCollection dicGenero = new AutoCompleteStringCollection();
-                foreach (Genero genero in generoBLL.CarregaGeneros())
-                {
-                    dicGenero.Add(genero.Descricao);
-                }
-                cbGenero.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                cbGenero.AutoCompleteSource = AutoCompleteSource.CustomSource;
-                cbGenero.AutoCompleteCustomSource = dicGenero;
-                //Cria o autocomplete da combobox Editora
-                AutoCompleteStringCollection dicEditora = new AutoCompleteStringCollection();
-                foreach (Editora editora in editoraBLL.CarregaEditoras())
-                {
-                    dicEditora.Add(editora.Nome);
-                }
-                cbEditora.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                cbEditora.AutoCompleteSource = AutoCompleteSource.CustomSource;
-                cbEditora.AutoCompleteCustomSource = dicEditora;
-                //Carrega as áreas na combobox
-                cbArea.DataSource = areaBLL.CarregaAreas();
-                //Insere a borda nas dataGridViews
-                dataGridAssuntos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-                dataGridAutores.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-                dataGridGeneros.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+                dicAutor.Add(autor.Nome);
             }
-            catch (Exception ex)
+            cbAutor.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbAutor.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            cbAutor.AutoCompleteCustomSource = dicAutor;
+            //Cria o autocomplete da combobox Assuntos
+            AutoCompleteStringCollection dicAssunto = new AutoCompleteStringCollection();
+            foreach (Assunto assunto in assuntoBLL.CarregaAssuntos())
             {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Close();
+                dicAssunto.Add(assunto.Descricao);
             }
+            cbAssunto.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbAssunto.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            cbAssunto.AutoCompleteCustomSource = dicAssunto;
+            //Cria o autocomplete da combobox Genêros
+            AutoCompleteStringCollection dicGenero = new AutoCompleteStringCollection();
+            foreach (Genero genero in generoBLL.CarregaGeneros())
+            {
+                dicGenero.Add(genero.Descricao);
+            }
+            cbGenero.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbGenero.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            cbGenero.AutoCompleteCustomSource = dicGenero;
+            //Cria o autocomplete da combobox Editora
+            AutoCompleteStringCollection dicEditora = new AutoCompleteStringCollection();
+            foreach (Editora editora in editoraBLL.CarregaEditoras())
+            {
+                dicEditora.Add(editora.Nome);
+            }
+            cbEditora.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbEditora.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            cbEditora.AutoCompleteCustomSource = dicEditora;
+            //Carrega as áreas na combobox
+            cbArea.DataSource = areaBLL.CarregaAreas();
+            //Insere a borda nas dataGridViews
+            dataGridAssuntos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            dataGridAutores.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            dataGridGeneros.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         }
-        //Formata campo Valor quando recebe foco
+        //Retira a formatacao do campo Valor quando recebe foco
         private void txtValor_Focus(object sender, EventArgs e)
         {
             try
@@ -740,72 +728,81 @@ namespace Interface.Formularios.Cadastros
         //Verifica se o genêro já está inserido para o livro
         private bool ValidaGenero()
         {
-            try
+            bool resultado = true;
+            foreach (DataGridViewRow dataRow in dataGridGeneros.Rows)
             {
-                bool resultado = true;
-                foreach (DataGridViewRow dataRow in dataGridGeneros.Rows)
+                if (cbGenero.Text == dataRow.Cells["clnGenero"].Value.ToString())
                 {
-                    if (cbGenero.Text == dataRow.Cells["clnGenero"].Value.ToString())
-                    {
-                        resultado = false;
-                    }
+                    resultado = false;
                 }
-                return resultado;
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
+            return resultado;
         }
         //Verifica se o autor já está inserido para o livro
         private bool ValidaAutor()
         {
-            try
+            bool resultado = true;
+            foreach (DataGridViewRow dataRow in dataGridAutores.Rows)
             {
-                bool resultado = true;
-                foreach (DataGridViewRow dataRow in dataGridAutores.Rows)
+                if (cbAutor.Text == dataRow.Cells["clnAutor"].Value.ToString())
                 {
-                    if (cbAutor.Text == dataRow.Cells["clnAutor"].Value.ToString())
-                    {
-                        resultado = false;
-                    }
+                    resultado = false;
                 }
-                return resultado;
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
+            return resultado;
         }
         //Verifica se o assunto já está inserido para o livro
         private bool ValidaAssunto()
         {
-            try
+            bool resultado = true;
+            foreach (DataGridViewRow dataRow in dataGridAssuntos.Rows)
             {
-                bool resultado = true;
-                foreach (DataGridViewRow dataRow in dataGridAssuntos.Rows)
+                if (cbAssunto.Text == dataRow.Cells["clnAssunto"].Value.ToString())
                 {
-                    if (cbAssunto.Text == dataRow.Cells["clnAssunto"].Value.ToString())
-                    {
-                        resultado = false;
-                    }
+                    resultado = false;
                 }
-                return resultado;
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
+            return resultado;
         }
         //Retira o texto padrão quando a combobox Assunto recebe foco
         private void cbGenero_Focus(object sender, EventArgs e)
         {
             try
             {
-                cbGenero.Text = "";
+                if (cbGenero.Text.Equals("Digite o genêro"))
+                {
+                    cbGenero.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        //Retira o texto padrão quando a combobox Autor recebe foco
+        private void cbAutor_Focus(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbAutor.Text.Equals("Digite o nome do autor"))
+                {
+                    cbAutor.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        //Retira o texto padrão quando a combobox Assunto recebe foco
+        private void cbAssunto_Focus(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbAssunto.Text.Equals("Digite o assunto"))
+                {
+                    cbAssunto.Text = "";
+                }
             }
             catch (Exception ex)
             {
@@ -824,36 +821,12 @@ namespace Interface.Formularios.Cadastros
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Retira o texto padrão quando a combobox Autor recebe foco
-        private void cbAutor_Focus(object sender, EventArgs e)
-        {
-            try
-            {
-                cbAutor.Text = "";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
         //Ativa o timer da combobox Autor
         private void cbAutor_Leave(object sender, EventArgs e)
         {
             try
             {
                 timerCbAutor.Enabled = true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        //Retira o texto padrão quando a combobox Assunto recebe foco
-        private void cbAssunto_Focus(object sender, EventArgs e)
-        {
-            try
-            {
-                cbAssunto.Text = "";
             }
             catch (Exception ex)
             {
@@ -877,8 +850,11 @@ namespace Interface.Formularios.Cadastros
         {
             try
             {
-                cbGenero.Text = "Digite o genero";
-                timerCbGenero.Enabled = false;
+                if (!cbGenero.Focused)
+                {
+                    cbGenero.Text = "Digite o genêro";
+                    timerCbGenero.Enabled = false;
+                }
             }
             catch (Exception ex)
             {
@@ -890,8 +866,11 @@ namespace Interface.Formularios.Cadastros
         {
             try
             {
-                cbAutor.Text = "Digite o nome do Autor";
-                timerCbAutor.Enabled = false;
+                if (!cbAutor.Focused)
+                {
+                    cbAutor.Text = "Digite o nome do autor";
+                    timerCbAutor.Enabled = false;
+                }
             }
             catch (Exception ex)
             {
@@ -903,8 +882,47 @@ namespace Interface.Formularios.Cadastros
         {
             try
             {
-                cbAssunto.Text = "Digite o assunto";
-                timerCbAssunto.Enabled = false;
+                if (!cbAssunto.Focused)
+                {
+                    cbAssunto.Text = "Digite o assunto";
+                    timerCbAssunto.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        //Mostra o conteúdo da combobox
+        private void cbGenero_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                toolExibe(cbGenero, cbGenero.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        //Mostra o conteúdo da combobox
+        private void cbAutor_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                toolExibe(cbAutor, cbAutor.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        //Mostra o conteúdo da combobox
+        private void cbAssunto_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                toolExibe(cbAssunto, cbAssunto.Text);
             }
             catch (Exception ex)
             {

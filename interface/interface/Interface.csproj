@@ -150,6 +150,12 @@
     <Compile Include="Formularios\Cadastros\FrmCadLivro.Designer.cs">
       <DependentUpon>FrmCadLivro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Cadastros\FrmCadMapa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Cadastros\FrmCadMapa.Designer.cs">
+      <DependentUpon>FrmCadMapa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Cadastros\FrmCadMidiaEmprestimo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,6 +252,12 @@
     <Compile Include="Formularios\Cadastros\FrmPonteLivro.Designer.cs">
       <DependentUpon>FrmPonteLivro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Cadastros\FrmPonteMapa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Cadastros\FrmPonteMapa.Designer.cs">
+      <DependentUpon>FrmPonteMapa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Cadastros\FrmPonteTurma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -306,11 +318,11 @@
     <Compile Include="Formularios\Consultas\FrmPCEmprestimo.Designer.cs">
       <DependentUpon>FrmPCEmprestimo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmPCExJornal.cs">
+    <Compile Include="Formularios\Consultas\FrmPCJornalEx.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmPCExJornal.Designer.cs">
-      <DependentUpon>FrmPCExJornal.cs</DependentUpon>
+    <Compile Include="Formularios\Consultas\FrmPCJornalEx.Designer.cs">
+      <DependentUpon>FrmPCJornalEx.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Consultas\FrmPCExtravio.cs">
       <SubType>Form</SubType>
@@ -432,6 +444,9 @@
     <EmbeddedResource Include="Formularios\Cadastros\FrmCadLivro.resx">
       <DependentUpon>FrmCadLivro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Cadastros\FrmCadMapa.resx">
+      <DependentUpon>FrmCadMapa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cadastros\FrmCadMidiaEmprestimo.resx">
       <DependentUpon>FrmCadMidiaEmprestimo.cs</DependentUpon>
     </EmbeddedResource>
@@ -480,6 +495,9 @@
     <EmbeddedResource Include="Formularios\Cadastros\FrmPonteLivro.resx">
       <DependentUpon>FrmPonteLivro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Cadastros\FrmPonteMapa.resx">
+      <DependentUpon>FrmPonteMapa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cadastros\FrmPonteTurma.resx">
       <DependentUpon>FrmPonteTurma.cs</DependentUpon>
     </EmbeddedResource>
@@ -510,8 +528,8 @@
     <EmbeddedResource Include="Formularios\Consultas\FrmPCEmprestimo.resx">
       <DependentUpon>FrmPCEmprestimo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Consultas\FrmPCExJornal.resx">
-      <DependentUpon>FrmPCExJornal.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Consultas\FrmPCJornalEx.resx">
+      <DependentUpon>FrmPCJornalEx.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Consultas\FrmPCExtravio.resx">
       <DependentUpon>FrmPCExtravio.cs</DependentUpon>

@@ -44,18 +44,16 @@
             // 
             // 
             this.txtTexto.CustomButton.Image = null;
-            this.txtTexto.CustomButton.Location = new System.Drawing.Point(274, 2);
-            this.txtTexto.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTexto.CustomButton.Location = new System.Drawing.Point(152, 1);
             this.txtTexto.CustomButton.Name = "";
-            this.txtTexto.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.txtTexto.CustomButton.Size = new System.Drawing.Size(16, 17);
             this.txtTexto.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtTexto.CustomButton.TabIndex = 1;
             this.txtTexto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtTexto.CustomButton.UseSelectable = true;
             this.txtTexto.CustomButton.Visible = false;
             this.txtTexto.Lines = new string[0];
-            this.txtTexto.Location = new System.Drawing.Point(68, 143);
-            this.txtTexto.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTexto.Location = new System.Drawing.Point(51, 116);
             this.txtTexto.MaxLength = 32767;
             this.txtTexto.Name = "txtTexto";
             this.txtTexto.PasswordChar = '\0';
@@ -64,7 +62,7 @@
             this.txtTexto.SelectionLength = 0;
             this.txtTexto.SelectionStart = 0;
             this.txtTexto.ShortcutsEnabled = true;
-            this.txtTexto.Size = new System.Drawing.Size(300, 28);
+            this.txtTexto.Size = new System.Drawing.Size(225, 23);
             this.txtTexto.TabIndex = 0;
             this.txtTexto.UseSelectable = true;
             this.txtTexto.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -74,19 +72,17 @@
             // 
             this.lblTexto.AutoSize = true;
             this.lblTexto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTexto.Location = new System.Drawing.Point(75, 102);
-            this.lblTexto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTexto.Location = new System.Drawing.Point(56, 83);
             this.lblTexto.Name = "lblTexto";
-            this.lblTexto.Size = new System.Drawing.Size(274, 24);
+            this.lblTexto.Size = new System.Drawing.Size(215, 18);
             this.lblTexto.TabIndex = 104;
             this.lblTexto.Text = "Digite aqui o código da pessoa:";
             // 
             // btnAcao
             // 
-            this.btnAcao.Location = new System.Drawing.Point(305, 218);
-            this.btnAcao.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAcao.Location = new System.Drawing.Point(229, 177);
             this.btnAcao.Name = "btnAcao";
-            this.btnAcao.Size = new System.Drawing.Size(100, 28);
+            this.btnAcao.Size = new System.Drawing.Size(75, 23);
             this.btnAcao.TabIndex = 1;
             this.btnAcao.Text = "Carregar";
             this.btnAcao.UseSelectable = true;
@@ -99,11 +95,10 @@
             this.btnFechar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.Location = new System.Drawing.Point(397, 1);
-            this.btnFechar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFechar.Location = new System.Drawing.Point(298, 1);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(33, 27);
-            this.btnFechar.TabIndex = 2;
+            this.btnFechar.Size = new System.Drawing.Size(25, 22);
+            this.btnFechar.TabIndex = 0;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
@@ -112,10 +107,9 @@
             this.lblForm.AutoSize = true;
             this.lblForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblForm.ForeColor = System.Drawing.Color.White;
-            this.lblForm.Location = new System.Drawing.Point(9, 5);
-            this.lblForm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblForm.Location = new System.Drawing.Point(7, 4);
             this.lblForm.Name = "lblForm";
-            this.lblForm.Size = new System.Drawing.Size(53, 20);
+            this.lblForm.Size = new System.Drawing.Size(45, 16);
             this.lblForm.TabIndex = 48;
             this.lblForm.Text = "Nome";
             // 
@@ -124,29 +118,26 @@
             this.pnlForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pnlForm.Controls.Add(this.lblForm);
             this.pnlForm.Controls.Add(this.btnFechar);
-            this.pnlForm.Location = new System.Drawing.Point(0, 6);
-            this.pnlForm.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlForm.Location = new System.Drawing.Point(0, 5);
             this.pnlForm.Name = "pnlForm";
-            this.pnlForm.Size = new System.Drawing.Size(439, 32);
-            this.pnlForm.TabIndex = 106;
+            this.pnlForm.Size = new System.Drawing.Size(329, 26);
+            this.pnlForm.TabIndex = 2;
             this.pnlForm.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_MouseMove);
             // 
             // FrmPonte
             // 
             this.AcceptButton = this.btnAcao;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.CancelButton = this.btnFechar;
-            this.ClientSize = new System.Drawing.Size(436, 274);
+            this.ClientSize = new System.Drawing.Size(327, 223);
             this.Controls.Add(this.btnAcao);
             this.Controls.Add(this.pnlForm);
             this.Controls.Add(this.txtTexto);
             this.Controls.Add(this.lblTexto);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Movable = false;
             this.Name = "FrmPonte";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
             this.pnlForm.ResumeLayout(false);
             this.pnlForm.PerformLayout();

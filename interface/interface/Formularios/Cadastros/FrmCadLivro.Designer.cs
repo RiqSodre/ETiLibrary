@@ -114,7 +114,7 @@
             // 
             this.pnl.Margin = new System.Windows.Forms.Padding(4);
             this.pnl.Size = new System.Drawing.Size(765, 26);
-            this.pnl.TabIndex = 2;
+            this.pnl.TabIndex = 3;
             // 
             // lblForm
             // 
@@ -127,13 +127,13 @@
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.Location = new System.Drawing.Point(722, 1);
             this.btnFechar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnFechar.TabIndex = 2;
+            this.btnFechar.TabIndex = 0;
             // 
             // pnlBase
             // 
             this.pnlBase.Margin = new System.Windows.Forms.Padding(4);
             this.pnlBase.Size = new System.Drawing.Size(760, 36);
-            this.pnlBase.TabIndex = 1;
+            this.pnlBase.TabIndex = 4;
             // 
             // btnExcluir
             // 
@@ -166,14 +166,14 @@
             // 
             this.btnCancelar.Location = new System.Drawing.Point(662, 434);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCancelar.TabIndex = 1;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "&Cancelar";
             // 
             // btnAcao
             // 
             this.btnAcao.Location = new System.Drawing.Point(565, 434);
             this.btnAcao.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAcao.TabIndex = 0;
+            this.btnAcao.TabIndex = 1;
             this.btnAcao.Click += new System.EventHandler(this.btnAcao_Click);
             // 
             // pnlPrincipal
@@ -239,7 +239,7 @@
             this.txtObservacao.Multiline = true;
             this.txtObservacao.Name = "txtObservacao";
             this.txtObservacao.Size = new System.Drawing.Size(198, 77);
-            this.txtObservacao.TabIndex = 17;
+            this.txtObservacao.TabIndex = 24;
             // 
             // txtEdicao
             // 
@@ -316,7 +316,7 @@
             this.txtColecao.CustomButton.UseSelectable = true;
             this.txtColecao.CustomButton.Visible = false;
             this.txtColecao.Lines = new string[0];
-            this.txtColecao.Location = new System.Drawing.Point(568, 71);
+            this.txtColecao.Location = new System.Drawing.Point(570, 71);
             this.txtColecao.MaxLength = 32767;
             this.txtColecao.Name = "txtColecao";
             this.txtColecao.PasswordChar = '\0';
@@ -326,7 +326,7 @@
             this.txtColecao.SelectionStart = 0;
             this.txtColecao.ShortcutsEnabled = true;
             this.txtColecao.Size = new System.Drawing.Size(95, 23);
-            this.txtColecao.TabIndex = 2;
+            this.txtColecao.TabIndex = 8;
             this.txtColecao.UseSelectable = true;
             this.txtColecao.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtColecao.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -460,8 +460,9 @@
             this.cbGenero.Location = new System.Drawing.Point(82, 131);
             this.cbGenero.Name = "cbGenero";
             this.cbGenero.Size = new System.Drawing.Size(130, 23);
-            this.cbGenero.TabIndex = 11;
+            this.cbGenero.TabIndex = 12;
             this.cbGenero.Text = "Digite o genero";
+            this.cbGenero.TextChanged += new System.EventHandler(this.cbGenero_TextChanged);
             this.cbGenero.Leave += new System.EventHandler(this.cbGenero_Leave);
             // 
             // cbArea
@@ -474,7 +475,7 @@
             this.cbArea.Location = new System.Drawing.Point(541, 220);
             this.cbArea.Name = "cbArea";
             this.cbArea.Size = new System.Drawing.Size(123, 23);
-            this.cbArea.TabIndex = 24;
+            this.cbArea.TabIndex = 28;
             this.cbArea.ValueMember = "CodArea";
             // 
             // cbEditora
@@ -484,7 +485,7 @@
             this.cbEditora.Location = new System.Drawing.Point(542, 188);
             this.cbEditora.Name = "cbEditora";
             this.cbEditora.Size = new System.Drawing.Size(122, 23);
-            this.cbEditora.TabIndex = 23;
+            this.cbEditora.TabIndex = 27;
             this.cbEditora.Text = "Digite a editora";
             // 
             // dtDataPublicacao
@@ -504,8 +505,9 @@
             this.cbAssunto.Location = new System.Drawing.Point(308, 247);
             this.cbAssunto.Name = "cbAssunto";
             this.cbAssunto.Size = new System.Drawing.Size(130, 23);
-            this.cbAssunto.TabIndex = 18;
+            this.cbAssunto.TabIndex = 20;
             this.cbAssunto.Text = "Digite o assunto";
+            this.cbAssunto.TextChanged += new System.EventHandler(this.cbAssunto_TextChanged);
             this.cbAssunto.Leave += new System.EventHandler(this.cbAssunto_Leave);
             // 
             // cbAutor
@@ -517,8 +519,9 @@
             this.cbAutor.Location = new System.Drawing.Point(82, 247);
             this.cbAutor.Name = "cbAutor";
             this.cbAutor.Size = new System.Drawing.Size(147, 23);
-            this.cbAutor.TabIndex = 14;
+            this.cbAutor.TabIndex = 16;
             this.cbAutor.Text = "Digite o nome do Autor";
+            this.cbAutor.TextChanged += new System.EventHandler(this.cbAutor_TextChanged);
             this.cbAutor.Leave += new System.EventHandler(this.cbAutor_Leave);
             // 
             // dataGridAssuntos
@@ -574,8 +577,8 @@
             dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridAssuntos.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridAssuntos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridAssuntos.Size = new System.Drawing.Size(199, 77);
-            this.dataGridAssuntos.TabIndex = 167;
+            this.dataGridAssuntos.Size = new System.Drawing.Size(196, 77);
+            this.dataGridAssuntos.TabIndex = 22;
             // 
             // clnCodAssunto
             // 
@@ -645,7 +648,7 @@
             this.dataGridGeneros.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridGeneros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridGeneros.Size = new System.Drawing.Size(196, 77);
-            this.dataGridGeneros.TabIndex = 168;
+            this.dataGridGeneros.TabIndex = 14;
             // 
             // clnCodGenero
             // 
@@ -696,7 +699,7 @@
             this.dataGridAutores.EnableHeadersVisualStyles = false;
             this.dataGridAutores.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dataGridAutores.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dataGridAutores.Location = new System.Drawing.Point(33, 274);
+            this.dataGridAutores.Location = new System.Drawing.Point(32, 274);
             this.dataGridAutores.MultiSelect = false;
             this.dataGridAutores.Name = "dataGridAutores";
             this.dataGridAutores.ReadOnly = true;
@@ -715,7 +718,7 @@
             this.dataGridAutores.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridAutores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridAutores.Size = new System.Drawing.Size(196, 77);
-            this.dataGridAutores.TabIndex = 169;
+            this.dataGridAutores.TabIndex = 18;
             // 
             // clnCodAutor
             // 
@@ -735,72 +738,72 @@
             // 
             this.btnGeneroAdd.BackColor = System.Drawing.Color.Transparent;
             this.btnGeneroAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGeneroAdd.BackgroundImage")));
-            this.btnGeneroAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGeneroAdd.Location = new System.Drawing.Point(234, 159);
+            this.btnGeneroAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnGeneroAdd.Location = new System.Drawing.Point(232, 159);
             this.btnGeneroAdd.Margin = new System.Windows.Forms.Padding(0);
             this.btnGeneroAdd.Name = "btnGeneroAdd";
-            this.btnGeneroAdd.Size = new System.Drawing.Size(30, 30);
-            this.btnGeneroAdd.TabIndex = 12;
+            this.btnGeneroAdd.Size = new System.Drawing.Size(35, 35);
+            this.btnGeneroAdd.TabIndex = 13;
             this.btnGeneroAdd.UseSelectable = true;
             this.btnGeneroAdd.Click += new System.EventHandler(this.btnGeneroAdd_Click);
             // 
             // btnGeneroRemover
             // 
             this.btnGeneroRemover.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGeneroRemover.BackgroundImage")));
-            this.btnGeneroRemover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGeneroRemover.Location = new System.Drawing.Point(234, 189);
+            this.btnGeneroRemover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnGeneroRemover.Location = new System.Drawing.Point(232, 201);
             this.btnGeneroRemover.Margin = new System.Windows.Forms.Padding(0);
             this.btnGeneroRemover.Name = "btnGeneroRemover";
-            this.btnGeneroRemover.Size = new System.Drawing.Size(30, 30);
-            this.btnGeneroRemover.TabIndex = 13;
+            this.btnGeneroRemover.Size = new System.Drawing.Size(35, 35);
+            this.btnGeneroRemover.TabIndex = 15;
             this.btnGeneroRemover.UseSelectable = true;
             this.btnGeneroRemover.Click += new System.EventHandler(this.btnGeneroRemover_Click);
             // 
             // btnAutoresRemover
             // 
             this.btnAutoresRemover.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAutoresRemover.BackgroundImage")));
-            this.btnAutoresRemover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAutoresRemover.Location = new System.Drawing.Point(232, 303);
+            this.btnAutoresRemover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAutoresRemover.Location = new System.Drawing.Point(232, 316);
             this.btnAutoresRemover.Margin = new System.Windows.Forms.Padding(0);
             this.btnAutoresRemover.Name = "btnAutoresRemover";
-            this.btnAutoresRemover.Size = new System.Drawing.Size(30, 30);
-            this.btnAutoresRemover.TabIndex = 16;
+            this.btnAutoresRemover.Size = new System.Drawing.Size(35, 35);
+            this.btnAutoresRemover.TabIndex = 19;
             this.btnAutoresRemover.UseSelectable = true;
             this.btnAutoresRemover.Click += new System.EventHandler(this.btnAutoresRemover_Click);
             // 
             // btnAutoresAdd
             // 
             this.btnAutoresAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAutoresAdd.BackgroundImage")));
-            this.btnAutoresAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAutoresAdd.Location = new System.Drawing.Point(232, 273);
+            this.btnAutoresAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAutoresAdd.Location = new System.Drawing.Point(232, 274);
             this.btnAutoresAdd.Margin = new System.Windows.Forms.Padding(0);
             this.btnAutoresAdd.Name = "btnAutoresAdd";
-            this.btnAutoresAdd.Size = new System.Drawing.Size(30, 30);
-            this.btnAutoresAdd.TabIndex = 15;
+            this.btnAutoresAdd.Size = new System.Drawing.Size(35, 35);
+            this.btnAutoresAdd.TabIndex = 17;
             this.btnAutoresAdd.UseSelectable = true;
             this.btnAutoresAdd.Click += new System.EventHandler(this.btnAutoresAdd_Click);
             // 
             // btnAssuntosRemover
             // 
             this.btnAssuntosRemover.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAssuntosRemover.BackgroundImage")));
-            this.btnAssuntosRemover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAssuntosRemover.Location = new System.Drawing.Point(477, 303);
+            this.btnAssuntosRemover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAssuntosRemover.Location = new System.Drawing.Point(474, 316);
             this.btnAssuntosRemover.Margin = new System.Windows.Forms.Padding(0);
             this.btnAssuntosRemover.Name = "btnAssuntosRemover";
-            this.btnAssuntosRemover.Size = new System.Drawing.Size(30, 30);
-            this.btnAssuntosRemover.TabIndex = 20;
+            this.btnAssuntosRemover.Size = new System.Drawing.Size(35, 35);
+            this.btnAssuntosRemover.TabIndex = 23;
             this.btnAssuntosRemover.UseSelectable = true;
             this.btnAssuntosRemover.Click += new System.EventHandler(this.btnAssuntosRemover_Click);
             // 
             // btnAssuntosAdd
             // 
             this.btnAssuntosAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAssuntosAdd.BackgroundImage")));
-            this.btnAssuntosAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAssuntosAdd.Location = new System.Drawing.Point(477, 273);
+            this.btnAssuntosAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAssuntosAdd.Location = new System.Drawing.Point(474, 274);
             this.btnAssuntosAdd.Margin = new System.Windows.Forms.Padding(0);
             this.btnAssuntosAdd.Name = "btnAssuntosAdd";
-            this.btnAssuntosAdd.Size = new System.Drawing.Size(30, 30);
-            this.btnAssuntosAdd.TabIndex = 19;
+            this.btnAssuntosAdd.Size = new System.Drawing.Size(35, 35);
+            this.btnAssuntosAdd.TabIndex = 21;
             this.btnAssuntosAdd.UseSelectable = true;
             this.btnAssuntosAdd.Click += new System.EventHandler(this.btnAssuntosAdd_Click);
             // 
@@ -817,7 +820,7 @@
             this.cbTipoLivro.Location = new System.Drawing.Point(308, 104);
             this.cbTipoLivro.Name = "cbTipoLivro";
             this.cbTipoLivro.Size = new System.Drawing.Size(123, 23);
-            this.cbTipoLivro.TabIndex = 9;
+            this.cbTipoLivro.TabIndex = 10;
             // 
             // cbTipoTombo
             // 
@@ -831,7 +834,7 @@
             this.cbTipoTombo.Location = new System.Drawing.Point(541, 104);
             this.cbTipoTombo.Name = "cbTipoTombo";
             this.cbTipoTombo.Size = new System.Drawing.Size(123, 23);
-            this.cbTipoTombo.TabIndex = 10;
+            this.cbTipoTombo.TabIndex = 11;
             // 
             // txtTombo
             // 
@@ -848,7 +851,7 @@
             this.txtTombo.CustomButton.UseSelectable = true;
             this.txtTombo.CustomButton.Visible = false;
             this.txtTombo.Lines = new string[0];
-            this.txtTombo.Location = new System.Drawing.Point(568, 11);
+            this.txtTombo.Location = new System.Drawing.Point(570, 11);
             this.txtTombo.MaxLength = 32767;
             this.txtTombo.Name = "txtTombo";
             this.txtTombo.PasswordChar = '\0';
@@ -859,7 +862,7 @@
             this.txtTombo.SelectionStart = 0;
             this.txtTombo.ShortcutsEnabled = true;
             this.txtTombo.Size = new System.Drawing.Size(95, 23);
-            this.txtTombo.TabIndex = 10;
+            this.txtTombo.TabIndex = 2;
             this.txtTombo.TabStop = false;
             this.txtTombo.UseSelectable = true;
             this.txtTombo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -867,17 +870,17 @@
             // 
             // timerCbAutor
             // 
-            this.timerCbAutor.Interval = 2500;
+            this.timerCbAutor.Interval = 10000;
             this.timerCbAutor.Tick += new System.EventHandler(this.timerCbAutor_Tick);
             // 
             // timerCbGenero
             // 
-            this.timerCbGenero.Interval = 2500;
+            this.timerCbGenero.Interval = 10000;
             this.timerCbGenero.Tick += new System.EventHandler(this.timerCbGenero_Tick);
             // 
             // timerCbAssunto
             // 
-            this.timerCbAssunto.Interval = 2500;
+            this.timerCbAssunto.Interval = 10000;
             this.timerCbAssunto.Tick += new System.EventHandler(this.timerCbAssunto_Tick);
             // 
             // txtValor
@@ -906,7 +909,7 @@
             this.txtValor.SelectionStart = 0;
             this.txtValor.ShortcutsEnabled = true;
             this.txtValor.Size = new System.Drawing.Size(95, 23);
-            this.txtValor.TabIndex = 8;
+            this.txtValor.TabIndex = 9;
             this.txtValor.Text = "R$ 00,00";
             this.txtValor.UseSelectable = true;
             this.txtValor.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -917,10 +920,9 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.FontSize = MetroFramework.MetroLabelSize.Small;
             this.lblTitulo.Location = new System.Drawing.Point(21, 13);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(37, 15);
+            this.lblTitulo.Size = new System.Drawing.Size(44, 19);
             this.lblTitulo.TabIndex = 188;
             this.lblTitulo.Text = "Título:";
             // 
@@ -1084,7 +1086,7 @@
             this.lblDisponivel.Name = "lblDisponivel";
             this.lblDisponivel.Size = new System.Drawing.Size(71, 19);
             this.lblDisponivel.TabIndex = 206;
-            this.lblDisponivel.Text = "Disponivel:";
+            this.lblDisponivel.Text = "Disponível:";
             // 
             // lblLingua
             // 
@@ -1168,7 +1170,7 @@
             this.cbLingua.Location = new System.Drawing.Point(541, 159);
             this.cbLingua.Name = "cbLingua";
             this.cbLingua.Size = new System.Drawing.Size(123, 23);
-            this.cbLingua.TabIndex = 22;
+            this.cbLingua.TabIndex = 26;
             // 
             // txtLocalizacao
             // 
@@ -1185,7 +1187,7 @@
             this.txtLocalizacao.CustomButton.UseSelectable = true;
             this.txtLocalizacao.CustomButton.Visible = false;
             this.txtLocalizacao.Lines = new string[0];
-            this.txtLocalizacao.Location = new System.Drawing.Point(540, 132);
+            this.txtLocalizacao.Location = new System.Drawing.Point(541, 132);
             this.txtLocalizacao.MaxLength = 32767;
             this.txtLocalizacao.Name = "txtLocalizacao";
             this.txtLocalizacao.PasswordChar = '\0';
@@ -1195,7 +1197,7 @@
             this.txtLocalizacao.SelectionStart = 0;
             this.txtLocalizacao.ShortcutsEnabled = true;
             this.txtLocalizacao.Size = new System.Drawing.Size(124, 23);
-            this.txtLocalizacao.TabIndex = 21;
+            this.txtLocalizacao.TabIndex = 25;
             this.txtLocalizacao.UseSelectable = true;
             this.txtLocalizacao.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtLocalizacao.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -1205,10 +1207,11 @@
             this.checkDisponivel.AutoSize = true;
             this.checkDisponivel.Checked = true;
             this.checkDisponivel.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkDisponivel.Location = new System.Drawing.Point(613, 252);
+            this.checkDisponivel.Location = new System.Drawing.Point(627, 252);
             this.checkDisponivel.Name = "checkDisponivel";
             this.checkDisponivel.Size = new System.Drawing.Size(15, 14);
             this.checkDisponivel.TabIndex = 25;
+            this.checkDisponivel.TabStop = false;
             this.checkDisponivel.UseVisualStyleBackColor = true;
             // 
             // FrmCadLivro
