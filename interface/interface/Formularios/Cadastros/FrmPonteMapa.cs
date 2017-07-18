@@ -45,7 +45,7 @@ namespace Interface.Formularios.Cadastros
                 else
                 {
                     mapa = midiaBLL.MapaConsultar_PorTombo(Convert.ToInt32(txtTexto.Text));
-                    if (mapa.CodMidia == null)
+                    if (mapa.CodMidia == null || mapa.CodMidia == 0)
                     {
                         MessageBox.Show(this, "Nenhum registro encontrado, certifique-se que o tombo do Mapa foi digitado corretamente.", "Atenção", MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);

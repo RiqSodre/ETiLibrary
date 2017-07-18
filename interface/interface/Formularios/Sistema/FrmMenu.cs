@@ -22,8 +22,6 @@ namespace Interface.Formularios.Sistema
             try
             {
                 lblNome.Text = Settings.Default.Nome.Substring(0, Settings.Default.Nome.IndexOf(" "));
-                //Solução para um bug que estava ocorrendo ao inicializar o Form
-                WindowState = FormWindowState.Normal;
                 if(Settings.Default.Admin == true)
                 {
                     funcionarioToolStripMenuItem.Enabled = true;

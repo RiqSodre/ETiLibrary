@@ -1,41 +1,40 @@
-﻿using System;
-using System.Drawing;
-using Interface.Formularios.Modelos;
-using BLL;
-using System.Windows.Forms;
-using DTO.Midia;
+﻿using BLL;
 using DTO.Emprestimos;
+using DTO.Midia;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace Interface.Formularios.Cadastros
 {
-    public partial class FrmCadJornalEx : FrmCadBase
+    public partial class FrmCadRevistaEx : Interface.Formularios.Modelos.FrmCadBase
     {
         private AreaBLL areaBLL = new AreaBLL();
         private MidiaBLL midiaBLL = new MidiaBLL();
-        private JornalBLL jornalBLL = new JornalBLL();
-        private JornalEx jornalExBase = new JornalEx();
-        public JornalEx JornalEx
+        private RevistaBLL revistaBLL = new RevistaBLL();
+        private RevistaEx revistaExBase = new RevistaEx();
+        public RevistaEx RevistaEx
         {
             get
             {
-                return jornalExBase;
+                return revistaExBase;
             }
 
             set
             {
-                jornalExBase = value;
+                revistaExBase = value;
             }
         }
 
         //Construtor Padrão
-        public FrmCadJornalEx()
+        public FrmCadRevistaEx()
         {
             try
             {
                 InitializeComponent();
                 txtObservacao.GotFocus += txtObservacao_Focus;
                 cbArea.DataSource = areaBLL.CarregaAreas();
-                cbJornal.DataSource = jornalBLL.CarregaJornais();
+                cbRevista.DataSource = revistaBLL.CarregarRevistas();
                 Habilita(true);
                 LimparComponentes();
                 cbLingua.SelectedIndex = 42;
@@ -46,13 +45,13 @@ namespace Interface.Formularios.Cadastros
                 Close();
             }
         }
-        //Construtor carregando cadastro do Jornal no form
-        public FrmCadJornalEx(JornalEx jornal) : this()
+        //Construtor carregando cadastro da Revista no form
+        public FrmCadRevistaEx(RevistaEx revista) : this()
         {
             try
             {
-                CarregaCampos(jornal);
-                txtManchete.Focus();
+                CarregaCampos(revista);
+                txtTitulo.Focus();
             }
             catch (Exception ex)
             {
@@ -67,35 +66,34 @@ namespace Interface.Formularios.Cadastros
             {
                 if (btnAcao.Text.Equals("Salvar") || btnAcao.Text.Equals("Alterar"))
                 {
-                    //Validações campo Manchete
-                    if (txtManchete.Text.Length == 0)
+                    //Validações campo Titulo
+                    if (txtTitulo.Text.Length == 0)
                     {
-                        MessageBox.Show(this, "O campo Manchete é obrigatório.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Titulo é obrigatório.", "Atenção", MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
                         return;
                     }
-                    else if (txtManchete.Text.Length < 10)
+                    else if (txtTitulo.Text.Length < 6)
                     {
-                        MessageBox.Show(this, "O campo Manchete deve conter no mínimo dez digitos.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Titulo deve conter no mínimo seis digitos.", "Atenção", MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
                         return;
                     }
                     else
                     {
-                        JornalEx.Manchete = txtManchete.Text;
+                        RevistaEx.Titulo = txtTitulo.Text;
                     }
-                    //Validações campo Data de Pulicação
-                    if (dtDataPublicacao.Value > DateTime.Now)
+                    //Campo Edição
+                    if(!txtEdicao.Text.Equals(""))
                     {
-                        MessageBox.Show(this, "Informe uma data valida.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
+                        RevistaEx.Edicao = txtEdicao.Text;
                     }
                     else
                     {
-                        JornalEx.DataPublicacao = dtDataPublicacao.Value;
+                        RevistaEx.Edicao = "";
                     }
                     //Campo Lingua
-                    JornalEx.Lingua = cbLingua.Text;
+                    RevistaEx.Lingua = cbLingua.Text;
                     //Validações campo Localização
                     if (txtLocalizacao.Text.Length != 0)
                     {
@@ -105,11 +103,11 @@ namespace Interface.Formularios.Cadastros
                                 MessageBoxIcon.Warning);
                             return;
                         }
-                        JornalEx.Localizacao = txtLocalizacao.Text;
+                        RevistaEx.Localizacao = txtLocalizacao.Text;
                     }
                     else
                     {
-                        JornalEx.Localizacao = "";
+                        RevistaEx.Localizacao = "";
                     }
                     //Validações campo Área
                     if ((int)cbArea.SelectedValue < 0)
@@ -119,7 +117,7 @@ namespace Interface.Formularios.Cadastros
                     }
                     else
                     {
-                        JornalEx.Area.CodArea = (int)cbArea.SelectedValue;
+                        RevistaEx.Area.CodArea = (int)cbArea.SelectedValue;
                     }
                     //Validações campo Tipo Tombo
                     if (cbTipoTombo.Text == "")
@@ -129,15 +127,15 @@ namespace Interface.Formularios.Cadastros
                     }
                     else
                     {
-                        JornalEx.TipoTombo = cbTipoTombo.Text;
+                        RevistaEx.TipoTombo = cbTipoTombo.Text;
                     }
                     //CheckBox Disponivel
                     if (btnAcao.Text.Equals("Alterar"))
                     {
-                        if (JornalEx.Disponivel != checkDisponivel.Checked)
+                        if (RevistaEx.Disponivel != checkDisponivel.Checked)
                         {
                             EmprestimoBLL emprestimoBLL = new EmprestimoBLL();
-                            EmprestimoList emprestimoList = emprestimoBLL.EmprestimoConsultar_PorTombo(JornalEx.Tombo, "Jornal");
+                            EmprestimoList emprestimoList = emprestimoBLL.EmprestimoConsultar_PorTombo(RevistaEx.Tombo, "Revista");
                             foreach (Emprestimo emprestimo in emprestimoList)
                             {
                                 if (emprestimo.Fechado == false)
@@ -145,9 +143,9 @@ namespace Interface.Formularios.Cadastros
                                     MidiaEmprestimoList midiaEmprestimoList = emprestimoBLL.EmprestimoMidiaConsultar_PorCodEmprestimo(emprestimo.CodEmprestimo);
                                     foreach (MidiaEmprestimo midia in midiaEmprestimoList)
                                     {
-                                        if (midia.CodMidia == JornalEx.CodMidia && midia.Devolvido == false)
+                                        if (midia.CodMidia == RevistaEx.CodMidia && midia.Devolvido == false)
                                         {
-                                            if (MessageBox.Show(this, "Este Jornal encontra-se emprestado, por isso não é possivel alterar sua disponibilidade." +
+                                            if (MessageBox.Show(this, "Esta Revista encontra-se emprestado, por isso não é possivel alterar sua disponibilidade." +
                                                 "Deseja abrir a paginá do empréstimo?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                                             {
                                                 FrmCadEmprestimo frmCadEmprestimo = new FrmCadEmprestimo(emprestimo);
@@ -161,23 +159,23 @@ namespace Interface.Formularios.Cadastros
                             }
                         }
                     }
-                    JornalEx.Disponivel = checkDisponivel.Checked;
+                    RevistaEx.Disponivel = checkDisponivel.Checked;
                     //Validações campo Jornal
-                    if ((int)cbJornal.SelectedValue < 0)
+                    if ((int)cbRevista.SelectedValue < 0)
                     {
-                        MessageBox.Show(this, "Selecione um jornal da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(this, "Selecione uma Revista da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     else
                     {
-                        JornalEx.Jornal_.CodJornal = (int)cbJornal.SelectedValue;
+                        RevistaEx.Revista_.CodRevista = (int)cbRevista.SelectedValue;
                     }
                     //Campo Observação
-                    JornalEx.Observacao = txtObservacao.Text;
+                    RevistaEx.Observacao = txtObservacao.Text;
                     //Execução
                     if (btnAcao.Text.Equals("Salvar"))
                     {
-                        resultado = midiaBLL.JornalInserir(JornalEx);
+                        resultado = midiaBLL.RevistaInserir(RevistaEx);
                         MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
                                   MessageBoxIcon.Information);
                         if (resultado.Contains("sucesso"))
@@ -188,7 +186,7 @@ namespace Interface.Formularios.Cadastros
                     }
                     else
                     {
-                        resultado = midiaBLL.JornalAlterar(JornalEx);
+                        resultado = midiaBLL.RevistaAlterar(RevistaEx);
                         MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
                                  MessageBoxIcon.Information);
                         if (resultado.Contains("sucesso"))
@@ -200,10 +198,10 @@ namespace Interface.Formularios.Cadastros
                 }
                 else
                 {
-                    if (MessageBox.Show(this, "Deseja excluir este Jornal?", "Atenção", MessageBoxButtons.YesNo,
+                    if (MessageBox.Show(this, "Deseja excluir esta Revista?", "Atenção", MessageBoxButtons.YesNo,
                               MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        resultado = midiaBLL.MidiaExcluir(JornalEx.Tombo, "Jornal");
+                        resultado = midiaBLL.MidiaExcluir(RevistaEx.Tombo, "Revista");
                         MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
                                    MessageBoxIcon.Information);
                         if (resultado.Contains("sucesso"))
@@ -227,7 +225,7 @@ namespace Interface.Formularios.Cadastros
                 Habilita(true);
                 LimparComponentes();
                 cbLingua.SelectedIndex = 42;
-                txtManchete.Focus();
+                txtTitulo.Focus();
             }
             catch (Exception ex)
             {
@@ -239,13 +237,13 @@ namespace Interface.Formularios.Cadastros
         {
             try
             {
-                FrmPonteJornalEx ponteJornalEx = new FrmPonteJornalEx(this, "Alterar");
-                if (ponteJornalEx.ShowDialog() == DialogResult.OK)
+                FrmPonteRevistaEx ponteRevistaEx = new FrmPonteRevistaEx(this, "Alterar");
+                if (ponteRevistaEx.ShowDialog() == DialogResult.OK)
                 {
-                    CarregaCampos(JornalEx);
+                    CarregaCampos(RevistaEx);
                     btnAcao.Text = "Alterar";
                     Habilita(true);
-                    txtManchete.Focus();
+                    txtTitulo.Focus();
                 }
             }
             catch (Exception ex)
@@ -258,10 +256,10 @@ namespace Interface.Formularios.Cadastros
         {
             try
             {
-                FrmPonteJornalEx ponteJornalEx = new FrmPonteJornalEx(this, "Excluir");
-                if (ponteJornalEx.ShowDialog() == DialogResult.OK)
+                FrmPonteRevistaEx ponteRevistaEx = new FrmPonteRevistaEx(this, "Excluir");
+                if (ponteRevistaEx.ShowDialog() == DialogResult.OK)
                 {
-                    CarregaCampos(JornalEx);
+                    CarregaCampos(RevistaEx);
                     btnAcao.Text = "Excluir";
                     Habilita(true);
                     btnAcao.Focus();
@@ -273,17 +271,18 @@ namespace Interface.Formularios.Cadastros
             }
         }
         //Carrega o cadastro do Jornal no form
-        private void CarregaCampos(JornalEx jornal)
+        private void CarregaCampos(RevistaEx revista)
         {
-            txtManchete.Text = jornal.Manchete;
-            txtTombo.Text = jornal.Tombo.ToString();
-            txtLocalizacao.Text = jornal.Localizacao;
-            cbLingua.SelectedItem = jornal.Lingua;
-            cbTipoTombo.SelectedItem = jornal.TipoTombo;
-            cbArea.SelectedValue = jornal.Area.CodArea;
-            cbJornal.SelectedValue = jornal.Jornal_.CodJornal;
-            txtObservacao.Text = jornal.Observacao;
-            if (jornal.Disponivel)
+            txtTitulo.Text = revista.Titulo;
+            txtEdicao.Text = revista.Edicao;
+            txtTombo.Text = revista.Tombo.ToString();
+            txtLocalizacao.Text = revista.Localizacao;
+            cbLingua.SelectedItem = revista.Lingua;
+            cbTipoTombo.SelectedItem = revista.TipoTombo;
+            cbArea.SelectedValue = revista.Area.CodArea;
+            cbRevista.SelectedValue = revista.Revista_.CodRevista;
+            txtObservacao.Text = revista.Observacao;
+            if (revista.Disponivel)
             {
                 checkDisponivel.Checked = true;
             }
@@ -291,7 +290,7 @@ namespace Interface.Formularios.Cadastros
             {
                 checkDisponivel.Checked = false;
             }
-            toolExibe(txtManchete, txtManchete.Text);
+            toolExibe(txtTitulo, txtTitulo.Text);
         }
         //Mostra o conteúdo da combobox
         private void cbArea_SelectedIndexChanged(object sender, EventArgs e)
@@ -306,11 +305,11 @@ namespace Interface.Formularios.Cadastros
             }
         }
         //Mostra o conteúdo da combobox
-        private void cbJornal_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbRevista_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-                toolExibe(cbJornal, cbJornal.Text);
+                toolExibe(cbRevista, cbRevista.Text);
             }
             catch (Exception ex)
             {

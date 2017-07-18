@@ -28,6 +28,7 @@ namespace Interface.Formularios.Cadastros
             catch (Exception ex)
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
             }
         }
         //Carrega o form ponte funcionario Biblioteca
@@ -44,6 +45,7 @@ namespace Interface.Formularios.Cadastros
             catch (Exception ex)
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
             }
         }
         //Carrega os dados do funcionario que serão passsados para o form de cadastro

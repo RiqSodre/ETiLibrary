@@ -25,6 +25,7 @@ namespace Interface.Formularios.Cadastros
             catch (Exception ex)
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
             }
         }       
         //Carrega os dados do aluno que serão passsados para o form de cadastro

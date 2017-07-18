@@ -42,7 +42,7 @@ namespace Interface.Formularios.Cadastros
                 cbAutor.GotFocus += cbAutor_Focus;
                 cbAssunto.GotFocus += cbAssunto_Focus;
                 LimparComponentes();
-                txtValor.Text = "R$ 0,00";
+                txtValor.Text = "R$0,00";
                 cbLingua.SelectedIndex = 42;
                 txtTitulo.Focus();
             }
@@ -177,7 +177,7 @@ namespace Interface.Formularios.Cadastros
                         Livro.Serie_Colecao = "";
                     }
                     //Campo Valor
-                    Livro.Valor = (float)Convert.ToDouble(txtValor.Text.Replace("R$ ", ""));
+                    Livro.Valor = (float)Convert.ToDouble(txtValor.Text.Replace("R$", ""));
                     //Validações campo TipoLivro
                     if (cbTipoLivro.SelectedIndex < 0)
                     {
@@ -364,7 +364,7 @@ namespace Interface.Formularios.Cadastros
             {
                 LimparComponentes();
                 Habilita(true);
-                txtValor.Text = "R$ 0,00";
+                txtValor.Text = "R$0,00";
                 cbLingua.SelectedIndex = 42;
                 txtTitulo.Focus();
             }
@@ -923,6 +923,18 @@ namespace Interface.Formularios.Cadastros
             try
             {
                 toolExibe(cbAssunto, cbAssunto.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        //Mostra o conteúdo da combobox
+        private void cbArea_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                toolExibe(cbArea, cbArea.Text);
             }
             catch (Exception ex)
             {

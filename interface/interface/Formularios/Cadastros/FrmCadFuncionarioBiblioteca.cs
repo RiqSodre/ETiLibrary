@@ -28,11 +28,19 @@ namespace Interface.Formularios.Cadastros
         //Construtor Padrão
         public FrmCadFuncionarioBiblioteca()
         {
-            InitializeComponent();
-            Habilita(true);
-            LimparComponentes();
-            cbCargo.Items.Add("Funcionário Biblioteca");
-            cbCargo.SelectedIndex = 0;
+            try
+            {
+                InitializeComponent();
+                Habilita(true);
+                LimparComponentes();
+                cbCargo.Items.Add("Funcionário Biblioteca");
+                cbCargo.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
+            }
         }
         //Construtor carregando cadastro do funcionario no form
         public FrmCadFuncionarioBiblioteca(Funcionario funcionario) : this()
@@ -45,6 +53,7 @@ namespace Interface.Formularios.Cadastros
             catch (Exception ex)
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
             }
         }
         //Botão de ação do form Salvar/Alterar/Excluir - Implementar

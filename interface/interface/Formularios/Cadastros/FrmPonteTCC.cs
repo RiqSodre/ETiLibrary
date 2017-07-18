@@ -1,26 +1,30 @@
-﻿using System;
-using Interface.Formularios.Modelos;
+﻿using BLL;
 using DTO.Midia;
-using BLL;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
 using System.Windows.Forms;
 
 namespace Interface.Formularios.Cadastros
 {
-    public partial class FrmPonteCdDvd : FrmPonte
+    public partial class FrmPonteTCC : Interface.Formularios.Modelos.FrmPonte
     {
         private MidiaBLL midiaBLL = new MidiaBLL();
-        private FrmCadCdDvd frmCadCdDvdBase = new FrmCadCdDvd();
-        private CD_DVD cdvd = new CD_DVD();
+        private FrmCadTCC frmCadTCCBase = new FrmCadTCC();
+        private Tcc tcc = new Tcc();
 
-        //Carrega o form ponte CD/DVD
-        public FrmPonteCdDvd(FrmCadCdDvd frmCadCDvd, string txtFrm)
+        //Carrega o form ponte TCC
+        public FrmPonteTCC(FrmCadTCC frmCadTCC, string txtForm)
         {
             try
             {
                 InitializeComponent();
-                frmCadCdDvdBase = frmCadCDvd;
-                cdvd = frmCadCdDvdBase.CD_DVD;
-                lblForm.Text += " - " + txtFrm;
+                frmCadTCCBase = frmCadTCC;
+                tcc = frmCadTCCBase.Tcc;
+                lblForm.Text += " - " + txtForm;
             }
             catch (Exception ex)
             {
@@ -28,27 +32,27 @@ namespace Interface.Formularios.Cadastros
                 Close();
             }
         }
-        //Carrega os dados do CD/DVD que serão passsados para o form de cadastro
+        //Carrega os dados do TCC que serão passsados para o form de cadastro
         protected override void btnAcao_Click(object sender, EventArgs e)
         {
             try
             {
                 if (txtTexto.Text.Length == 0)
                 {
-                    MessageBox.Show(this, "Digite o tombo do CD/DVD no campo informado.", "Atenção", MessageBoxButtons.OK,
+                    MessageBox.Show(this, "Digite o tombo do TCC no campo informado.", "Atenção", MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
                     return;
                 }
                 else
                 {
-                    cdvd = midiaBLL.CDVDConsultar_PorTombo(Convert.ToInt32(txtTexto.Text));
-                    if (cdvd.CodMidia == null || cdvd.CodMidia == 0)
+                    tcc = midiaBLL.TCCConsultar_PorTombo(Convert.ToInt32(txtTexto.Text));
+                    if (tcc.CodMidia == null || tcc.CodMidia == 0)
                     {
-                        MessageBox.Show(this, "Nenhum registro encontrado, certifique-se que o tombo do CD/DVD foi digitado corretamente.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "Nenhum registro encontrado, certifique-se que o tombo do TCC foi digitado corretamente.", "Atenção", MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
                         return;
                     }
-                    frmCadCdDvdBase.CD_DVD = cdvd;
+                    frmCadTCCBase.Tcc = tcc;
                     DialogResult = DialogResult.OK;
                 }
             }
@@ -57,7 +61,7 @@ namespace Interface.Formularios.Cadastros
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Faz o campo do tombo do CD/DVD aceitar apenas números
+        //Faz o campo do tombo do TCC aceitar apenas números
         private void txtTexto_KeyPress(object sender, KeyPressEventArgs e)
         {
             try

@@ -38,6 +38,7 @@ namespace Interface.Formularios.Cadastros
             catch (Exception ex)
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
             }
         }
         //Construtor carregando cadastro do funcionario no form
@@ -51,6 +52,7 @@ namespace Interface.Formularios.Cadastros
             catch (Exception ex)
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
             }
         }
         //Botão de ação do form Salvar/Alterar/Excluir - Implementar

@@ -477,6 +477,7 @@
             this.cbArea.Size = new System.Drawing.Size(123, 23);
             this.cbArea.TabIndex = 28;
             this.cbArea.ValueMember = "CodArea";
+            this.cbArea.SelectedIndexChanged += new System.EventHandler(this.cbArea_SelectedIndexChanged);
             // 
             // cbEditora
             // 

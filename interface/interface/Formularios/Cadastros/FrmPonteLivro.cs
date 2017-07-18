@@ -33,7 +33,7 @@ namespace Interface.Formularios.Cadastros
             else
             {
                 livro = midiaBLL.LivroConsultar_PorTombo(Convert.ToInt32(txtTexto.Text));
-                if (livro.CodMidia == 0)
+                if (livro.CodMidia == null || livro.CodMidia == 0)
                 {
                     MessageBox.Show(this, "Nenhum registro encontrado, certifique-se que tombo foi digitado corretamente.", "Atenção", MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);

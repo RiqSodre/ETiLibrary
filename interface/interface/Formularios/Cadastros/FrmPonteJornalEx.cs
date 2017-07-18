@@ -15,10 +15,18 @@ namespace Interface.Formularios.Cadastros
         //Carrega o form ponte JornalEx
         public FrmPonteJornalEx(FrmCadJornalEx frmCadJornalEx, string txtForm)
         {
-            InitializeComponent();
-            frmCadJornalExBase = frmCadJornalEx;
-            jornalEx = frmCadJornalExBase.JornalEx;
-            lblForm.Text += " - " + txtForm;
+            try
+            {
+                InitializeComponent();
+                frmCadJornalExBase = frmCadJornalEx;
+                jornalEx = frmCadJornalExBase.JornalEx;
+                lblForm.Text += " - " + txtForm;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
+            }
         }
         //Carrega os dados do Jornal que serão passsados para o form de cadastro
         protected override void btnAcao_Click(object sender, EventArgs e)
@@ -34,7 +42,7 @@ namespace Interface.Formularios.Cadastros
                 else
                 {
                     jornalEx = midiaBLL.JornalConsultar_PorTombo(Convert.ToInt32(txtTexto.Text));
-                    if (jornalEx.CodMidia == null)
+                    if (jornalEx.CodMidia == null || jornalEx.CodMidia == 0)
                     {
                         MessageBox.Show(this, "Nenhum registro encontrado, certifique-se que o tombo do Jornal foi digitado corretamente.", "Atenção", MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);

@@ -672,8 +672,6 @@ C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\
 C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmPCJornalEx.resources
 C:\Users\Pichau\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteMapa.resources
 C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\bin\Debug\Tech Lab.exe.config
-C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Tech Lab.exe
-C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Tech Lab.pdb
 C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\bin\Debug\Tech Lab.exe
 C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\bin\Debug\Tech Lab.pdb
 C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\bin\Debug\BLL.dll
@@ -704,6 +702,8 @@ C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interf
 C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadLivro.resources
 C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadMapa.resources
 C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadMidiaEmprestimo.resources
+C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadRevistaEx.resources
+C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadTCC.resources
 C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmCadTurma.resources
 C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteAluno.resources
 C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteArea.resources
@@ -720,6 +720,8 @@ C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interf
 C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteJornalEx.resources
 C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteLivro.resources
 C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteMapa.resources
+C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteRevistaEx.resources
+C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteTCC.resources
 C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Cadastros.FrmPonteTurma.resources
 C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmConsultaAluno.resources
 C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Consultas.FrmConsultaEmprestimo.resources
@@ -745,3 +747,5 @@ C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interf
 C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Formularios.Sistema.FrmMenu.resources
 C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.Properties.Resources.resources
 C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Interface.csproj.GenerateResource.Cache
+C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Tech Lab.exe
+C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\interface\interface\obj\Debug\Tech Lab.pdb

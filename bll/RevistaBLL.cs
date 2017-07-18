@@ -68,7 +68,7 @@ namespace BLL
                 RevistaList revistaList = new RevistaList();
 
                 acesso.LimparParametros();
-                DataTable dataTableRevistas = acesso.ExecutarConsulta(CommandType.StoredProcedure,
+                DataTable dataTableRevistas = acesso.ExecutarConsulta(CommandType.Text,
                     "SELECT CodRevista, Nome FROM tblRevista");
                 
                 foreach(DataRow dataRow in dataTableRevistas.Rows)

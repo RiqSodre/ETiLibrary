@@ -237,7 +237,46 @@ namespace Interface.Formularios.Modelos
         {
             try
             {
-                //Implementar
+                bool existe = false;
+                if (enumodo == EnumModo.Cadastro)
+                {
+                    foreach (Form form in (this.MdiParent).MdiChildren)
+                    {
+                        if (form.Name == "FrmCadRevistaEx")
+                        {
+                            existe = VerificaForm(form, existe);
+                            break;
+                        }
+                    }
+                    if (!existe)
+                    {
+                        FrmCadRevistaEx cadrevistaex = new FrmCadRevistaEx();
+                        cadrevistaex.MdiParent = MdiParent;
+                        cadrevistaex.Show();
+                    }
+                }
+                else
+                {
+                    foreach (Form form in (this.MdiParent).MdiChildren)
+                    {
+                        if (form.Name == "FrmPCRevistaEx")
+                        {
+                            existe = VerificaForm(form, existe);
+                            break;
+                        }
+                    }
+                    if (!existe)
+                    {
+                        /*FrmPCRevistaEx pcrevistaex = new FrmPCRevistaEx();
+                        pcrevistaex.MdiParent = MdiParent;
+                        pcrevistaex.Show();*/
+                    }
+                }
+                if (existe)
+                {
+                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                this.Dispose();
             }
             catch (Exception ex)
             {
@@ -249,7 +288,46 @@ namespace Interface.Formularios.Modelos
         {
             try
             {
-                //Implementar
+                bool existe = false;
+                if (enumodo == EnumModo.Cadastro)
+                {
+                    foreach (Form form in (this.MdiParent).MdiChildren)
+                    {
+                        if (form.Name == "FrmCadTCC")
+                        {
+                            existe = VerificaForm(form, existe);
+                            break;
+                        }
+                    }
+                    if (!existe)
+                    {
+                        FrmCadTCC cadtcc = new FrmCadTCC();
+                        cadtcc.MdiParent = MdiParent;
+                        cadtcc.Show();
+                    }
+                }
+                else
+                {
+                    foreach (Form form in (this.MdiParent).MdiChildren)
+                    {
+                        if (form.Name == "FrmPCTCC")
+                        {
+                            existe = VerificaForm(form, existe);
+                            break;
+                        }
+                    }
+                    if (!existe)
+                    {
+                        /*FrmPCTCC pctcc = new FrmPCTCC();
+                        pctcc.MdiParent = MdiParent;
+                        pctcc.Show();*/
+                    }
+                }
+                if (existe)
+                {
+                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                this.Dispose();
             }
             catch (Exception ex)
             {

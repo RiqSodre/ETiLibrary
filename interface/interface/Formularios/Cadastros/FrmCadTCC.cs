@@ -1,44 +1,47 @@
-﻿using System;
-using System.Drawing;
-using Interface.Formularios.Modelos;
-using BLL;
-using System.Windows.Forms;
+﻿using BLL;
 using DTO.Midia;
-using DTO.Emprestimos;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
 
 namespace Interface.Formularios.Cadastros
 {
-    public partial class FrmCadJornalEx : FrmCadBase
+    public partial class FrmCadTCC : Interface.Formularios.Modelos.FrmCadBase
     {
         private AreaBLL areaBLL = new AreaBLL();
         private MidiaBLL midiaBLL = new MidiaBLL();
-        private JornalBLL jornalBLL = new JornalBLL();
-        private JornalEx jornalExBase = new JornalEx();
-        public JornalEx JornalEx
+        private CursoBLL cursoBLL = new CursoBLL();
+        private Tcc tccBase = new Tcc();
+        public Tcc Tcc
         {
             get
             {
-                return jornalExBase;
+                return tccBase;
             }
 
             set
             {
-                jornalExBase = value;
+                tccBase = value;
             }
         }
 
-        //Construtor Padrão
-        public FrmCadJornalEx()
+        //Construtor  Padrão
+        public FrmCadTCC()
         {
             try
             {
                 InitializeComponent();
                 txtObservacao.GotFocus += txtObservacao_Focus;
                 cbArea.DataSource = areaBLL.CarregaAreas();
-                cbJornal.DataSource = jornalBLL.CarregaJornais();
+                cbCurso.DataSource = cursoBLL.CarregaCursos();
                 Habilita(true);
                 LimparComponentes();
                 cbLingua.SelectedIndex = 42;
+                cbTipoTombo.SelectedIndex = 0;
             }
             catch (Exception ex)
             {
@@ -46,13 +49,13 @@ namespace Interface.Formularios.Cadastros
                 Close();
             }
         }
-        //Construtor carregando cadastro do Jornal no form
-        public FrmCadJornalEx(JornalEx jornal) : this()
+        //Construtor carregando cadastro do CD / DVD no form
+        public FrmCadTCC(Tcc tcc)
         {
             try
             {
-                CarregaCampos(jornal);
-                txtManchete.Focus();
+                CarregaCampos(tcc);
+                txtTitulo.Focus();
             }
             catch (Exception ex)
             {
@@ -67,22 +70,22 @@ namespace Interface.Formularios.Cadastros
             {
                 if (btnAcao.Text.Equals("Salvar") || btnAcao.Text.Equals("Alterar"))
                 {
-                    //Validações campo Manchete
-                    if (txtManchete.Text.Length == 0)
+                    //Validações campo Titulo
+                    if (txtTitulo.Text.Length == 0)
                     {
-                        MessageBox.Show(this, "O campo Manchete é obrigatório.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Titulo é obrigatório.", "Atenção", MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
                         return;
                     }
-                    else if (txtManchete.Text.Length < 10)
+                    else if (txtTitulo.Text.Length < 6)
                     {
-                        MessageBox.Show(this, "O campo Manchete deve conter no mínimo dez digitos.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Titulo deve conter no mínimo seis digitos.", "Atenção", MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
                         return;
                     }
                     else
                     {
-                        JornalEx.Manchete = txtManchete.Text;
+                        Tcc.Titulo = txtTitulo.Text;
                     }
                     //Validações campo Data de Pulicação
                     if (dtDataPublicacao.Value > DateTime.Now)
@@ -92,10 +95,10 @@ namespace Interface.Formularios.Cadastros
                     }
                     else
                     {
-                        JornalEx.DataPublicacao = dtDataPublicacao.Value;
+                        Tcc.DataPublicacao = dtDataPublicacao.Value;
                     }
                     //Campo Lingua
-                    JornalEx.Lingua = cbLingua.Text;
+                    Tcc.Lingua = cbLingua.Text;
                     //Validações campo Localização
                     if (txtLocalizacao.Text.Length != 0)
                     {
@@ -105,11 +108,11 @@ namespace Interface.Formularios.Cadastros
                                 MessageBoxIcon.Warning);
                             return;
                         }
-                        JornalEx.Localizacao = txtLocalizacao.Text;
+                        Tcc.Localizacao = txtLocalizacao.Text;
                     }
                     else
                     {
-                        JornalEx.Localizacao = "";
+                        Tcc.Localizacao = "";
                     }
                     //Validações campo Área
                     if ((int)cbArea.SelectedValue < 0)
@@ -119,65 +122,24 @@ namespace Interface.Formularios.Cadastros
                     }
                     else
                     {
-                        JornalEx.Area.CodArea = (int)cbArea.SelectedValue;
+                        Tcc.Area.CodArea = (int)cbArea.SelectedValue;
                     }
-                    //Validações campo Tipo Tombo
-                    if (cbTipoTombo.Text == "")
-                    {
-                        MessageBox.Show(this, "Selecione um tipo de tombo.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-                    else
-                    {
-                        JornalEx.TipoTombo = cbTipoTombo.Text;
-                    }
-                    //CheckBox Disponivel
-                    if (btnAcao.Text.Equals("Alterar"))
-                    {
-                        if (JornalEx.Disponivel != checkDisponivel.Checked)
-                        {
-                            EmprestimoBLL emprestimoBLL = new EmprestimoBLL();
-                            EmprestimoList emprestimoList = emprestimoBLL.EmprestimoConsultar_PorTombo(JornalEx.Tombo, "Jornal");
-                            foreach (Emprestimo emprestimo in emprestimoList)
-                            {
-                                if (emprestimo.Fechado == false)
-                                {
-                                    MidiaEmprestimoList midiaEmprestimoList = emprestimoBLL.EmprestimoMidiaConsultar_PorCodEmprestimo(emprestimo.CodEmprestimo);
-                                    foreach (MidiaEmprestimo midia in midiaEmprestimoList)
-                                    {
-                                        if (midia.CodMidia == JornalEx.CodMidia && midia.Devolvido == false)
-                                        {
-                                            if (MessageBox.Show(this, "Este Jornal encontra-se emprestado, por isso não é possivel alterar sua disponibilidade." +
-                                                "Deseja abrir a paginá do empréstimo?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                                            {
-                                                FrmCadEmprestimo frmCadEmprestimo = new FrmCadEmprestimo(emprestimo);
-                                                frmCadEmprestimo.MdiParent = this.MdiParent;
-                                                frmCadEmprestimo.Show();
-                                            }
-                                            return;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    JornalEx.Disponivel = checkDisponivel.Checked;
                     //Validações campo Jornal
-                    if ((int)cbJornal.SelectedValue < 0)
+                    if ((int)cbCurso.SelectedValue < 0)
                     {
-                        MessageBox.Show(this, "Selecione um jornal da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(this, "Selecione um curso da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     else
                     {
-                        JornalEx.Jornal_.CodJornal = (int)cbJornal.SelectedValue;
+                        Tcc.Curso.CodCurso = (int)cbCurso.SelectedValue;
                     }
                     //Campo Observação
-                    JornalEx.Observacao = txtObservacao.Text;
+                    Tcc.Observacao = txtObservacao.Text;
                     //Execução
                     if (btnAcao.Text.Equals("Salvar"))
                     {
-                        resultado = midiaBLL.JornalInserir(JornalEx);
+                        resultado = midiaBLL.TCCInserir(Tcc);
                         MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
                                   MessageBoxIcon.Information);
                         if (resultado.Contains("sucesso"))
@@ -188,7 +150,7 @@ namespace Interface.Formularios.Cadastros
                     }
                     else
                     {
-                        resultado = midiaBLL.JornalAlterar(JornalEx);
+                        resultado = midiaBLL.TCCAlterar(Tcc);
                         MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
                                  MessageBoxIcon.Information);
                         if (resultado.Contains("sucesso"))
@@ -200,10 +162,10 @@ namespace Interface.Formularios.Cadastros
                 }
                 else
                 {
-                    if (MessageBox.Show(this, "Deseja excluir este Jornal?", "Atenção", MessageBoxButtons.YesNo,
+                    if (MessageBox.Show(this, "Deseja excluir este TCC?", "Atenção", MessageBoxButtons.YesNo,
                               MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        resultado = midiaBLL.MidiaExcluir(JornalEx.Tombo, "Jornal");
+                        resultado = midiaBLL.MidiaExcluir(Tcc.Tombo, "TCC");
                         MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
                                    MessageBoxIcon.Information);
                         if (resultado.Contains("sucesso"))
@@ -227,7 +189,8 @@ namespace Interface.Formularios.Cadastros
                 Habilita(true);
                 LimparComponentes();
                 cbLingua.SelectedIndex = 42;
-                txtManchete.Focus();
+                cbTipoTombo.SelectedIndex = 0;
+                txtTitulo.Focus();
             }
             catch (Exception ex)
             {
@@ -239,13 +202,13 @@ namespace Interface.Formularios.Cadastros
         {
             try
             {
-                FrmPonteJornalEx ponteJornalEx = new FrmPonteJornalEx(this, "Alterar");
-                if (ponteJornalEx.ShowDialog() == DialogResult.OK)
+                FrmPonteTCC pontetcc = new FrmPonteTCC(this, "Alterar");
+                if (pontetcc.ShowDialog() == DialogResult.OK)
                 {
-                    CarregaCampos(JornalEx);
+                    CarregaCampos(Tcc);
                     btnAcao.Text = "Alterar";
                     Habilita(true);
-                    txtManchete.Focus();
+                    txtTitulo.Focus();
                 }
             }
             catch (Exception ex)
@@ -258,10 +221,10 @@ namespace Interface.Formularios.Cadastros
         {
             try
             {
-                FrmPonteJornalEx ponteJornalEx = new FrmPonteJornalEx(this, "Excluir");
-                if (ponteJornalEx.ShowDialog() == DialogResult.OK)
+                FrmPonteTCC pontetcc = new FrmPonteTCC(this, "Excluir");
+                if (pontetcc.ShowDialog() == DialogResult.OK)
                 {
-                    CarregaCampos(JornalEx);
+                    CarregaCampos(Tcc);
                     btnAcao.Text = "Excluir";
                     Habilita(true);
                     btnAcao.Focus();
@@ -272,26 +235,18 @@ namespace Interface.Formularios.Cadastros
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Carrega o cadastro do Jornal no form
-        private void CarregaCampos(JornalEx jornal)
+        //Carrega o cadastro do TCC no form
+        private void CarregaCampos(Tcc tcc)
         {
-            txtManchete.Text = jornal.Manchete;
-            txtTombo.Text = jornal.Tombo.ToString();
-            txtLocalizacao.Text = jornal.Localizacao;
-            cbLingua.SelectedItem = jornal.Lingua;
-            cbTipoTombo.SelectedItem = jornal.TipoTombo;
-            cbArea.SelectedValue = jornal.Area.CodArea;
-            cbJornal.SelectedValue = jornal.Jornal_.CodJornal;
-            txtObservacao.Text = jornal.Observacao;
-            if (jornal.Disponivel)
-            {
-                checkDisponivel.Checked = true;
-            }
-            else
-            {
-                checkDisponivel.Checked = false;
-            }
-            toolExibe(txtManchete, txtManchete.Text);
+            txtTitulo.Text = tcc.Titulo;
+            txtTombo.Text = tcc.Tombo.ToString();
+            txtLocalizacao.Text = tcc.Localizacao;
+            cbLingua.SelectedItem = tcc.Lingua;
+            cbArea.SelectedValue = tcc.Area.CodArea;
+            cbTipoTombo.SelectedIndex = 0;
+            cbCurso.SelectedValue = tcc.Curso.CodCurso;
+            txtObservacao.Text = tcc.Observacao;
+            toolExibe(txtTitulo, txtTitulo.Text);
         }
         //Mostra o conteúdo da combobox
         private void cbArea_SelectedIndexChanged(object sender, EventArgs e)
@@ -306,11 +261,11 @@ namespace Interface.Formularios.Cadastros
             }
         }
         //Mostra o conteúdo da combobox
-        private void cbJornal_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbCurso_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-                toolExibe(cbJornal, cbJornal.Text);
+                toolExibe(cbCurso, cbCurso.Text);
             }
             catch (Exception ex)
             {

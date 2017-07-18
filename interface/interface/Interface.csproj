@@ -162,6 +162,18 @@
     <Compile Include="Formularios\Cadastros\FrmCadMidiaEmprestimo.Designer.cs">
       <DependentUpon>FrmCadMidiaEmprestimo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Cadastros\FrmCadRevistaEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Cadastros\FrmCadRevistaEx.Designer.cs">
+      <DependentUpon>FrmCadRevistaEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Cadastros\FrmCadTCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Cadastros\FrmCadTCC.Designer.cs">
+      <DependentUpon>FrmCadTCC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Cadastros\FrmCadTurma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +269,18 @@
     </Compile>
     <Compile Include="Formularios\Cadastros\FrmPonteMapa.Designer.cs">
       <DependentUpon>FrmPonteMapa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Cadastros\FrmPonteRevistaEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Cadastros\FrmPonteRevistaEx.Designer.cs">
+      <DependentUpon>FrmPonteRevistaEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Cadastros\FrmPonteTCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Cadastros\FrmPonteTCC.Designer.cs">
+      <DependentUpon>FrmPonteTCC.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Cadastros\FrmPonteTurma.cs">
       <SubType>Form</SubType>
@@ -450,6 +474,12 @@
     <EmbeddedResource Include="Formularios\Cadastros\FrmCadMidiaEmprestimo.resx">
       <DependentUpon>FrmCadMidiaEmprestimo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Cadastros\FrmCadRevistaEx.resx">
+      <DependentUpon>FrmCadRevistaEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Cadastros\FrmCadTCC.resx">
+      <DependentUpon>FrmCadTCC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cadastros\FrmCadTurma.resx">
       <DependentUpon>FrmCadTurma.cs</DependentUpon>
     </EmbeddedResource>
@@ -497,6 +527,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cadastros\FrmPonteMapa.resx">
       <DependentUpon>FrmPonteMapa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Cadastros\FrmPonteRevistaEx.resx">
+      <DependentUpon>FrmPonteRevistaEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Cadastros\FrmPonteTCC.resx">
+      <DependentUpon>FrmPonteTCC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cadastros\FrmPonteTurma.resx">
       <DependentUpon>FrmPonteTurma.cs</DependentUpon>

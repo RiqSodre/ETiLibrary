@@ -41,6 +41,7 @@ namespace Interface.Formularios.Cadastros
             catch (Exception ex)
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
             }
         }
         //Construtor carregando cadastro do CD / DVD no form
@@ -54,6 +55,7 @@ namespace Interface.Formularios.Cadastros
             catch (Exception ex)
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
             }
         }
         //Botão de ação do form Salvar/Alterar/Excluir
@@ -179,7 +181,7 @@ namespace Interface.Formularios.Cadastros
                     if (MessageBox.Show(this, "Deseja excluir este CD/DVD?", "Atenção", MessageBoxButtons.YesNo,
                               MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        resultado = midiaBLL.MidiaExcluir(CD_DVD.CodMidia, "CD_DVD");
+                        resultado = midiaBLL.MidiaExcluir(CD_DVD.Tombo, "CD_DVD");
                         MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
                                    MessageBoxIcon.Information);
                         if (resultado.Contains("sucesso"))

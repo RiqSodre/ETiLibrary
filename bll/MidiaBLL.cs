@@ -57,10 +57,8 @@ namespace BLL
                 acesso.AdicionarParametros("@Titulo", tcc.Titulo);
                 acesso.AdicionarParametros("@DataPublicacao", tcc.DataPublicacao);
                 acesso.AdicionarParametros("@CodArea", tcc.Area.CodArea);
-                acesso.AdicionarParametros("@Disponivel", tcc.Disponivel);
                 acesso.AdicionarParametros("@Localizacao", tcc.Localizacao);
                 acesso.AdicionarParametros("@Lingua", tcc.Lingua);
-                acesso.AdicionarParametros("@TipoTombo", tcc.TipoTombo);
                 acesso.AdicionarParametros("@Observacao", tcc.Observacao);
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspTCCInserir");
@@ -82,10 +80,8 @@ namespace BLL
                 acesso.AdicionarParametros("@Titulo", tcc.Titulo);
                 acesso.AdicionarParametros("@DataPublicacao", tcc.DataPublicacao);
                 acesso.AdicionarParametros("@CodArea", tcc.Area.CodArea);
-                acesso.AdicionarParametros("@Disponivel", tcc.Disponivel);
                 acesso.AdicionarParametros("@Localizacao", tcc.Localizacao);
                 acesso.AdicionarParametros("@Lingua", tcc.Lingua);
-                acesso.AdicionarParametros("@TipoTombo", tcc.TipoTombo);
                 acesso.AdicionarParametros("@Observacao", tcc.Observacao);
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspTCCAlterar");
@@ -197,8 +193,6 @@ namespace BLL
                     tcc.Localizacao = (string)dataRow["Localizacao"];
                     tcc.Lingua = (string)dataRow["Lingua"];
                     tcc.DataCadastro = (DateTime)dataRow["DataCadastro"];
-                    tcc.TipoTombo = (string)dataRow["TipoTombo"];
-                    tcc.Disponivel = (bool)dataRow["Disponivel"];
                     tcc.Tombo = (int)dataRow["Tombo"];
                     tcc.Observacao = (string)dataRow["Observacao"];
                     tcc.Area.Descricao = (string)dataRow["Área"];
@@ -576,7 +570,7 @@ namespace BLL
             try
             {
                 JornalEx jornal = new JornalEx();
-
+                jornal.CodMidia = 0;
                 acesso.LimparParametros();
                 acesso.AdicionarParametros("@Tombo", Tombo);
                 DataTable dataTableJornais = acesso.ExecutarConsulta(CommandType.StoredProcedure,
@@ -602,7 +596,6 @@ namespace BLL
             {
                 JornalEx jornal = new JornalEx();
                 jornal.CodMidia = 0;
-
                 acesso.LimparParametros();
                 acesso.AdicionarParametros("@Tombo", Tombo);
                 DataTable dataTableJornais = acesso.ExecutarConsulta(CommandType.StoredProcedure,
@@ -903,14 +896,13 @@ namespace BLL
             try
             {
                 RevistaExList revistaList = new RevistaExList();
-
                 foreach(DataRow dataRow in dataTableRevistas.Rows)
                 {
                     RevistaEx revista = new RevistaEx();
-
                     revista.CodMidia = (int)dataRow["CodRevistaEx"];
                     revista.Titulo = (string)dataRow["Titulo"];
                     revista.Edicao = (string)dataRow["Edicao"];
+                    revista.Revista_.CodRevista = (int)dataRow["CodRevista"];
                     revista.Revista_.Nome = (string)dataRow["Revista"];
                     revista.Revista_.Editora.Nome = (string)dataRow["Editora"];
                     revista.Localizacao = (string)dataRow["Localizacao"];
@@ -920,11 +912,10 @@ namespace BLL
                     revista.Disponivel = (bool)dataRow["Disponivel"];
                     revista.Tombo = (int)dataRow["Tombo"];
                     revista.Observacao = (string)dataRow["Observacao"];
+                    revista.Area.CodArea = (int)dataRow["CodArea"];
                     revista.Area.Descricao = (string)dataRow["Área"];
-
                     revistaList.Add(revista);
                 }
-
                 return revistaList;
             }
             catch (Exception ex)

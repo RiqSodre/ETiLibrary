@@ -102,8 +102,7 @@ namespace Interface.Formularios.Sistema
             this.confiuraçõesToolStripMenuItem});
             this.menuPrincipal.Location = new System.Drawing.Point(0, 0);
             this.menuPrincipal.Name = "menuPrincipal";
-            this.menuPrincipal.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuPrincipal.Size = new System.Drawing.Size(1712, 28);
+            this.menuPrincipal.Size = new System.Drawing.Size(957, 24);
             this.menuPrincipal.TabIndex = 0;
             this.menuPrincipal.TabStop = true;
             this.menuPrincipal.Text = "menuStrip1";
@@ -111,7 +110,7 @@ namespace Interface.Formularios.Sistema
             // inicioToolStripMenuItem
             // 
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(57, 24);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.inicioToolStripMenuItem.Text = "Inicio";
             // 
             // cadastrosToolStripMenuItem
@@ -122,14 +121,14 @@ namespace Interface.Formularios.Sistema
             this.acervoToolStripMenuItem,
             this.infraestruturaToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
-            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
+            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
             // 
             // alunosToolStripMenuItem
             // 
             this.alunosToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.alunosToolStripMenuItem.Name = "alunosToolStripMenuItem";
-            this.alunosToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.alunosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.alunosToolStripMenuItem.Text = "Alunos";
             this.alunosToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.alunosToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
@@ -141,13 +140,13 @@ namespace Interface.Formularios.Sistema
             this.funcionarioToolStripMenuItem,
             this.funcionárioBibliotecaToolStripMenuItem});
             this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
-            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.funcionáriosToolStripMenuItem.Text = "Funcionários";
             // 
             // funcionarioToolStripMenuItem
             // 
             this.funcionarioToolStripMenuItem.Name = "funcionarioToolStripMenuItem";
-            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.funcionarioToolStripMenuItem.Text = "Funcionário";
             this.funcionarioToolStripMenuItem.Click += new System.EventHandler(this.funcionáriosToolStripMenuItem_Click);
             // 
@@ -155,14 +154,14 @@ namespace Interface.Formularios.Sistema
             // 
             this.funcionárioBibliotecaToolStripMenuItem.Enabled = false;
             this.funcionárioBibliotecaToolStripMenuItem.Name = "funcionárioBibliotecaToolStripMenuItem";
-            this.funcionárioBibliotecaToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.funcionárioBibliotecaToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.funcionárioBibliotecaToolStripMenuItem.Text = "Funcionário Biblioteca";
             this.funcionárioBibliotecaToolStripMenuItem.Click += new System.EventHandler(this.funcionárioBibliotecaToolStripMenuItem_Click);
             // 
             // acervoToolStripMenuItem
             // 
             this.acervoToolStripMenuItem.Name = "acervoToolStripMenuItem";
-            this.acervoToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.acervoToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.acervoToolStripMenuItem.Text = "Acervo";
             this.acervoToolStripMenuItem.Click += new System.EventHandler(this.acervoToolStripMenuItem_Click);
             // 
@@ -182,14 +181,14 @@ namespace Interface.Formularios.Sistema
             this.extraviosToolStripMenuItem,
             this.assuntosToolStripMenuItem});
             this.infraestruturaToolStripMenuItem.Name = "infraestruturaToolStripMenuItem";
-            this.infraestruturaToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.infraestruturaToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.infraestruturaToolStripMenuItem.Text = "Infraestrutura";
             // 
             // cargosToolStripMenuItem
             // 
             this.cargosToolStripMenuItem.Enabled = false;
             this.cargosToolStripMenuItem.Name = "cargosToolStripMenuItem";
-            this.cargosToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.cargosToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.cargosToolStripMenuItem.Text = "Cargos";
             this.cargosToolStripMenuItem.Click += new System.EventHandler(this.cargosToolStripMenuItem_Click);
             // 
@@ -197,7 +196,7 @@ namespace Interface.Formularios.Sistema
             // 
             this.cursosToolStripMenuItem.Enabled = false;
             this.cursosToolStripMenuItem.Name = "cursosToolStripMenuItem";
-            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.cursosToolStripMenuItem.Text = "Cursos";
             this.cursosToolStripMenuItem.Click += new System.EventHandler(this.cursosToolStripMenuItem_Click);
             // 
@@ -205,68 +204,68 @@ namespace Interface.Formularios.Sistema
             // 
             this.turmasToolStripMenuItem.Enabled = false;
             this.turmasToolStripMenuItem.Name = "turmasToolStripMenuItem";
-            this.turmasToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.turmasToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.turmasToolStripMenuItem.Text = "Turmas";
             this.turmasToolStripMenuItem.Click += new System.EventHandler(this.turmasToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(140, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(119, 6);
             // 
             // áreaToolStripMenuItem
             // 
             this.áreaToolStripMenuItem.Name = "áreaToolStripMenuItem";
-            this.áreaToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.áreaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.áreaToolStripMenuItem.Text = "Área";
             this.áreaToolStripMenuItem.Click += new System.EventHandler(this.áreaToolStripMenuItem_Click);
             // 
             // jornalToolStripMenuItem
             // 
             this.jornalToolStripMenuItem.Name = "jornalToolStripMenuItem";
-            this.jornalToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.jornalToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.jornalToolStripMenuItem.Text = "Jornal";
             this.jornalToolStripMenuItem.Click += new System.EventHandler(this.jornalToolStripMenuItem_Click);
             // 
             // revistaToolStripMenuItem
             // 
             this.revistaToolStripMenuItem.Name = "revistaToolStripMenuItem";
-            this.revistaToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.revistaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.revistaToolStripMenuItem.Text = "Revista";
             this.revistaToolStripMenuItem.Click += new System.EventHandler(this.revistaToolStripMenuItem_Click);
             // 
             // editoraToolStripMenuItem
             // 
             this.editoraToolStripMenuItem.Name = "editoraToolStripMenuItem";
-            this.editoraToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.editoraToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.editoraToolStripMenuItem.Text = "Editora";
             this.editoraToolStripMenuItem.Click += new System.EventHandler(this.editoraToolStripMenuItem_Click);
             // 
             // genêroToolStripMenuItem
             // 
             this.genêroToolStripMenuItem.Name = "genêroToolStripMenuItem";
-            this.genêroToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.genêroToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.genêroToolStripMenuItem.Text = "Genêro";
             this.genêroToolStripMenuItem.Click += new System.EventHandler(this.genêroToolStripMenuItem_Click);
             // 
             // autoresToolStripMenuItem
             // 
             this.autoresToolStripMenuItem.Name = "autoresToolStripMenuItem";
-            this.autoresToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.autoresToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.autoresToolStripMenuItem.Text = "Autores";
             this.autoresToolStripMenuItem.Click += new System.EventHandler(this.autoresToolStripMenuItem_Click);
             // 
             // extraviosToolStripMenuItem
             // 
             this.extraviosToolStripMenuItem.Name = "extraviosToolStripMenuItem";
-            this.extraviosToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.extraviosToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.extraviosToolStripMenuItem.Text = "Extravios";
             this.extraviosToolStripMenuItem.Click += new System.EventHandler(this.extraviosToolStripMenuItem_Click);
             // 
             // assuntosToolStripMenuItem
             // 
             this.assuntosToolStripMenuItem.Name = "assuntosToolStripMenuItem";
-            this.assuntosToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.assuntosToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.assuntosToolStripMenuItem.Text = "Assuntos";
             this.assuntosToolStripMenuItem.Click += new System.EventHandler(this.assuntosToolStripMenuItem_Click);
             // 
@@ -280,41 +279,41 @@ namespace Interface.Formularios.Sistema
             this.reservasToolStripMenuItem,
             this.infraestruturaToolStripMenuItem1});
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.consultasToolStripMenuItem.Text = "Consultas";
             // 
             // alunosToolStripMenuItem1
             // 
             this.alunosToolStripMenuItem1.Name = "alunosToolStripMenuItem1";
-            this.alunosToolStripMenuItem1.Size = new System.Drawing.Size(172, 26);
+            this.alunosToolStripMenuItem1.Size = new System.Drawing.Size(145, 22);
             this.alunosToolStripMenuItem1.Text = "Alunos";
             this.alunosToolStripMenuItem1.Click += new System.EventHandler(this.alunosToolStripMenuItem1_Click);
             // 
             // funcionáriosToolStripMenuItem1
             // 
             this.funcionáriosToolStripMenuItem1.Name = "funcionáriosToolStripMenuItem1";
-            this.funcionáriosToolStripMenuItem1.Size = new System.Drawing.Size(172, 26);
+            this.funcionáriosToolStripMenuItem1.Size = new System.Drawing.Size(145, 22);
             this.funcionáriosToolStripMenuItem1.Text = "Funcionário";
             this.funcionáriosToolStripMenuItem1.Click += new System.EventHandler(this.funcionarioToolStripMenuItem_Click);
             // 
             // acervoToolStripMenuItem1
             // 
             this.acervoToolStripMenuItem1.Name = "acervoToolStripMenuItem1";
-            this.acervoToolStripMenuItem1.Size = new System.Drawing.Size(172, 26);
+            this.acervoToolStripMenuItem1.Size = new System.Drawing.Size(145, 22);
             this.acervoToolStripMenuItem1.Text = "Acervo";
             this.acervoToolStripMenuItem1.Click += new System.EventHandler(this.acervoToolStripMenuItem1_Click);
             // 
             // emprestimoToolStripMenuItem
             // 
             this.emprestimoToolStripMenuItem.Name = "emprestimoToolStripMenuItem";
-            this.emprestimoToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.emprestimoToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.emprestimoToolStripMenuItem.Text = "Empréstimo";
             this.emprestimoToolStripMenuItem.Click += new System.EventHandler(this.emprestimoToolStripMenuItem_Click);
             // 
             // reservasToolStripMenuItem
             // 
             this.reservasToolStripMenuItem.Name = "reservasToolStripMenuItem";
-            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.reservasToolStripMenuItem.Text = "Reservas";
             this.reservasToolStripMenuItem.Click += new System.EventHandler(this.reservasToolStripMenuItem_Click);
             // 
@@ -331,81 +330,81 @@ namespace Interface.Formularios.Sistema
             this.revistasToolStripMenuItem,
             this.extraviosToolStripMenuItem1});
             this.infraestruturaToolStripMenuItem1.Name = "infraestruturaToolStripMenuItem1";
-            this.infraestruturaToolStripMenuItem1.Size = new System.Drawing.Size(172, 26);
+            this.infraestruturaToolStripMenuItem1.Size = new System.Drawing.Size(145, 22);
             this.infraestruturaToolStripMenuItem1.Text = "Infraestrutura";
             // 
             // cargosToolStripMenuItem1
             // 
             this.cargosToolStripMenuItem1.Name = "cargosToolStripMenuItem1";
-            this.cargosToolStripMenuItem1.Size = new System.Drawing.Size(143, 26);
+            this.cargosToolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
             this.cargosToolStripMenuItem1.Text = "Cargos";
             this.cargosToolStripMenuItem1.Click += new System.EventHandler(this.cargosToolStripMenuItem1_Click);
             // 
             // cursosToolStripMenuItem1
             // 
             this.cursosToolStripMenuItem1.Name = "cursosToolStripMenuItem1";
-            this.cursosToolStripMenuItem1.Size = new System.Drawing.Size(143, 26);
+            this.cursosToolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
             this.cursosToolStripMenuItem1.Text = "Cursos";
             this.cursosToolStripMenuItem1.Click += new System.EventHandler(this.cursosToolStripMenuItem1_Click);
             // 
             // turmasToolStripMenuItem1
             // 
             this.turmasToolStripMenuItem1.Name = "turmasToolStripMenuItem1";
-            this.turmasToolStripMenuItem1.Size = new System.Drawing.Size(143, 26);
+            this.turmasToolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
             this.turmasToolStripMenuItem1.Text = "Turmas";
             this.turmasToolStripMenuItem1.Click += new System.EventHandler(this.turmasToolStripMenuItem1_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(140, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(117, 6);
             // 
             // autoresToolStripMenuItem1
             // 
             this.autoresToolStripMenuItem1.Name = "autoresToolStripMenuItem1";
-            this.autoresToolStripMenuItem1.Size = new System.Drawing.Size(143, 26);
+            this.autoresToolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
             this.autoresToolStripMenuItem1.Text = "Autores";
             this.autoresToolStripMenuItem1.Click += new System.EventHandler(this.autoresToolStripMenuItem1_Click);
             // 
             // editorasToolStripMenuItem
             // 
             this.editorasToolStripMenuItem.Name = "editorasToolStripMenuItem";
-            this.editorasToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.editorasToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.editorasToolStripMenuItem.Text = "Editoras";
             this.editorasToolStripMenuItem.Click += new System.EventHandler(this.editorasToolStripMenuItem_Click);
             // 
             // jornalToolStripMenuItem1
             // 
             this.jornalToolStripMenuItem1.Name = "jornalToolStripMenuItem1";
-            this.jornalToolStripMenuItem1.Size = new System.Drawing.Size(143, 26);
+            this.jornalToolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
             this.jornalToolStripMenuItem1.Text = "Jornal";
             this.jornalToolStripMenuItem1.Click += new System.EventHandler(this.jornalToolStripMenuItem1_Click);
             // 
             // revistasToolStripMenuItem
             // 
             this.revistasToolStripMenuItem.Name = "revistasToolStripMenuItem";
-            this.revistasToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.revistasToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.revistasToolStripMenuItem.Text = "Revistas";
             this.revistasToolStripMenuItem.Click += new System.EventHandler(this.revistasToolStripMenuItem_Click);
             // 
             // extraviosToolStripMenuItem1
             // 
             this.extraviosToolStripMenuItem1.Name = "extraviosToolStripMenuItem1";
-            this.extraviosToolStripMenuItem1.Size = new System.Drawing.Size(143, 26);
+            this.extraviosToolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
             this.extraviosToolStripMenuItem1.Text = "Extravios";
             this.extraviosToolStripMenuItem1.Click += new System.EventHandler(this.extraviosToolStripMenuItem1_Click);
             // 
             // relátoriosToolStripMenuItem
             // 
             this.relátoriosToolStripMenuItem.Name = "relátoriosToolStripMenuItem";
-            this.relátoriosToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
+            this.relátoriosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.relátoriosToolStripMenuItem.Text = "Relatórios";
             this.relátoriosToolStripMenuItem.Click += new System.EventHandler(this.relátoriosToolStripMenuItem_Click);
             // 
             // confiuraçõesToolStripMenuItem
             // 
             this.confiuraçõesToolStripMenuItem.Name = "confiuraçõesToolStripMenuItem";
-            this.confiuraçõesToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
+            this.confiuraçõesToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
             this.confiuraçõesToolStripMenuItem.Text = "Configurações";
             // 
             // pnlBase
@@ -422,10 +421,9 @@ namespace Interface.Formularios.Sistema
             this.pnlBase.Controls.Add(this.btnConfiguracoes);
             this.pnlBase.Controls.Add(this.btnSair);
             this.pnlBase.Controls.Add(this.btnAcervo);
-            this.pnlBase.Location = new System.Drawing.Point(1548, 20);
-            this.pnlBase.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlBase.Location = new System.Drawing.Point(834, 12);
             this.pnlBase.Name = "pnlBase";
-            this.pnlBase.Size = new System.Drawing.Size(164, 825);
+            this.pnlBase.Size = new System.Drawing.Size(123, 670);
             this.pnlBase.TabIndex = 10;
             // 
             // btnCadAluno
@@ -436,10 +434,9 @@ namespace Interface.Formularios.Sistema
             this.btnCadAluno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnCadAluno.FlatAppearance.BorderSize = 0;
             this.btnCadAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadAluno.Location = new System.Drawing.Point(0, 91);
-            this.btnCadAluno.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCadAluno.Location = new System.Drawing.Point(0, 85);
             this.btnCadAluno.Name = "btnCadAluno";
-            this.btnCadAluno.Size = new System.Drawing.Size(164, 118);
+            this.btnCadAluno.Size = new System.Drawing.Size(123, 96);
             this.btnCadAluno.TabIndex = 1;
             this.btnCadAluno.Text = "&Cadastro Alunos";
             this.btnCadAluno.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -448,43 +445,42 @@ namespace Interface.Formularios.Sistema
             // 
             // lblData
             // 
-            this.lblData.Location = new System.Drawing.Point(15, 750);
-            this.lblData.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblData.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblData.Location = new System.Drawing.Point(11, 609);
             this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(133, 28);
+            this.lblData.Size = new System.Drawing.Size(100, 23);
             this.lblData.TabIndex = 13;
             this.lblData.Text = "Data";
             this.lblData.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblMensagem
             // 
+            this.lblMensagem.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblMensagem.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lblMensagem.Location = new System.Drawing.Point(4, 26);
-            this.lblMensagem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMensagem.Location = new System.Drawing.Point(3, 21);
             this.lblMensagem.Name = "lblMensagem";
-            this.lblMensagem.Size = new System.Drawing.Size(156, 23);
+            this.lblMensagem.Size = new System.Drawing.Size(117, 19);
             this.lblMensagem.TabIndex = 12;
             this.lblMensagem.Text = "Mensagem";
             this.lblMensagem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblNome
             // 
+            this.lblNome.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblNome.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lblNome.Location = new System.Drawing.Point(4, 57);
-            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNome.Location = new System.Drawing.Point(3, 46);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(156, 23);
+            this.lblNome.Size = new System.Drawing.Size(117, 19);
             this.lblNome.TabIndex = 11;
             this.lblNome.Text = "Nome";
             this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblHora
             // 
-            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblHora.Location = new System.Drawing.Point(17, 780);
-            this.lblHora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHora.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblHora.Location = new System.Drawing.Point(13, 634);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(128, 23);
+            this.lblHora.Size = new System.Drawing.Size(96, 19);
             this.lblHora.TabIndex = 9;
             this.lblHora.Text = "Hora";
             this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -497,10 +493,9 @@ namespace Interface.Formularios.Sistema
             this.btnEmprestimo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEmprestimo.FlatAppearance.BorderSize = 0;
             this.btnEmprestimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmprestimo.Location = new System.Drawing.Point(0, 213);
-            this.btnEmprestimo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEmprestimo.Location = new System.Drawing.Point(0, 191);
             this.btnEmprestimo.Name = "btnEmprestimo";
-            this.btnEmprestimo.Size = new System.Drawing.Size(164, 118);
+            this.btnEmprestimo.Size = new System.Drawing.Size(123, 96);
             this.btnEmprestimo.TabIndex = 2;
             this.btnEmprestimo.Text = "&Empréstimo";
             this.btnEmprestimo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -515,10 +510,9 @@ namespace Interface.Formularios.Sistema
             this.btnConfiguracoes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnConfiguracoes.FlatAppearance.BorderSize = 0;
             this.btnConfiguracoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfiguracoes.Location = new System.Drawing.Point(0, 457);
-            this.btnConfiguracoes.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConfiguracoes.Location = new System.Drawing.Point(0, 389);
             this.btnConfiguracoes.Name = "btnConfiguracoes";
-            this.btnConfiguracoes.Size = new System.Drawing.Size(164, 118);
+            this.btnConfiguracoes.Size = new System.Drawing.Size(123, 96);
             this.btnConfiguracoes.TabIndex = 4;
             this.btnConfiguracoes.Text = "Configurações";
             this.btnConfiguracoes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -533,10 +527,9 @@ namespace Interface.Formularios.Sistema
             this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSair.Location = new System.Drawing.Point(0, 578);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSair.Location = new System.Drawing.Point(0, 488);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(164, 118);
+            this.btnSair.Size = new System.Drawing.Size(123, 96);
             this.btnSair.TabIndex = 5;
             this.btnSair.Text = "&Sair";
             this.btnSair.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -551,10 +544,9 @@ namespace Interface.Formularios.Sistema
             this.btnAcervo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAcervo.FlatAppearance.BorderSize = 0;
             this.btnAcervo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAcervo.Location = new System.Drawing.Point(0, 335);
-            this.btnAcervo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAcervo.Location = new System.Drawing.Point(0, 290);
             this.btnAcervo.Name = "btnAcervo";
-            this.btnAcervo.Size = new System.Drawing.Size(164, 118);
+            this.btnAcervo.Size = new System.Drawing.Size(123, 96);
             this.btnAcervo.TabIndex = 3;
             this.btnAcervo.Text = "&Acervo";
             this.btnAcervo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -567,23 +559,22 @@ namespace Interface.Formularios.Sistema
             this.statusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblVersao,
             this.lblEspaco});
-            this.statusBar.Location = new System.Drawing.Point(0, 829);
+            this.statusBar.Location = new System.Drawing.Point(0, 672);
             this.statusBar.Name = "statusBar";
-            this.statusBar.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusBar.Size = new System.Drawing.Size(1712, 25);
+            this.statusBar.Size = new System.Drawing.Size(957, 22);
             this.statusBar.TabIndex = 11;
             this.statusBar.Text = "statusStrip1";
             // 
             // lblVersao
             // 
             this.lblVersao.Name = "lblVersao";
-            this.lblVersao.Size = new System.Drawing.Size(87, 20);
+            this.lblVersao.Size = new System.Drawing.Size(67, 17);
             this.lblVersao.Text = "Versão Beta";
             // 
             // lblEspaco
             // 
             this.lblEspaco.Name = "lblEspaco";
-            this.lblEspaco.Size = new System.Drawing.Size(1605, 20);
+            this.lblEspaco.Size = new System.Drawing.Size(875, 17);
             this.lblEspaco.Spring = true;
             // 
             // hora
@@ -604,23 +595,21 @@ namespace Interface.Formularios.Sistema
             // 
             // FrmMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1712, 854);
+            this.ClientSize = new System.Drawing.Size(957, 694);
             this.Controls.Add(this.statusBar);
             this.Controls.Add(this.menuPrincipal);
             this.Controls.Add(this.pnlBase);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(973, 733);
             this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "E-Tech. Library";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMenu_FormClosing);
             this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.menuPrincipal.ResumeLayout(false);
