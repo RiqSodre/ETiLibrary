@@ -50,39 +50,37 @@ namespace Interface.Formularios.Modelos
                 {
                     (control as TextBox).Text = "";
                 }
-
-                if (control is MetroTextBox)
+                else if (control is MetroTextBox)
                 {
                     (control as MetroTextBox).Text = "";
                 }
-
-                if (control is MaskedTextBox)
+                else if (control is MaskedTextBox)
                 {
                     (control as MaskedTextBox).Text = "";
                 }
-
-                if (control is ComboBox)
+                else if (control is ComboBox)
                 {
                     (control as ComboBox).SelectedIndex = -1;
                 }
-
-                if (control is ListBox)
+                else if (control is ListBox)
                 {
                     (control as ListBox).SelectedIndex = -1;
                 }
-
-                if (control is RadioButton)
+                else if (control is RadioButton)
                 {
                     (control as RadioButton).Checked = false;
                 }
-
-                if (control is CheckBox)
+                else if (control is CheckBox)
                 {
                     (control as CheckBox).Checked = false;
                 }
-                if (control is DataGridView)
+                else if (control is DataGridView)
                 {
                     (control as DataGridView).Rows.Clear();
+                }
+                else if (control is DateTimePicker)
+                {
+                    (control as DateTimePicker).Value = DateTime.Now;
                 }
             }
             btnAcao.Text = "Salvar";

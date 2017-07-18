@@ -44,9 +44,9 @@
             // 
             // 
             this.txtTexto.CustomButton.Image = null;
-            this.txtTexto.CustomButton.Location = new System.Drawing.Point(152, 1);
+            this.txtTexto.CustomButton.Location = new System.Drawing.Point(203, 1);
             this.txtTexto.CustomButton.Name = "";
-            this.txtTexto.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.txtTexto.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtTexto.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtTexto.CustomButton.TabIndex = 1;
             this.txtTexto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -136,6 +136,7 @@
             this.Controls.Add(this.pnlForm);
             this.Controls.Add(this.txtTexto);
             this.Controls.Add(this.lblTexto);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Movable = false;
             this.Name = "FrmPonte";
             this.Resizable = false;

@@ -169,6 +169,7 @@
             this.Controls.Add(this.pnl);
             this.Controls.Add(this.pnlBase);
             this.Controls.Add(this.pnlPrincipal);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCadBase";
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;

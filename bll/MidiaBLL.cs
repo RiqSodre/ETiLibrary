@@ -181,12 +181,11 @@ namespace BLL
             try
             {
                 TccList tccList = new TccList();
-
                 foreach(DataRow dataRow in dataTableTCC.Rows)
                 {
                     Tcc tcc = new Tcc();
-
                     tcc.Curso.Descricao = (string)dataRow["Curso"];
+                    tcc.Curso.CodCurso = (int)dataRow["CodCurso"];
                     tcc.CodMidia = (int)dataRow["CodTCC"];
                     tcc.Titulo = (string)dataRow["Titulo"];
                     tcc.DataPublicacao = (DateTime)dataRow["DataPublicacao"];
@@ -196,10 +195,9 @@ namespace BLL
                     tcc.Tombo = (int)dataRow["Tombo"];
                     tcc.Observacao = (string)dataRow["Observacao"];
                     tcc.Area.Descricao = (string)dataRow["Área"];
-
+                    tcc.Area.CodArea = (int)dataRow["CodArea"];
                     tccList.Add(tcc);
                 }
-
                 return tccList;
             }
             catch (Exception ex)
@@ -388,11 +386,9 @@ namespace BLL
             try
             {
                 MapaList mapaList = new MapaList();
-
                 foreach(DataRow dataRow in dataTableMapas.Rows)
                 {
                     Mapa mapa = new Mapa();
-
                     mapa.CodMidia = (int)dataRow["CodMapa"];
                     mapa.Especificacao = (string)dataRow["Especificacao"];
                     mapa.Localizacao = (string)dataRow["Localizacao"];
@@ -403,10 +399,9 @@ namespace BLL
                     mapa.Tombo = (int)dataRow["Tombo"];
                     mapa.Observacao = (string)dataRow["Observacao"];
                     mapa.Area.Descricao = (string)dataRow["Área"];
-
+                    mapa.Area.CodArea = (int)dataRow["CodArea"];
                     mapaList.Add(mapa);
                 }
-
                 return mapaList;
             }
             catch (Exception ex)

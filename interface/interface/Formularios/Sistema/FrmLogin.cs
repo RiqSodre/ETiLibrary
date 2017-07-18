@@ -9,7 +9,7 @@ namespace Interface.Formularios.Sistema
 {
     public partial class FrmLogin : MetroFramework.Forms.MetroForm
     {
-        private AutenticacaoBLL auntenticacaoBLL = new AutenticacaoBLL();
+        private AutenticacaoBLL autenticacaoBLL = new AutenticacaoBLL();
         private PessoaBLL pessoaBLL = new PessoaBLL();
 
         //Construtor Padrão
@@ -55,8 +55,7 @@ namespace Interface.Formularios.Sistema
                 if (CaixasOK())
                 {
                     int codUsuario;
-                    codUsuario = auntenticacaoBLL.AutenticarUsuario(txtNome.Text, txtSenha.Text);
-
+                    codUsuario = autenticacaoBLL.AutenticarUsuario(txtNome.Text, autenticacaoBLL.CripSenha(txtSenha.Text));
                     if (codUsuario == 0)
                     {
                         MessageBox.Show(this, "Usuário não cadastrado no sistema", "Atenção", MessageBoxButtons.OK,
@@ -71,7 +70,6 @@ namespace Interface.Formularios.Sistema
                         Settings.Default.Senha = funcionario.Senha;
                         Settings.Default.Admin = funcionario.Admin;
                         Settings.Default.CodPessoa = (int)funcionario.CodPessoa;
-
                         DialogResult = DialogResult.Yes;
                     }
                 }

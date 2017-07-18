@@ -94,6 +94,10 @@ namespace BLL
             {
                 try
                 {
+                    if(!(email.Contains(".")) || email.Contains(" "))
+                    {
+                        return false;
+                    }
                     var mail = new MailAddress(email);
                     return true;
                 }
