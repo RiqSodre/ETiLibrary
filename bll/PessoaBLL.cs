@@ -204,19 +204,8 @@ namespace BLL
                 CursoBLL cursoBLL = new CursoBLL();
                 TurmaBLL turmaBLL = new TurmaBLL();
 
-                CursoList cursoList = cursoBLL.CursoConsultarCod_PorNome(aluno.Turma.Curso.Descricao);
-                TurmaList turmaList = turmaBLL.TurmaConsultarCod_PorNome(aluno.Turma.Descricao);
-
-                foreach(Curso curso in cursoList)
-                {
-                    aluno.Turma.Curso.CodCurso = curso.CodCurso;
-                }
-
-                foreach (Turma turma in turmaList)
-                {
-                    aluno.Turma.CodTurma = turma.CodTurma;
-                }
-
+                aluno.Turma.Curso.CodCurso = cursoBLL.CursoConsultarCod_PorNome(aluno.Turma.Curso.Descricao);
+                aluno.Turma.CodTurma = turmaBLL.TurmaConsultarCod_PorNome(aluno.Turma.Descricao);
                 return aluno;
             }
             catch (Exception ex)
@@ -296,7 +285,7 @@ namespace BLL
                 acesso.AdicionarParametros("@Nome", funcionario.Nome);
                 acesso.AdicionarParametros("@Sexo", funcionario.Sexo);
                 acesso.AdicionarParametros("@CPF", funcionario.Cpf);
-                acesso.AdicionarParametros("@CodCargo", funcionario.Cargo.CodCargo);
+                acesso.AdicionarParametros("@CodCargo", funcionario.CodCargo);
                 acesso.AdicionarParametros("@Telefone", funcionario.Telefone.Numero);
                 acesso.AdicionarParametros("@Celular", funcionario.Celular.Numero);
                 return acesso.ExecutarManipulacao(CommandType.StoredProcedure, "uspFuncionarioInserir").ToString();
@@ -317,7 +306,7 @@ namespace BLL
                 acesso.AdicionarParametros("@Nome", funcionario.Nome);
                 acesso.AdicionarParametros("@Sexo", funcionario.Sexo);
                 acesso.AdicionarParametros("@CPF", funcionario.Cpf);
-                acesso.AdicionarParametros("@CodCargo", funcionario.Cargo.CodCargo);
+                acesso.AdicionarParametros("@CodCargo", funcionario.CodCargo);
                 acesso.AdicionarParametros("@Telefone", funcionario.Telefone.Numero);
                 acesso.AdicionarParametros("@Celular", funcionario.Celular.Numero);
                 return acesso.ExecutarManipulacao(CommandType.StoredProcedure, "uspFuncionarioAlterar").ToString();
@@ -434,8 +423,8 @@ namespace BLL
 
                     funcionario.Cpf = (string)dataRow["CPF"];
                     funcionario.DataCadastro = (DateTime)dataRow["DataCadastro"];
-                    funcionario.Cargo.CodCargo = (int)dataRow["CodCargo"];
-                    funcionario.Cargo.Descricao = (string)dataRow["Cargo"];
+                    funcionario.CodCargo = (int)dataRow["CodCargo"];
+                    funcionario.Cargo = (string)dataRow["Cargo"];
                     if (((string)dataRow["Tipo Telefone"]).Equals("Telefone"))
                     {
                         funcionario.Telefone.Numero = (string)dataRow["Telefone"];
@@ -519,8 +508,8 @@ namespace BLL
 
                 foreach (DataRow dataRow in dataTableFuncionarioBiblio.Rows)
                 {
-                    funcionario.Cargo.CodCargo = (int)dataRow["CodCargo"];
-                    funcionario.Cargo.Descricao = (string)dataRow["Cargo"];
+                    funcionario.CodCargo = (int)dataRow["CodCargo"];
+                    funcionario.Cargo = (string)dataRow["Cargo"];
                     funcionario.CodPessoa = (int)dataRow["CodPessoa"];
                     funcionario.Nome = (string)dataRow["Nome"];
                     funcionario.Sexo = (string)dataRow["Sexo"];

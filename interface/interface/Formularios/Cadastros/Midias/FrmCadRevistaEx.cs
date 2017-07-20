@@ -176,24 +176,10 @@ namespace Interface.Formularios.Cadastros
                     if (btnAcao.Text.Equals("Salvar"))
                     {
                         resultado = midiaBLL.RevistaInserir(RevistaEx);
-                        MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
-                                  MessageBoxIcon.Information);
-                        if (resultado.Contains("sucesso"))
-                        {
-                            Habilita(false);
-                            LimparComponentes();
-                        }
                     }
                     else
                     {
                         resultado = midiaBLL.RevistaAlterar(RevistaEx);
-                        MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
-                                 MessageBoxIcon.Information);
-                        if (resultado.Contains("sucesso"))
-                        {
-                            Habilita(false);
-                            LimparComponentes();
-                        }
                     }
                 }
                 else
@@ -202,14 +188,14 @@ namespace Interface.Formularios.Cadastros
                               MessageBoxIcon.Information) == DialogResult.Yes)
                     {
                         resultado = midiaBLL.MidiaExcluir(RevistaEx.Tombo, "Revista");
-                        MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
-                                   MessageBoxIcon.Information);
-                        if (resultado.Contains("sucesso"))
-                        {
-                            Habilita(false);
-                            LimparComponentes();
-                        }
                     }
+                }
+                MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
+                                   MessageBoxIcon.Information);
+                if (resultado.Contains("sucesso"))
+                {
+                    Habilita(false);
+                    LimparComponentes();
                 }
             }
             catch (Exception ex)

@@ -45,7 +45,6 @@
     <Compile Include="AssuntosBLL.cs" />
     <Compile Include="AutenticacaoBLL.cs" />
     <Compile Include="AutorBLL.cs" />
-    <Compile Include="CargoBLL.cs" />
     <Compile Include="CursoBLL.cs" />
     <Compile Include="EditoraBLL.cs" />
     <Compile Include="EmprestimoBLL.cs" />

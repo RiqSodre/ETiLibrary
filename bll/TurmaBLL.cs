@@ -26,7 +26,6 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Alterar a turma
         public string TurmaAlterar(Turma turma)
         {
@@ -44,14 +43,13 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Excluir a turma
-        public string TurmaExcluir(Turma turma)
+        public string TurmaExcluir(int codTurma)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@CodTurma", turma.CodTurma);
+                acesso.AdicionarParametros("@CodTurma", codTurma);
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspTurmaExcluir");
             }
@@ -60,7 +58,6 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Carrega a lista de turmas do curso informado
         public TurmaList CarregaTurmas(int CodCurso) {
             try
@@ -69,7 +66,7 @@ namespace BLL
 
                 acesso.LimparParametros();
                 DataTable dataTableTurmas = acesso.ExecutarConsulta(CommandType.Text,
-                    "SELECT CodTurma, Descricao FROM tblTurma WHERE CodCurso = "+CodCurso);
+                    "SELECT CodTurma, Descricao, Periodo FROM tblTurma WHERE CodCurso = "+CodCurso);
 
                 foreach(DataRow dataRow in dataTableTurmas.Rows)
                 {
@@ -77,7 +74,7 @@ namespace BLL
 
                     turma.CodTurma = (int)dataRow["CodTurma"];
                     turma.Descricao = (string)dataRow["Descricao"];
-
+                    turma.Periodo = (string)dataRow["Periodo"];
                     turmaList.Add(turma);
                 }
 
@@ -88,7 +85,6 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Realiza a consulta de Turmas por nome
         public TurmaList TurmaConsultar(string Descricao)
         {
@@ -121,28 +117,20 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Carrega o codigo da turma informado por nome
-        public TurmaList TurmaConsultarCod_PorNome(string Descricao)
+        public int TurmaConsultarCod_PorNome(string Descricao)
         {
             try
             {
-                TurmaList turmaList = new TurmaList();
-
                 acesso.LimparParametros();
+                int codTurma = 0;
                 DataTable dataTableTurmas = acesso.ExecutarConsulta(CommandType.Text,
                     "SELECT CodTurma FROM tblTurma WHERE Descricao = '"+Descricao+"'");
-
                 foreach (DataRow dataRow in dataTableTurmas.Rows)
                 {
-                    Turma turma = new Turma();
-
-                    turma.CodTurma = (int)dataRow["CodTurma"];
-
-                    turmaList.Add(turma);
+                    codTurma = (int)dataRow["CodTurma"];
                 }
-
-                return turmaList;
+                return codTurma;
             }
             catch (Exception ex)
             {

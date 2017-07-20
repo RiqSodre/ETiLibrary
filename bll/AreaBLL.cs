@@ -72,10 +72,8 @@ namespace BLL
                 foreach(DataRow dataRow in dataTableAreas.Rows)
                 {
                     Area area = new Area();
-
                     area.CodArea = (int)dataRow["CodArea"];
                     area.Descricao = (string)dataRow["Descricao"];
-
                     areaList.Add(area);
                 }
 
@@ -94,11 +92,9 @@ namespace BLL
             {
                 Area area = new Area();
                 area.Descricao = "";
-
                 acesso.LimparParametros();
                 DataTable dataTableAreas = acesso.ExecutarConsulta(CommandType.Text,
                     "SELECT CodArea, Descricao FROM tblArea WHERE Descricao = '"+Descricao+"'");
-
                 foreach (DataRow dataRow in dataTableAreas.Rows)
                 {
                     area.CodArea = (int)dataRow["CodArea"];

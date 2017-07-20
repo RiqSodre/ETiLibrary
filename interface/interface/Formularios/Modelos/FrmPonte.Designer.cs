@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPonte));
             this.txtTexto = new MetroFramework.Controls.MetroTextBox();
-            this.lblTexto = new System.Windows.Forms.Label();
             this.btnAcao = new MetroFramework.Controls.MetroButton();
             this.btnFechar = new System.Windows.Forms.Button();
             this.lblForm = new System.Windows.Forms.Label();
             this.pnlForm = new System.Windows.Forms.Panel();
+            this.lblTexto = new MetroFramework.Controls.MetroLabel();
             this.pnlForm.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,16 +67,6 @@
             this.txtTexto.UseSelectable = true;
             this.txtTexto.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtTexto.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // lblTexto
-            // 
-            this.lblTexto.AutoSize = true;
-            this.lblTexto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTexto.Location = new System.Drawing.Point(56, 83);
-            this.lblTexto.Name = "lblTexto";
-            this.lblTexto.Size = new System.Drawing.Size(215, 18);
-            this.lblTexto.TabIndex = 104;
-            this.lblTexto.Text = "Digite aqui o código da pessoa:";
             // 
             // btnAcao
             // 
@@ -124,6 +114,16 @@
             this.pnlForm.TabIndex = 2;
             this.pnlForm.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_MouseMove);
             // 
+            // lblTexto
+            // 
+            this.lblTexto.AutoSize = true;
+            this.lblTexto.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblTexto.Location = new System.Drawing.Point(144, 83);
+            this.lblTexto.Name = "lblTexto";
+            this.lblTexto.Size = new System.Drawing.Size(41, 19);
+            this.lblTexto.TabIndex = 217;
+            this.lblTexto.Text = "Texto";
+            // 
             // FrmPonte
             // 
             this.AcceptButton = this.btnAcao;
@@ -132,10 +132,10 @@
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.CancelButton = this.btnFechar;
             this.ClientSize = new System.Drawing.Size(327, 223);
+            this.Controls.Add(this.lblTexto);
             this.Controls.Add(this.btnAcao);
             this.Controls.Add(this.pnlForm);
             this.Controls.Add(this.txtTexto);
-            this.Controls.Add(this.lblTexto);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Movable = false;
             this.Name = "FrmPonte";
@@ -149,10 +149,10 @@
 
         #endregion
         public MetroFramework.Controls.MetroTextBox txtTexto;
-        public System.Windows.Forms.Label lblTexto;
         public MetroFramework.Controls.MetroButton btnAcao;
         public System.Windows.Forms.Button btnFechar;
         public System.Windows.Forms.Label lblForm;
         public System.Windows.Forms.Panel pnlForm;
+        public MetroFramework.Controls.MetroLabel lblTexto;
     }
 }

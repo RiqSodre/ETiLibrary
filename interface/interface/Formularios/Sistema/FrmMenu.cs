@@ -4,6 +4,7 @@ using Interface.Formularios.Modelos;
 using Interface.Formularios.Cadastros;
 using Interface.Formularios.Consultas;
 using Interface.Properties;
+using Interface.Formularios.Cadastros.Infraestrutura;
 
 namespace Interface.Formularios.Sistema
 {
@@ -26,9 +27,7 @@ namespace Interface.Formularios.Sistema
                 {
                     funcionarioToolStripMenuItem.Enabled = true;
                     funcionárioBibliotecaToolStripMenuItem.Enabled = true;
-                    cargosToolStripMenuItem.Enabled = true;
                     cursosToolStripMenuItem.Enabled = true;
-                    turmasToolStripMenuItem.Enabled = true;
                 }
             }
             catch (Exception ex)
@@ -161,38 +160,6 @@ namespace Interface.Formularios.Sistema
                                        MessageBoxIcon.Error);
             }
         }
-        //Abre o form de cadastro de cargos
-        private void cargosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                existe = false;
-                foreach (Form form in this.MdiChildren)
-                {
-                    if (form.Name == "FrmCadCargo")
-                    {
-                        existe = VerificaForm(form, existe);
-                        break;
-                    }
-                }
-                if (!existe)
-                {
-                    FrmCadCargo cadcargo = new FrmCadCargo();
-                    cadcargo.MdiParent = this;
-                    cadcargo.Show();
-                }
-                else
-                {
-                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK,
-                                       MessageBoxIcon.Error);
-            }
-        }
         //Abre o form de cadastro de cursos
         private void cursosToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -209,40 +176,9 @@ namespace Interface.Formularios.Sistema
                 }
                 if (!existe)
                 {
-                    FrmCadCurso cadcurso = new FrmCadCurso();
+                    FrmCadCursoT cadcurso = new FrmCadCursoT();
                     cadcurso.MdiParent = this;
                     cadcurso.Show();
-                }
-                else
-                {
-                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK,
-                                       MessageBoxIcon.Error);
-            }
-        }
-        //Abre o form de cadastro de turmas
-        private void turmasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                existe = false;
-                foreach (Form form in this.MdiChildren)
-                {
-                    if (form.Name == "FrmCadTurma")
-                    {
-                        existe = VerificaForm(form, existe);
-                        break;
-                    }
-                }
-                if (!existe)
-                {
-                    FrmCadTurma cadturma = new FrmCadTurma();
-                    cadturma.MdiParent = this;
-                    cadturma.Show();
                 }
                 else
                 {
@@ -258,7 +194,7 @@ namespace Interface.Formularios.Sistema
         //Abre o form de cadastro de áreas
         private void áreaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
+         /*   try
             {
                 existe = false;
                 foreach (Form form in this.MdiChildren)
@@ -284,7 +220,7 @@ namespace Interface.Formularios.Sistema
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK,
                                        MessageBoxIcon.Error);
-            }
+            }*/
         }
         //Abre o form de cadastro de jornais -Implementar
         private void jornalToolStripMenuItem_Click(object sender, EventArgs e)
@@ -315,7 +251,7 @@ namespace Interface.Formularios.Sistema
         //Abre o form de cadastro de editoras
         private void editoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 existe = false;
                 foreach (Form form in this.MdiChildren)
@@ -341,12 +277,12 @@ namespace Interface.Formularios.Sistema
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK,
                                        MessageBoxIcon.Error);
-            }
+            }*/
         }
         //Abre o form de cadastro de gêneros
         private void genêroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
+          /*  try
             {
                 existe = false;
                 foreach (Form form in this.MdiChildren)
@@ -372,12 +308,12 @@ namespace Interface.Formularios.Sistema
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK,
                                        MessageBoxIcon.Error);
-            }
+            }*/
         }
         //Abre o form de cadastro de autores
         private void autoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
+          /*  try
             {
                 existe = false;
                 foreach (Form form in this.MdiChildren)
@@ -403,12 +339,12 @@ namespace Interface.Formularios.Sistema
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK,
                                        MessageBoxIcon.Error);
-            }
+            }*/
         }
         //Abre o form de cadastro de extravios
         private void extraviosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
+         /*   try
             {
                 existe = false;
                 foreach (Form form in this.MdiChildren)
@@ -434,12 +370,12 @@ namespace Interface.Formularios.Sistema
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK,
                                        MessageBoxIcon.Error);
-            }
+            }*/
         }
         //Abre o form de cadastro de assuntos
         private void assuntosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
+          /*  try
             {
                 existe = false;
                 foreach (Form form in this.MdiChildren)
@@ -465,7 +401,7 @@ namespace Interface.Formularios.Sistema
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK,
                                        MessageBoxIcon.Error);
-            }
+            }*/
         }
         //Abre o form de consulta de alunos
         private void alunosToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -560,34 +496,8 @@ namespace Interface.Formularios.Sistema
                                        MessageBoxIcon.Error);
             }
         }
-        //Abre o form de consulta de cargos -Implementar
-        private void cargosToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                //implementar
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK,
-                                       MessageBoxIcon.Error);
-            }
-        }
         //Abre o form de consulta de cursos -Implementar
         private void cursosToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                //implementar
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK,
-                                       MessageBoxIcon.Error);
-            }
-        }
-        //Abre o form de consulta de turmas -Implementar
-        private void turmasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             try
             {

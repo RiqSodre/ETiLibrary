@@ -9,7 +9,6 @@ namespace Interface.Formularios.Cadastros
     public partial class FrmCadFuncionarioBiblioteca : FrmCadBase
     {
         private PessoaBLL pessoaBLL = new PessoaBLL();
-        private CargoBLL cargoBLL = new CargoBLL();
         private AutenticacaoBLL autenticacaoBLL = new AutenticacaoBLL();
         private Funcionario funcionarioBase = new Funcionario();
         public Funcionario Funcionario
@@ -115,7 +114,7 @@ namespace Interface.Formularios.Cadastros
                          return;
                      }*/
                 }
-                Funcionario.Cargo.CodCargo = 3;
+                Funcionario.CodCargo = 3;
                 //Validações campos Telefone e Celular
                 if (txtTelefone.Text.Length == 0 && txtCelular.Text.Length == 0)
                 {
@@ -210,24 +209,10 @@ namespace Interface.Formularios.Cadastros
                 if (btnAcao.Text == "Salvar")
                 {
                     resultado = pessoaBLL.FuncionarioBiblioInserir(Funcionario);
-                    MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
-                               MessageBoxIcon.Information);
-                    if (resultado.Contains("sucesso"))
-                    {
-                        Habilita(false);
-                        LimparComponentes();
-                    }
                 }//Execução
                 else
                 {
                     resultado = pessoaBLL.FuncionarioBiblioAlterar(Funcionario);
-                    MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
-                               MessageBoxIcon.Information);
-                    if (resultado.Contains("sucesso"))
-                    {
-                        Habilita(false);
-                        LimparComponentes();
-                    }
                 }
             }
             else
@@ -236,14 +221,19 @@ namespace Interface.Formularios.Cadastros
                               MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     resultado = pessoaBLL.PessoaExcluir(Funcionario.CodPessoa);
-                    MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
-                               MessageBoxIcon.Information);
-                    if (resultado.Contains("sucesso"))
-                    {
-                        Habilita(false);
-                        LimparComponentes();
-                    }
                 }
+            }
+            MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
+                                   MessageBoxIcon.Information);
+            if (resultado.Contains("sucesso"))
+            {
+                Habilita(false);
+                LimparComponentes();
+            }
+            if (resultado.Contains("sucesso"))
+            {
+                Habilita(false);
+                LimparComponentes();
             }
         }
         //Botão que habilita e limpa os componentes do form

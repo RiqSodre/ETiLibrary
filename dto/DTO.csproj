@@ -67,8 +67,6 @@
     <Compile Include="Infraestrutura de Midia\RevistaList.cs" />
     <Compile Include="Infraestrutura de Midia\Autor.cs" />
     <Compile Include="Infraestrutura de Midia\AutorList.cs" />
-    <Compile Include="Infraestrutura de Pessoa\Cargo.cs" />
-    <Compile Include="Infraestrutura de Pessoa\CargoList.cs" />
     <Compile Include="Infraestrutura de Pessoa\Curso.cs" />
     <Compile Include="Infraestrutura de Pessoa\CursoList.cs" />
     <Compile Include="Infraestrutura de Pessoa\Telefone.cs" />

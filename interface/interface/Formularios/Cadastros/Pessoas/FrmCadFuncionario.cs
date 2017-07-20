@@ -8,8 +8,7 @@ namespace Interface.Formularios.Cadastros
 {
     public partial class FrmCadFuncionario : FrmCadBase
     {
-        private PessoaBLL pessoaBLL = new PessoaBLL();       
-        private CargoBLL cargoBLL = new CargoBLL();
+        private PessoaBLL pessoaBLL = new PessoaBLL();
         private AutenticacaoBLL autenticacaoBLL = new AutenticacaoBLL();
         private Funcionario funcionarioBase = new Funcionario();
         public Funcionario Funcionario
@@ -31,7 +30,9 @@ namespace Interface.Formularios.Cadastros
             try
             {
                 InitializeComponent();
-                cbCargo.DataSource = cargoBLL.CarregaCargos("SELECT CodCargo, Descricao FROM tblCargo WHERE CodCargo != 3");
+                var cargos = new[] {
+                new { Descricao = "Professor", CodCargo = 1 }, new { Descricao = "Funcionário" , CodCargo = 2}};
+                cbCargo.DataSource = cargos;
                 Habilita(true);
                 LimparComponentes();
             }
@@ -122,7 +123,7 @@ namespace Interface.Formularios.Cadastros
                 }
                 else
                 {
-                    Funcionario.Cargo.CodCargo = Convert.ToInt32(cbCargo.SelectedValue);
+                    Funcionario.CodCargo = Convert.ToInt32(cbCargo.SelectedValue);
                 }
                 //Validações campos Telefone e Celular
                 if (txtTelefone.Text.Length == 0 && txtCelular.Text.Length == 0)
@@ -157,24 +158,10 @@ namespace Interface.Formularios.Cadastros
                 if (btnAcao.Text == "Salvar")
                 {
                     resultado = pessoaBLL.FuncionarioInserir(Funcionario);
-                    MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
-                               MessageBoxIcon.Information);
-                    if (resultado.Contains("sucesso"))
-                    {
-                        Habilita(false);
-                        LimparComponentes();
-                    }
                 }
                 else 
                 {
                     resultado = pessoaBLL.FuncionarioAlterar(Funcionario);
-                    MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
-                               MessageBoxIcon.Information);
-                    if (resultado.Contains("sucesso"))
-                    {
-                        Habilita(false);
-                        LimparComponentes();
-                    }
                 }
             }//Execução
             else
@@ -183,14 +170,14 @@ namespace Interface.Formularios.Cadastros
                               MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     resultado = pessoaBLL.PessoaExcluir(Funcionario.CodPessoa);
-                    MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
-                               MessageBoxIcon.Information);
-                    if (resultado.Contains("sucesso"))
-                    {
-                        Habilita(false);
-                        LimparComponentes();
-                    }
                 }
+            }
+            MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
+                                   MessageBoxIcon.Information);
+            if (resultado.Contains("sucesso"))
+            {
+                Habilita(false);
+                LimparComponentes();
             }
         }
         //Botão que habilita e limpa os componentes do form
@@ -314,7 +301,7 @@ namespace Interface.Formularios.Cadastros
         {
             txtNome.Text = funcionario.Nome;
             cbSexo.SelectedItem = funcionario.Sexo;
-            cbCargo.SelectedValue = funcionario.Cargo.CodCargo;
+            cbCargo.SelectedValue = funcionario.CodCargo;
             txtCpf.Text = funcionario.Cpf;
             txtTelefone.Text = funcionario.Telefone.Numero;
             txtCelular.Text = funcionario.Celular.Numero;

@@ -64,7 +64,7 @@ namespace Interface.Formularios.Cadastros
                     if (funcBiblioteca)
                     {
                         funcionario = pessoaBLL.FuncionarioBiblioSelect(Convert.ToInt32(txtTexto.Text));
-                        if (funcionario.CodPessoa == null || funcionario.Cargo.CodCargo != 3)
+                        if (funcionario.CodPessoa == null || funcionario.CodCargo != 3)
                         {
                             MessageBox.Show(this, "Nenhum registro encontrado, certifique-se que o código do funcionário foi digitado corretamente.", "Atenção", MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
@@ -76,7 +76,7 @@ namespace Interface.Formularios.Cadastros
                     else
                     {
                         funcionario = pessoaBLL.FuncionarioConsulta_PorCod(Convert.ToInt32(txtTexto.Text));
-                        if (funcionario.CodPessoa == null || funcionario.Cargo.CodCargo == 3)
+                        if (funcionario.CodPessoa == null || funcionario.CodCargo == 3)
                         {
                             MessageBox.Show(this, "Nenhum registro encontrado, certifique-se que o código do funcionário foi digitado corretamente.", "Atenção", MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);

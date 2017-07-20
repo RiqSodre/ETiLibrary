@@ -4,14 +4,15 @@ namespace DTO.Pessoas
 {
     public class Funcionario : Pessoa
     {
-        private Cargo cargo = new Cargo();
+        private string cargo;
+        private int codCargo;
         private string login;
         private string senha;
         private bool admin;
         private bool habilitado;
         private string email;
 
-        public Cargo Cargo
+        public string Cargo
         {
             get
             {
@@ -20,6 +21,18 @@ namespace DTO.Pessoas
             set
             {
                 cargo = value;
+            }
+        }
+        public int CodCargo
+        {
+            get
+            {
+                return codCargo;
+            }
+
+            set
+            {
+                codCargo = value;
             }
         }
         public string Login

@@ -60,53 +60,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EnumModo.cs" />
-    <Compile Include="Formularios\Cadastros\FrmCadArea.cs">
+    <Compile Include="Formularios\Cadastros\Emprestimos\FrmCadEmprestimo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmCadArea.Designer.cs">
-      <DependentUpon>FrmCadArea.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Cadastros\FrmCadAssunto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Cadastros\FrmCadAssunto.Designer.cs">
-      <DependentUpon>FrmCadAssunto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Cadastros\FrmCadAutores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Cadastros\FrmCadAutores.Designer.cs">
-      <DependentUpon>FrmCadAutores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Cadastros\FrmCadCargo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Cadastros\FrmCadCargo.Designer.cs">
-      <DependentUpon>FrmCadCargo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Cadastros\FrmCadCurso.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Cadastros\FrmCadCurso.Designer.cs">
-      <DependentUpon>FrmCadCurso.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Cadastros\FrmCadEditora.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Cadastros\FrmCadEditora.Designer.cs">
-      <DependentUpon>FrmCadEditora.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Cadastros\FrmCadEmprestimo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Cadastros\FrmCadEmprestimo.Designer.cs">
+    <Compile Include="Formularios\Cadastros\Emprestimos\FrmCadEmprestimo.Designer.cs">
       <DependentUpon>FrmCadEmprestimo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmCadExtravio.cs">
+    <Compile Include="Formularios\Cadastros\Infraestrutura\FrmCadCursoT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmCadExtravio.Designer.cs">
-      <DependentUpon>FrmCadExtravio.cs</DependentUpon>
+    <Compile Include="Formularios\Cadastros\Infraestrutura\FrmCadCursoT.Designer.cs">
+      <DependentUpon>FrmCadCursoT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Cadastros\Infraestrutura\FrmCadTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Cadastros\Infraestrutura\FrmCadTurma.Designer.cs">
+      <DependentUpon>FrmCadTurma.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Cadastros\Pessoas\FrmCadFuncionario.cs">
       <SubType>Form</SubType>
@@ -119,12 +89,6 @@
     </Compile>
     <Compile Include="Formularios\Cadastros\Pessoas\FrmCadFuncionarioBiblioteca.Designer.cs">
       <DependentUpon>FrmCadFuncionarioBiblioteca.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Cadastros\FrmCadGenero.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Cadastros\FrmCadGenero.Designer.cs">
-      <DependentUpon>FrmCadGenero.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Cadastros\Midias\FrmCadJornalEx.cs">
       <SubType>Form</SubType>
@@ -156,10 +120,10 @@
     <Compile Include="Formularios\Cadastros\Midias\FrmCadMapa.Designer.cs">
       <DependentUpon>FrmCadMapa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmCadMidiaEmprestimo.cs">
+    <Compile Include="Formularios\Cadastros\Emprestimos\FrmCadMidiaEmprestimo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmCadMidiaEmprestimo.Designer.cs">
+    <Compile Include="Formularios\Cadastros\Emprestimos\FrmCadMidiaEmprestimo.Designer.cs">
       <DependentUpon>FrmCadMidiaEmprestimo.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Cadastros\Midias\FrmCadRevistaEx.cs">
@@ -174,41 +138,29 @@
     <Compile Include="Formularios\Cadastros\Midias\FrmCadTCC.Designer.cs">
       <DependentUpon>FrmCadTCC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmCadTurma.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Cadastros\FrmCadTurma.Designer.cs">
-      <DependentUpon>FrmCadTurma.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\Cadastros\Pessoas\FrmPonteAluno.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Cadastros\Pessoas\FrmPonteAluno.Designer.cs">
       <DependentUpon>FrmPonteAluno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmPonteArea.cs">
+    <Compile Include="Formularios\Cadastros\Infraestrutura\FrmPonteArea.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmPonteArea.Designer.cs">
+    <Compile Include="Formularios\Cadastros\Infraestrutura\FrmPonteArea.Designer.cs">
       <DependentUpon>FrmPonteArea.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmPonteAssunto.cs">
+    <Compile Include="Formularios\Cadastros\Infraestrutura\FrmPonteAssunto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmPonteAssunto.Designer.cs">
+    <Compile Include="Formularios\Cadastros\Infraestrutura\FrmPonteAssunto.Designer.cs">
       <DependentUpon>FrmPonteAssunto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmPonteAutores.cs">
+    <Compile Include="Formularios\Cadastros\Infraestrutura\FrmPonteAutores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmPonteAutores.Designer.cs">
+    <Compile Include="Formularios\Cadastros\Infraestrutura\FrmPonteAutores.Designer.cs">
       <DependentUpon>FrmPonteAutores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Cadastros\FrmPonteCargo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Cadastros\FrmPonteCargo.Designer.cs">
-      <DependentUpon>FrmPonteCargo.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Cadastros\Midias\FrmPonteCdDvd.cs">
       <SubType>Form</SubType>
@@ -216,28 +168,28 @@
     <Compile Include="Formularios\Cadastros\Midias\FrmPonteCdDvd.Designer.cs">
       <DependentUpon>FrmPonteCdDvd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmPonteCurso.cs">
+    <Compile Include="Formularios\Cadastros\Infraestrutura\FrmPonteCurso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmPonteCurso.Designer.cs">
+    <Compile Include="Formularios\Cadastros\Infraestrutura\FrmPonteCurso.Designer.cs">
       <DependentUpon>FrmPonteCurso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmPonteEditora.cs">
+    <Compile Include="Formularios\Cadastros\Infraestrutura\FrmPonteEditora.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmPonteEditora.Designer.cs">
+    <Compile Include="Formularios\Cadastros\Infraestrutura\FrmPonteEditora.Designer.cs">
       <DependentUpon>FrmPonteEditora.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmPonteEmprestimo.cs">
+    <Compile Include="Formularios\Cadastros\Emprestimos\FrmPonteEmprestimo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmPonteEmprestimo.Designer.cs">
+    <Compile Include="Formularios\Cadastros\Emprestimos\FrmPonteEmprestimo.Designer.cs">
       <DependentUpon>FrmPonteEmprestimo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmPonteExtravio.cs">
+    <Compile Include="Formularios\Cadastros\Infraestrutura\FrmPonteExtravio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmPonteExtravio.Designer.cs">
+    <Compile Include="Formularios\Cadastros\Infraestrutura\FrmPonteExtravio.Designer.cs">
       <DependentUpon>FrmPonteExtravio.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Cadastros\Pessoas\FrmPonteFuncionario.cs">
@@ -246,10 +198,10 @@
     <Compile Include="Formularios\Cadastros\Pessoas\FrmPonteFuncionario.Designer.cs">
       <DependentUpon>FrmPonteFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmPonteGenero.cs">
+    <Compile Include="Formularios\Cadastros\Infraestrutura\FrmPonteGenero.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmPonteGenero.Designer.cs">
+    <Compile Include="Formularios\Cadastros\Infraestrutura\FrmPonteGenero.Designer.cs">
       <DependentUpon>FrmPonteGenero.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Cadastros\Midias\FrmPonteJornalEx.cs">
@@ -282,88 +234,88 @@
     <Compile Include="Formularios\Cadastros\Midias\FrmPonteTCC.Designer.cs">
       <DependentUpon>FrmPonteTCC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmPonteTurma.cs">
+    <Compile Include="Formularios\Cadastros\Infraestrutura\FrmPonteTurma.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Cadastros\FrmPonteTurma.Designer.cs">
+    <Compile Include="Formularios\Cadastros\Infraestrutura\FrmPonteTurma.Designer.cs">
       <DependentUpon>FrmPonteTurma.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmConsultaAluno.cs">
+    <Compile Include="Formularios\Consultas\Pessoas\FrmConsultaAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmConsultaAluno.Designer.cs">
+    <Compile Include="Formularios\Consultas\Pessoas\FrmConsultaAluno.Designer.cs">
       <DependentUpon>FrmConsultaAluno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmConsultaEmprestimo.cs">
+    <Compile Include="Formularios\Consultas\Emprestimos\FrmConsultaEmprestimo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmConsultaEmprestimo.Designer.cs">
+    <Compile Include="Formularios\Consultas\Emprestimos\FrmConsultaEmprestimo.Designer.cs">
       <DependentUpon>FrmConsultaEmprestimo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmConsultaLivro.cs">
+    <Compile Include="Formularios\Consultas\Midia\FrmConsultaLivro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmConsultaLivro.Designer.cs">
+    <Compile Include="Formularios\Consultas\Midia\FrmConsultaLivro.Designer.cs">
       <DependentUpon>FrmConsultaLivro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmConsultaFuncionario.cs">
+    <Compile Include="Formularios\Consultas\Pessoas\FrmConsultaFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmConsultaFuncionario.Designer.cs">
+    <Compile Include="Formularios\Consultas\Pessoas\FrmConsultaFuncionario.Designer.cs">
       <DependentUpon>FrmConsultaFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmConsultaMidiaEmprestimo.cs">
+    <Compile Include="Formularios\Consultas\Emprestimos\FrmConsultaMidiaEmprestimo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmConsultaMidiaEmprestimo.Designer.cs">
+    <Compile Include="Formularios\Consultas\Emprestimos\FrmConsultaMidiaEmprestimo.Designer.cs">
       <DependentUpon>FrmConsultaMidiaEmprestimo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmPCAluno.cs">
+    <Compile Include="Formularios\Consultas\Pessoas\FrmPCAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmPCAluno.Designer.cs">
+    <Compile Include="Formularios\Consultas\Pessoas\FrmPCAluno.Designer.cs">
       <DependentUpon>FrmPCAluno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmPCAutor.cs">
+    <Compile Include="Formularios\Consultas\Infraestrutura\FrmPCAutor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmPCAutor.Designer.cs">
+    <Compile Include="Formularios\Consultas\Infraestrutura\FrmPCAutor.Designer.cs">
       <DependentUpon>FrmPCAutor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmPCCDVD.cs">
+    <Compile Include="Formularios\Consultas\Midia\FrmPCCDVD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmPCCDVD.Designer.cs">
+    <Compile Include="Formularios\Consultas\Midia\FrmPCCDVD.Designer.cs">
       <DependentUpon>FrmPCCDVD.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmPCEmprestimo.cs">
+    <Compile Include="Formularios\Consultas\Emprestimos\FrmPCEmprestimo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmPCEmprestimo.Designer.cs">
+    <Compile Include="Formularios\Consultas\Emprestimos\FrmPCEmprestimo.Designer.cs">
       <DependentUpon>FrmPCEmprestimo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmPCJornalEx.cs">
+    <Compile Include="Formularios\Consultas\Midia\FrmPCJornalEx.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmPCJornalEx.Designer.cs">
+    <Compile Include="Formularios\Consultas\Midia\FrmPCJornalEx.Designer.cs">
       <DependentUpon>FrmPCJornalEx.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmPCExtravio.cs">
+    <Compile Include="Formularios\Consultas\Infraestrutura\FrmPCExtravio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmPCExtravio.Designer.cs">
+    <Compile Include="Formularios\Consultas\Infraestrutura\FrmPCExtravio.Designer.cs">
       <DependentUpon>FrmPCExtravio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmPCFuncionario.cs">
+    <Compile Include="Formularios\Consultas\Pessoas\FrmPCFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmPCFuncionario.Designer.cs">
+    <Compile Include="Formularios\Consultas\Pessoas\FrmPCFuncionario.Designer.cs">
       <DependentUpon>FrmPCFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmPCLivro.cs">
+    <Compile Include="Formularios\Consultas\Midia\FrmPCLivro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Consultas\FrmPCLivro.Designer.cs">
+    <Compile Include="Formularios\Consultas\Midia\FrmPCLivro.Designer.cs">
       <DependentUpon>FrmPCLivro.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Modelos\FrmListaBase.cs">
@@ -396,12 +348,6 @@
     <Compile Include="Formularios\Modelos\FrmCadBase.Designer.cs">
       <DependentUpon>FrmCadBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Modelos\FrmCadBaseInfraestrutura.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Modelos\FrmCadBaseInfraestrutura.Designer.cs">
-      <DependentUpon>FrmCadBaseInfraestrutura.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\Modelos\FrmConsultaBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -423,38 +369,20 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
-    <EmbeddedResource Include="Formularios\Cadastros\FrmCadArea.resx">
-      <DependentUpon>FrmCadArea.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Cadastros\FrmCadAssunto.resx">
-      <DependentUpon>FrmCadAssunto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Cadastros\FrmCadAutores.resx">
-      <DependentUpon>FrmCadAutores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Cadastros\FrmCadCargo.resx">
-      <DependentUpon>FrmCadCargo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Cadastros\FrmCadCurso.resx">
-      <DependentUpon>FrmCadCurso.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Cadastros\FrmCadEditora.resx">
-      <DependentUpon>FrmCadEditora.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Cadastros\FrmCadEmprestimo.resx">
+    <EmbeddedResource Include="Formularios\Cadastros\Emprestimos\FrmCadEmprestimo.resx">
       <DependentUpon>FrmCadEmprestimo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Cadastros\FrmCadExtravio.resx">
-      <DependentUpon>FrmCadExtravio.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Cadastros\Infraestrutura\FrmCadCursoT.resx">
+      <DependentUpon>FrmCadCursoT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Cadastros\Infraestrutura\FrmCadTurma.resx">
+      <DependentUpon>FrmCadTurma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cadastros\Pessoas\FrmCadFuncionario.resx">
       <DependentUpon>FrmCadFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cadastros\Pessoas\FrmCadFuncionarioBiblioteca.resx">
       <DependentUpon>FrmCadFuncionarioBiblioteca.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Cadastros\FrmCadGenero.resx">
-      <DependentUpon>FrmCadGenero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cadastros\Midias\FrmCadJornalEx.resx">
       <DependentUpon>FrmCadJornalEx.cs</DependentUpon>
@@ -471,7 +399,7 @@
     <EmbeddedResource Include="Formularios\Cadastros\Midias\FrmCadMapa.resx">
       <DependentUpon>FrmCadMapa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Cadastros\FrmCadMidiaEmprestimo.resx">
+    <EmbeddedResource Include="Formularios\Cadastros\Emprestimos\FrmCadMidiaEmprestimo.resx">
       <DependentUpon>FrmCadMidiaEmprestimo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cadastros\Midias\FrmCadRevistaEx.resx">
@@ -480,43 +408,37 @@
     <EmbeddedResource Include="Formularios\Cadastros\Midias\FrmCadTCC.resx">
       <DependentUpon>FrmCadTCC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Cadastros\FrmCadTurma.resx">
-      <DependentUpon>FrmCadTurma.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cadastros\Pessoas\FrmPonteAluno.resx">
       <DependentUpon>FrmPonteAluno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Cadastros\FrmPonteArea.resx">
+    <EmbeddedResource Include="Formularios\Cadastros\Infraestrutura\FrmPonteArea.resx">
       <DependentUpon>FrmPonteArea.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Cadastros\FrmPonteAssunto.resx">
+    <EmbeddedResource Include="Formularios\Cadastros\Infraestrutura\FrmPonteAssunto.resx">
       <DependentUpon>FrmPonteAssunto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Cadastros\FrmPonteAutores.resx">
+    <EmbeddedResource Include="Formularios\Cadastros\Infraestrutura\FrmPonteAutores.resx">
       <DependentUpon>FrmPonteAutores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Cadastros\FrmPonteCargo.resx">
-      <DependentUpon>FrmPonteCargo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cadastros\Midias\FrmPonteCdDvd.resx">
       <DependentUpon>FrmPonteCdDvd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Cadastros\FrmPonteCurso.resx">
+    <EmbeddedResource Include="Formularios\Cadastros\Infraestrutura\FrmPonteCurso.resx">
       <DependentUpon>FrmPonteCurso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Cadastros\FrmPonteEditora.resx">
+    <EmbeddedResource Include="Formularios\Cadastros\Infraestrutura\FrmPonteEditora.resx">
       <DependentUpon>FrmPonteEditora.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Cadastros\FrmPonteEmprestimo.resx">
+    <EmbeddedResource Include="Formularios\Cadastros\Emprestimos\FrmPonteEmprestimo.resx">
       <DependentUpon>FrmPonteEmprestimo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Cadastros\FrmPonteExtravio.resx">
+    <EmbeddedResource Include="Formularios\Cadastros\Infraestrutura\FrmPonteExtravio.resx">
       <DependentUpon>FrmPonteExtravio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cadastros\Pessoas\FrmPonteFuncionario.resx">
       <DependentUpon>FrmPonteFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Cadastros\FrmPonteGenero.resx">
+    <EmbeddedResource Include="Formularios\Cadastros\Infraestrutura\FrmPonteGenero.resx">
       <DependentUpon>FrmPonteGenero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cadastros\Midias\FrmPonteJornalEx.resx">
@@ -534,46 +456,46 @@
     <EmbeddedResource Include="Formularios\Cadastros\Midias\FrmPonteTCC.resx">
       <DependentUpon>FrmPonteTCC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Cadastros\FrmPonteTurma.resx">
+    <EmbeddedResource Include="Formularios\Cadastros\Infraestrutura\FrmPonteTurma.resx">
       <DependentUpon>FrmPonteTurma.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Consultas\FrmConsultaAluno.resx">
+    <EmbeddedResource Include="Formularios\Consultas\Pessoas\FrmConsultaAluno.resx">
       <DependentUpon>FrmConsultaAluno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Consultas\FrmConsultaEmprestimo.resx">
+    <EmbeddedResource Include="Formularios\Consultas\Emprestimos\FrmConsultaEmprestimo.resx">
       <DependentUpon>FrmConsultaEmprestimo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Consultas\FrmConsultaLivro.resx">
+    <EmbeddedResource Include="Formularios\Consultas\Midia\FrmConsultaLivro.resx">
       <DependentUpon>FrmConsultaLivro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Consultas\FrmConsultaFuncionario.resx">
+    <EmbeddedResource Include="Formularios\Consultas\Pessoas\FrmConsultaFuncionario.resx">
       <DependentUpon>FrmConsultaFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Consultas\FrmConsultaMidiaEmprestimo.resx">
+    <EmbeddedResource Include="Formularios\Consultas\Emprestimos\FrmConsultaMidiaEmprestimo.resx">
       <DependentUpon>FrmConsultaMidiaEmprestimo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Consultas\FrmPCAluno.resx">
+    <EmbeddedResource Include="Formularios\Consultas\Pessoas\FrmPCAluno.resx">
       <DependentUpon>FrmPCAluno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Consultas\FrmPCAutor.resx">
+    <EmbeddedResource Include="Formularios\Consultas\Infraestrutura\FrmPCAutor.resx">
       <DependentUpon>FrmPCAutor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Consultas\FrmPCCDVD.resx">
+    <EmbeddedResource Include="Formularios\Consultas\Midia\FrmPCCDVD.resx">
       <DependentUpon>FrmPCCDVD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Consultas\FrmPCEmprestimo.resx">
+    <EmbeddedResource Include="Formularios\Consultas\Emprestimos\FrmPCEmprestimo.resx">
       <DependentUpon>FrmPCEmprestimo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Consultas\FrmPCJornalEx.resx">
+    <EmbeddedResource Include="Formularios\Consultas\Midia\FrmPCJornalEx.resx">
       <DependentUpon>FrmPCJornalEx.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Consultas\FrmPCExtravio.resx">
+    <EmbeddedResource Include="Formularios\Consultas\Infraestrutura\FrmPCExtravio.resx">
       <DependentUpon>FrmPCExtravio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Consultas\FrmPCFuncionario.resx">
+    <EmbeddedResource Include="Formularios\Consultas\Pessoas\FrmPCFuncionario.resx">
       <DependentUpon>FrmPCFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Consultas\FrmPCLivro.resx">
+    <EmbeddedResource Include="Formularios\Consultas\Midia\FrmPCLivro.resx">
       <DependentUpon>FrmPCLivro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Modelos\FrmListaBase.resx">
@@ -590,9 +512,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Modelos\FrmCadBase.resx">
       <DependentUpon>FrmCadBase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Modelos\FrmCadBaseInfraestrutura.resx">
-      <DependentUpon>FrmCadBaseInfraestrutura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Modelos\FrmConsultaBase.resx">
       <DependentUpon>FrmConsultaBase.cs</DependentUpon>
