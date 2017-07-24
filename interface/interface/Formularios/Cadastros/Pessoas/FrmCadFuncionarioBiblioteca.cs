@@ -24,7 +24,7 @@ namespace Interface.Formularios.Cadastros
             }
         }
 
-        //Construtor Padrão
+        //Construtor padrão
         public FrmCadFuncionarioBiblioteca()
         {
             try

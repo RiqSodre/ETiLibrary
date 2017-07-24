@@ -86,14 +86,12 @@ namespace BLL
                 acesso.AdicionarParametros("@Descricao", Descricao);
                 DataTable dataTableCursos = acesso.ExecutarConsulta(CommandType.StoredProcedure, 
                     "uspCursoConsultar");
-
                 foreach (DataRow dataRow in dataTableCursos.Rows)
                 {
                     Curso curso = new Curso();
 
                     curso.CodCurso = (int)dataRow["CodCurso"];
                     curso.Descricao = (string)dataRow["Descricao"];
-
                     cursoList.Add(curso);
                 }
 

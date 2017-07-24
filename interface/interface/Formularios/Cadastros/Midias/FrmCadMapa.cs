@@ -26,7 +26,7 @@ namespace Interface.Formularios.Cadastros
             }
         }
 
-        //Construtor Padrão
+        //Construtor padrão
         public FrmCadMapa()
         {
             try

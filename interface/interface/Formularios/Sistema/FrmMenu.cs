@@ -194,7 +194,7 @@ namespace Interface.Formularios.Sistema
         //Abre o form de cadastro de áreas
         private void áreaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-         /*   try
+            try
             {
                 existe = false;
                 foreach (Form form in this.MdiChildren)
@@ -220,7 +220,7 @@ namespace Interface.Formularios.Sistema
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK,
                                        MessageBoxIcon.Error);
-            }*/
+            }
         }
         //Abre o form de cadastro de jornais -Implementar
         private void jornalToolStripMenuItem_Click(object sender, EventArgs e)
@@ -251,7 +251,7 @@ namespace Interface.Formularios.Sistema
         //Abre o form de cadastro de editoras
         private void editoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*try
+            try
             {
                 existe = false;
                 foreach (Form form in this.MdiChildren)
@@ -277,7 +277,7 @@ namespace Interface.Formularios.Sistema
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK,
                                        MessageBoxIcon.Error);
-            }*/
+            }
         }
         //Abre o form de cadastro de gêneros
         private void genêroToolStripMenuItem_Click(object sender, EventArgs e)
@@ -313,12 +313,12 @@ namespace Interface.Formularios.Sistema
         //Abre o form de cadastro de autores
         private void autoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          /*  try
+            try
             {
                 existe = false;
                 foreach (Form form in this.MdiChildren)
                 {
-                    if (form.Name == "FrmCadAutores")
+                    if (form.Name == "FrmCadAutor")
                     {
                         existe = VerificaForm(form, existe);
                         break;
@@ -326,9 +326,9 @@ namespace Interface.Formularios.Sistema
                 }
                 if (!existe)
                 {
-                    FrmCadAutores cadautores = new FrmCadAutores();
-                    cadautores.MdiParent = this;
-                    cadautores.Show();
+                    FrmCadAutor cadautor = new FrmCadAutor();
+                    cadautor.MdiParent = this;
+                    cadautor.Show();
                 }
                 else
                 {
@@ -339,7 +339,7 @@ namespace Interface.Formularios.Sistema
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK,
                                        MessageBoxIcon.Error);
-            }*/
+            }
         }
         //Abre o form de cadastro de extravios
         private void extraviosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -375,7 +375,7 @@ namespace Interface.Formularios.Sistema
         //Abre o form de cadastro de assuntos
         private void assuntosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          /*  try
+            try
             {
                 existe = false;
                 foreach (Form form in this.MdiChildren)
@@ -401,7 +401,7 @@ namespace Interface.Formularios.Sistema
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK,
                                        MessageBoxIcon.Error);
-            }*/
+            }
         }
         //Abre o form de consulta de alunos
         private void alunosToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -719,7 +719,7 @@ namespace Interface.Formularios.Sistema
                 lblHora.Text = DateTime.Now.ToShortTimeString();
                 lblData.Text = DateTime.Now.ToShortDateString();
                 int hora = Convert.ToInt32(lblHora.Text.Substring(0, 2));
-                if(hora > 18 || hora < 5)
+                if(hora > 17 || hora < 6)
                 {
                     lblMensagem.Text = "Boa noite";
                 }

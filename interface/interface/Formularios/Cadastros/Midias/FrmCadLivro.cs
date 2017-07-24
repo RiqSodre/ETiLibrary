@@ -6,6 +6,7 @@ using DTO.Infraestrutura_de_Midia;
 using BLL;
 using DTO.Midia;
 using DTO.Emprestimos;
+using MetroFramework.Controls;
 
 namespace Interface.Formularios.Cadastros
 {
@@ -505,7 +506,7 @@ namespace Interface.Formularios.Cadastros
         //Carrega as combobox com seu conteúdo
         private void CarregaCombo()
         {
-            //Cria o autocomplete da combobox Autorres
+            //Cria o autocomplete da combobox Autores
             AutoCompleteStringCollection dicAutor = new AutoCompleteStringCollection();
             foreach (Autor autor in autorBLL.CarregaAutores())
             {
@@ -877,40 +878,24 @@ namespace Interface.Formularios.Cadastros
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Mostra o conteúdo da combobox
-        private void cbGenero_TextChanged(object sender, EventArgs e)
+        //Mostra o conteúdo em uma toolTip
+        private void exibe_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                toolExibe(cbGenero, cbGenero.Text);
+                if (sender is MetroTextBox)
+                {
+                    toolExibe((sender as MetroTextBox), (sender as MetroTextBox).Text);
+                }
+                else
+                {
+                    toolExibe((sender as ComboBox), (sender as ComboBox).Text);
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        //Mostra o conteúdo da combobox
-        private void cbAutor_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                toolExibe(cbAutor, cbAutor.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        //Mostra o conteúdo da combobox
-        private void cbAssunto_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                toolExibe(cbAssunto, cbAssunto.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
             }
         }
         //Mostra o conteúdo da combobox

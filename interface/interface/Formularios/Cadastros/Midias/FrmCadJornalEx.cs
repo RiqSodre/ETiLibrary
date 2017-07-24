@@ -27,7 +27,7 @@ namespace Interface.Formularios.Cadastros
             }
         }
 
-        //Construtor Padrão
+        //Construtor padrão
         public FrmCadJornalEx()
         {
             try

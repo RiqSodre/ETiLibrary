@@ -1,20 +1,16 @@
 ﻿using BLL;
 using DTO.Infraestrutura_de_Pessoa;
+using Interface.Formularios.Modelos;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Interface.Formularios.Cadastros.Infraestrutura
 {
-    public partial class FrmCadCursoT : Interface.Formularios.Modelos.FrmCadBase
+    public partial class FrmCadCursoT : FrmCadBase
     {
         private CursoBLL cursoBLL = new CursoBLL();
         private TurmaBLL turmaBLL = new TurmaBLL();
-        private int[] codTurmas = new int[20];
+        private int[] codTurmas;
         private Turma turmaBase = new Turma();
         public Turma Turma
         {
@@ -29,7 +25,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
             }
         }
 
-        //Construtor Padrão
+        //Construtor padrão
         public FrmCadCursoT()
         {
             try
@@ -120,11 +116,11 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                             turma.Descricao = (string)dataRow.Cells["clnTurma"].Value;
                             turma.Periodo = (string)dataRow.Cells["clnPeriodo"].Value;
                             turma.Curso.CodCurso = cursoAlt.CodCurso;
-                            for(int i = 0; i<20; i++)
+                            for(int cont = 0; cont<codTurmas.GetLength(0); cont++)
                             {
-                                if(codTurmas[i] == (int)dataRow.Cells["clnCodTurma"].Value && (int)dataRow.Cells["clnCodTurma"].Value != 0)
+                                if(codTurmas[cont] == (int)dataRow.Cells["clnCodTurma"].Value && (int)dataRow.Cells["clnCodTurma"].Value != 0)
                                 {
-                                    codTurmas[i] = 0;
+                                    codTurmas[cont] = 0;
                                     novo = false;
                                 }
                             }
@@ -139,11 +135,11 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                             novo = true;
                         }
                         //Excluir turmas retiradas
-                        for (int i = 0; i < 20; i++)
+                        for (int cont = 0; cont < codTurmas.GetLength(0); cont++)
                         {
-                            if (codTurmas[i] != 0)
+                            if (codTurmas[cont] != 0)
                             {
-                                turmaBLL.TurmaExcluir(codTurmas[i]);
+                                turmaBLL.TurmaExcluir(codTurmas[cont]);
                             }
                         }
                     }
@@ -264,7 +260,13 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                     foreach (Turma turma in turmaBLL.CarregaTurmas((int)cbCurso.SelectedValue))
                     {
                         dataGridTurmas.Rows.Add(turma.CodTurma, turma.Descricao, turma.Periodo);
-                        codTurmas[cont] = turma.CodTurma;
+                        cont++;
+                    }
+                    codTurmas = new int[cont];
+                    cont = 0;
+                    foreach(DataGridViewRow dataRow in dataGridTurmas.Rows)
+                    {
+                        codTurmas[cont] = (int)dataRow.Cells["clnCodTurma"].Value;
                         cont++;
                     }
                 }
@@ -291,7 +293,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
         {
             try
             {
-                FrmCadTurma frmCadTurma = new FrmCadTurma(this);
+                FrmPonteTurma frmCadTurma = new FrmPonteTurma(this);
                 if(frmCadTurma.ShowDialog() == DialogResult.OK)
                 {
                     bool resultado = true;

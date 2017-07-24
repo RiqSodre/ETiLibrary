@@ -10,12 +10,12 @@ namespace BLL
         AcessoDadosSqlServer acesso = new AcessoDadosSqlServer();
 
         //Inserir o assunto
-        public string AssuntoInserir(Assunto assunto)
+        public string AssuntoInserir(string Descricao)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Descricao", assunto.Descricao);
+                acesso.AdicionarParametros("@Descricao", Descricao);
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspAssuntoInserir");
             }
@@ -43,12 +43,12 @@ namespace BLL
         }
 
         //Excluir o assunto
-        public string AssuntoExcluir(Assunto assunto)
+        public string AssuntoExcluir(int CodAssunto)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@CodAssunto", assunto.CodAssunto);
+                acesso.AdicionarParametros("@CodAssunto", CodAssunto);
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspAssuntoExcluir");
             }

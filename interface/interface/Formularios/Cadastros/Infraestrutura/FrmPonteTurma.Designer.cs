@@ -1,4 +1,4 @@
-﻿namespace Interface.Formularios.Cadastros
+﻿namespace Interface.Formularios.Cadastros.Infraestrutura
 {
     partial class FrmPonteTurma
     {
@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.cbPeriodo = new System.Windows.Forms.ComboBox();
+            this.lblPeriodo = new MetroFramework.Controls.MetroLabel();
             this.pnlForm.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnFechar
-            // 
-            this.btnFechar.FlatAppearance.BorderSize = 0;
             // 
             // txtTexto
             // 
@@ -50,14 +48,67 @@
             this.txtTexto.CustomButton.UseSelectable = true;
             this.txtTexto.CustomButton.Visible = false;
             this.txtTexto.Lines = new string[0];
+            this.txtTexto.Location = new System.Drawing.Point(51, 100);
             // 
-            // FrmPonteTurma
+            // btnAcao
+            // 
+            this.btnAcao.Location = new System.Drawing.Point(229, 224);
+            this.btnAcao.Text = "Salvar";
+            this.btnAcao.Click += new System.EventHandler(this.btnAcao_Click);
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.FlatAppearance.BorderSize = 0;
+            // 
+            // lblForm
+            // 
+            this.lblForm.Size = new System.Drawing.Size(108, 16);
+            this.lblForm.Text = "Cadastro: Turma";
+            // 
+            // lblTexto
+            // 
+            this.lblTexto.Location = new System.Drawing.Point(84, 70);
+            this.lblTexto.Size = new System.Drawing.Size(158, 19);
+            this.lblTexto.Text = "Insira o nome da Turma:";
+            // 
+            // cbPeriodo
+            // 
+            this.cbPeriodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPeriodo.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPeriodo.FormattingEnabled = true;
+            this.cbPeriodo.Items.AddRange(new object[] {
+            "Matuitino",
+            "Vespertino",
+            "Noturno"});
+            this.cbPeriodo.Location = new System.Drawing.Point(89, 171);
+            this.cbPeriodo.Name = "cbPeriodo";
+            this.cbPeriodo.Size = new System.Drawing.Size(149, 23);
+            this.cbPeriodo.TabIndex = 218;
+            // 
+            // lblPeriodo
+            // 
+            this.lblPeriodo.AutoSize = true;
+            this.lblPeriodo.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblPeriodo.Location = new System.Drawing.Point(134, 141);
+            this.lblPeriodo.Name = "lblPeriodo";
+            this.lblPeriodo.Size = new System.Drawing.Size(58, 19);
+            this.lblPeriodo.TabIndex = 219;
+            this.lblPeriodo.Text = "Período:";
+            // 
+            // FrmCadTurma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(327, 223);
-            this.Name = "FrmPonteTurma";
-            this.Load += new System.EventHandler(this.FrmPonteTurma_Load);
+            this.ClientSize = new System.Drawing.Size(327, 280);
+            this.Controls.Add(this.cbPeriodo);
+            this.Controls.Add(this.lblPeriodo);
+            this.Location = new System.Drawing.Point(0, 0);
+            this.Name = "FrmCadTurma";
+            this.Controls.SetChildIndex(this.txtTexto, 0);
+            this.Controls.SetChildIndex(this.pnlForm, 0);
+            this.Controls.SetChildIndex(this.btnAcao, 0);
+            this.Controls.SetChildIndex(this.lblTexto, 0);
+            this.Controls.SetChildIndex(this.lblPeriodo, 0);
+            this.Controls.SetChildIndex(this.cbPeriodo, 0);
             this.pnlForm.ResumeLayout(false);
             this.pnlForm.PerformLayout();
             this.ResumeLayout(false);
@@ -66,5 +117,8 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.ComboBox cbPeriodo;
+        private MetroFramework.Controls.MetroLabel lblPeriodo;
     }
 }

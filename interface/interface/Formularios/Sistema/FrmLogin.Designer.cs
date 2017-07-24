@@ -48,7 +48,7 @@
             // 
             this.picboxLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picboxLogo.BackgroundImage")));
             this.picboxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picboxLogo.Location = new System.Drawing.Point(105, 17);
+            this.picboxLogo.Location = new System.Drawing.Point(105, 50);
             this.picboxLogo.Name = "picboxLogo";
             this.picboxLogo.Size = new System.Drawing.Size(150, 150);
             this.picboxLogo.TabIndex = 26;
@@ -57,7 +57,7 @@
             // picBoxSistema
             // 
             this.picBoxSistema.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxSistema.BackgroundImage")));
-            this.picBoxSistema.Location = new System.Drawing.Point(54, 159);
+            this.picBoxSistema.Location = new System.Drawing.Point(54, 205);
             this.picBoxSistema.Name = "picBoxSistema";
             this.picBoxSistema.Size = new System.Drawing.Size(260, 21);
             this.picBoxSistema.TabIndex = 25;
@@ -95,7 +95,7 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblUsuario.Location = new System.Drawing.Point(20, 195);
+            this.lblUsuario.Location = new System.Drawing.Point(20, 247);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(131, 19);
             this.lblUsuario.TabIndex = 99999;
@@ -106,7 +106,7 @@
             // 
             this.lblSenha.AutoSize = true;
             this.lblSenha.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblSenha.Location = new System.Drawing.Point(20, 255);
+            this.lblSenha.Location = new System.Drawing.Point(20, 307);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(53, 19);
             this.lblSenha.TabIndex = 999999;
@@ -117,7 +117,7 @@
             // 
             this.lblRecSenha.DisplayFocus = true;
             this.lblRecSenha.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblRecSenha.Location = new System.Drawing.Point(118, 313);
+            this.lblRecSenha.Location = new System.Drawing.Point(118, 365);
             this.lblRecSenha.Name = "lblRecSenha";
             this.lblRecSenha.Size = new System.Drawing.Size(125, 23);
             this.lblRecSenha.TabIndex = 0;
@@ -136,7 +136,7 @@
             this.lblSistema.FontSize = MetroFramework.MetroLabelSize.Small;
             this.lblSistema.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblSistema.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblSistema.Location = new System.Drawing.Point(8, 424);
+            this.lblSistema.Location = new System.Drawing.Point(8, 476);
             this.lblSistema.Name = "lblSistema";
             this.lblSistema.Size = new System.Drawing.Size(221, 15);
             this.lblSistema.TabIndex = 999999;
@@ -149,7 +149,7 @@
             this.btnEntrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEntrar.BackgroundImage")));
             this.btnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnEntrar.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btnEntrar.Location = new System.Drawing.Point(25, 344);
+            this.btnEntrar.Location = new System.Drawing.Point(25, 396);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(315, 37);
             this.btnEntrar.TabIndex = 2;
@@ -175,7 +175,7 @@
             this.txtNome.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtNome.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
             this.txtNome.Lines = new string[0];
-            this.txtNome.Location = new System.Drawing.Point(25, 215);
+            this.txtNome.Location = new System.Drawing.Point(25, 267);
             this.txtNome.MaxLength = 20;
             this.txtNome.Name = "txtNome";
             this.txtNome.PasswordChar = '\0';
@@ -207,7 +207,7 @@
             this.txtSenha.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtSenha.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
             this.txtSenha.Lines = new string[0];
-            this.txtSenha.Location = new System.Drawing.Point(25, 275);
+            this.txtSenha.Location = new System.Drawing.Point(25, 327);
             this.txtSenha.MaxLength = 12;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
@@ -228,7 +228,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(361, 448);
+            this.ClientSize = new System.Drawing.Size(361, 500);
             this.ControlBox = false;
             this.Controls.Add(this.picBoxSistema);
             this.Controls.Add(this.txtSenha);

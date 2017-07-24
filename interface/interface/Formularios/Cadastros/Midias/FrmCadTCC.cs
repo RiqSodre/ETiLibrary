@@ -1,16 +1,13 @@
 ﻿using BLL;
 using DTO.Midia;
+using Interface.Formularios.Modelos;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Interface.Formularios.Cadastros
 {
-    public partial class FrmCadTCC : Interface.Formularios.Modelos.FrmCadBase
+    public partial class FrmCadTCC : FrmCadBase
     {
         private AreaBLL areaBLL = new AreaBLL();
         private MidiaBLL midiaBLL = new MidiaBLL();
@@ -29,7 +26,7 @@ namespace Interface.Formularios.Cadastros
             }
         }
 
-        //Construtor  Padrão
+        //Construtor  padrão
         public FrmCadTCC()
         {
             try

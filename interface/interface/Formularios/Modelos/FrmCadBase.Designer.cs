@@ -101,7 +101,7 @@
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(88, 41);
             this.btnExcluir.TabIndex = 26;
-            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.Text = "&Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             // 
             // btnAlterar
@@ -112,7 +112,7 @@
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(88, 41);
             this.btnAlterar.TabIndex = 25;
-            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.Text = "&Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
             // 
             // btnNovo
@@ -123,7 +123,7 @@
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(88, 41);
             this.btnNovo.TabIndex = 24;
-            this.btnNovo.Text = "Novo";
+            this.btnNovo.Text = "&Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
@@ -132,7 +132,7 @@
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 104;
-            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.UseSelectable = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 

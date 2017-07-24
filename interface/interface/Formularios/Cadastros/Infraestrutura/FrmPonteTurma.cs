@@ -1,26 +1,52 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Interface.Formularios.Modelos;
 
-namespace Interface.Formularios.Cadastros
+namespace Interface.Formularios.Cadastros.Infraestrutura
 {
-    public partial class FrmPonteTurma : FrmPonte
+    public partial class FrmPonteTurma : Interface.Formularios.Modelos.FrmPonte
     {
-        public FrmPonteTurma()
-        {
-            InitializeComponent();
-        }
+        private FrmCadCursoT frmCadCursoTBase = new FrmCadCursoT();
 
-        private void FrmPonteTurma_Load(object sender, EventArgs e)
+        //Construtor padrão
+        public FrmPonteTurma(FrmCadCursoT frmCadCursoT)
         {
-            lblTexto.Text = "Digite o código da Turma:";
+            try
+            {
+                InitializeComponent();
+                frmCadCursoTBase = frmCadCursoT;
+                cbPeriodo.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
+            }
+        }
+        //Salva a turma que sera passada ao form de cadastro
+        protected override void btnAcao_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtTexto.Text.Length == 0)
+                {
+                    MessageBox.Show(this, "Insira o nome da Turma que deseja cadastrar no campo informado.", "Atenção", MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                    return;
+                }
+                else if (txtTexto.Text.Length < 3)
+                {
+                    MessageBox.Show(this, "O nome da Turma deve conter no mínimo 3 caracteres.", "Atenção", MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                    return;
+                }
+                frmCadCursoTBase.Turma.Descricao = txtTexto.Text;
+                frmCadCursoTBase.Turma.Periodo = cbPeriodo.Text;
+                DialogResult = DialogResult.OK;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

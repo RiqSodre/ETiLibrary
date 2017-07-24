@@ -10,12 +10,12 @@ namespace BLL
         AcessoDadosSqlServer acesso = new AcessoDadosSqlServer();
 
         //Inserir a editora
-        public string EditoraInserir(Editora editora)
+        public string EditoraInserir(string Nome)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Nome", editora.Nome);
+                acesso.AdicionarParametros("@Nome", Nome);
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspEditoraInserir");
             }
@@ -43,12 +43,12 @@ namespace BLL
         }
 
         //Excluir a editora
-        public string EditoraExcluir(Editora editora)
+        public string EditoraExcluir(int CodEditora)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@CodEditora", editora.CodEditora);
+                acesso.AdicionarParametros("@CodEditora", CodEditora);
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspEditoraExcluir");
             }

@@ -10,12 +10,12 @@ namespace BLL
         AcessoDadosSqlServer acesso = new AcessoDadosSqlServer();
 
         //Inserir a area
-        public string AreaInserir(Area area)
+        public string AreaInserir(string Descricao)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Descricao", area.Descricao);
+                acesso.AdicionarParametros("@Descricao", Descricao);
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspAreaInserir");
             }
@@ -43,12 +43,12 @@ namespace BLL
         }
 
         //Excluir a area
-        public string AreaExcluir(Area area)
+        public string AreaExcluir(int CodArea)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@CodArea", area.CodArea);
+                acesso.AdicionarParametros("@CodArea", CodArea);
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspAreaExcluir");
             }
