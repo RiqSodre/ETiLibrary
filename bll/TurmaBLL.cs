@@ -63,21 +63,17 @@ namespace BLL
             try
             {
                 TurmaList turmaList = new TurmaList();
-
                 acesso.LimparParametros();
                 DataTable dataTableTurmas = acesso.ExecutarConsulta(CommandType.Text,
                     "SELECT CodTurma, Descricao, Periodo FROM tblTurma WHERE CodCurso = "+CodCurso);
-
                 foreach(DataRow dataRow in dataTableTurmas.Rows)
                 {
                     Turma turma = new Turma();
-
                     turma.CodTurma = (int)dataRow["CodTurma"];
                     turma.Descricao = (string)dataRow["Descricao"];
                     turma.Periodo = (string)dataRow["Periodo"];
                     turmaList.Add(turma);
                 }
-
                 return turmaList;
             }
             catch(Exception ex)
@@ -91,25 +87,20 @@ namespace BLL
             try
             {
                 TurmaList turmaList = new TurmaList();
-
                 acesso.LimparParametros();
                 acesso.AdicionarParametros("@Descricao", Descricao);
                 DataTable dataTableTurmas = acesso.ExecutarConsulta(CommandType.StoredProcedure, 
                     "uspTurmaConsultar");
-
                 foreach (DataRow dataRow in dataTableTurmas.Rows)
                 {
                     Turma turma = new Turma();
-
                     turma.CodTurma = (int)dataRow["CodTurma"];
                     turma.Descricao = (string)dataRow["Turma"];
                     turma.Periodo = (string)dataRow["Periodo"];
                     turma.Curso.CodCurso = (int)dataRow["CodCurso"];
                     turma.Curso.Descricao = (string)dataRow["Curso"];
-
                     turmaList.Add(turma);
                 }
-
                 return turmaList;
             }
             catch (Exception ex)

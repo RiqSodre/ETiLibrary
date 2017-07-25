@@ -1,6 +1,7 @@
 ﻿using BLL;
 using DTO.Infraestrutura_de_Pessoa;
 using Interface.Formularios.Modelos;
+using MetroFramework.Controls;
 using System;
 using System.Windows.Forms;
 
@@ -101,7 +102,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                             turmaBLL.TurmaInserir(turmaAdd);
                         }
                     }
-                    else //Alterar
+                    else 
                     {
                         //Variaveis 
                         bool novo = true;
@@ -144,7 +145,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                         }
                     }
                 }
-                else //Excluir
+                else
                 {
                     if (MessageBox.Show(this, "Deseja excluir este Curso e suas Turmas?", "Atenção", MessageBoxButtons.YesNo,
                               MessageBoxIcon.Information) == DialogResult.Yes)

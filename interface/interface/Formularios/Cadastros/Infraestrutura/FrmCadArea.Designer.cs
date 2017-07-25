@@ -129,7 +129,7 @@
             this.txtArea.UseSelectable = true;
             this.txtArea.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtArea.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtArea.TextChanged += new System.EventHandler(this.txtArea_TextChanged);
+            this.txtArea.TextChanged += new System.EventHandler(this.exibe_TextChanged);
             // 
             // cbArea
             // 
@@ -142,7 +142,7 @@
             this.cbArea.Size = new System.Drawing.Size(149, 23);
             this.cbArea.TabIndex = 218;
             this.cbArea.ValueMember = "CodArea";
-            this.cbArea.SelectedIndexChanged += new System.EventHandler(this.cbArea_SelectedIndexChanged);
+            this.cbArea.TextChanged += new System.EventHandler(this.exibe_TextChanged);
             // 
             // lblcbArea
             // 

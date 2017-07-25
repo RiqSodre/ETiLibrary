@@ -55,8 +55,3 @@ C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\DAL\bin\Debug\DA
 C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\DAL\bin\Debug\DAL.pdb
 C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\DAL\obj\Debug\DAL.dll
 C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\DAL\obj\Debug\DAL.pdb
-C:\Users\Giovanni Hessel\Desktop\Prj_ETiLibrary\ETiLibrary\DAL\bin\Debug\DAL.dll.config
-C:\Users\Giovanni Hessel\Desktop\Prj_ETiLibrary\ETiLibrary\DAL\bin\Debug\DAL.dll
-C:\Users\Giovanni Hessel\Desktop\Prj_ETiLibrary\ETiLibrary\DAL\bin\Debug\DAL.pdb
-C:\Users\Giovanni Hessel\Desktop\Prj_ETiLibrary\ETiLibrary\DAL\obj\Debug\DAL.dll
-C:\Users\Giovanni Hessel\Desktop\Prj_ETiLibrary\ETiLibrary\DAL\obj\Debug\DAL.pdb

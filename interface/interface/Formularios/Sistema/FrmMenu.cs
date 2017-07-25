@@ -222,12 +222,30 @@ namespace Interface.Formularios.Sistema
                                        MessageBoxIcon.Error);
             }
         }
-        //Abre o form de cadastro de jornais -Implementar
+        //Abre o form de cadastro de jornais
         private void jornalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
-                //implementar
+                existe = false;
+                foreach (Form form in this.MdiChildren)
+                {
+                    if (form.Name == "FrmCadJornal")
+                    {
+                        existe = VerificaForm(form, existe);
+                        break;
+                    }
+                }
+                if (!existe)
+                {
+                    FrmCadJornal cadjornal = new FrmCadJornal();
+                    cadjornal.MdiParent = this;
+                    cadjornal.Show();
+                }
+                else
+                {
+                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
             catch (Exception ex)
             {
@@ -240,7 +258,25 @@ namespace Interface.Formularios.Sistema
         {
             try
             {
-                //implementar
+                existe = false;
+                foreach (Form form in this.MdiChildren)
+                {
+                    if (form.Name == "FrmCadRevista")
+                    {
+                        existe = VerificaForm(form, existe);
+                        break;
+                    }
+                }
+                if (!existe)
+                {
+                    FrmCadRevista cadrevista = new FrmCadRevista();
+                    cadrevista.MdiParent = this;
+                    cadrevista.Show();
+                }
+                else
+                {
+                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
             catch (Exception ex)
             {
@@ -282,7 +318,7 @@ namespace Interface.Formularios.Sistema
         //Abre o form de cadastro de gêneros
         private void genêroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          /*  try
+            try
             {
                 existe = false;
                 foreach (Form form in this.MdiChildren)
@@ -308,7 +344,7 @@ namespace Interface.Formularios.Sistema
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK,
                                        MessageBoxIcon.Error);
-            }*/
+            }
         }
         //Abre o form de cadastro de autores
         private void autoresToolStripMenuItem_Click(object sender, EventArgs e)

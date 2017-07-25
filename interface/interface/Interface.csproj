@@ -102,6 +102,18 @@
     <Compile Include="Formularios\Cadastros\Infraestrutura\FrmCadGenero.Designer.cs">
       <DependentUpon>FrmCadGenero.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Cadastros\Infraestrutura\FrmCadJornal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Cadastros\Infraestrutura\FrmCadJornal.Designer.cs">
+      <DependentUpon>FrmCadJornal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Cadastros\Infraestrutura\FrmCadRevista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Cadastros\Infraestrutura\FrmCadRevista.Designer.cs">
+      <DependentUpon>FrmCadRevista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Cadastros\Infraestrutura\FrmPonteTurma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -368,6 +380,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cadastros\Infraestrutura\FrmCadEditora.resx">
       <DependentUpon>FrmCadEditora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Cadastros\Infraestrutura\FrmCadGenero.resx">
+      <DependentUpon>FrmCadGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Cadastros\Infraestrutura\FrmCadJornal.resx">
+      <DependentUpon>FrmCadJornal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Cadastros\Infraestrutura\FrmCadRevista.resx">
+      <DependentUpon>FrmCadRevista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cadastros\Infraestrutura\FrmPonteTurma.resx">
       <DependentUpon>FrmPonteTurma.cs</DependentUpon>

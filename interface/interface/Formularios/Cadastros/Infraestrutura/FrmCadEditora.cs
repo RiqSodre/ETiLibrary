@@ -10,6 +10,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
     public partial class FrmCadEditora : FrmCadBase
     {
         private EditoraBLL editoraBLL = new EditoraBLL();
+        private Editora editoraBase = new Editora();
 
         //Construtor padrão
         public FrmCadEditora()
@@ -20,7 +21,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 LimparComponentes();
                 Habilita(false);
                 cbEditora.Enabled = true;
-                CarregaAssuntos();
+                CarregaEditoras();
                 cbEditora.Focus();
             }
             catch (Exception ex)
@@ -47,11 +48,6 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
         {
             try
             {
-                Editora editora = new Editora();
-                if(cbEditora.Text != "")
-                {
-                    editora = editoraBLL.CarregaEditora(cbEditora.Text);
-                } 
                 if (btnAcao.Text.Equals("Salvar") || btnAcao.Text.Equals("Alterar"))
                 {
                     //Validações campo Editora
@@ -74,8 +70,8 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                     }
                     else
                     {
-                        editora.Nome = txtEditora.Text;
-                        resultado = editoraBLL.EditoraAlterar(editora);
+                        editoraBase.Nome = txtEditora.Text;
+                        resultado = editoraBLL.EditoraAlterar(editoraBase);
                     }
                 }
                 else
@@ -83,14 +79,14 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                     if (MessageBox.Show(this, "Deseja excluir esta Editora?", "Atenção", MessageBoxButtons.YesNo,
                               MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        resultado = editoraBLL.EditoraExcluir(editora.CodEditora);
+                        resultado = editoraBLL.EditoraExcluir(editoraBase.CodEditora);
                     }
                 }
                 MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
                                    MessageBoxIcon.Information);
                 if (resultado.Contains("sucesso"))
                 {
-                    CarregaAssuntos();
+                    CarregaEditoras();
                     btnCancelar_Click(sender, e);
                 }
             }
@@ -115,7 +111,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Botão Alterar - Habilita a edição do curso e suas turmas
+        //Botão Alterar - Habilita a edição da editora
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             try
@@ -127,8 +123,8 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 }
                 else
                 {
-                    Editora editora = editoraBLL.CarregaEditora(cbEditora.Text);
-                    if (editora.Nome.Equals(""))
+                    editoraBase = editoraBLL.CarregaEditora(cbEditora.Text);
+                    if (editoraBase.Nome.Equals(""))
                     {
                         MessageBox.Show(this, "Selecione uma editora da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
@@ -145,7 +141,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Botão Excluir - Habilita a exclusão do curso e suas turmas
+        //Botão Excluir - Habilita a exclusão da editora
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             try
@@ -157,8 +153,8 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 }
                 else
                 {
-                    Editora editora = editoraBLL.CarregaEditora(cbEditora.Text);
-                    if (editora.Nome.Equals(""))
+                    editoraBase = editoraBLL.CarregaEditora(cbEditora.Text);
+                    if (editoraBase.Nome.Equals(""))
                     {
                         MessageBox.Show(this, "Selecione uma editora da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
@@ -213,7 +209,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
             }
         }
         //Cria o autocomplete da combobox Editora
-        private void CarregaAssuntos()
+        private void CarregaEditoras()
         {
             AutoCompleteStringCollection dicEditora = new AutoCompleteStringCollection();
             foreach (Editora editora in editoraBLL.CarregaEditoras())

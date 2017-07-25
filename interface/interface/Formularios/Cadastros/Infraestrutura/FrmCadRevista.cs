@@ -3,26 +3,46 @@ using DTO.Infraestrutura_de_Midia;
 using Interface.Formularios.Modelos;
 using MetroFramework.Controls;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
 using System.Windows.Forms;
 
 namespace Interface.Formularios.Cadastros.Infraestrutura
 {
-    public partial class FrmCadGenero : FrmCadBase
+    public partial class FrmCadRevista : FrmCadBase
     {
-        private GeneroBLL generoBLL = new GeneroBLL();
-        private Genero generoBase = new Genero();
+        private RevistaBLL revistaBLL = new RevistaBLL();
+        private EditoraBLL editoraBLL = new EditoraBLL();
+        private Revista revistaBase = new Revista();
 
-        //Construtor padrao
-        public FrmCadGenero()
+        //Construtor padrão
+        public FrmCadRevista()
         {
             try
             {
                 InitializeComponent();
                 LimparComponentes();
                 Habilita(false);
-                cbGenero.Enabled = true;
-                CarregaGeneros();
-                cbGenero.Focus();
+                cbRevista.Enabled = true;
+                CarregaCampos();
+                cbRevista.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
+            }
+        }
+        //Construtor carregando a revista
+        public FrmCadRevista(Revista revista) : this()
+        {
+            try
+            {
+                cbRevista.Text = revista.Nome;
+                cbEditora.Text = revista.Editora.Nome;
             }
             catch (Exception ex)
             {
@@ -37,43 +57,53 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
             {
                 if (btnAcao.Text.Equals("Salvar") || btnAcao.Text.Equals("Alterar"))
                 {
-                    //Validações campo Editora
-                    if (txtGenero.Text.Length == 0)
+                    //Validações campo Nome
+                    if (txtRevista.Text.Length == 0)
                     {
-                        MessageBox.Show(this, "O campo Gênero é obrigatório.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Revista é obrigatório.", "Atenção", MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
                         return;
                     }
-                    else if (txtGenero.Text.Length < 4)
+                    else if (txtRevista.Text.Length < 3)
                     {
-                        MessageBox.Show(this, "O campo Gênero deve conter no minimo 4 caracteres.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Revista deve conter no minimo 3 caracteres.", "Atenção", MessageBoxButtons.OK,
                            MessageBoxIcon.Warning);
+                        return;
+                    }
+                    else
+                    {
+                        revistaBase.Nome = txtRevista.Text;
+                    }
+                    //Validações campo Editora
+                    revistaBase.Editora = editoraBLL.CarregaEditora(cbEditora.Text);
+                    if (revistaBase.Editora.Nome.Equals(""))
+                    {
+                        MessageBox.Show(this, "Selecione uma editora da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     //Execução
                     if (btnAcao.Text.Equals("Salvar"))
                     {
-                        resultado = generoBLL.GeneroInserir(txtGenero.Text);
+                        resultado = revistaBLL.RevistaInserir(revistaBase);
                     }
                     else
                     {
-                        generoBase.Descricao = txtGenero.Text;
-                        resultado = generoBLL.GeneroAlterar(generoBase);
+                        resultado = revistaBLL.RevistaAlterar(revistaBase);
                     }
                 }
                 else
                 {
-                    if (MessageBox.Show(this, "Deseja excluir este gênero?", "Atenção", MessageBoxButtons.YesNo,
+                    if (MessageBox.Show(this, "Deseja excluir esta revista?", "Atenção", MessageBoxButtons.YesNo,
                               MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        resultado = generoBLL.GeneroExcluir(generoBase.CodGenero);
+                        resultado = revistaBLL.RevistaExcluir(revistaBase.CodRevista);
                     }
                 }
                 MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
                                    MessageBoxIcon.Information);
                 if (resultado.Contains("sucesso"))
                 {
-                    CarregaGeneros();
+                    CarregaCampos();
                     btnCancelar_Click(sender, e);
                 }
             }
@@ -89,16 +119,16 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
             {
                 LimparComponentes();
                 Habilita(true);
-                cbGenero.Text = "";
-                cbGenero.Enabled = false;
-                txtGenero.Focus();
+                cbRevista.Text = "";
+                cbRevista.Enabled = false;
+                txtRevista.Focus();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Botão Alterar - Habilita a edição do genero
+        //Botão Alterar - Habilita a edição da revista
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             try
@@ -106,21 +136,22 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 if (btnAcao.Enabled == true)
                 {
                     btnCancelar_Click(sender, e);
-                    MessageBox.Show(this, "Selecione uma editora.", "Atenção:", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(this, "Selecione uma revista.", "Atenção:", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    generoBase = generoBLL.CarregaGenero(cbGenero.Text);
-                    if (generoBase.Descricao.Equals(""))
+                    revistaBase = revistaBLL.CarregarRevista(cbRevista.Text);
+                    if (revistaBase.Nome.Equals(""))
                     {
-                        MessageBox.Show(this, "Selecione um genero da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(this, "Selecione uma revista da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     btnAcao.Text = "Alterar";
                     Habilita(true);
-                    cbGenero.Enabled = false;
-                    txtGenero.Text = cbGenero.Text;
-                    txtGenero.Focus();
+                    cbRevista.Enabled = false;
+                    txtRevista.Text = cbRevista.Text;
+                    cbEditora.Text = revistaBase.Editora.Nome;
+                    txtRevista.Focus();
                 }
             }
             catch (Exception ex)
@@ -128,7 +159,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Botão Excluir - Habilita a exclusão do genero
+        //Botão Excluir - Habilita a exclusão da revista
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             try
@@ -136,19 +167,20 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 if (btnAcao.Enabled == true)
                 {
                     btnCancelar_Click(sender, e);
-                    MessageBox.Show(this, "Selecione uma editora.", "Atenção:", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(this, "Selecione uma revista.", "Atenção:", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    generoBase = generoBLL.CarregaGenero(cbGenero.Text);
-                    if (generoBase.Descricao.Equals(""))
+                    revistaBase = revistaBLL.CarregarRevista(cbRevista.Text);
+                    if (revistaBase.Nome.Equals(""))
                     {
-                        MessageBox.Show(this, "Selecione um genero da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(this, "Selecione uma revista da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     btnAcao.Text = "Excluir";
                     Habilita(false);
-                    txtGenero.Text = cbGenero.Text;
+                    txtRevista.Text = cbRevista.Text;
+                    cbEditora.Text = revistaBase.Editora.Nome;
                     btnAcao.Enabled = true;
                     btnCancelar.Enabled = true;
                     btnAcao.Focus();
@@ -166,9 +198,10 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
             {
                 LimparComponentes();
                 Habilita(false);
-                cbGenero.Enabled = true;
-                cbGenero.Text = "Digite um genero";
-                cbGenero.Focus();
+                cbRevista.Enabled = true;
+                cbRevista.Text = "Digite a revista";
+                cbEditora.Text = "Digite a editora";
+                cbRevista.Focus();
             }
             catch (Exception ex)
             {
@@ -195,17 +228,27 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 Close();
             }
         }
-        //Cria o autocomplete da combobox Gêneros
-        private void CarregaGeneros()
+        //Cria o autocomplete das combobox
+        private void CarregaCampos()
         {
-            AutoCompleteStringCollection dicGenero = new AutoCompleteStringCollection();
-            foreach (Genero genero in generoBLL.CarregaGeneros())
+            //Cria o autocomplete das combobox Editora
+            AutoCompleteStringCollection dicEditora = new AutoCompleteStringCollection();
+            foreach (Editora editora in editoraBLL.CarregaEditoras())
             {
-                dicGenero.Add(genero.Descricao);
+                dicEditora.Add(editora.Nome);
             }
-            cbGenero.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            cbGenero.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            cbGenero.AutoCompleteCustomSource = dicGenero;
+            cbEditora.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbEditora.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            cbEditora.AutoCompleteCustomSource = dicEditora;
+            //Cria o autocomplete das combobox Revista
+            AutoCompleteStringCollection dicRevista = new AutoCompleteStringCollection();
+            foreach (Revista revista in revistaBLL.CarregarRevistas())
+            {
+                dicRevista.Add(revista.Nome);
+            }
+            cbRevista.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbRevista.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            cbRevista.AutoCompleteCustomSource = dicRevista;
         }
     }
 }

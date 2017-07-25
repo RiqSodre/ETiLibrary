@@ -524,7 +524,7 @@ namespace Interface.Formularios.Cadastros
             cbAssunto.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cbAssunto.AutoCompleteSource = AutoCompleteSource.CustomSource;
             cbAssunto.AutoCompleteCustomSource = dicAssunto;
-            //Cria o autocomplete da combobox Genêros
+            //Cria o autocomplete da combobox Gêneros
             AutoCompleteStringCollection dicGenero = new AutoCompleteStringCollection();
             foreach (Genero genero in generoBLL.CarregaGeneros())
             {
@@ -584,7 +584,7 @@ namespace Interface.Formularios.Cadastros
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Botão de adicionar genero
+        //Botão de adicionar gênero
         private void btnGeneroAdd_Click(object sender, EventArgs e)
         {
             try
@@ -710,7 +710,7 @@ namespace Interface.Formularios.Cadastros
                 return;
             }
         }
-        //Verifica se o genêro já está inserido para o livro
+        //Verifica se o gênero já está inserido para o livro
         private bool ValidaGenero()
         {
             bool resultado = true;
@@ -830,7 +830,7 @@ namespace Interface.Formularios.Cadastros
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Timer que coloca o texto default da combobox Genêro
+        //Timer que coloca o texto default da combobox Gênero
         private void timerCbGenero_Tick(object sender, EventArgs e)
         {
             try

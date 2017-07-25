@@ -120,7 +120,6 @@ namespace BLL
                 int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
                 string tempCpf, digito;
                 int soma, resto;
-
                 tempCpf = cpf.Substring(0, 9);
                 soma = 0;
                 for (int cont = 0; cont < 9; cont++)
@@ -185,18 +184,18 @@ namespace BLL
         public string DecripSenha(string txtCifrado)
         {
             try
-            {               
-                    byte[] bChave = Convert.FromBase64String(chaveAlg);
-                    byte[] bTxt = Convert.FromBase64String(txtCifrado);             
-                    Rijndael rijndael = new RijndaelManaged();              
-                    rijndael.KeySize = 256;               
-                    MemoryStream mStream = new MemoryStream();    
-                    CryptoStream decryptor = new CryptoStream(mStream, rijndael.CreateDecryptor(bChave, bIV),
-                        CryptoStreamMode.Write);  
-                    decryptor.Write(bTxt, 0, bTxt.Length);     
-                    decryptor.FlushFinalBlock();        
-                    UTF8Encoding utf8 = new UTF8Encoding();       
-                    return utf8.GetString(mStream.ToArray());
+            {
+                byte[] bChave = Convert.FromBase64String(chaveAlg);
+                byte[] bTxt = Convert.FromBase64String(txtCifrado);
+                Rijndael rijndael = new RijndaelManaged();
+                rijndael.KeySize = 256;
+                MemoryStream mStream = new MemoryStream();
+                CryptoStream decryptor = new CryptoStream(mStream, rijndael.CreateDecryptor(bChave, bIV),
+                    CryptoStreamMode.Write);
+                decryptor.Write(bTxt, 0, bTxt.Length);
+                decryptor.FlushFinalBlock();
+                UTF8Encoding utf8 = new UTF8Encoding();
+                return utf8.GetString(mStream.ToArray());
             }
             catch (Exception ex)
             {

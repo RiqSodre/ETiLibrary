@@ -125,7 +125,6 @@ namespace BLL
                 acesso.AdicionarParametros("@Notacao", Notacao);
                 DataTable dataTableAutores = acesso.ExecutarConsulta(CommandType.StoredProcedure,
                     "uspAutorConsultar_PorNotacao");
-
                 return AutoresCarregarLista(dataTableAutores);
             }
             catch (Exception ex)
@@ -142,7 +141,6 @@ namespace BLL
                 acesso.AdicionarParametros("@CodMidia", CodLivro);
                 DataTable dataTableAutores = acesso.ExecutarConsulta(CommandType.StoredProcedure,
                     "uspAutorConsultar_PorLivro");
-
                 return AutoresCarregarLista(dataTableAutores);
             }
             catch (Exception ex)

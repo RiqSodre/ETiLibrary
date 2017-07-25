@@ -24,7 +24,6 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Alterar a area
         public string AreaAlterar(Area area)
         {
@@ -41,7 +40,6 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Excluir a area
         public string AreaExcluir(int CodArea)
         {
@@ -57,18 +55,15 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Carrega a lista de areas
         public AreaList CarregaAreas()
         {
             try
             {
                 AreaList areaList = new AreaList();
-
                 acesso.LimparParametros();
                 DataTable dataTableAreas = acesso.ExecutarConsulta(CommandType.Text,
                     "SELECT CodArea, Descricao FROM tblArea");
-
                 foreach(DataRow dataRow in dataTableAreas.Rows)
                 {
                     Area area = new Area();
@@ -76,7 +71,6 @@ namespace BLL
                     area.Descricao = (string)dataRow["Descricao"];
                     areaList.Add(area);
                 }
-
                 return areaList;
             }
             catch (Exception ex)
@@ -84,7 +78,6 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Carrega  areas
         public Area CarregaArea(string Descricao)
         {
@@ -100,7 +93,6 @@ namespace BLL
                     area.CodArea = (int)dataRow["CodArea"];
                     area.Descricao = (string)dataRow["Descricao"];
                 }
-
                 return area;
             }
             catch (Exception ex)

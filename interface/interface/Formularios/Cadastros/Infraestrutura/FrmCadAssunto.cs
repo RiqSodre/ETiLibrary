@@ -10,7 +10,8 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
     public partial class FrmCadAssunto : FrmCadBase
     {
         private AssuntosBLL assuntoBLL = new AssuntosBLL();
-
+        private Assunto assuntoBase = new Assunto();
+        
         //Construtor padrão
         public FrmCadAssunto()
         {
@@ -34,11 +35,6 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
         {
             try
             {
-                Assunto assunto = new Assunto();
-                if(cbAssunto.Text != "")
-                {
-                    assunto = assuntoBLL.CarregaAssunto(cbAssunto.Text);
-                }
                 if (btnAcao.Text.Equals("Salvar") || btnAcao.Text.Equals("Alterar"))
                 {
                     //Validações campo Assunto
@@ -61,8 +57,8 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                     }
                     else
                     {
-                        assunto.Descricao = txtAssunto.Text;
-                        resultado = assuntoBLL.AssuntoAlterar(assunto);
+                        assuntoBase.Descricao = txtAssunto.Text;
+                        resultado = assuntoBLL.AssuntoAlterar(assuntoBase);
                     }
                 }
                 else
@@ -70,7 +66,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                     if (MessageBox.Show(this, "Deseja excluir este assunto?", "Atenção", MessageBoxButtons.YesNo,
                               MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        resultado = assuntoBLL.AssuntoExcluir(assunto.CodAssunto);
+                        resultado = assuntoBLL.AssuntoExcluir(assuntoBase.CodAssunto);
                     }
                 }
                 MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
@@ -102,7 +98,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Botão Alterar - Habilita a edição do curso e suas turmas
+        //Botão Alterar - Habilita a edição do assunto
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             try
@@ -114,8 +110,8 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 }
                 else
                 {
-                    Assunto assunto = assuntoBLL.CarregaAssunto(cbAssunto.Text);
-                    if (assunto.Descricao.Equals(""))
+                    assuntoBase = assuntoBLL.CarregaAssunto(cbAssunto.Text);
+                    if (assuntoBase.Descricao.Equals(""))
                     {
                         MessageBox.Show(this, "Selecione um assunto da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
@@ -132,7 +128,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Botão Excluir - Habilita a exclusão do curso e suas turmas
+        //Botão Excluir - Habilita a exclusão do assunto
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             try
@@ -144,8 +140,8 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 }
                 else
                 {
-                    Assunto assunto = assuntoBLL.CarregaAssunto(cbAssunto.Text);
-                    if (assunto.Descricao.Equals(""))
+                    assuntoBase = assuntoBLL.CarregaAssunto(cbAssunto.Text);
+                    if (assuntoBase.Descricao.Equals(""))
                     {
                         MessageBox.Show(this, "Selecione um assunto da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;

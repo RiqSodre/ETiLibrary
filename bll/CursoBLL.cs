@@ -81,7 +81,6 @@ namespace BLL
             try
             {
                 CursoList cursoList = new CursoList();
-
                 acesso.LimparParametros();
                 acesso.AdicionarParametros("@Descricao", Descricao);
                 DataTable dataTableCursos = acesso.ExecutarConsulta(CommandType.StoredProcedure, 
@@ -89,12 +88,10 @@ namespace BLL
                 foreach (DataRow dataRow in dataTableCursos.Rows)
                 {
                     Curso curso = new Curso();
-
                     curso.CodCurso = (int)dataRow["CodCurso"];
                     curso.Descricao = (string)dataRow["Descricao"];
                     cursoList.Add(curso);
                 }
-
                 return cursoList;
             }
             catch (Exception ex)

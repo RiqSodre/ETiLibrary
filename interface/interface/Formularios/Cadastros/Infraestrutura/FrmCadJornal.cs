@@ -7,22 +7,35 @@ using System.Windows.Forms;
 
 namespace Interface.Formularios.Cadastros.Infraestrutura
 {
-    public partial class FrmCadGenero : FrmCadBase
+    public partial class FrmCadJornal : FrmCadBase
     {
-        private GeneroBLL generoBLL = new GeneroBLL();
-        private Genero generoBase = new Genero();
+        private JornalBLL jornalBLL = new JornalBLL();
+        private Jornal jornalBase = new Jornal();
 
-        //Construtor padrao
-        public FrmCadGenero()
+        //Construtor padrão
+        public FrmCadJornal()
         {
             try
             {
                 InitializeComponent();
                 LimparComponentes();
                 Habilita(false);
-                cbGenero.Enabled = true;
-                CarregaGeneros();
-                cbGenero.Focus();
+                cbJornal.Enabled = true;
+                CarregaJornais();
+                cbJornal.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
+            }
+        }
+        //Construtor carregando o jornal
+        public FrmCadJornal(Jornal jornal) : this()
+        {
+            try
+            {
+                cbJornal.Text = jornal.Nome;
             }
             catch (Exception ex)
             {
@@ -37,43 +50,43 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
             {
                 if (btnAcao.Text.Equals("Salvar") || btnAcao.Text.Equals("Alterar"))
                 {
-                    //Validações campo Editora
-                    if (txtGenero.Text.Length == 0)
+                    //Validações campo Jornal
+                    if (txtJornal.Text.Length == 0)
                     {
-                        MessageBox.Show(this, "O campo Gênero é obrigatório.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Jornal é obrigatório.", "Atenção", MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
                         return;
                     }
-                    else if (txtGenero.Text.Length < 4)
+                    else if (txtJornal.Text.Length < 3)
                     {
-                        MessageBox.Show(this, "O campo Gênero deve conter no minimo 4 caracteres.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Jornal deve conter no minimo 3 caracteres.", "Atenção", MessageBoxButtons.OK,
                            MessageBoxIcon.Warning);
                         return;
                     }
                     //Execução
                     if (btnAcao.Text.Equals("Salvar"))
                     {
-                        resultado = generoBLL.GeneroInserir(txtGenero.Text);
+                        resultado = jornalBLL.JornalInserir(txtJornal.Text);
                     }
                     else
                     {
-                        generoBase.Descricao = txtGenero.Text;
-                        resultado = generoBLL.GeneroAlterar(generoBase);
+                        jornalBase.Nome = txtJornal.Text;
+                        resultado = jornalBLL.JornalAlterar(jornalBase);
                     }
                 }
                 else
                 {
-                    if (MessageBox.Show(this, "Deseja excluir este gênero?", "Atenção", MessageBoxButtons.YesNo,
+                    if (MessageBox.Show(this, "Deseja excluir este jornal?", "Atenção", MessageBoxButtons.YesNo,
                               MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        resultado = generoBLL.GeneroExcluir(generoBase.CodGenero);
+                        resultado = jornalBLL.JornalExcluir(jornalBase.CodJornal);
                     }
                 }
                 MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
                                    MessageBoxIcon.Information);
                 if (resultado.Contains("sucesso"))
                 {
-                    CarregaGeneros();
+                    CarregaJornais();
                     btnCancelar_Click(sender, e);
                 }
             }
@@ -89,16 +102,16 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
             {
                 LimparComponentes();
                 Habilita(true);
-                cbGenero.Text = "";
-                cbGenero.Enabled = false;
-                txtGenero.Focus();
+                cbJornal.Text = "";
+                cbJornal.Enabled = false;
+                txtJornal.Focus();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Botão Alterar - Habilita a edição do genero
+        //Botão Alterar - Habilita a edição do jornal
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             try
@@ -106,21 +119,21 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 if (btnAcao.Enabled == true)
                 {
                     btnCancelar_Click(sender, e);
-                    MessageBox.Show(this, "Selecione uma editora.", "Atenção:", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(this, "Selecione um jornal.", "Atenção:", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    generoBase = generoBLL.CarregaGenero(cbGenero.Text);
-                    if (generoBase.Descricao.Equals(""))
+                    jornalBase = jornalBLL.CarregaJornal(cbJornal.Text);
+                    if (jornalBase.Nome.Equals(""))
                     {
-                        MessageBox.Show(this, "Selecione um genero da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(this, "Selecione um jornal da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     btnAcao.Text = "Alterar";
                     Habilita(true);
-                    cbGenero.Enabled = false;
-                    txtGenero.Text = cbGenero.Text;
-                    txtGenero.Focus();
+                    cbJornal.Enabled = false;
+                    txtJornal.Text = cbJornal.Text;
+                    txtJornal.Focus();
                 }
             }
             catch (Exception ex)
@@ -128,7 +141,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Botão Excluir - Habilita a exclusão do genero
+        //Botão Excluir - Habilita a exclusão do jornal
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             try
@@ -136,19 +149,19 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 if (btnAcao.Enabled == true)
                 {
                     btnCancelar_Click(sender, e);
-                    MessageBox.Show(this, "Selecione uma editora.", "Atenção:", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(this, "Selecione um jornal.", "Atenção:", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    generoBase = generoBLL.CarregaGenero(cbGenero.Text);
-                    if (generoBase.Descricao.Equals(""))
+                    jornalBase = jornalBLL.CarregaJornal(cbJornal.Text);
+                    if (jornalBase.Nome.Equals(""))
                     {
-                        MessageBox.Show(this, "Selecione um genero da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(this, "Selecione um jornal da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     btnAcao.Text = "Excluir";
                     Habilita(false);
-                    txtGenero.Text = cbGenero.Text;
+                    txtJornal.Text = cbJornal.Text;
                     btnAcao.Enabled = true;
                     btnCancelar.Enabled = true;
                     btnAcao.Focus();
@@ -166,9 +179,9 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
             {
                 LimparComponentes();
                 Habilita(false);
-                cbGenero.Enabled = true;
-                cbGenero.Text = "Digite um genero";
-                cbGenero.Focus();
+                cbJornal.Enabled = true;
+                cbJornal.Text = "Digite um jornal";
+                cbJornal.Focus();
             }
             catch (Exception ex)
             {
@@ -195,17 +208,17 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 Close();
             }
         }
-        //Cria o autocomplete da combobox Gêneros
-        private void CarregaGeneros()
+        //Cria o autocomplete da combobox Jornal
+        private void CarregaJornais()
         {
-            AutoCompleteStringCollection dicGenero = new AutoCompleteStringCollection();
-            foreach (Genero genero in generoBLL.CarregaGeneros())
+            AutoCompleteStringCollection dicJornal = new AutoCompleteStringCollection();
+            foreach (Jornal jornal in jornalBLL.CarregaJornais())
             {
-                dicGenero.Add(genero.Descricao);
+                dicJornal.Add(jornal.Nome);
             }
-            cbGenero.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            cbGenero.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            cbGenero.AutoCompleteCustomSource = dicGenero;
+            cbJornal.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbJornal.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            cbJornal.AutoCompleteCustomSource = dicJornal;
         }
     }
 }

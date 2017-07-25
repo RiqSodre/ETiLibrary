@@ -10,6 +10,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
     public partial class FrmCadAutor : FrmCadBase
     {
         private AutorBLL autorBLL = new AutorBLL();
+        private Autor autorBase = new Autor();
 
         //Construtor padrão
         public FrmCadAutor()
@@ -47,11 +48,6 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
         {
             try
             {
-                Autor autor = new Autor();
-                if(cbAutor.Text != "")
-                {
-                    autor = autorBLL.CarregaAutor(cbAutor.Text);
-                }
                 if (btnAcao.Text.Equals("Salvar") || btnAcao.Text.Equals("Alterar"))
                 {
                     //Validações campo Nome
@@ -69,7 +65,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                     }
                     else
                     {
-                        autor.Nome = txtNome.Text;
+                        autorBase.Nome = txtNome.Text;
                     }
                     //Validações Sobrenome
                     if (txtSobrenome.Text.Length == 0)
@@ -86,7 +82,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                     }
                     else
                     {
-                        autor.Sobrenome = txtSobrenome.Text;
+                        autorBase.Sobrenome = txtSobrenome.Text;
                     }
                     //Validações Notação
                     if (txtNotacao.Text.Length != 0)
@@ -97,20 +93,20 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                                MessageBoxIcon.Warning);
                             return;
                         }
-                        autor.NotacaoAutor = txtNotacao.Text;
+                        autorBase.NotacaoAutor = txtNotacao.Text;
                     }
                     else
                     {
-                        autor.NotacaoAutor = "N/I";
+                        autorBase.NotacaoAutor = "N/I";
                     }
                     //Execução
                     if (btnAcao.Text.Equals("Salvar"))
                     {
-                        resultado = autorBLL.AutorInserir(autor);
+                        resultado = autorBLL.AutorInserir(autorBase);
                     }
                     else
                     {
-                        resultado = autorBLL.AutorAlterar(autor);
+                        resultado = autorBLL.AutorAlterar(autorBase);
                     }
                 }
                 else
@@ -118,7 +114,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                     if (MessageBox.Show(this, "Deseja excluir este autor?", "Atenção", MessageBoxButtons.YesNo,
                               MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        resultado = autorBLL.AutorExcluir(autor.CodAutor);
+                        resultado = autorBLL.AutorExcluir(autorBase.CodAutor);
                     }
                 }
                 MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
@@ -150,7 +146,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Botão Alterar - Habilita a edição do curso e suas turmas
+        //Botão Alterar - Habilita a edição do autor
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             try
@@ -162,8 +158,8 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 }
                 else
                 {
-                    Autor autor = autorBLL.CarregaAutor(cbAutor.Text);
-                    if (autor.Nome.Equals(""))
+                    autorBase = autorBLL.CarregaAutor(cbAutor.Text);
+                    if (autorBase.Nome.Equals(""))
                     {
                         MessageBox.Show(this, "Selecione um autor da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
@@ -171,9 +167,9 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                     btnAcao.Text = "Alterar";
                     Habilita(true);
                     cbAutor.Enabled = false;
-                    txtNome.Text = autor.Nome.Substring(autor.Nome.IndexOf(",")+2);
-                    txtSobrenome.Text = autor.Nome.Substring(0, autor.Nome.IndexOf(",")-1);
-                    txtNotacao.Text = autor.NotacaoAutor;
+                    txtNome.Text = autorBase.Nome.Substring(autorBase.Nome.IndexOf(",")+2);
+                    txtSobrenome.Text = autorBase.Nome.Substring(0, autorBase.Nome.IndexOf(",")-1);
+                    txtNotacao.Text = autorBase.NotacaoAutor;
                     txtNome.Focus();
                 }
             }
@@ -182,7 +178,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Botão Excluir - Habilita a exclusão do curso e suas turmas
+        //Botão Excluir - Habilita a exclusão do autor
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             try
@@ -194,17 +190,17 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 }
                 else
                 {
-                    Autor autor = autorBLL.CarregaAutor(cbAutor.Text);
-                    if (autor.Nome.Equals(""))
+                    autorBase = autorBLL.CarregaAutor(cbAutor.Text);
+                    if (autorBase.Nome.Equals(""))
                     {
                         MessageBox.Show(this, "Selecione um autor da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     btnAcao.Text = "Excluir";
                     Habilita(false);
-                    txtNome.Text = autor.Nome.Substring(autor.Nome.IndexOf(",") + 2);
-                    txtSobrenome.Text = autor.Nome.Substring(0, autor.Nome.IndexOf(",") - 1);
-                    txtNotacao.Text = autor.NotacaoAutor;
+                    txtNome.Text = autorBase.Nome.Substring(autorBase.Nome.IndexOf(",") + 2);
+                    txtSobrenome.Text = autorBase.Nome.Substring(0, autorBase.Nome.IndexOf(",") - 1);
+                    txtNotacao.Text = autorBase.NotacaoAutor;
                     btnAcao.Enabled = true;
                     btnCancelar.Enabled = true;
                     btnAcao.Focus();

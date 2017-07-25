@@ -1,6 +1,7 @@
 ﻿using BLL;
 using DTO.Infraestrutura_de_Midia;
 using Interface.Formularios.Modelos;
+using MetroFramework.Controls;
 using System;
 using System.Windows.Forms;
 
@@ -98,7 +99,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Botão Alterar - Habilita a edição do curso e suas turmas
+        //Botão Alterar - Habilita a edição da área
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             try
@@ -122,7 +123,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Botão Excluir - Habilita a exclusão do curso e suas turmas
+        //Botão Excluir - Habilita a exclusão da área
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             try
@@ -163,25 +164,19 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Mostra o conteúdo da combobox
-        private void cbArea_SelectedIndexChanged(object sender, EventArgs e)
+        //Mostra o conteúdo em uma toolTip
+        private void exibe_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                toolExibe(cbArea, cbArea.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Close();
-            }
-        }
-        //Mostra o conteúdo da textbox
-        private void txtArea_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                toolExibe(txtArea, txtArea.Text);
+                if (sender is MetroTextBox)
+                {
+                    toolExibe((sender as MetroTextBox), (sender as MetroTextBox).Text);
+                }
+                else
+                {
+                    toolExibe((sender as ComboBox), (sender as ComboBox).Text);
+                }
             }
             catch (Exception ex)
             {
