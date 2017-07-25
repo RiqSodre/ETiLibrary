@@ -15,9 +15,9 @@ namespace BLL
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Nome", autor.Nome);
-                acesso.AdicionarParametros("@Sobrenome", autor.Sobrenome);
-                acesso.AdicionarParametros("@Notacao", autor.NotacaoAutor);
+                acesso.AdicionarParametros("@Nome", autor.Nome.ToUpper());
+                acesso.AdicionarParametros("@Sobrenome", autor.Sobrenome.ToUpper());
+                acesso.AdicionarParametros("@Notacao", autor.NotacaoAutor.ToUpper());
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspAutorInserir");
             }
@@ -33,9 +33,9 @@ namespace BLL
             {
                 acesso.LimparParametros();
                 acesso.AdicionarParametros("@CodAutor", autor.CodAutor);
-                acesso.AdicionarParametros("@Nome", autor.Nome);
-                acesso.AdicionarParametros("@Sobrenome", autor.Sobrenome);
-                acesso.AdicionarParametros("@Notacao", autor.NotacaoAutor);
+                acesso.AdicionarParametros("@Nome", autor.Nome.ToUpper());
+                acesso.AdicionarParametros("@Sobrenome", autor.Sobrenome.ToUpper());
+                acesso.AdicionarParametros("@Notacao", autor.NotacaoAutor.ToUpper());
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspAutorAlterar");
             }
@@ -45,12 +45,12 @@ namespace BLL
             }
         }
         //Excluir o autor
-        public string AutorExcluir(int CodAutor)
+        public string AutorExcluir(int codAutor)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@CodAutor", CodAutor);
+                acesso.AdicionarParametros("@CodAutor", codAutor);
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspAutorExcluir");
             }
@@ -60,20 +60,20 @@ namespace BLL
             }
         }
         //Carrega o autor
-        public Autor CarregaAutor(string Nome)
+        public Autor CarregaAutor(string nome)
         {
             try
             {
                 Autor autor = new Autor();
                 autor.Nome = "";
                 acesso.LimparParametros();
-                if (Nome.Contains("'"))
+                if (nome.Contains("'"))
                 {
-                   Nome = Nome.Replace("'", "''");
+                   nome = nome.Replace("'", "''");
                 }
                 DataTable dataTableAutores = acesso.ExecutarConsulta(CommandType.Text,
                     "SELECT CodAutor, CONCAT(Sobrenome, ' , ', Nome) AS 'Nome', NotacaoAutor AS 'Notação do Autor' FROM tblAutor "
-                    + "WHERE CONCAT(Sobrenome, ' , ', Nome) =  '" + Nome + "'");
+                    + "WHERE CONCAT(Sobrenome, ' , ', Nome) =  '" + nome + "'");
                 foreach(Autor aut in AutoresCarregarLista(dataTableAutores))
                 {
                     autor = aut;
@@ -101,12 +101,12 @@ namespace BLL
             }
         }
         //Consultar autor por Nome
-        public AutorList AutorConsultar_PorNome(string Nome)
+        public AutorList AutorConsultar_PorNome(string nome)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Nome", Nome);
+                acesso.AdicionarParametros("@Nome", nome);
                 DataTable dataTableAutores = acesso.ExecutarConsulta(CommandType.StoredProcedure, 
                     "uspAutorConsultar_PorNome");
                 return AutoresCarregarLista(dataTableAutores);
@@ -117,12 +117,12 @@ namespace BLL
             }
         }
         //Consultar autor por Notacao
-        public AutorList AutorConsultar_PorNotacao(string Notacao)
+        public AutorList AutorConsultar_PorNotacao(string notacao)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Notacao", Notacao);
+                acesso.AdicionarParametros("@Notacao", notacao);
                 DataTable dataTableAutores = acesso.ExecutarConsulta(CommandType.StoredProcedure,
                     "uspAutorConsultar_PorNotacao");
                 return AutoresCarregarLista(dataTableAutores);
@@ -133,12 +133,12 @@ namespace BLL
             }
         }
         //Consultar autor por Livro
-        public AutorList AutorConsultar_PorLivro(int? CodLivro)
+        public AutorList AutorConsultar_PorLivro(int? codLivro)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@CodMidia", CodLivro);
+                acesso.AdicionarParametros("@CodMidia", codLivro);
                 DataTable dataTableAutores = acesso.ExecutarConsulta(CommandType.StoredProcedure,
                     "uspAutorConsultar_PorLivro");
                 return AutoresCarregarLista(dataTableAutores);
@@ -158,10 +158,10 @@ namespace BLL
                 {
                     Autor autor = new Autor();
                     autor.CodAutor = (int)dataRow["CodAutor"];
-                    autor.Nome = (string)dataRow["Nome"];
+                    autor.Nome = ((string)dataRow["Nome"]).ToUpper();
                     if(!DBNull.Value.Equals(dataRow["Notação do Autor"])) 
                     {
-                    autor.NotacaoAutor = (string)dataRow["Notação do Autor"];
+                    autor.NotacaoAutor = ((string)dataRow["Notação do Autor"]).ToUpper();
                     }
                     autorList.Add(autor);
                 }

@@ -13,37 +13,32 @@ namespace BLL
         AcessoDadosSqlServer acesso = new AcessoDadosSqlServer();
 
         //Carregar aluno através do arquivo xml gerado no nsa
-        public Aluno AlunoCarregarXML(string RM)
+        public Aluno AlunoCarregarXML(string rm)
         {
             try
             {
                 Aluno aluno = new Aluno();
                 XmlDocument xdocument = new XmlDocument();
-
                 //Definir local do arquivo
                 string documentoxml = Directory.GetCurrentDirectory();
                 documentoxml = documentoxml.Replace("bin\\Debug", "");
                 documentoxml = documentoxml + "dir.xml";
-
                 xdocument.Load(documentoxml);
-
                 XmlNodeList xmlnodeList = xdocument.SelectNodes("Alunos/Aluno");
-                
                 foreach(XmlNode xmlnode in xmlnodeList)
                   {
-                     if (xmlnode.SelectSingleNode("RM").InnerText == RM)
+                     if (xmlnode.SelectSingleNode("RM").InnerText == rm)
                       {
-                          aluno.Nome = xmlnode["Nome"].InnerText;
-                          aluno.Sexo = xmlnode["Sexo"].InnerText;
+                          aluno.Nome = (xmlnode["Nome"].InnerText).ToUpper();
+                          aluno.Sexo = (xmlnode["Sexo"].InnerText).ToUpper();
                           aluno.Cpf = xmlnode["CPF"].InnerText;
                           aluno.Rm = xmlnode["RM"].InnerText;
-                          aluno.Turma.Curso.Descricao = xmlnode["Curso"].InnerText;
-                          aluno.Turma.Descricao = xmlnode["Turma"].InnerText;
+                          aluno.Turma.Curso.Descricao = (xmlnode["Curso"].InnerText).ToUpper();
+                          aluno.Turma.Descricao = (xmlnode["Turma"].InnerText).ToUpper();
                           aluno.Telefone.Numero = xmlnode["Telefone"].InnerText;
                           aluno.Celular.Numero = xmlnode["Celular"].InnerText;
                       }
                   }
-
                 return AlunoCursoTurma(aluno);
             }
             catch (Exception ex)
@@ -51,13 +46,12 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Inserir aluno
         public string AlunoInserir(Aluno aluno) {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Nome", aluno.Nome);
+                acesso.AdicionarParametros("@Nome", aluno.Nome.ToUpper());
                 acesso.AdicionarParametros("@Sexo", aluno.Sexo);
                 acesso.AdicionarParametros("@CPF", aluno.Cpf);
                 acesso.AdicionarParametros("@RM", aluno.Rm);
@@ -71,14 +65,13 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Alterar aluno
         public string AlunoAlterar(Aluno aluno) {
             try
             {
                 acesso.LimparParametros();
                 acesso.AdicionarParametros("@CodPessoa", aluno.CodPessoa);
-                acesso.AdicionarParametros("@Nome", aluno.Nome);
+                acesso.AdicionarParametros("@Nome", aluno.Nome.ToUpper());
                 acesso.AdicionarParametros("@Sexo", aluno.Sexo);
                 acesso.AdicionarParametros("@CPF", aluno.Cpf);
                 acesso.AdicionarParametros("@RM", aluno.Rm);
@@ -92,15 +85,13 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Consultar aluno por Nome
-        public AlunoList AlunoConsulta_PorNome(string Nome)
+        public AlunoList AlunoConsulta_PorNome(string nome)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Nome", Nome);
-
+                acesso.AdicionarParametros("@Nome", nome);
                 DataTable dataTableAluno = acesso.ExecutarConsulta(CommandType.StoredProcedure, "uspAlunoConsulta_PorNome");
                 return AlunoCarregarLista(dataTableAluno);
             }
@@ -109,15 +100,13 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Consultar aluno por Curso
-        public AlunoList AlunoConsulta_PorCurso(int CodCurso)
+        public AlunoList AlunoConsulta_PorCurso(int codCurso)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@CodCurso", CodCurso);
-
+                acesso.AdicionarParametros("@CodCurso", codCurso);
                 DataTable dataTableAluno = acesso.ExecutarConsulta(System.Data.CommandType.StoredProcedure, "uspAlunoConsulta_PorCurso");
                 return AlunoCarregarLista(dataTableAluno);
             }
@@ -126,15 +115,13 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Consultar aluno por Turma
-        public AlunoList AlunoConsulta_PorTurma(int CodTurma)
+        public AlunoList AlunoConsulta_PorTurma(int codTurma)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@CodTurma", CodTurma);
-
+                acesso.AdicionarParametros("@CodTurma", codTurma);
                 DataTable dataTableAluno = acesso.ExecutarConsulta(System.Data.CommandType.StoredProcedure, "uspAlunoConsulta_PorTurma");
                 return AlunoCarregarLista(dataTableAluno);
             }
@@ -143,25 +130,20 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Consultar aluno por RM
-        public Aluno AlunoConsulta_PorRM(int RM)
+        public Aluno AlunoConsulta_PorRM(string rm)
         {
             try
             {
                 Aluno aluno = new Aluno();
-
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@RM", RM);
-
-                DataTable dataTableAluno = acesso.ExecutarConsulta(System.Data.CommandType.StoredProcedure, "uspAlunoConsulta_PorRM");
+                acesso.AdicionarParametros("@RM", rm);
+                DataTable dataTableAluno = acesso.ExecutarConsulta(CommandType.StoredProcedure, "uspAlunoConsulta_PorRM");
                 AlunoList alunoList = AlunoCarregarLista(dataTableAluno);
-
                 foreach (Aluno alun in AlunoCarregarLista(dataTableAluno))
                 {
                     aluno = alun;
                 }
-
                 return aluno;
             }
             catch (Exception ex)
@@ -169,25 +151,20 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Consultar aluno por Codigo
-        public Aluno AlunoConsulta_PorCod(int CodPessoa)
+        public Aluno AlunoConsulta_PorCod(int codPessoa)
         {
             try
             {
                 Aluno aluno = new Aluno();
-
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@CodPessoa", CodPessoa);
-
+                acesso.AdicionarParametros("@CodPessoa", codPessoa);
                 DataTable dataTableAluno = acesso.ExecutarConsulta(CommandType.StoredProcedure, 
                     "uspAlunoConsulta_PorCod");
-
                 foreach (Aluno alun in AlunoCarregarLista(dataTableAluno))
                 {
                     aluno = alun;
                 }
-
                 return aluno;
             }
             catch (Exception ex)
@@ -195,7 +172,6 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Carrega o Codigo da turma e do curso
         private Aluno AlunoCursoTurma(Aluno aluno)
         {
@@ -203,7 +179,6 @@ namespace BLL
             {
                 CursoBLL cursoBLL = new CursoBLL();
                 TurmaBLL turmaBLL = new TurmaBLL();
-
                 aluno.Turma.Curso.CodCurso = cursoBLL.CursoConsultarCod_PorNome(aluno.Turma.Curso.Descricao);
                 aluno.Turma.CodTurma = turmaBLL.TurmaConsultarCod_PorNome(aluno.Turma.Descricao);
                 return aluno;
@@ -213,22 +188,18 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Carrega dados do DataTable em uma lista de Alunos
         private AlunoList AlunoCarregarLista(DataTable dataTableAluno)
         {
             try
             {
                 AlunoList alunoList = new AlunoList();
-
                 foreach (DataRow dataRow in dataTableAluno.Rows)
                 {
                     Aluno aluno = new Aluno();
-
                     aluno.CodPessoa = (int)dataRow["CodAluno"];
-                    aluno.Nome = (string)dataRow["Nome"];
+                    aluno.Nome = ((string)dataRow["Nome"]).ToUpper();
                     aluno.Sexo = (string)dataRow["Sexo"];
-
                     if (!DBNull.Value.Equals(dataRow["CPF"]))
                     {
                        aluno.Cpf = (string)dataRow["CPF"];
@@ -237,9 +208,7 @@ namespace BLL
                     {
                         aluno.Cpf = "CPF não informado.";
                     }
-
                     aluno.DataCadastro = (DateTime)dataRow["DataCadastro"];
-
                     if (!DBNull.Value.Equals(dataRow["R.M."]))
                     {
                         aluno.Rm = (string)dataRow["R.M."];
@@ -248,7 +217,6 @@ namespace BLL
                     {
                         aluno.Cpf = "RM não informado.";
                     }
-
                     aluno.Turma.Curso.CodCurso = (int)dataRow["CodCurso"];
                     aluno.Turma.Curso.Descricao = (string)dataRow["Curso"];
                     aluno.Turma.CodTurma = (int)dataRow["CodTurma"];
@@ -264,10 +232,8 @@ namespace BLL
                         aluno.Celular.Numero = (string)dataRow["Telefone"];
                         aluno.Celular.TelefoneTipo = (string)dataRow["Tipo Telefone"];
                     }
-
                     alunoList.Add(AlunoCursoTurma(aluno));
                 }
-
                 return alunoList;
             }
             catch (Exception ex)
@@ -275,14 +241,13 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Inserir funcionario
         public string FuncionarioInserir(Funcionario funcionario)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Nome", funcionario.Nome);
+                acesso.AdicionarParametros("@Nome", funcionario.Nome.ToUpper());
                 acesso.AdicionarParametros("@Sexo", funcionario.Sexo);
                 acesso.AdicionarParametros("@CPF", funcionario.Cpf);
                 acesso.AdicionarParametros("@CodCargo", funcionario.CodCargo);
@@ -295,7 +260,6 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Alterar funcionario
         public string FuncionarioAlterar(Funcionario funcionario)
         {
@@ -303,7 +267,7 @@ namespace BLL
             {
                 acesso.LimparParametros();
                 acesso.AdicionarParametros("@CodPessoa", funcionario.CodPessoa);
-                acesso.AdicionarParametros("@Nome", funcionario.Nome);
+                acesso.AdicionarParametros("@Nome", funcionario.Nome.ToUpper());
                 acesso.AdicionarParametros("@Sexo", funcionario.Sexo);
                 acesso.AdicionarParametros("@CPF", funcionario.Cpf);
                 acesso.AdicionarParametros("@CodCargo", funcionario.CodCargo);
@@ -316,15 +280,13 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Consultar funcionario por Nome
-        public FuncionariosList FuncionarioConsulta_PorNome(string Nome)
+        public FuncionariosList FuncionarioConsulta_PorNome(string nome)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Nome", Nome);
-
+                acesso.AdicionarParametros("@Nome", nome);
                 DataTable dataTableFuncionario = acesso.ExecutarConsulta(CommandType.StoredProcedure, "uspFuncionarioConsulta_PorNome");
                 return FuncionarioCarregarLista(dataTableFuncionario);
             }
@@ -333,24 +295,19 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Consultar funcionario por CPF
-        public Funcionario FuncionarioConsulta_PorCPF(string CPF)
+        public Funcionario FuncionarioConsulta_PorCPF(string cpf)
         {
             try
             {
                 Funcionario funcionario = new Funcionario();
-
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@CPF", CPF);
-
+                acesso.AdicionarParametros("@CPF", cpf);
                 DataTable dataTableFuncionario = acesso.ExecutarConsulta(CommandType.StoredProcedure, "uspFuncionarioConsulta_PorCPF");
-
                 foreach (Funcionario func in FuncionarioCarregarLista(dataTableFuncionario))
                 {
                     funcionario = func;
                 }
-
                 return funcionario;
             }
             catch (Exception ex)
@@ -358,15 +315,13 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Consultar funcionario por Cargo
-        public FuncionariosList FuncionarioConsulta_PorCargo(int Cargo)
+        public FuncionariosList FuncionarioConsulta_PorCargo(int cargo)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Cargo", Cargo);
-
+                acesso.AdicionarParametros("@Cargo", cargo);
                 DataTable dataTableFuncionario = acesso.ExecutarConsulta(CommandType.StoredProcedure, "uspFuncionarioConsulta_PorCargo");
                 return FuncionarioCarregarLista(dataTableFuncionario);
             }
@@ -375,25 +330,20 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Consultar funcionario por Codigo
-        public Funcionario FuncionarioConsulta_PorCod(int CodPessoa)
+        public Funcionario FuncionarioConsulta_PorCod(int codPessoa)
         {
             try
             {
                 Funcionario funcionario = new Funcionario();
-
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@CodPessoa", CodPessoa);
-
+                acesso.AdicionarParametros("@CodPessoa", codPessoa);
                 DataTable dataTableFuncionario = acesso.ExecutarConsulta(CommandType.StoredProcedure,
                     "uspFuncionarioConsulta_PorCod");
-
                 foreach (Funcionario func in FuncionarioCarregarLista(dataTableFuncionario))
                 {
                     funcionario = func;
                 }
-
                 return funcionario;
             }
             catch (Exception ex)
@@ -401,26 +351,21 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Carrega dados do DataTable em uma lista de Funcionarios
         private FuncionariosList FuncionarioCarregarLista(DataTable dataTableFuncionario)
         {
             try
             {
                 FuncionariosList funcionarioList = new FuncionariosList();
-
                 foreach (DataRow dataRow in dataTableFuncionario.Rows)
                 {
                     Funcionario funcionario = new Funcionario();
-
                     funcionario.CodPessoa = (int)dataRow["CodPessoa"];
-                    funcionario.Nome = (string)dataRow["Nome"];
-
+                    funcionario.Nome = ((string)dataRow["Nome"]).ToUpper();
                     if (!DBNull.Value.Equals(dataRow["Sexo"]))
                     {
                         funcionario.Sexo = (string)dataRow["Sexo"];
                     }
-
                     funcionario.Cpf = (string)dataRow["CPF"];
                     funcionario.DataCadastro = (DateTime)dataRow["DataCadastro"];
                     funcionario.CodCargo = (int)dataRow["CodCargo"];
@@ -435,7 +380,6 @@ namespace BLL
                         funcionario.Celular.Numero = (string)dataRow["Telefone"];
                         funcionario.Celular.TelefoneTipo = (string)dataRow["Tipo Telefone"];
                     }
-
                     funcionarioList.Add(funcionario);
                 }
                 return funcionarioList;
@@ -445,14 +389,13 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Inserir funcionario da Biblioteca
         public string FuncionarioBiblioInserir(Funcionario funcionario)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Nome", funcionario.Nome);
+                acesso.AdicionarParametros("@Nome", funcionario.Nome.ToUpper());
                 acesso.AdicionarParametros("@Sexo", funcionario.Sexo);
                 acesso.AdicionarParametros("@CPF", funcionario.Cpf);
                 acesso.AdicionarParametros("@Telefone", funcionario.Telefone.Numero);
@@ -460,7 +403,7 @@ namespace BLL
                 acesso.AdicionarParametros("@Login", funcionario.Login);
                 acesso.AdicionarParametros("@Senha", funcionario.Senha);
                 acesso.AdicionarParametros("@Admin", funcionario.Admin);
-                acesso.AdicionarParametros("@Email", funcionario.Email);
+                acesso.AdicionarParametros("@Email", funcionario.Email.ToUpper());
                 return acesso.ExecutarManipulacao(CommandType.StoredProcedure, "uspFuncionarioBiblioInserir").ToString();
             }
             catch (Exception ex)
@@ -468,7 +411,6 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Alterar funcionario da Biblioteca
         public string FuncionarioBiblioAlterar(Funcionario funcionario)
         {
@@ -476,7 +418,7 @@ namespace BLL
             {
                 acesso.LimparParametros();
                 acesso.AdicionarParametros("@CodPessoa", funcionario.CodPessoa);
-                acesso.AdicionarParametros("@Nome", funcionario.Nome);
+                acesso.AdicionarParametros("@Nome", funcionario.Nome.ToUpper());
                 acesso.AdicionarParametros("@Sexo", funcionario.Sexo);
                 acesso.AdicionarParametros("@CPF", funcionario.Cpf);
                 acesso.AdicionarParametros("@Telefone", funcionario.Telefone.Numero);
@@ -485,7 +427,7 @@ namespace BLL
                 acesso.AdicionarParametros("@Senha", funcionario.Senha);
                 acesso.AdicionarParametros("@Admin", funcionario.Admin);
                 acesso.AdicionarParametros("@Habilitado", funcionario.Habilitado);
-                acesso.AdicionarParametros("@Email", funcionario.Email);
+                acesso.AdicionarParametros("@Email", funcionario.Email.ToUpper());
                 return acesso.ExecutarManipulacao(CommandType.StoredProcedure, "uspFuncionarioBiblioAlterar").ToString();
             }
             catch (Exception ex)
@@ -493,25 +435,21 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Seleciona os dados do funcionario da Biblioteca informado
-        public Funcionario FuncionarioBiblioSelect(int CodFuncionario)
+        public Funcionario FuncionarioBiblioSelect(int codFuncionario)
         {
             try
             {
                 Funcionario funcionario = new Funcionario();
-
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@CodFuncionario", CodFuncionario);
-
+                acesso.AdicionarParametros("@CodFuncionario", codFuncionario);
                 DataTable dataTableFuncionarioBiblio = acesso.ExecutarConsulta(CommandType.StoredProcedure, "uspFuncionarioBiblioSelect");
-
                 foreach (DataRow dataRow in dataTableFuncionarioBiblio.Rows)
                 {
                     funcionario.CodCargo = (int)dataRow["CodCargo"];
                     funcionario.Cargo = (string)dataRow["Cargo"];
                     funcionario.CodPessoa = (int)dataRow["CodPessoa"];
-                    funcionario.Nome = (string)dataRow["Nome"];
+                    funcionario.Nome = ((string)dataRow["Nome"]).ToUpper();
                     funcionario.Sexo = (string)dataRow["Sexo"];
                     funcionario.Cpf = (string)dataRow["CPF"];
                     funcionario.DataCadastro = (DateTime)dataRow["DataCadastro"];
@@ -519,7 +457,7 @@ namespace BLL
                     funcionario.Senha = (string)dataRow["Senha"];
                     funcionario.Admin = (bool)dataRow["Admin"];
                     funcionario.Habilitado = (bool)dataRow["Habilitado"];
-                    funcionario.Email = (string)dataRow["Email"];
+                    funcionario.Email = ((string)dataRow["Email"]).ToUpper();
                     if (((string)dataRow["Tipo Telefone"]).Equals("Telefone"))
                     {
                         funcionario.Telefone.Numero = (string)dataRow["Telefone"];
@@ -538,14 +476,13 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-  
         //Excluir a pessoa
-        public string PessoaExcluir(int? CodPessoa)
+        public string PessoaExcluir(int? codPessoa)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@CodPessoa", CodPessoa);
+                acesso.AdicionarParametros("@CodPessoa", codPessoa);
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure, "uspPessoaExcluir");
             }
             catch (Exception ex)
@@ -553,18 +490,15 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
-
         //Carrega segundo telefone da Pessoa informada
-        public Telefone PessoaTelefone(int? CodPessoa)
+        public Telefone PessoaTelefone(int? codPessoa)
         {
             try
             {
                 Telefone telefone = new Telefone();
-
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@CodPessoa", CodPessoa);
+                acesso.AdicionarParametros("@CodPessoa", codPessoa);
                 DataTable dataTableTelefone = acesso.ExecutarConsulta(CommandType.StoredProcedure, "uspPessoaTelefone");
-
                 foreach (DataRow dataRow in dataTableTelefone.Rows)
                 {
                     telefone.Numero = (string)dataRow["Numero"];

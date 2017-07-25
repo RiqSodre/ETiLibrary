@@ -15,7 +15,7 @@ namespace BLL
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Descricao", descricao);
+                acesso.AdicionarParametros("@Descricao", descricao.ToUpper());
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure, "uspCursoInserir");
             }
             catch (Exception ex)
@@ -29,7 +29,7 @@ namespace BLL
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Descricao", curso.Descricao);
+                acesso.AdicionarParametros("@Descricao", curso.Descricao.ToUpper());
                 acesso.AdicionarParametros("@CodCurso", curso.CodCurso);
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure, "uspCursoAlterar");
             }
@@ -65,7 +65,7 @@ namespace BLL
                 {
                     Curso curso = new Curso();
                     curso.CodCurso = (int)dataRow["CodCurso"];
-                    curso.Descricao = (string)dataRow["Descricao"];
+                    curso.Descricao = ((string)dataRow["Descricao"]).ToUpper();
                     cursoList.Add(curso);
                 }
                 return cursoList;
@@ -76,20 +76,20 @@ namespace BLL
             }
         }
         //Realiza a consulta de cursos por nome
-        public CursoList CursoConsultar(string Descricao)
+        public CursoList CursoConsultar(string descricao)
         {
             try
             {
                 CursoList cursoList = new CursoList();
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Descricao", Descricao);
+                acesso.AdicionarParametros("@Descricao", descricao);
                 DataTable dataTableCursos = acesso.ExecutarConsulta(CommandType.StoredProcedure, 
                     "uspCursoConsultar");
                 foreach (DataRow dataRow in dataTableCursos.Rows)
                 {
                     Curso curso = new Curso();
                     curso.CodCurso = (int)dataRow["CodCurso"];
-                    curso.Descricao = (string)dataRow["Descricao"];
+                    curso.Descricao = ((string)dataRow["Descricao"]).ToUpper();
                     cursoList.Add(curso);
                 }
                 return cursoList;
@@ -100,14 +100,14 @@ namespace BLL
             }
         }
         //Carrega o codigo do curso informado por nome
-        public int CursoConsultarCod_PorNome(string Descricao)
+        public int CursoConsultarCod_PorNome(string descricao)
         {
             try
             {
                 acesso.LimparParametros();
                 int codCurso = 0;
                 DataTable dataTableCursos = acesso.ExecutarConsulta(CommandType.Text,
-                    "SELECT CodCurso FROM tblCurso WHERE Descricao = '"+Descricao+"'");
+                    "SELECT CodCurso FROM tblCurso WHERE Descricao = '"+descricao+"'");
                 foreach (DataRow dataRow in dataTableCursos.Rows)
                 {
                     codCurso = (int)dataRow["CodCurso"];

@@ -10,12 +10,12 @@ namespace BLL
         AcessoDadosSqlServer acesso = new AcessoDadosSqlServer();
 
         //Inserir o genero
-        public string GeneroInserir(string Descricao)
+        public string GeneroInserir(string descricao)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Descricao", Descricao);
+                acesso.AdicionarParametros("@Descricao", descricao.ToUpper());
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspGeneroInserir");
             }
@@ -31,7 +31,7 @@ namespace BLL
             {
                 acesso.LimparParametros();
                 acesso.AdicionarParametros("@CodGenero", genero.CodGenero);
-                acesso.AdicionarParametros("@Descricao", genero.Descricao);
+                acesso.AdicionarParametros("@Descricao", genero.Descricao.ToUpper());
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspGeneroAlterar");
             }
@@ -41,12 +41,12 @@ namespace BLL
             }
         }
         //Excluir o genero
-        public string GeneroExcluir(int CodGenero)
+        public string GeneroExcluir(int codGenero)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@CodGenero", CodGenero);
+                acesso.AdicionarParametros("@CodGenero", codGenero);
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspGeneroExcluir");
             }
@@ -68,7 +68,7 @@ namespace BLL
                 {
                     Genero genero = new Genero();
                     genero.CodGenero = (int)dataRow["CodGenero"];
-                    genero.Descricao = (string)dataRow["Descricao"];
+                    genero.Descricao = ((string)dataRow["Descricao"]).ToUpper();
                     generoList.Add(genero);
                 }
                 return generoList;
@@ -79,7 +79,7 @@ namespace BLL
             }
         }
         //Carrega a lista de generos
-        public Genero CarregaGenero(string Descricao)
+        public Genero CarregaGenero(string descricao)
         {
             try
             {
@@ -87,11 +87,11 @@ namespace BLL
                 genero.Descricao = "";
                 acesso.LimparParametros();
                 DataTable dataTableGeneros = acesso.ExecutarConsulta(CommandType.Text,
-                    "SELECT CodGenero, Descricao FROM tblGenero WHERE Descricao = '"+Descricao+"'");
+                    "SELECT CodGenero, Descricao FROM tblGenero WHERE Descricao = '"+descricao+"'");
                 foreach (DataRow dataRow in dataTableGeneros.Rows)
                 {
                     genero.CodGenero = (int)dataRow["CodGenero"];
-                    genero.Descricao = (string)dataRow["Descricao"];
+                    genero.Descricao = ((string)dataRow["Descricao"]).ToUpper();
                 }
                 return genero;
             }
@@ -101,20 +101,20 @@ namespace BLL
             }
         }
         //Carrega generos por livro
-        public GeneroList CarregaGenerosLivro(int? CodLivro)
+        public GeneroList CarregaGenerosLivro(int? codLivro)
         {
             try
             {
                 GeneroList generoList = new GeneroList();
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@CodMidia", CodLivro);
+                acesso.AdicionarParametros("@CodMidia", codLivro);
                 DataTable dataTableGeneros = acesso.ExecutarConsulta(CommandType.StoredProcedure,
                     "uspGeneroConsultar_PorLivro");
                 foreach (DataRow dataRow in dataTableGeneros.Rows)
                 {
                     Genero genero = new Genero();
                     genero.CodGenero = (int)dataRow["CodGenero"];
-                    genero.Descricao = (string)dataRow["Descricao"];
+                    genero.Descricao = ((string)dataRow["Descricao"]).ToUpper();
                     genero.Principal = (bool)dataRow["Principal"];
                     generoList.Add(genero);
                 }

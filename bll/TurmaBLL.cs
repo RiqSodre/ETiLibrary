@@ -16,7 +16,7 @@ namespace BLL
             {
                 acesso.LimparParametros();
                 acesso.AdicionarParametros("@CodCurso", turma.Curso.CodCurso);
-                acesso.AdicionarParametros("@Descricao", turma.Descricao);
+                acesso.AdicionarParametros("@Descricao", turma.Descricao.ToUpper());
                 acesso.AdicionarParametros("@Periodo", turma.Periodo);
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspTurmaInserir");
@@ -33,7 +33,7 @@ namespace BLL
             {
                 acesso.LimparParametros();
                 acesso.AdicionarParametros("@CodTurma", turma.CodTurma);
-                acesso.AdicionarParametros("@Descricao", turma.Descricao);
+                acesso.AdicionarParametros("@Descricao", turma.Descricao.ToUpper());
                 acesso.AdicionarParametros("@Periodo", turma.Periodo);
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspTurmaAlterar");
@@ -59,18 +59,18 @@ namespace BLL
             }
         }
         //Carrega a lista de turmas do curso informado
-        public TurmaList CarregaTurmas(int CodCurso) {
+        public TurmaList CarregaTurmas(int codCurso) {
             try
             {
                 TurmaList turmaList = new TurmaList();
                 acesso.LimparParametros();
                 DataTable dataTableTurmas = acesso.ExecutarConsulta(CommandType.Text,
-                    "SELECT CodTurma, Descricao, Periodo FROM tblTurma WHERE CodCurso = "+CodCurso);
+                    "SELECT CodTurma, Descricao, Periodo FROM tblTurma WHERE CodCurso = "+codCurso);
                 foreach(DataRow dataRow in dataTableTurmas.Rows)
                 {
                     Turma turma = new Turma();
                     turma.CodTurma = (int)dataRow["CodTurma"];
-                    turma.Descricao = (string)dataRow["Descricao"];
+                    turma.Descricao = ((string)dataRow["Descricao"]).ToUpper();
                     turma.Periodo = (string)dataRow["Periodo"];
                     turmaList.Add(turma);
                 }
@@ -82,20 +82,20 @@ namespace BLL
             }
         }
         //Realiza a consulta de Turmas por nome
-        public TurmaList TurmaConsultar(string Descricao)
+        public TurmaList TurmaConsultar(string descricao)
         {
             try
             {
                 TurmaList turmaList = new TurmaList();
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Descricao", Descricao);
+                acesso.AdicionarParametros("@Descricao", descricao);
                 DataTable dataTableTurmas = acesso.ExecutarConsulta(CommandType.StoredProcedure, 
                     "uspTurmaConsultar");
                 foreach (DataRow dataRow in dataTableTurmas.Rows)
                 {
                     Turma turma = new Turma();
                     turma.CodTurma = (int)dataRow["CodTurma"];
-                    turma.Descricao = (string)dataRow["Turma"];
+                    turma.Descricao = ((string)dataRow["Turma"]).ToUpper();
                     turma.Periodo = (string)dataRow["Periodo"];
                     turma.Curso.CodCurso = (int)dataRow["CodCurso"];
                     turma.Curso.Descricao = (string)dataRow["Curso"];
@@ -109,14 +109,14 @@ namespace BLL
             }
         }
         //Carrega o codigo da turma informado por nome
-        public int TurmaConsultarCod_PorNome(string Descricao)
+        public int TurmaConsultarCod_PorNome(string descricao)
         {
             try
             {
                 acesso.LimparParametros();
                 int codTurma = 0;
                 DataTable dataTableTurmas = acesso.ExecutarConsulta(CommandType.Text,
-                    "SELECT CodTurma FROM tblTurma WHERE Descricao = '"+Descricao+"'");
+                    "SELECT CodTurma FROM tblTurma WHERE Descricao = '"+descricao+"'");
                 foreach (DataRow dataRow in dataTableTurmas.Rows)
                 {
                     codTurma = (int)dataRow["CodTurma"];

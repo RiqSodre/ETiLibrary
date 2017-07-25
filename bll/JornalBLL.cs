@@ -10,12 +10,12 @@ namespace BLL
         AcessoDadosSqlServer acesso = new AcessoDadosSqlServer();
 
         //Inserir o jornal
-        public string JornalInserir(string Nome)
+        public string JornalInserir(string nome)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Nome", Nome);
+                acesso.AdicionarParametros("@Nome", nome.ToUpper());
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspJornalInserir");
             }
@@ -30,7 +30,7 @@ namespace BLL
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Nome", jornal.Nome);
+                acesso.AdicionarParametros("@Nome", jornal.Nome.ToUpper());
                 acesso.AdicionarParametros("@CodJornal", jornal.CodJornal);
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspJornalAlterar");
@@ -41,12 +41,12 @@ namespace BLL
             }
         }
         //Excluir o jornal
-        public string JornalExcluir(int CodJornal)
+        public string JornalExcluir(int codJornal)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@CodJornal", CodJornal);
+                acesso.AdicionarParametros("@CodJornal", codJornal);
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspJornalExcluir");
             }
@@ -56,18 +56,18 @@ namespace BLL
             }
         }
         //Carrega o autor
-        public Jornal CarregaJornal(string Nome)
+        public Jornal CarregaJornal(string nome)
         {
             try
             {
                 Jornal jornal = new Jornal();
                 acesso.LimparParametros();
                 DataTable dataTableJornais = acesso.ExecutarConsulta(CommandType.Text,
-                    "SELECT CodJornal, Nome FROM tblJornal WHERE Nome = '"+Nome+"'");
+                    "SELECT CodJornal, Nome FROM tblJornal WHERE Nome = '"+nome+"'");
                 foreach (DataRow dataRow in dataTableJornais.Rows)
                 {
                     jornal.CodJornal = (int)dataRow["CodJornal"];
-                    jornal.Nome = (string)dataRow["Nome"];
+                    jornal.Nome = ((string)dataRow["Nome"]).ToUpper();
                 }
                 return jornal;
             }
@@ -89,7 +89,7 @@ namespace BLL
                 {
                     Jornal jornal = new Jornal();
                     jornal.CodJornal = (int)dataRow["CodJornal"];
-                    jornal.Nome = (string)dataRow["Nome"];
+                    jornal.Nome = ((string)dataRow["Nome"]).ToUpper();
                     jornalList.Add(jornal);
                 }
                 return jornalList;
@@ -100,20 +100,20 @@ namespace BLL
             }
         }
         //Realiza a consulta de jornais por nome
-        public JornalList JornalConsultar(string Nome)
+        public JornalList JornalConsultar(string nome)
         {
             try
             {
                 JornalList jornalList = new JornalList();
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Nome", Nome);
+                acesso.AdicionarParametros("@Nome", nome);
                 DataTable dataTableJornais = acesso.ExecutarConsulta(CommandType.StoredProcedure,
                     "uspJornalConsultar");
                 foreach (DataRow dataRow in dataTableJornais.Rows)
                 {
                     Jornal jornal = new Jornal();
                     jornal.CodJornal = (int)dataRow["CodJornal"];
-                    jornal.Nome = (string)dataRow["Nome"];
+                    jornal.Nome = ((string)dataRow["Nome"]).ToUpper();
                     jornalList.Add(jornal);
                 }
                 return jornalList;

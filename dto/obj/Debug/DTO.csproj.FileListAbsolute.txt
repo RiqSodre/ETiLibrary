@@ -70,3 +70,10 @@ C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\DTO\obj\Debug\DT
 C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\DTO\obj\Debug\DTO.csproj.GenerateResource.Cache
 C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\DTO\obj\Debug\DTO.dll
 C:\Users\GIOVANNIGARCIAHESSEL\Desktop\Prj_ETiLibrary\ETiLibrary\DTO\obj\Debug\DTO.pdb
+C:\Users\Giovanni Hessel\Desktop\Prj_ETiLibrary\ETiLibrary\DTO\bin\Debug\DTO.dll.config
+C:\Users\Giovanni Hessel\Desktop\Prj_ETiLibrary\ETiLibrary\DTO\bin\Debug\DTO.dll
+C:\Users\Giovanni Hessel\Desktop\Prj_ETiLibrary\ETiLibrary\DTO\bin\Debug\DTO.pdb
+C:\Users\Giovanni Hessel\Desktop\Prj_ETiLibrary\ETiLibrary\DTO\obj\Debug\DTO.Properties.Resources.resources
+C:\Users\Giovanni Hessel\Desktop\Prj_ETiLibrary\ETiLibrary\DTO\obj\Debug\DTO.csproj.GenerateResource.Cache
+C:\Users\Giovanni Hessel\Desktop\Prj_ETiLibrary\ETiLibrary\DTO\obj\Debug\DTO.dll
+C:\Users\Giovanni Hessel\Desktop\Prj_ETiLibrary\ETiLibrary\DTO\obj\Debug\DTO.pdb

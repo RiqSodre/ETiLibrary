@@ -10,12 +10,12 @@ namespace BLL
         AcessoDadosSqlServer acesso = new AcessoDadosSqlServer();
 
         //Inserir a editora
-        public string EditoraInserir(string Nome)
+        public string EditoraInserir(string nome)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Nome", Nome);
+                acesso.AdicionarParametros("@Nome", nome.ToUpper());
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspEditoraInserir");
             }
@@ -30,7 +30,7 @@ namespace BLL
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Nome", editora.Nome);
+                acesso.AdicionarParametros("@Nome", editora.Nome.ToUpper());
                 acesso.AdicionarParametros("@CodEditora", editora.CodEditora);
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspEditoraAlterar");
@@ -41,12 +41,12 @@ namespace BLL
             }
         }
         //Excluir a editora
-        public string EditoraExcluir(int CodEditora)
+        public string EditoraExcluir(int codEditora)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@CodEditora", CodEditora);
+                acesso.AdicionarParametros("@CodEditora", codEditora);
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspEditoraExcluir");
             }
@@ -68,7 +68,7 @@ namespace BLL
                 {
                     Editora editora = new Editora();
                     editora.CodEditora = (int)dataRow["CodEditora"];
-                    editora.Nome = (string)dataRow["Nome"];
+                    editora.Nome = ((string)dataRow["Nome"]).ToUpper();
                     EditoraList.Add(editora);
                 }
                 return EditoraList;
@@ -79,7 +79,7 @@ namespace BLL
             }
         }
         //Carrega editora
-        public Editora CarregaEditora(string Nome)
+        public Editora CarregaEditora(string nome)
         {
             try
             {
@@ -87,11 +87,11 @@ namespace BLL
                 editora.Nome = "";
                 acesso.LimparParametros();
                 DataTable dataTableEditoras = acesso.ExecutarConsulta(CommandType.Text,
-                    "SELECT CodEditora, Nome FROM tblEditora WHERE Nome = '"+Nome+"'");
+                    "SELECT CodEditora, Nome FROM tblEditora WHERE Nome = '"+nome+"'");
                 foreach (DataRow dataRow in dataTableEditoras.Rows)
                 {
                     editora.CodEditora = (int)dataRow["CodEditora"];
-                    editora.Nome = (string)dataRow["Nome"];
+                    editora.Nome = ((string)dataRow["Nome"]).ToUpper();
                 }
                 return editora;
             }
@@ -101,17 +101,17 @@ namespace BLL
             }
         }
         //Carrega o codigo do assunto informado por descricao
-        public int AssuntoConsultarCod_PorNome(string Descricao)
+        public int AssuntoConsultarCod_PorNome(string descricao)
         {
             try
             {
                 int codEditora = 0;
                 acesso.LimparParametros();
                 DataTable dataTableEditora = acesso.ExecutarConsulta(CommandType.Text,
-                    "SELECT CodEditora FROM tblEditora WHERE Nome = '" + Descricao + "'");
+                    "SELECT CodEditora FROM tblEditora WHERE Nome = '" + descricao + "'");
                 foreach (DataRow dataRow in dataTableEditora.Rows)
                 {
-                    codEditora = Convert.ToInt32(dataRow["CodEditora"]);
+                    codEditora = (int)dataRow["CodEditora"];
                 }
                 return codEditora;
             }
@@ -121,20 +121,20 @@ namespace BLL
             }
         }
         //Realiza a consulta de editoras por nome
-        public EditoraList EditoraConsultar(string Nome)
+        public EditoraList EditoraConsultar(string nome)
         {
             try
             {
                 EditoraList editoraList = new EditoraList();
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Nome", Nome);
+                acesso.AdicionarParametros("@Nome", nome);
                 DataTable dataTableEditoras = acesso.ExecutarConsulta(CommandType.StoredProcedure,
                     "uspEditoraConsultar");
                 foreach (DataRow dataRow in dataTableEditoras.Rows)
                 {
                     Editora editora = new Editora();
                     editora.CodEditora = (int)dataRow["CodEditora"];
-                    editora.Nome = (string)dataRow["Nome"];
+                    editora.Nome = ((string)dataRow["Nome"]).ToUpper();
                     editoraList.Add(editora);
                 }
                 return editoraList;

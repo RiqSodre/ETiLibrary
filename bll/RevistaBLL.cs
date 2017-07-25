@@ -16,7 +16,7 @@ namespace BLL
             {
                 acesso.LimparParametros();
                 acesso.AdicionarParametros("@CodEditora", revista.Editora.CodEditora);
-                acesso.AdicionarParametros("@Nome", revista.Nome);
+                acesso.AdicionarParametros("@Nome", revista.Nome.ToUpper());
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspRevistaInserir");
             }
@@ -33,7 +33,7 @@ namespace BLL
                 acesso.LimparParametros();
                 acesso.AdicionarParametros("@CodRevista", revista.CodRevista);
                 acesso.AdicionarParametros("@CodEditora", revista.Editora.CodEditora);
-                acesso.AdicionarParametros("@Nome", revista.Nome);
+                acesso.AdicionarParametros("@Nome", revista.Nome.ToUpper());
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspRevistaAlterar");
             }
@@ -43,12 +43,12 @@ namespace BLL
             }
         }
         //Excluir a revista
-        public string RevistaExcluir(int CodRevista)
+        public string RevistaExcluir(int codRevista)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@CodRevista", CodRevista);
+                acesso.AdicionarParametros("@CodRevista", codRevista);
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspRevistaExcluir");
             }
@@ -70,7 +70,7 @@ namespace BLL
                 {
                     Revista revista = new Revista();
                     revista.CodRevista = (int)dataRow["CodRevista"];
-                    revista.Nome = (string)dataRow["Nome"];
+                    revista.Nome = ((string)dataRow["Nome"]).ToUpper();
                     revistaList.Add(revista);
                 }
                 return revistaList;
@@ -81,7 +81,7 @@ namespace BLL
             }
         }
         //Carrega a revista de acordo com o nome informado
-        public Revista CarregarRevista(string Nome)
+        public Revista CarregarRevista(string nome)
         {
             try
             {
@@ -90,13 +90,13 @@ namespace BLL
                 DataTable dataTableRevistas = acesso.ExecutarConsulta(CommandType.Text,
                     "SELECT A.CodRevista, A.Nome, B.CodEditora, B.Nome AS 'Editora' FROM tblRevista AS A "+
                     "INNER JOIN tblEditora AS B ON A.CodEditora = B.CodEditora "+
-                    "WHERE A.Nome = '"+Nome+"'");
+                    "WHERE A.Nome = '"+nome+"'");
                 foreach (DataRow dataRow in dataTableRevistas.Rows)
                 {
                     revista.CodRevista = (int)dataRow["CodRevista"];
-                    revista.Nome = (string)dataRow["Nome"];
+                    revista.Nome = ((string)dataRow["Nome"]).ToUpper();
                     revista.Editora.CodEditora = (int)dataRow["CodEditora"];
-                    revista.Editora.Nome = (string)dataRow["Editora"];
+                    revista.Editora.Nome = ((string)dataRow["Editora"]).ToUpper();
                 }
                 return revista;
             }
@@ -106,22 +106,22 @@ namespace BLL
             }
         }
         //Realiza a consulta de editoras por nome
-        public RevistaList RevistaConsultar(string Nome)
+        public RevistaList RevistaConsultar(string nome)
         {
             try
             {
                 RevistaList revistaList = new RevistaList();
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Nome", Nome);
+                acesso.AdicionarParametros("@Nome", nome);
                 DataTable dataTableRevistas = acesso.ExecutarConsulta(CommandType.StoredProcedure,
                     "uspRevistaConsultar");
                 foreach (DataRow dataRow in dataTableRevistas.Rows)
                 {
                     Revista revista = new Revista();
                     revista.CodRevista = (int)dataRow["CodRevista"];
-                    revista.Nome = (string)dataRow["Nome"];
+                    revista.Nome = ((string)dataRow["Nome"]).ToUpper();
                     revista.Editora.CodEditora = (int)dataRow["CodEditora"];
-                    revista.Editora.Nome = (string)dataRow["Editora"];
+                    revista.Editora.Nome = ((string)dataRow["Editora"]).ToUpper();
                     revistaList.Add(revista);
                 }
                 return revistaList;

@@ -174,7 +174,7 @@ namespace Interface.Formularios.Consultas
                             MessageBoxIcon.Warning);
                         return;
                     }
-                    Aluno aluno = pessoaBLL.AlunoConsulta_PorRM(Convert.ToInt32(txtPesquisa.Text));
+                    Aluno aluno = pessoaBLL.AlunoConsulta_PorRM(txtPesquisa.Text);
                     alunoList.Add(aluno);
                 }
                 else

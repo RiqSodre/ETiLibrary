@@ -10,12 +10,12 @@ namespace BLL
         AcessoDadosSqlServer acesso = new AcessoDadosSqlServer();
 
         //Inserir o assunto
-        public string AssuntoInserir(string Descricao)
+        public string AssuntoInserir(string descricao)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Descricao", Descricao);
+                acesso.AdicionarParametros("@Descricao", descricao.ToUpper());
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspAssuntoInserir");
             }
@@ -31,7 +31,7 @@ namespace BLL
             {
                 acesso.LimparParametros();
                 acesso.AdicionarParametros("@CodAssunto", assunto.CodAssunto);
-                acesso.AdicionarParametros("@Descricao", assunto.Descricao);
+                acesso.AdicionarParametros("@Descricao", assunto.Descricao.ToUpper());
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspAssuntoAlterar");
             }
@@ -41,12 +41,12 @@ namespace BLL
             }
         }
         //Excluir o assunto
-        public string AssuntoExcluir(int CodAssunto)
+        public string AssuntoExcluir(int codAssunto)
         {
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@CodAssunto", CodAssunto);
+                acesso.AdicionarParametros("@CodAssunto", codAssunto);
                 return (string)acesso.ExecutarManipulacao(CommandType.StoredProcedure,
                     "uspAssuntoExcluir");
             }
@@ -67,8 +67,8 @@ namespace BLL
                 foreach(DataRow dataRow in dataTableAssuntos.Rows)
                 {
                     Assunto assunto = new Assunto();
-                    assunto.CodAssunto = Convert.ToInt32(dataRow["CodAssunto"]);
-                    assunto.Descricao = Convert.ToString(dataRow["Descricao"]);
+                    assunto.CodAssunto =(int)(dataRow["CodAssunto"]);
+                    assunto.Descricao = ((string)dataRow["Descricao"]).ToUpper();
                     assuntoList.Add(assunto);
                 }
                 return assuntoList;
@@ -79,7 +79,7 @@ namespace BLL
             }
         }
         //Carrega o assunto 
-        public Assunto CarregaAssunto(string Descricao)
+        public Assunto CarregaAssunto(string descricao)
         {
             try
             {
@@ -87,11 +87,11 @@ namespace BLL
                 assunto.Descricao = "";
                 acesso.LimparParametros();
                 DataTable dataTableAssuntos = acesso.ExecutarConsulta(CommandType.Text,
-                    "SELECT CodAssunto, Descricao FROM tblAssunto WHERE Descricao = '"+Descricao+"'");
+                    "SELECT CodAssunto, Descricao FROM tblAssunto WHERE Descricao = '"+descricao+"'");
                 foreach (DataRow dataRow in dataTableAssuntos.Rows)
                 {
-                    assunto.CodAssunto = Convert.ToInt32(dataRow["CodAssunto"]);
-                    assunto.Descricao = Convert.ToString(dataRow["Descricao"]);
+                    assunto.CodAssunto = (int)(dataRow["CodAssunto"]);
+                    assunto.Descricao = ((string)(dataRow["Descricao"])).ToUpper();
                 }
                 return assunto;
             }
@@ -101,20 +101,20 @@ namespace BLL
             }
         }
         //Carrega assuntos por livro
-        public AssuntoList AssuntoConsultar(int? CodLivro)
+        public AssuntoList AssuntoConsultar(int? codLivro)
         {
             try
             {
                 AssuntoList assuntoList = new AssuntoList();
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@CodMidia", CodLivro);
+                acesso.AdicionarParametros("@CodMidia", codLivro);
                 DataTable dataTableAssuntos = acesso.ExecutarConsulta(CommandType.StoredProcedure,
                     "uspAssuntoConsultar_PorLivro");
                 foreach (DataRow dataRow in dataTableAssuntos.Rows)
                 {
                     Assunto assunto = new Assunto();
                     assunto.CodAssunto = (int)dataRow["CodAssunto"];
-                    assunto.Descricao = (string)dataRow["Descricao"];
+                    assunto.Descricao = ((string)dataRow["Descricao"]).ToUpper();
                     assuntoList.Add(assunto);
                 }
                 return assuntoList;
