@@ -32,7 +32,7 @@ namespace Interface.Formularios.Cadastros
             try
             {
                 InitializeComponent();
-                txtObservacao.GotFocus += txtObservacao_Focus;
+                txtObs.GotFocus += txtObs_Focus;
                 cbArea.DataSource = areaBLL.CarregaAreas();
                 Habilita(true);
                 LimparComponentes();
@@ -68,13 +68,13 @@ namespace Interface.Formularios.Cadastros
                     //Validações campo Titulo
                     if (txtTitulo.Text.Length == 0)
                     {
-                        MessageBox.Show(this, "O campo Titulo é obrigatório.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Título é obrigatório.", "Atenção", MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
                         return;
                     }
                     if (txtTitulo.Text.Length < 6)
                     {
-                        MessageBox.Show(this, "O titulo deve conter no minimo seis digitos.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O título deve conter no mínimo seis digitos.", "Atenção", MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
                         return;
                     }
@@ -85,15 +85,15 @@ namespace Interface.Formularios.Cadastros
                     //Campo Lingua
                     CD_DVD.Lingua = cbLingua.Text;
                     //Validações campo Localização
-                    if (txtLocalizacao.Text.Length != 0)
+                    if (txtLocaliza.Text.Length != 0)
                     {
-                        if (txtLocalizacao.Text.Length < 4)
+                        if (txtLocaliza.Text.Length < 4)
                         {
-                            MessageBox.Show(this, "O campo Localização deve conter no minimo quatro digitos.", "Atenção", MessageBoxButtons.OK,
+                            MessageBox.Show(this, "O campo Localização deve conter no mínimo quatro digitos.", "Atenção", MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
                             return;
                         }
-                        CD_DVD.Localizacao = txtLocalizacao.Text;
+                        CD_DVD.Localizacao = txtLocaliza.Text;
                     }
                     else
                     {
@@ -102,7 +102,7 @@ namespace Interface.Formularios.Cadastros
                     //Validações campo Área
                     if ((int)cbArea.SelectedValue < 0)
                     {
-                        MessageBox.Show(this, "Selecione uma area da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(this, "Selecione uma área da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     else
@@ -122,7 +122,7 @@ namespace Interface.Formularios.Cadastros
                     //CheckBox Disponivel
                     if(btnAcao.Text.Equals("Alterar"))
                     {
-                        if(CD_DVD.Disponivel != checkDisponivel.Checked)
+                        if(CD_DVD.Disponivel != checkDisp.Checked)
                         {
                             EmprestimoBLL emprestimoBLL = new EmprestimoBLL();
                             EmprestimoList emprestimoList = emprestimoBLL.EmprestimoConsultar_PorTombo(CD_DVD.Tombo, "CD_DVD");
@@ -149,9 +149,9 @@ namespace Interface.Formularios.Cadastros
                             }
                         }
                     }
-                    CD_DVD.Disponivel = checkDisponivel.Checked;
+                    CD_DVD.Disponivel = checkDisp.Checked;
                     //Campo Observação
-                    CD_DVD.Observacao = txtObservacao.Text;
+                    CD_DVD.Observacao = txtObs.Text;
                     //Execução
                     if (btnAcao.Text.Equals("Salvar"))
                     {
@@ -241,18 +241,18 @@ namespace Interface.Formularios.Cadastros
         {
             txtTitulo.Text = cdvd.Titulo;
             txtTombo.Text = cdvd.Tombo.ToString();
-            txtLocalizacao.Text = cdvd.Localizacao;
+            txtLocaliza.Text = cdvd.Localizacao;
             cbLingua.SelectedItem = cdvd.Lingua;
             cbTipoTombo.SelectedItem = cdvd.TipoTombo;
             cbArea.SelectedValue = cdvd.Area.CodArea;
-            txtObservacao.Text = cdvd.Observacao;
+            txtObs.Text = cdvd.Observacao;
             if (cdvd.Disponivel)
             {
-                checkDisponivel.Checked = true;
+                checkDisp.Checked = true;
             }
             else
             {
-                checkDisponivel.Checked = false;
+                checkDisp.Checked = false;
             }
             toolExibe(txtTitulo, txtTitulo.Text);
         }
@@ -269,9 +269,9 @@ namespace Interface.Formularios.Cadastros
             }
         }
         //Aumenta o tamanho do campo Observação
-        private void txtObservacao_Focus(object sender, EventArgs e)
+        private void txtObs_Focus(object sender, EventArgs e)
         {
-            txtObservacao.Height = 75;
+            txtObs.Height = 75;
             pnlPrincipal.Height = 324;
             this.Height = 395;
             btnAcao.Location = new Point(149, 353);
@@ -280,9 +280,9 @@ namespace Interface.Formularios.Cadastros
         //Retorna o tamanho do campo Observação ao original
         private void txtObservacao_Leave(object sender, EventArgs e)
         {
-            if (txtObservacao.Text == "" || txtObservacao.Text == null)
+            if (txtObs.Text == "" || txtObs.Text == null)
             {
-                txtObservacao.Height = 25;
+                txtObs.Height = 25;
                 pnlPrincipal.Height = 274;
                 this.Height = 345;
                 btnAcao.Location = new Point(149, 303);

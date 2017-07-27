@@ -37,16 +37,16 @@ namespace Interface.Formularios.Consultas
                 LimpaForm();
                 lblPesquisa.Text = "Selecione a área do jornal:";
                 lblPesquisa.Visible = true;
-                cbPesquisa1.Visible = true;
+                cbPesq1.Visible = true;
                 btnPesquisar.Visible = true;
                 btnPesquisar.Location = new Point(92, 293);
-                cbPesquisa1.DisplayMember = "Descricao";
-                cbPesquisa1.ValueMember = "CodArea";
+                cbPesq1.DisplayMember = "Descricao";
+                cbPesq1.ValueMember = "CodArea";
 
-                cbPesquisa1.DataSource = areaBLL.CarregaAreas();
-                if (cbPesquisa1.Items.Count > 0)
+                cbPesq1.DataSource = areaBLL.CarregaAreas();
+                if (cbPesq1.Items.Count > 0)
                 {
-                    cbPesquisa1.SelectedIndex = 0;
+                    cbPesq1.SelectedIndex = 0;
                 }
             }
             catch (Exception ex)
@@ -66,16 +66,16 @@ namespace Interface.Formularios.Consultas
                 LimpaForm();
                 lblPesquisa.Text = "Selecione o jornal:";
                 lblPesquisa.Visible = true;
-                cbPesquisa1.Visible = true;
+                cbPesq1.Visible = true;
                 btnPesquisar.Visible = true;
                 btnPesquisar.Location = new Point(92, 297);
-                cbPesquisa1.DisplayMember = "Descricao";
-                cbPesquisa1.ValueMember = "CodJornal";
+                cbPesq1.DisplayMember = "Descricao";
+                cbPesq1.ValueMember = "CodJornal";
 
-                cbPesquisa1.DataSource = jornalBLL.CarregaJornais();
-                if (cbPesquisa1.Items.Count > 0)
+                cbPesq1.DataSource = jornalBLL.CarregaJornais();
+                if (cbPesq1.Items.Count > 0)
                 {
-                    cbPesquisa1.SelectedIndex = 0;
+                    cbPesq1.SelectedIndex = 0;
                 }
 
             }
@@ -120,7 +120,7 @@ namespace Interface.Formularios.Consultas
             {
                 if (lblPesquisa.Text.Contains("área"))
                 {
-                    if (cbPesquisa1.SelectedIndex == -1)
+                    if (cbPesq1.SelectedIndex == -1)
                     {
                         MessageBox.Show(this, "Selecione a área do jornal.", "Atenção", MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
@@ -130,7 +130,7 @@ namespace Interface.Formularios.Consultas
                 }
                 else if (lblPesquisa.Text.Contains("jornal"))
                 {
-                    if (cbPesquisa1.SelectedIndex == -1)
+                    if (cbPesq1.SelectedIndex == -1)
                     {
                         MessageBox.Show(this, "Selecione o jornal.", "Atenção", MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);

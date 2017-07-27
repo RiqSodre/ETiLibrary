@@ -59,7 +59,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                     }
                     else if (txtNome.Text.Length < 3)
                     {
-                        MessageBox.Show(this, "O campo Nome deve conter no minimo 3 caracteres.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Nome deve conter no mínimo 3 caracteres.", "Atenção", MessageBoxButtons.OK,
                            MessageBoxIcon.Warning);
                         return;
                     }
@@ -76,7 +76,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                     }
                     else if (txtSobrenome.Text.Length < 3)
                     {
-                        MessageBox.Show(this, "O campo Sobrenome deve conter no minimo 3 caracteres.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Sobrenome deve conter no mínimo 3 caracteres.", "Atenção", MessageBoxButtons.OK,
                            MessageBoxIcon.Warning);
                         return;
                     }
@@ -89,7 +89,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                     {
                         if (txtNotacao.Text.Length < 3)
                         {
-                            MessageBox.Show(this, "O campo Notação deve conter no minimo 3 caracteres.", "Atenção", MessageBoxButtons.OK,
+                            MessageBox.Show(this, "O campo Notação deve conter no mínimo 3 caracteres.", "Atenção", MessageBoxButtons.OK,
                                MessageBoxIcon.Warning);
                             return;
                         }
@@ -219,7 +219,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 LimparComponentes();
                 Habilita(false);
                 cbAutor.Enabled = true;
-                cbAutor.Text = "Digite o nome do autor";
+                cbAutor.Text = "DIGITE O NOME DO AUTOR";
                 cbAutor.Focus();
             }
             catch (Exception ex)
@@ -258,6 +258,19 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
             cbAutor.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cbAutor.AutoCompleteSource = AutoCompleteSource.CustomSource;
             cbAutor.AutoCompleteCustomSource = dicAutor;
+        }
+        //Retorna o texto para maiusculo
+        private void cbAutor_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                cbAutor.Text = cbAutor.Text.ToUpper();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
+            }
         }
     }
 }

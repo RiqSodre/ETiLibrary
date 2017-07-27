@@ -32,31 +32,31 @@
             this.btnPesquisa5 = new System.Windows.Forms.Button();
             this.btnPesquisa6 = new System.Windows.Forms.Button();
             this.btnPesquisa7 = new System.Windows.Forms.Button();
-            this.panel3.SuspendLayout();
+            this.pnlPC.SuspendLayout();
             this.pnlForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(74, 50);
+            this.pnlPC.Location = new System.Drawing.Point(74, 50);
             // 
             // btnPesquisa3
             // 
-            this.btnPesquisa3.Location = new System.Drawing.Point(74, 136);
-            this.btnPesquisa3.Text = "Autor";
-            this.btnPesquisa3.Click += new System.EventHandler(this.btnPesquisa3_Click);
+            this.btnPesq3.Location = new System.Drawing.Point(74, 136);
+            this.btnPesq3.Text = "Autor";
+            this.btnPesq3.Click += new System.EventHandler(this.btnPesquisa3_Click);
             // 
             // btnPesquisa2
             // 
-            this.btnPesquisa2.Location = new System.Drawing.Point(74, 107);
-            this.btnPesquisa2.Text = "Assunto";
-            this.btnPesquisa2.Click += new System.EventHandler(this.btnPesquisa2_Click);
+            this.btnPesq2.Location = new System.Drawing.Point(74, 107);
+            this.btnPesq2.Text = "Assunto";
+            this.btnPesq2.Click += new System.EventHandler(this.btnPesquisa2_Click);
             // 
             // btnPesquisa1
             // 
-            this.btnPesquisa1.Location = new System.Drawing.Point(74, 78);
-            this.btnPesquisa1.Text = "Área";
-            this.btnPesquisa1.Click += new System.EventHandler(this.btnPesquisa1_Click);
+            this.btnPesq1.Location = new System.Drawing.Point(74, 78);
+            this.btnPesq1.Text = "Área";
+            this.btnPesq1.Click += new System.EventHandler(this.btnPesquisa1_Click);
             // 
             // lblPesquisa
             // 
@@ -70,24 +70,24 @@
             // 
             // dtPesquisa1
             // 
-            this.dtPesquisa1.Location = new System.Drawing.Point(71, 332);
+            this.dtPesq1.Location = new System.Drawing.Point(71, 332);
             // 
             // dtPesquisa2
             // 
-            this.dtPesquisa2.Location = new System.Drawing.Point(194, 332);
+            this.dtPesq2.Location = new System.Drawing.Point(194, 332);
             // 
             // cbPesquisa2
             // 
-            this.cbPesquisa2.Location = new System.Drawing.Point(92, 364);
+            this.cbPesq2.Location = new System.Drawing.Point(92, 364);
             // 
             // label9
             // 
-            this.label9.Size = new System.Drawing.Size(95, 16);
-            this.label9.Text = "Consulta: Livro";
+            this.lblFrm.Size = new System.Drawing.Size(95, 16);
+            this.lblFrm.Text = "Consulta: Livro";
             // 
             // cbPesquisa1
             // 
-            this.cbPesquisa1.Location = new System.Drawing.Point(92, 331);
+            this.cbPesq1.Location = new System.Drawing.Point(92, 331);
             // 
             // txtPesquisa
             // 
@@ -171,23 +171,23 @@
             this.Controls.Add(this.btnPesquisa4);
             this.Name = "FrmPCLivro";
             this.Controls.SetChildIndex(this.pnlForm, 0);
-            this.Controls.SetChildIndex(this.panel3, 0);
-            this.Controls.SetChildIndex(this.btnPesquisa3, 0);
-            this.Controls.SetChildIndex(this.btnPesquisa1, 0);
-            this.Controls.SetChildIndex(this.btnPesquisa2, 0);
+            this.Controls.SetChildIndex(this.pnlPC, 0);
+            this.Controls.SetChildIndex(this.btnPesq3, 0);
+            this.Controls.SetChildIndex(this.btnPesq1, 0);
+            this.Controls.SetChildIndex(this.btnPesq2, 0);
             this.Controls.SetChildIndex(this.lblPesquisa, 0);
             this.Controls.SetChildIndex(this.btnPesquisar, 0);
-            this.Controls.SetChildIndex(this.dtPesquisa1, 0);
-            this.Controls.SetChildIndex(this.dtPesquisa2, 0);
-            this.Controls.SetChildIndex(this.cbPesquisa2, 0);
+            this.Controls.SetChildIndex(this.dtPesq1, 0);
+            this.Controls.SetChildIndex(this.dtPesq2, 0);
+            this.Controls.SetChildIndex(this.cbPesq2, 0);
             this.Controls.SetChildIndex(this.txtPesquisa, 0);
-            this.Controls.SetChildIndex(this.cbPesquisa1, 0);
+            this.Controls.SetChildIndex(this.cbPesq1, 0);
             this.Controls.SetChildIndex(this.btnPesquisa4, 0);
             this.Controls.SetChildIndex(this.btnPesquisa5, 0);
             this.Controls.SetChildIndex(this.btnPesquisa6, 0);
             this.Controls.SetChildIndex(this.btnPesquisa7, 0);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnlPC.ResumeLayout(false);
+            this.pnlPC.PerformLayout();
             this.pnlForm.ResumeLayout(false);
             this.pnlForm.PerformLayout();
             this.ResumeLayout(false);

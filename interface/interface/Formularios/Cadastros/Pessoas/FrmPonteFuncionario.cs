@@ -9,20 +9,20 @@ namespace Interface.Formularios.Cadastros
     public partial class FrmPonteFuncionario : FrmPonte
     {
         private PessoaBLL pessoaBLL = new PessoaBLL();
-        private FrmCadFuncionario frmCadFuncionarioBase = new FrmCadFuncionario();
-        private FrmCadFuncionarioBiblioteca frmCadFuncionarioBibliotecaBase = new FrmCadFuncionarioBiblioteca();
-        private Funcionario funcionario = new Funcionario();
-        private bool funcBiblioteca;
+        private FrmCadFuncionario frmCadFuncBase = new FrmCadFuncionario();
+        private FrmCadFuncionarioBiblioteca frmCadFuncBBase = new FrmCadFuncionarioBiblioteca();
+        private Funcionario func = new Funcionario();
+        private bool funcB;
 
         //Carrega o form ponte funcionario
-        public FrmPonteFuncionario(FrmCadFuncionario frmCadFuncionario, string txtFrm)
+        public FrmPonteFuncionario(FrmCadFuncionario frmCadFunc, string txtFrm)
         {
             try
             {
                 InitializeComponent();
-                frmCadFuncionarioBase = frmCadFuncionario;
-                funcionario = frmCadFuncionario.Funcionario;
-                funcBiblioteca = false;
+                frmCadFuncBase = frmCadFunc;
+                func = frmCadFunc.Func;
+                funcB = false;
                 lblForm.Text += " - " + txtFrm;
             }
             catch (Exception ex)
@@ -32,14 +32,14 @@ namespace Interface.Formularios.Cadastros
             }
         }
         //Carrega o form ponte funcionario Biblioteca
-        public FrmPonteFuncionario(FrmCadFuncionarioBiblioteca frmCadFuncionarioBiblioteca, string txtFrm)
+        public FrmPonteFuncionario(FrmCadFuncionarioBiblioteca frmCadFuncB, string txtFrm)
         {
             try
             {
                 InitializeComponent();
-                frmCadFuncionarioBibliotecaBase = frmCadFuncionarioBiblioteca;
-                funcionario = frmCadFuncionarioBiblioteca.Funcionario;
-                funcBiblioteca = true;
+                frmCadFuncBBase = frmCadFuncB;
+                func = frmCadFuncB.Func;
+                funcB = true;
                 lblForm.Text += " Biblioteca - " + txtFrm;
             }
             catch (Exception ex)
@@ -61,29 +61,29 @@ namespace Interface.Formularios.Cadastros
                 }
                 else
                 {
-                    if (funcBiblioteca)
+                    if (funcB)
                     {
-                        funcionario = pessoaBLL.FuncionarioBiblioSelect(Convert.ToInt32(txtTexto.Text));
-                        if (funcionario.CodPessoa == null || funcionario.CodCargo != 3)
+                        func = pessoaBLL.FuncionarioBiblioSelect(Convert.ToInt32(txtTexto.Text));
+                        if (func.CodPessoa == null || func.CodCargo != 3)
                         {
                             MessageBox.Show(this, "Nenhum registro encontrado, certifique-se que o código do funcionário foi digitado corretamente.", "Atenção", MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
                             return;
                         }
                         pessoaTelefone();
-                        frmCadFuncionarioBibliotecaBase.Funcionario = funcionario;
+                        frmCadFuncBBase.Func = func;
                     }
                     else
                     {
-                        funcionario = pessoaBLL.FuncionarioConsulta_PorCod(Convert.ToInt32(txtTexto.Text));
-                        if (funcionario.CodPessoa == null || funcionario.CodCargo == 3)
+                        func = pessoaBLL.FuncionarioConsulta_PorCod(Convert.ToInt32(txtTexto.Text));
+                        if (func.CodPessoa == null || func.CodCargo == 3)
                         {
                             MessageBox.Show(this, "Nenhum registro encontrado, certifique-se que o código do funcionário foi digitado corretamente.", "Atenção", MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
                             return;
                         }
                         pessoaTelefone();
-                        frmCadFuncionarioBase.Funcionario = funcionario;
+                        frmCadFuncBase.Func = func;
                     }
                     DialogResult = DialogResult.OK;
                 }
@@ -101,7 +101,7 @@ namespace Interface.Formularios.Cadastros
                 if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
                 {
                     e.Handled = true;
-                    MessageBox.Show("O campo codigo aceita apenas números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("O campo codigo aceita apenas números.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -114,13 +114,13 @@ namespace Interface.Formularios.Cadastros
         {
             try
             {
-                if (funcionario.Celular.Numero == null)
+                if (func.Celular.Numero == null)
                 {
-                    funcionario.Celular = pessoaBLL.PessoaTelefone(funcionario.CodPessoa);
+                    func.Celular = pessoaBLL.PessoaTelefone(func.CodPessoa);
                 }
                 else
                 {
-                    funcionario.Telefone = pessoaBLL.PessoaTelefone(funcionario.CodPessoa);
+                    func.Telefone = pessoaBLL.PessoaTelefone(func.CodPessoa);
                 }
             }
             catch (Exception ex)

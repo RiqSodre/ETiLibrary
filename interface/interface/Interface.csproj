@@ -252,6 +252,12 @@
     <Compile Include="Formularios\Consultas\Midia\FrmConsultaLivro.Designer.cs">
       <DependentUpon>FrmConsultaLivro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Consultas\Midia\FrmConsultaCDVD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Consultas\Midia\FrmConsultaCDVD.Designer.cs">
+      <DependentUpon>FrmConsultaCDVD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Consultas\Pessoas\FrmConsultaFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -449,6 +455,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cadastros\Midias\FrmPonteTCC.resx">
       <DependentUpon>FrmPonteTCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Consultas\Midia\FrmConsultaCDVD.resx">
+      <DependentUpon>FrmConsultaCDVD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Consultas\Pessoas\FrmConsultaAluno.resx">
       <DependentUpon>FrmConsultaAluno.cs</DependentUpon>

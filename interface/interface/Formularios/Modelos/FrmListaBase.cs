@@ -3,10 +3,11 @@ using System.Windows.Forms;
 using Interface.Formularios.Cadastros;
 using Interface.Formularios.Consultas;
 using System.Runtime.InteropServices;
+using MetroFramework.Forms;
 
 namespace Interface.Formularios.Modelos
 {
-    public partial class FrmListaBase : MetroFramework.Forms.MetroForm
+    public partial class FrmListaBase : MetroForm
     {
         private EnumModo enumodo;
         //Variaveis utilizadas para mover o form através dos paineis
@@ -70,7 +71,7 @@ namespace Interface.Formularios.Modelos
                 }
                 if(existe)
                 {
-                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "Essa janela já esta aberta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 this.Dispose();
             }
@@ -114,14 +115,14 @@ namespace Interface.Formularios.Modelos
                     }
                     if (!existe)
                     {
-                        FrmPCJornalEx pcjornal = new FrmPCJornalEx();
-                        pcjornal.MdiParent = MdiParent;
-                        pcjornal.Show();
+                        FrmPCJornalEx pcjornalex = new FrmPCJornalEx();
+                        pcjornalex.MdiParent = MdiParent;
+                        pcjornalex.Show();
                     }
                 }
                 if(existe)
                 {
-                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "Essa janela já esta aberta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 this.Dispose();
             }
@@ -172,7 +173,7 @@ namespace Interface.Formularios.Modelos
                 }
                 if(existe)
                 {
-                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "Essa janela já esta aberta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 this.Dispose();
             }
@@ -223,7 +224,7 @@ namespace Interface.Formularios.Modelos
                 }
                 if (existe)
                 {
-                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "Essa janela já esta aberta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 this.Dispose();
             }
@@ -274,7 +275,7 @@ namespace Interface.Formularios.Modelos
                 }
                 if (existe)
                 {
-                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "Essa janela já esta aberta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 this.Dispose();
             }
@@ -325,7 +326,7 @@ namespace Interface.Formularios.Modelos
                 }
                 if (existe)
                 {
-                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "Essa janela já esta aberta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 this.Dispose();
             }

@@ -46,7 +46,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                     }
                     else if (txtArea.Text.Length < 4)
                     {
-                        MessageBox.Show(this, "O campo Área deve conter no minimo 4 caracteres.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Área deve conter no mínimo 4 caracteres.", "Atenção", MessageBoxButtons.OK,
                            MessageBoxIcon.Warning);
                         return;
                     }

@@ -1,30 +1,20 @@
-﻿using System;
+﻿using MetroFramework.Forms;
+using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace Interface.Formularios.Modelos
 {
-    public partial class FrmConsultaBase : MetroFramework.Forms.MetroForm
+    public partial class FrmConsultaBase : MetroForm
     {
         //Variaveis utilizadas para mover o form através dos paineis
         protected int WM_NCLBUTTONDOWN = 0xA1;
         protected int HT_CAPTION = 0x2;
 
+        //Construtor padrão
         public FrmConsultaBase()
         {
             InitializeComponent();
-        }
-
-        //Botão Fechar
-        protected void btnFechar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        //Botão Minimizar
-        private void btnMini_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
         }
         //Métodos para mover o form através dos paneis
         [DllImportAttribute("user32.dll")]
@@ -39,6 +29,11 @@ namespace Interface.Formularios.Modelos
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+        //Botão Fechar
+        protected void btnFechar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

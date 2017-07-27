@@ -206,7 +206,7 @@ namespace BLL
                     }
                     else
                     {
-                        aluno.Cpf = "CPF não informado.";
+                        aluno.Cpf = "";
                     }
                     aluno.DataCadastro = (DateTime)dataRow["DataCadastro"];
                     if (!DBNull.Value.Equals(dataRow["R.M."]))
@@ -215,7 +215,7 @@ namespace BLL
                     }
                     else
                     {
-                        aluno.Cpf = "RM não informado.";
+                        aluno.Rm = "";
                     }
                     aluno.Turma.Curso.CodCurso = (int)dataRow["CodCurso"];
                     aluno.Turma.Curso.Descricao = (string)dataRow["Curso"];
@@ -321,7 +321,7 @@ namespace BLL
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@Cargo", cargo);
+                acesso.AdicionarParametros("@CodCargo", cargo);
                 DataTable dataTableFuncionario = acesso.ExecutarConsulta(CommandType.StoredProcedure, "uspFuncionarioConsulta_PorCargo");
                 return FuncionarioCarregarLista(dataTableFuncionario);
             }

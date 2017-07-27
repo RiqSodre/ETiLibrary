@@ -1,11 +1,11 @@
 ﻿using BLL;
+using MetroFramework.Forms;
 using System;
-using System.Net.Mail;
 using System.Windows.Forms;
 
 namespace Interface.Formularios.Sistema
 {
-    public partial class FrmRecSenha : MetroFramework.Forms.MetroForm
+    public partial class FrmRecSenha : MetroForm
     {
         private AutenticacaoBLL autenticaBLL = new AutenticacaoBLL();
         private string retorno;
@@ -31,14 +31,14 @@ namespace Interface.Formularios.Sistema
                     retorno = autenticaBLL.RecuperarUsuario(txtEmail.Text);
                     MessageBox.Show(this, retorno, "Atenção",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if (retorno.Equals("Dados do usuario enviado para o email solicitado."))
+                    if (retorno.Equals("Dados do usuário enviados para o email solicitado."))
                     {
                         this.Close();
                     }
                 }
                 else
                 {
-                    MessageBox.Show(this, "Digite um email valido.", "Atenção",
+                    MessageBox.Show(this, "Digite um email válido.", "Atenção",
                      MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtEmail.Focus();
                 }

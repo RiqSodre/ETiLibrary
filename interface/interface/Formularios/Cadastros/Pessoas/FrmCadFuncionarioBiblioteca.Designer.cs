@@ -40,10 +40,10 @@
             this.cbCargo = new System.Windows.Forms.ComboBox();
             this.lblDadosP = new MetroFramework.Controls.MetroLabel();
             this.cbSexo = new System.Windows.Forms.ComboBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.lblNome = new MetroFramework.Controls.MetroLabel();
             this.lblEmail = new MetroFramework.Controls.MetroLabel();
             this.txtEmail = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.lblDadosS = new MetroFramework.Controls.MetroLabel();
             this.lblLogin = new MetroFramework.Controls.MetroLabel();
             this.txtLogin = new MetroFramework.Controls.MetroTextBox();
             this.lblSenha = new MetroFramework.Controls.MetroLabel();
@@ -88,7 +88,6 @@
             this.btnExcluir.Location = new System.Drawing.Point(256, -3);
             this.btnExcluir.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcluir.TabIndex = 2;
-            this.btnExcluir.Text = "&Excluir";
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
@@ -97,7 +96,6 @@
             this.btnAlterar.Location = new System.Drawing.Point(164, -3);
             this.btnAlterar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAlterar.TabIndex = 1;
-            this.btnAlterar.Text = "&Alterar";
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnNovo
@@ -106,7 +104,6 @@
             this.btnNovo.Location = new System.Drawing.Point(73, -3);
             this.btnNovo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNovo.TabIndex = 0;
-            this.btnNovo.Text = "&Novo";
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnCancelar
@@ -114,7 +111,6 @@
             this.btnCancelar.Location = new System.Drawing.Point(328, 348);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.TabIndex = 2;
-            this.btnCancelar.Text = "&Cancelar";
             // 
             // btnAcao
             // 
@@ -134,10 +130,10 @@
             this.pnlPrincipal.Controls.Add(this.txtSenha);
             this.pnlPrincipal.Controls.Add(this.lblLogin);
             this.pnlPrincipal.Controls.Add(this.txtLogin);
-            this.pnlPrincipal.Controls.Add(this.metroLabel2);
+            this.pnlPrincipal.Controls.Add(this.lblDadosS);
             this.pnlPrincipal.Controls.Add(this.txtEmail);
             this.pnlPrincipal.Controls.Add(this.lblEmail);
-            this.pnlPrincipal.Controls.Add(this.metroLabel1);
+            this.pnlPrincipal.Controls.Add(this.lblNome);
             this.pnlPrincipal.Controls.Add(this.lblCelular);
             this.pnlPrincipal.Controls.Add(this.txtNome);
             this.pnlPrincipal.Controls.Add(this.lblTelefone);
@@ -272,6 +268,8 @@
             this.cbCargo.Enabled = false;
             this.cbCargo.Font = new System.Drawing.Font("Calibri", 8.68F);
             this.cbCargo.FormattingEnabled = true;
+            this.cbCargo.Items.AddRange(new object[] {
+            "Funcionário Biblioteca"});
             this.cbCargo.Location = new System.Drawing.Point(74, 104);
             this.cbCargo.Name = "cbCargo";
             this.cbCargo.Size = new System.Drawing.Size(148, 22);
@@ -301,14 +299,14 @@
             this.cbSexo.Size = new System.Drawing.Size(85, 23);
             this.cbSexo.TabIndex = 1;
             // 
-            // metroLabel1
+            // lblNome
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(13, 39);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(49, 19);
-            this.metroLabel1.TabIndex = 36;
-            this.metroLabel1.Text = "Nome:";
+            this.lblNome.AutoSize = true;
+            this.lblNome.Location = new System.Drawing.Point(13, 39);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(49, 19);
+            this.lblNome.TabIndex = 36;
+            this.lblNome.Text = "Nome:";
             // 
             // lblEmail
             // 
@@ -349,15 +347,15 @@
             this.txtEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroLabel2
+            // lblDadosS
             // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel2.Location = new System.Drawing.Point(231, 11);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(129, 19);
-            this.metroLabel2.TabIndex = 40;
-            this.metroLabel2.Text = "Dados do Sistema";
+            this.lblDadosS.AutoSize = true;
+            this.lblDadosS.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblDadosS.Location = new System.Drawing.Point(231, 11);
+            this.lblDadosS.Name = "lblDadosS";
+            this.lblDadosS.Size = new System.Drawing.Size(129, 19);
+            this.lblDadosS.TabIndex = 40;
+            this.lblDadosS.Text = "Dados do Sistema";
             // 
             // lblLogin
             // 
@@ -516,14 +514,14 @@
         public System.Windows.Forms.ComboBox cbCargo;
         private MetroFramework.Controls.MetroLabel lblDadosP;
         public System.Windows.Forms.ComboBox cbSexo;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel lblNome;
         private MetroFramework.Controls.MetroTextBox txtEmail;
         private MetroFramework.Controls.MetroLabel lblEmail;
         private MetroFramework.Controls.MetroLabel lblSenha;
         private MetroFramework.Controls.MetroTextBox txtSenha;
         private MetroFramework.Controls.MetroLabel lblLogin;
         private MetroFramework.Controls.MetroTextBox txtLogin;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel lblDadosS;
         private System.Windows.Forms.CheckBox checkMSenha;
         private MetroFramework.Controls.MetroLabel lblMSenha;
         private MetroFramework.Controls.MetroLabel lblAdmin;

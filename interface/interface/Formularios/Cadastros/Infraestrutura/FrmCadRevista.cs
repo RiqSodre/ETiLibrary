@@ -3,11 +3,6 @@ using DTO.Infraestrutura_de_Midia;
 using Interface.Formularios.Modelos;
 using MetroFramework.Controls;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Interface.Formularios.Cadastros.Infraestrutura
@@ -66,7 +61,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                     }
                     else if (txtRevista.Text.Length < 3)
                     {
-                        MessageBox.Show(this, "O campo Revista deve conter no minimo 3 caracteres.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Revista deve conter no mínimo 3 caracteres.", "Atenção", MessageBoxButtons.OK,
                            MessageBoxIcon.Warning);
                         return;
                     }
@@ -199,8 +194,8 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 LimparComponentes();
                 Habilita(false);
                 cbRevista.Enabled = true;
-                cbRevista.Text = "Digite a revista";
-                cbEditora.Text = "Digite a editora";
+                cbRevista.Text = "DIGITE A REVISTA";
+                cbEditora.Text = "DIGITE A EDITORA";
                 cbRevista.Focus();
             }
             catch (Exception ex)
@@ -249,6 +244,19 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
             cbRevista.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cbRevista.AutoCompleteSource = AutoCompleteSource.CustomSource;
             cbRevista.AutoCompleteCustomSource = dicRevista;
+        }
+        //Retorna o texto para maiusculo
+        private void cb_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                (sender as ComboBox).Text = (sender as ComboBox).Text.ToUpper();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
+            }
         }
     }
 }

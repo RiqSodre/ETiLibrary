@@ -78,13 +78,13 @@ namespace Interface.Formularios.Cadastros
                     //Validações campo Titulo
                     if (txtTitulo.Text.Length == 0)
                     {
-                        MessageBox.Show(this, "O campo Titulo é obrigatório.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Título é obrigatório.", "Atenção", MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
                         return;
                     }
                     else if (txtTitulo.Text.Length < 6)
                     {
-                        MessageBox.Show(this, "O titulo deve conter no minimo seis digitos", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O título deve conter no minimo seis digitos.", "Atenção", MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
                         return;
                     }
@@ -97,7 +97,7 @@ namespace Interface.Formularios.Cadastros
                     {
                         if (txtSubtitulo.Text.Length < 3)
                         {
-                            MessageBox.Show(this, "O subtitulo deve conter no minimo três digitos", "Atenção", MessageBoxButtons.OK,
+                            MessageBox.Show(this, "O subtítulo deve conter no minimo três digitos.", "Atenção", MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
                             return;
                         }
@@ -132,7 +132,7 @@ namespace Interface.Formularios.Cadastros
                     //Validações campo Data de publicação
                     if (dtDataPublicacao.Value > DateTime.Now)
                     {
-                        MessageBox.Show(this, "Selecione uma data de publicação valida.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "Selecione uma data de publicação válida.", "Atenção", MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
                         return;
                     }
@@ -152,7 +152,7 @@ namespace Interface.Formularios.Cadastros
                         Livro.Local = txtLocal.Text;
                     }
                     //Validações campo NPags
-                    if (txtNdePaginas.Text.Length == 0)
+                    if (txtNPags.Text.Length == 0)
                     {
                         MessageBox.Show(this, "O campo Nº de Páginas é obrigatório.", "Atenção", MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
@@ -160,14 +160,14 @@ namespace Interface.Formularios.Cadastros
                     }
                     else
                     {
-                        Livro.Npags = txtNdePaginas.Text;
+                        Livro.Npags = txtNPags.Text;
                     }
                     //Validações campo Colecao
                     if (txtColecao.Text.Length != 0)
                     {
                         if (txtColecao.Text.Length < 3)
                         {
-                            MessageBox.Show(this, "O campo Coleção deve conter no minimo três digitos", "Atenção", MessageBoxButtons.OK,
+                            MessageBox.Show(this, "O campo Coleção deve conter no mínimo três digitos.", "Atenção", MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
                             return;
                         }
@@ -215,17 +215,17 @@ namespace Interface.Formularios.Cadastros
                         }
                     }
                     //Campo Observação
-                    Livro.Observacao = txtObservacao.Text;
+                    Livro.Observacao = txtObs.Text;
                     //Validações campo Localização
-                    if (txtLocalizacao.Text.Length != 0)
+                    if (txtLocaliza.Text.Length != 0)
                     {
-                        if (txtLocalizacao.Text.Length < 4)
+                        if (txtLocaliza.Text.Length < 4)
                         {
-                            MessageBox.Show(this, "O campo Localização deve conter no minimo quatro digitor", "Atenção", MessageBoxButtons.OK,
+                            MessageBox.Show(this, "O campo Localização deve conter no mínimo quatro digitos.", "Atenção", MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
                             return;
                         }
-                        Livro.Localizacao = txtLocalizacao.Text;
+                        Livro.Localizacao = txtLocaliza.Text;
                     }
                     else
                     {
@@ -253,7 +253,7 @@ namespace Interface.Formularios.Cadastros
                     //CheckBox Disponivel
                     if (btnAcao.Text.Equals("Alterar"))
                     {
-                        if (Livro.Disponivel != checkDisponivel.Checked)
+                        if (Livro.Disponivel != checkDisp.Checked)
                         {
                             EmprestimoBLL emprestimoBLL = new EmprestimoBLL();
                             EmprestimoList emprestimoList = emprestimoBLL.EmprestimoConsultar_PorTombo(Livro.Tombo, "Livro");
@@ -280,7 +280,7 @@ namespace Interface.Formularios.Cadastros
                             }
                         }
                     }
-                    Livro.Disponivel = checkDisponivel.Checked;
+                    Livro.Disponivel = checkDisp.Checked;
                     //Validações dataGrid Assuntos
                     if (dataGridAssuntos.Rows.Count == 0)
                     {
@@ -410,7 +410,7 @@ namespace Interface.Formularios.Cadastros
                 e.KeyChar != (Char)13 && e.KeyChar != (Char)8))
                 {
                     e.KeyChar = (Char)0;
-                    MessageBox.Show("O campo número de Valor aceita apenas números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("O campo número de Valor aceita apenas números.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -440,7 +440,7 @@ namespace Interface.Formularios.Cadastros
                 if (!char.IsLetter(e.KeyChar) && !(e.KeyChar == (char)Keys.Back) && !(e.KeyChar == (char)Keys.Space))
                 {
                     e.Handled = true;
-                    MessageBox.Show("O campo Local aceita apenas letras!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("O campo Local aceita apenas letras.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -456,7 +456,7 @@ namespace Interface.Formularios.Cadastros
                 if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
                 {
                     e.Handled = true;
-                    MessageBox.Show("O campo Número de páginas aceita apenas números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("O campo Número de páginas aceita apenas números.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -474,16 +474,16 @@ namespace Interface.Formularios.Cadastros
             txtEdicao.Text = livro.Edicao;
             dtDataPublicacao.Value = (DateTime)livro.DataPublicacao;
             txtLocal.Text = livro.Local;
-            txtNdePaginas.Text = livro.Npags;
+            txtNPags.Text = livro.Npags;
             txtTombo.Text = livro.Tombo.ToString();
             txtValor.Text = Convert.ToDouble(livro.Valor).ToString("C");
             cbTipoLivro.SelectedItem = livro.TipoLivro;
             cbTipoTombo.SelectedItem = livro.TipoTombo;
-            txtLocalizacao.Text = livro.Localizacao;
+            txtLocaliza.Text = livro.Localizacao;
             cbLingua.SelectedItem = livro.Lingua;
             cbEditora.Text = livro.Editora.Nome;
             cbArea.SelectedValue = livro.Area.CodArea;
-            checkDisponivel.Checked = Livro.Disponivel;
+            checkDisp.Checked = Livro.Disponivel;
             foreach (Genero genero in livro.GeneroList)
             {
                 dataGridGeneros.Rows.Add(genero.CodGenero, genero.Descricao);
@@ -837,7 +837,7 @@ namespace Interface.Formularios.Cadastros
             {
                 if (!cbGenero.Focused)
                 {
-                    cbGenero.Text = "Digite o genêro";
+                    cbGenero.Text = "Digite o gênero";
                     timerCbGenero.Enabled = false;
                 }
             }

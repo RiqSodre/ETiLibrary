@@ -31,21 +31,6 @@
             this.pnlForm.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel2
-            // 
-            this.pnlForm.TabIndex = 1000;
-            // 
-            // lblForm
-            // 
-            this.lblForm.Size = new System.Drawing.Size(139, 16);
-            this.lblForm.TabIndex = 1000;
-            this.lblForm.Text = "Emprestimo: Carregar";
-            // 
-            // btnFechar
-            // 
-            this.btnFechar.FlatAppearance.BorderSize = 0;
-            this.btnFechar.TabIndex = 2;
-            // 
             // txtTexto
             // 
             // 
@@ -61,23 +46,39 @@
             this.txtTexto.CustomButton.UseSelectable = true;
             this.txtTexto.CustomButton.Visible = false;
             this.txtTexto.Lines = new string[0];
-            this.txtTexto.TabIndex = 0;
-            // 
-            // lblTexto
-            // 
-            this.lblTexto.TabIndex = 1000;
             // 
             // btnAcao
             // 
-            this.btnAcao.TabIndex = 1;
             this.btnAcao.Text = "Avançar";
             this.btnAcao.Click += new System.EventHandler(this.btnAcao_Click);
             // 
+            // btnFechar
+            // 
+            this.btnFechar.FlatAppearance.BorderSize = 0;
+            this.btnFechar.TabIndex = 2;
+            // 
+            // lblForm
+            // 
+            this.lblForm.Size = new System.Drawing.Size(139, 16);
+            this.lblForm.TabIndex = 1000;
+            this.lblForm.Text = "Emprestimo: Carregar";
+            // 
+            // pnlForm
+            // 
+            this.pnlForm.TabIndex = 1000;
+            // 
+            // lblTexto
+            // 
+            this.lblTexto.Location = new System.Drawing.Point(78, 83);
+            this.lblTexto.Size = new System.Drawing.Size(170, 19);
+            this.lblTexto.TabIndex = 1000;
+            this.lblTexto.Text = "Digite o código da pessoa:";
+            // 
             // FrmPonteEmprestimo
             // 
-            this.AcceptButton = this.btnAcao;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(327, 223);
+            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "FrmPonteEmprestimo";
             this.pnlForm.ResumeLayout(false);
             this.pnlForm.PerformLayout();

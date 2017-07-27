@@ -73,7 +73,7 @@ namespace Interface.Formularios.Cadastros
                 if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
                 {
                     e.Handled = true;
-                    MessageBox.Show("O campo codigo aceita apenas números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("O campo codigo aceita apenas números.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)

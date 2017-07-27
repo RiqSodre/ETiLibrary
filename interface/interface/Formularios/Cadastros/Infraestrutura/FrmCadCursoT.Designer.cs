@@ -54,6 +54,7 @@
             // pnl
             // 
             this.pnl.Size = new System.Drawing.Size(355, 26);
+            this.pnl.TabIndex = 4;
             // 
             // lblForm
             // 
@@ -64,37 +65,44 @@
             // 
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.Location = new System.Drawing.Point(323, 1);
+            this.btnFechar.TabIndex = 0;
             // 
             // pnlBase
             // 
             this.pnlBase.Size = new System.Drawing.Size(350, 36);
+            this.pnlBase.TabIndex = 3;
             // 
             // btnExcluir
             // 
             this.btnExcluir.FlatAppearance.BorderSize = 0;
             this.btnExcluir.Location = new System.Drawing.Point(222, -3);
+            this.btnExcluir.TabIndex = 2;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
             this.btnAlterar.FlatAppearance.BorderSize = 0;
             this.btnAlterar.Location = new System.Drawing.Point(131, -3);
+            this.btnAlterar.TabIndex = 1;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnNovo
             // 
             this.btnNovo.FlatAppearance.BorderSize = 0;
             this.btnNovo.Location = new System.Drawing.Point(40, -3);
+            this.btnNovo.TabIndex = 0;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(256, 358);
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAcao
             // 
             this.btnAcao.Location = new System.Drawing.Point(164, 358);
+            this.btnAcao.TabIndex = 1;
             this.btnAcao.Click += new System.EventHandler(this.btnAcao_Click);
             // 
             // pnlPrincipal
@@ -109,6 +117,7 @@
             this.pnlPrincipal.Controls.Add(this.cbCurso);
             this.pnlPrincipal.Controls.Add(this.lblcbCurso);
             this.pnlPrincipal.Size = new System.Drawing.Size(340, 273);
+            this.pnlPrincipal.TabIndex = 0;
             // 
             // lblCurso
             // 
@@ -144,7 +153,7 @@
             this.txtCurso.SelectionStart = 0;
             this.txtCurso.ShortcutsEnabled = true;
             this.txtCurso.Size = new System.Drawing.Size(149, 23);
-            this.txtCurso.TabIndex = 213;
+            this.txtCurso.TabIndex = 0;
             this.txtCurso.UseSelectable = true;
             this.txtCurso.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtCurso.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -159,7 +168,7 @@
             this.cbCurso.Location = new System.Drawing.Point(177, 31);
             this.cbCurso.Name = "cbCurso";
             this.cbCurso.Size = new System.Drawing.Size(149, 23);
-            this.cbCurso.TabIndex = 214;
+            this.cbCurso.TabIndex = 1;
             this.cbCurso.ValueMember = "CodCurso";
             this.cbCurso.SelectedIndexChanged += new System.EventHandler(this.cbCurso_SelectedIndexChanged);
             // 
@@ -189,7 +198,7 @@
             this.btnTurmaRemover.Margin = new System.Windows.Forms.Padding(0);
             this.btnTurmaRemover.Name = "btnTurmaRemover";
             this.btnTurmaRemover.Size = new System.Drawing.Size(35, 35);
-            this.btnTurmaRemover.TabIndex = 220;
+            this.btnTurmaRemover.TabIndex = 4;
             this.btnTurmaRemover.UseSelectable = true;
             this.btnTurmaRemover.Click += new System.EventHandler(this.btnTurmaRemover_Click);
             // 
@@ -202,7 +211,7 @@
             this.btnTurmaAdd.Margin = new System.Windows.Forms.Padding(0);
             this.btnTurmaAdd.Name = "btnTurmaAdd";
             this.btnTurmaAdd.Size = new System.Drawing.Size(35, 35);
-            this.btnTurmaAdd.TabIndex = 218;
+            this.btnTurmaAdd.TabIndex = 3;
             this.btnTurmaAdd.UseSelectable = true;
             this.btnTurmaAdd.Click += new System.EventHandler(this.btnTurmaAdd_Click);
             // 
@@ -261,7 +270,7 @@
             this.dataGridTurmas.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridTurmas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridTurmas.Size = new System.Drawing.Size(251, 119);
-            this.dataGridTurmas.TabIndex = 219;
+            this.dataGridTurmas.TabIndex = 2;
             // 
             // clnCodTurma
             // 

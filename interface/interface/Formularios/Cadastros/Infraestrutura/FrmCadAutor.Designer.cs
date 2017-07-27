@@ -45,6 +45,7 @@
             // pnl
             // 
             this.pnl.Size = new System.Drawing.Size(358, 26);
+            this.pnl.TabIndex = 4;
             // 
             // lblForm
             // 
@@ -55,37 +56,44 @@
             // 
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.Location = new System.Drawing.Point(323, 1);
+            this.btnFechar.TabIndex = 0;
             // 
             // pnlBase
             // 
             this.pnlBase.Size = new System.Drawing.Size(350, 36);
+            this.pnlBase.TabIndex = 3;
             // 
             // btnExcluir
             // 
             this.btnExcluir.FlatAppearance.BorderSize = 0;
             this.btnExcluir.Location = new System.Drawing.Point(221, -3);
+            this.btnExcluir.TabIndex = 2;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
             this.btnAlterar.FlatAppearance.BorderSize = 0;
             this.btnAlterar.Location = new System.Drawing.Point(130, -3);
+            this.btnAlterar.TabIndex = 1;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnNovo
             // 
             this.btnNovo.FlatAppearance.BorderSize = 0;
             this.btnNovo.Location = new System.Drawing.Point(39, -3);
+            this.btnNovo.TabIndex = 0;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(256, 252);
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAcao
             // 
             this.btnAcao.Location = new System.Drawing.Point(164, 252);
+            this.btnAcao.TabIndex = 1;
             this.btnAcao.Click += new System.EventHandler(this.btnAcao_Click);
             // 
             // pnlPrincipal
@@ -100,6 +108,7 @@
             this.pnlPrincipal.Controls.Add(this.cbAutor);
             this.pnlPrincipal.Controls.Add(this.lblcbAutor);
             this.pnlPrincipal.Size = new System.Drawing.Size(338, 175);
+            this.pnlPrincipal.TabIndex = 0;
             // 
             // lblNome
             // 
@@ -135,7 +144,7 @@
             this.txtNome.SelectionStart = 0;
             this.txtNome.ShortcutsEnabled = true;
             this.txtNome.Size = new System.Drawing.Size(102, 23);
-            this.txtNome.TabIndex = 225;
+            this.txtNome.TabIndex = 1;
             this.txtNome.UseSelectable = true;
             this.txtNome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtNome.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -148,11 +157,12 @@
             this.cbAutor.FormattingEnabled = true;
             this.cbAutor.Location = new System.Drawing.Point(21, 31);
             this.cbAutor.Name = "cbAutor";
-            this.cbAutor.Size = new System.Drawing.Size(149, 23);
-            this.cbAutor.TabIndex = 226;
-            this.cbAutor.Text = "Digite o nome do autor";
+            this.cbAutor.Size = new System.Drawing.Size(172, 23);
+            this.cbAutor.TabIndex = 0;
+            this.cbAutor.Text = "DIGITE O NOME DO AUTOR";
             this.cbAutor.ValueMember = "CodArea";
             this.cbAutor.TextChanged += new System.EventHandler(this.exibe_TextChanged);
+            this.cbAutor.Leave += new System.EventHandler(this.cbAutor_Leave);
             // 
             // lblcbAutor
             // 
@@ -197,7 +207,7 @@
             this.txtNotacao.SelectionStart = 0;
             this.txtNotacao.ShortcutsEnabled = true;
             this.txtNotacao.Size = new System.Drawing.Size(149, 23);
-            this.txtNotacao.TabIndex = 229;
+            this.txtNotacao.TabIndex = 3;
             this.txtNotacao.UseSelectable = true;
             this.txtNotacao.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtNotacao.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -236,7 +246,7 @@
             this.txtSobrenome.SelectionStart = 0;
             this.txtSobrenome.ShortcutsEnabled = true;
             this.txtSobrenome.Size = new System.Drawing.Size(149, 23);
-            this.txtSobrenome.TabIndex = 231;
+            this.txtSobrenome.TabIndex = 2;
             this.txtSobrenome.UseSelectable = true;
             this.txtSobrenome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtSobrenome.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

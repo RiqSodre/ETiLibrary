@@ -1,7 +1,6 @@
 ﻿using BLL;
 using DTO.Infraestrutura_de_Pessoa;
 using Interface.Formularios.Modelos;
-using MetroFramework.Controls;
 using System;
 using System.Windows.Forms;
 
@@ -75,7 +74,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                     }
                     else if(txtCurso.Text.Length < 4)
                     {
-                        MessageBox.Show(this, "O campo Curso deve conter no minimo 4 caracteres.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Curso deve conter no mínimo 4 caracteres.", "Atenção", MessageBoxButtons.OK,
                            MessageBoxIcon.Warning);
                         return;
                     }

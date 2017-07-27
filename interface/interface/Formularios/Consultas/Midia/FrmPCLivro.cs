@@ -36,17 +36,17 @@ namespace Interface.Formularios.Consultas
                 LimpaForm();
                 lblPesquisa.Text = "Selecione a área do livro:";
 
-                cbPesquisa1.DisplayMember = "Descricao";
-                cbPesquisa1.ValueMember = "CodArea";
-                cbPesquisa1.DropDownStyle = ComboBoxStyle.DropDownList;
+                cbPesq1.DisplayMember = "Descricao";
+                cbPesq1.ValueMember = "CodArea";
+                cbPesq1.DropDownStyle = ComboBoxStyle.DropDownList;
 
-                cbPesquisa1.DataSource = areaBLL.CarregaAreas();
-                if (cbPesquisa1.Items.Count > 0)
+                cbPesq1.DataSource = areaBLL.CarregaAreas();
+                if (cbPesq1.Items.Count > 0)
                 {
-                    cbPesquisa1.SelectedIndex = 0;
+                    cbPesq1.SelectedIndex = 0;
                 }
                 
-                HabilitaCombo(92, 366);
+                HabilitaCombo(92, 366, cbPesq1);
                 TamanhoForm(345, 413);
             }
             catch (Exception ex)
@@ -71,13 +71,13 @@ namespace Interface.Formularios.Consultas
                     dicAssunto.Add(assunto.Descricao);
                 }
 
-                cbPesquisa1.DropDownStyle = ComboBoxStyle.DropDown;
-                cbPesquisa1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                cbPesquisa1.AutoCompleteSource = AutoCompleteSource.CustomSource;
-                cbPesquisa1.AutoCompleteCustomSource = dicAssunto;
-                cbPesquisa1.Text = "Digite o assunto";
+                cbPesq1.DropDownStyle = ComboBoxStyle.DropDown;
+                cbPesq1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                cbPesq1.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                cbPesq1.AutoCompleteCustomSource = dicAssunto;
+                cbPesq1.Text = "Digite o assunto";
 
-                HabilitaCombo(92, 366);
+                HabilitaCombo(92, 366, cbPesq1);
                 TamanhoForm(345, 413);
             }
             catch (Exception ex)
@@ -102,13 +102,13 @@ namespace Interface.Formularios.Consultas
                     dicAutor.Add(autor.Nome);
                 }
 
-                cbPesquisa1.DropDownStyle = ComboBoxStyle.DropDown;
-                cbPesquisa1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                cbPesquisa1.AutoCompleteSource = AutoCompleteSource.CustomSource;
-                cbPesquisa1.AutoCompleteCustomSource = dicAutor;
-                cbPesquisa1.Text = "Digite o nome do Autor";
+                cbPesq1.DropDownStyle = ComboBoxStyle.DropDown;
+                cbPesq1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                cbPesq1.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                cbPesq1.AutoCompleteCustomSource = dicAutor;
+                cbPesq1.Text = "Digite o nome do Autor";
 
-                HabilitaCombo(92, 366);
+                HabilitaCombo(92, 366, cbPesq1);
                 TamanhoForm(345, 413);
             }
             catch (Exception ex)
@@ -133,13 +133,13 @@ namespace Interface.Formularios.Consultas
                     dicEditora.Add(editora.Nome);
                 }
 
-                cbPesquisa1.DropDownStyle = ComboBoxStyle.DropDown;
-                cbPesquisa1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                cbPesquisa1.AutoCompleteSource = AutoCompleteSource.CustomSource;
-                cbPesquisa1.AutoCompleteCustomSource = dicEditora;
-                cbPesquisa1.Text = "Digite a editora";
+                cbPesq1.DropDownStyle = ComboBoxStyle.DropDown;
+                cbPesq1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                cbPesq1.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                cbPesq1.AutoCompleteCustomSource = dicEditora;
+                cbPesq1.Text = "Digite a editora";
 
-                HabilitaCombo(92, 366);
+                HabilitaCombo(92, 366, cbPesq1);
                 TamanhoForm(345, 413);
             }
             catch (Exception ex)
@@ -157,8 +157,8 @@ namespace Interface.Formularios.Consultas
                 LimpaForm();
                 lblPesquisa.Text = "Selecione a genêro do livro:";
 
-                cbPesquisa1.DisplayMember = "Descricao";
-                cbPesquisa1.ValueMember = "CodGenero";
+                cbPesq1.DisplayMember = "Descricao";
+                cbPesq1.ValueMember = "CodGenero";
 
                 AutoCompleteStringCollection dicGenero = new AutoCompleteStringCollection();
 
@@ -167,13 +167,13 @@ namespace Interface.Formularios.Consultas
                     dicGenero.Add(genero.Descricao);
                 }
                 
-                cbPesquisa1.DropDownStyle = ComboBoxStyle.DropDown;
-                cbPesquisa1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                cbPesquisa1.AutoCompleteSource = AutoCompleteSource.CustomSource;
-                cbPesquisa1.AutoCompleteCustomSource = dicGenero;
-                cbPesquisa1.Text = "Digite o genêro";
+                cbPesq1.DropDownStyle = ComboBoxStyle.DropDown;
+                cbPesq1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                cbPesq1.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                cbPesq1.AutoCompleteCustomSource = dicGenero;
+                cbPesq1.Text = "Digite o genêro";
 
-                HabilitaCombo(92, 366);
+                HabilitaCombo(92, 366, cbPesq1);
                 TamanhoForm(345, 413);
             }
             catch (Exception ex)
@@ -228,17 +228,17 @@ namespace Interface.Formularios.Consultas
 
                 if (lblPesquisa.Text.Contains("área"))
                 {
-                    if(cbPesquisa1.SelectedIndex == -1)
+                    if(cbPesq1.SelectedIndex == -1)
                     {
                         MessageBox.Show(this, "Selecione uma área.", "Atenção", MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
                         return;
                     }
-                    livroList = midiaBLL.LivroConsultar_PorArea((int)cbPesquisa1.SelectedValue);
+                    livroList = midiaBLL.LivroConsultar_PorArea((int)cbPesq1.SelectedValue);
                 }
                 else if (lblPesquisa.Text.Contains("assunto"))
                 {
-                    Assunto assunto = assuntoBLL.CarregaAssunto(cbPesquisa1.Text);
+                    Assunto assunto = assuntoBLL.CarregaAssunto(cbPesq1.Text);
 
                     if (assunto.Descricao.Equals(""))
                     {
@@ -249,7 +249,7 @@ namespace Interface.Formularios.Consultas
                 }
                 else if (lblPesquisa.Text.Contains("autor"))
                 {
-                    Autor autor = autorBLL.CarregaAutor(cbPesquisa1.Text);
+                    Autor autor = autorBLL.CarregaAutor(cbPesq1.Text);
 
                     if (autor.Nome.Equals(""))
                     {
@@ -260,7 +260,7 @@ namespace Interface.Formularios.Consultas
                 }
                 else if(lblPesquisa.Text.Contains("editora"))
                 {
-                    Editora editora = editoraBLL.CarregaEditora(cbPesquisa1.Text);
+                    Editora editora = editoraBLL.CarregaEditora(cbPesq1.Text);
 
                     if (editora.Nome.Equals(""))
                     {
@@ -271,7 +271,7 @@ namespace Interface.Formularios.Consultas
                 }
                 else if (lblPesquisa.Text.Contains("genêro"))
                 {
-                    Genero genero = generoBLL.CarregaGenero(cbPesquisa1.Text);
+                    Genero genero = generoBLL.CarregaGenero(cbPesq1.Text);
 
                     if (genero.Descricao.Equals(""))
                     {

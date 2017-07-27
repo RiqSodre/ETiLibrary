@@ -35,12 +35,12 @@
             this.lblTombo = new MetroFramework.Controls.MetroLabel();
             this.txtTombo = new MetroFramework.Controls.MetroTextBox();
             this.cbTipoTombo = new System.Windows.Forms.ComboBox();
-            this.txtObservacao = new System.Windows.Forms.TextBox();
+            this.txtObs = new System.Windows.Forms.TextBox();
             this.lblObs = new MetroFramework.Controls.MetroLabel();
             this.lblTipoTombo = new MetroFramework.Controls.MetroLabel();
             this.cbArea = new System.Windows.Forms.ComboBox();
-            this.lblLocalizacao = new MetroFramework.Controls.MetroLabel();
-            this.txtLocalizacao = new MetroFramework.Controls.MetroTextBox();
+            this.lblLocaliza = new MetroFramework.Controls.MetroLabel();
+            this.txtLocaliza = new MetroFramework.Controls.MetroTextBox();
             this.lblTitulo = new MetroFramework.Controls.MetroLabel();
             this.txtTitulo = new MetroFramework.Controls.MetroTextBox();
             this.lblArea = new MetroFramework.Controls.MetroLabel();
@@ -73,28 +73,24 @@
             // 
             this.btnExcluir.FlatAppearance.BorderSize = 0;
             this.btnExcluir.TabIndex = 2;
-            this.btnExcluir.Text = "&Excluir";
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
             this.btnAlterar.FlatAppearance.BorderSize = 0;
             this.btnAlterar.TabIndex = 1;
-            this.btnAlterar.Text = "&Alterar";
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnNovo
             // 
             this.btnNovo.FlatAppearance.BorderSize = 0;
             this.btnNovo.TabIndex = 0;
-            this.btnNovo.Text = "&Novo";
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(241, 403);
             this.btnCancelar.TabIndex = 2;
-            this.btnCancelar.Text = "&Cancelar";
             // 
             // btnAcao
             // 
@@ -111,12 +107,12 @@
             this.pnlPrincipal.Controls.Add(this.lblTombo);
             this.pnlPrincipal.Controls.Add(this.txtTombo);
             this.pnlPrincipal.Controls.Add(this.cbTipoTombo);
-            this.pnlPrincipal.Controls.Add(this.txtObservacao);
+            this.pnlPrincipal.Controls.Add(this.txtObs);
             this.pnlPrincipal.Controls.Add(this.lblObs);
             this.pnlPrincipal.Controls.Add(this.lblTipoTombo);
             this.pnlPrincipal.Controls.Add(this.cbArea);
-            this.pnlPrincipal.Controls.Add(this.lblLocalizacao);
-            this.pnlPrincipal.Controls.Add(this.txtLocalizacao);
+            this.pnlPrincipal.Controls.Add(this.lblLocaliza);
+            this.pnlPrincipal.Controls.Add(this.txtLocaliza);
             this.pnlPrincipal.Controls.Add(this.lblTitulo);
             this.pnlPrincipal.Controls.Add(this.txtTitulo);
             this.pnlPrincipal.Controls.Add(this.lblArea);
@@ -189,7 +185,7 @@
             "Vietnamita "});
             this.cbCurso.Location = new System.Drawing.Point(21, 234);
             this.cbCurso.Name = "cbCurso";
-            this.cbCurso.Size = new System.Drawing.Size(100, 23);
+            this.cbCurso.Size = new System.Drawing.Size(142, 23);
             this.cbCurso.TabIndex = 7;
             this.cbCurso.ValueMember = "CodCurso";
             this.cbCurso.SelectedIndexChanged += new System.EventHandler(this.cbCurso_SelectedIndexChanged);
@@ -274,16 +270,16 @@
             this.cbTipoTombo.Size = new System.Drawing.Size(100, 23);
             this.cbTipoTombo.TabIndex = 6;
             // 
-            // txtObservacao
+            // txtObs
             // 
-            this.txtObservacao.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservacao.Location = new System.Drawing.Point(21, 291);
-            this.txtObservacao.MaxLength = 140;
-            this.txtObservacao.Multiline = true;
-            this.txtObservacao.Name = "txtObservacao";
-            this.txtObservacao.Size = new System.Drawing.Size(290, 25);
-            this.txtObservacao.TabIndex = 8;
-            this.txtObservacao.Leave += new System.EventHandler(this.txtObservacao_Leave);
+            this.txtObs.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObs.Location = new System.Drawing.Point(21, 291);
+            this.txtObs.MaxLength = 140;
+            this.txtObs.Multiline = true;
+            this.txtObs.Name = "txtObs";
+            this.txtObs.Size = new System.Drawing.Size(290, 25);
+            this.txtObs.TabIndex = 8;
+            this.txtObs.Leave += new System.EventHandler(this.txtObservacao_Leave);
             // 
             // lblObs
             // 
@@ -317,44 +313,44 @@
             this.cbArea.ValueMember = "CodArea";
             this.cbArea.SelectedIndexChanged += new System.EventHandler(this.cbArea_SelectedIndexChanged);
             // 
-            // lblLocalizacao
+            // lblLocaliza
             // 
-            this.lblLocalizacao.AutoSize = true;
-            this.lblLocalizacao.Location = new System.Drawing.Point(169, 108);
-            this.lblLocalizacao.Name = "lblLocalizacao";
-            this.lblLocalizacao.Size = new System.Drawing.Size(79, 19);
-            this.lblLocalizacao.TabIndex = 256;
-            this.lblLocalizacao.Text = "Localização:";
+            this.lblLocaliza.AutoSize = true;
+            this.lblLocaliza.Location = new System.Drawing.Point(169, 108);
+            this.lblLocaliza.Name = "lblLocaliza";
+            this.lblLocaliza.Size = new System.Drawing.Size(79, 19);
+            this.lblLocaliza.TabIndex = 256;
+            this.lblLocaliza.Text = "Localização:";
             // 
-            // txtLocalizacao
-            // 
-            // 
+            // txtLocaliza
             // 
             // 
-            this.txtLocalizacao.CustomButton.Image = null;
-            this.txtLocalizacao.CustomButton.Location = new System.Drawing.Point(101, 1);
-            this.txtLocalizacao.CustomButton.Name = "";
-            this.txtLocalizacao.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtLocalizacao.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtLocalizacao.CustomButton.TabIndex = 1;
-            this.txtLocalizacao.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtLocalizacao.CustomButton.UseSelectable = true;
-            this.txtLocalizacao.CustomButton.Visible = false;
-            this.txtLocalizacao.Lines = new string[0];
-            this.txtLocalizacao.Location = new System.Drawing.Point(174, 130);
-            this.txtLocalizacao.MaxLength = 40;
-            this.txtLocalizacao.Name = "txtLocalizacao";
-            this.txtLocalizacao.PasswordChar = '\0';
-            this.txtLocalizacao.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtLocalizacao.SelectedText = "";
-            this.txtLocalizacao.SelectionLength = 0;
-            this.txtLocalizacao.SelectionStart = 0;
-            this.txtLocalizacao.ShortcutsEnabled = true;
-            this.txtLocalizacao.Size = new System.Drawing.Size(123, 23);
-            this.txtLocalizacao.TabIndex = 4;
-            this.txtLocalizacao.UseSelectable = true;
-            this.txtLocalizacao.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtLocalizacao.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // 
+            this.txtLocaliza.CustomButton.Image = null;
+            this.txtLocaliza.CustomButton.Location = new System.Drawing.Point(101, 1);
+            this.txtLocaliza.CustomButton.Name = "";
+            this.txtLocaliza.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtLocaliza.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtLocaliza.CustomButton.TabIndex = 1;
+            this.txtLocaliza.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtLocaliza.CustomButton.UseSelectable = true;
+            this.txtLocaliza.CustomButton.Visible = false;
+            this.txtLocaliza.Lines = new string[0];
+            this.txtLocaliza.Location = new System.Drawing.Point(174, 130);
+            this.txtLocaliza.MaxLength = 40;
+            this.txtLocaliza.Name = "txtLocaliza";
+            this.txtLocaliza.PasswordChar = '\0';
+            this.txtLocaliza.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtLocaliza.SelectedText = "";
+            this.txtLocaliza.SelectionLength = 0;
+            this.txtLocaliza.SelectionStart = 0;
+            this.txtLocaliza.ShortcutsEnabled = true;
+            this.txtLocaliza.Size = new System.Drawing.Size(123, 23);
+            this.txtLocaliza.TabIndex = 4;
+            this.txtLocaliza.UseSelectable = true;
+            this.txtLocaliza.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtLocaliza.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // lblTitulo
             // 
@@ -363,7 +359,7 @@
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(44, 19);
             this.lblTitulo.TabIndex = 255;
-            this.lblTitulo.Text = "Titulo:";
+            this.lblTitulo.Text = "Título:";
             // 
             // txtTitulo
             // 
@@ -502,12 +498,12 @@
         private MetroFramework.Controls.MetroLabel lblTombo;
         private MetroFramework.Controls.MetroTextBox txtTombo;
         private System.Windows.Forms.ComboBox cbTipoTombo;
-        private System.Windows.Forms.TextBox txtObservacao;
+        private System.Windows.Forms.TextBox txtObs;
         private MetroFramework.Controls.MetroLabel lblObs;
         private MetroFramework.Controls.MetroLabel lblTipoTombo;
         private System.Windows.Forms.ComboBox cbArea;
-        private MetroFramework.Controls.MetroLabel lblLocalizacao;
-        private MetroFramework.Controls.MetroTextBox txtLocalizacao;
+        private MetroFramework.Controls.MetroLabel lblLocaliza;
+        private MetroFramework.Controls.MetroTextBox txtLocaliza;
         private MetroFramework.Controls.MetroLabel lblTitulo;
         private MetroFramework.Controls.MetroTextBox txtTitulo;
         private MetroFramework.Controls.MetroLabel lblArea;

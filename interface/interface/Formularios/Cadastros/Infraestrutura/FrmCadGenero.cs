@@ -46,7 +46,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                     }
                     else if (txtGenero.Text.Length < 4)
                     {
-                        MessageBox.Show(this, "O campo Gênero deve conter no minimo 4 caracteres.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Gênero deve conter no mínimo 4 caracteres.", "Atenção", MessageBoxButtons.OK,
                            MessageBoxIcon.Warning);
                         return;
                     }
@@ -106,14 +106,14 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 if (btnAcao.Enabled == true)
                 {
                     btnCancelar_Click(sender, e);
-                    MessageBox.Show(this, "Selecione uma editora.", "Atenção:", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(this, "Selecione um gênero.", "Atenção:", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     generoBase = generoBLL.CarregaGenero(cbGenero.Text);
                     if (generoBase.Descricao.Equals(""))
                     {
-                        MessageBox.Show(this, "Selecione um genero da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(this, "Selecione um gênero da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     btnAcao.Text = "Alterar";
@@ -136,14 +136,14 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 if (btnAcao.Enabled == true)
                 {
                     btnCancelar_Click(sender, e);
-                    MessageBox.Show(this, "Selecione uma editora.", "Atenção:", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(this, "Selecione um gênero.", "Atenção:", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     generoBase = generoBLL.CarregaGenero(cbGenero.Text);
                     if (generoBase.Descricao.Equals(""))
                     {
-                        MessageBox.Show(this, "Selecione um genero da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(this, "Selecione um gênero da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     btnAcao.Text = "Excluir";
@@ -167,7 +167,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 LimparComponentes();
                 Habilita(false);
                 cbGenero.Enabled = true;
-                cbGenero.Text = "Digite um genero";
+                cbGenero.Text = "DIGITE O GENÊRO";
                 cbGenero.Focus();
             }
             catch (Exception ex)
@@ -206,6 +206,19 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
             cbGenero.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cbGenero.AutoCompleteSource = AutoCompleteSource.CustomSource;
             cbGenero.AutoCompleteCustomSource = dicGenero;
+        }
+        //Retorna o texto para maiusculo
+        private void cbGenero_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                cbGenero.Text = cbGenero.Text.ToUpper();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
+            }
         }
     }
 }

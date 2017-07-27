@@ -42,6 +42,7 @@
             // pnl
             // 
             this.pnl.Size = new System.Drawing.Size(358, 26);
+            this.pnl.TabIndex = 4;
             // 
             // lblForm
             // 
@@ -52,37 +53,44 @@
             // 
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.Location = new System.Drawing.Point(323, 1);
+            this.btnFechar.TabIndex = 0;
             // 
             // pnlBase
             // 
             this.pnlBase.Size = new System.Drawing.Size(350, 36);
+            this.pnlBase.TabIndex = 3;
             // 
             // btnExcluir
             // 
             this.btnExcluir.FlatAppearance.BorderSize = 0;
             this.btnExcluir.Location = new System.Drawing.Point(221, -3);
+            this.btnExcluir.TabIndex = 2;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
             this.btnAlterar.FlatAppearance.BorderSize = 0;
             this.btnAlterar.Location = new System.Drawing.Point(130, -3);
+            this.btnAlterar.TabIndex = 1;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnNovo
             // 
             this.btnNovo.FlatAppearance.BorderSize = 0;
             this.btnNovo.Location = new System.Drawing.Point(39, -3);
+            this.btnNovo.TabIndex = 0;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(256, 202);
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAcao
             // 
             this.btnAcao.Location = new System.Drawing.Point(164, 202);
+            this.btnAcao.TabIndex = 1;
             this.btnAcao.Click += new System.EventHandler(this.btnAcao_Click);
             // 
             // pnlPrincipal
@@ -94,6 +102,7 @@
             this.pnlPrincipal.Controls.Add(this.cbRevista);
             this.pnlPrincipal.Controls.Add(this.lblcbRevista);
             this.pnlPrincipal.Size = new System.Drawing.Size(338, 125);
+            this.pnlPrincipal.TabIndex = 0;
             // 
             // lblRevista
             // 
@@ -129,7 +138,7 @@
             this.txtRevista.SelectionStart = 0;
             this.txtRevista.ShortcutsEnabled = true;
             this.txtRevista.Size = new System.Drawing.Size(149, 23);
-            this.txtRevista.TabIndex = 225;
+            this.txtRevista.TabIndex = 0;
             this.txtRevista.UseSelectable = true;
             this.txtRevista.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtRevista.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -143,10 +152,11 @@
             this.cbRevista.Location = new System.Drawing.Point(177, 31);
             this.cbRevista.Name = "cbRevista";
             this.cbRevista.Size = new System.Drawing.Size(149, 23);
-            this.cbRevista.TabIndex = 226;
-            this.cbRevista.Text = "Digite a revista";
+            this.cbRevista.TabIndex = 1;
+            this.cbRevista.Text = "DIGITE A REVISTA";
             this.cbRevista.ValueMember = "CodArea";
             this.cbRevista.TextChanged += new System.EventHandler(this.exibe_TextChanged);
+            this.cbRevista.Leave += new System.EventHandler(this.cb_Leave);
             // 
             // lblcbRevista
             // 
@@ -165,10 +175,11 @@
             this.cbEditora.Location = new System.Drawing.Point(177, 83);
             this.cbEditora.Name = "cbEditora";
             this.cbEditora.Size = new System.Drawing.Size(149, 23);
-            this.cbEditora.TabIndex = 229;
-            this.cbEditora.Text = "Digite a editora";
+            this.cbEditora.TabIndex = 2;
+            this.cbEditora.Text = "DIGITE A EDITORA";
             this.cbEditora.ValueMember = "CodArea";
             this.cbEditora.TextChanged += new System.EventHandler(this.exibe_TextChanged);
+            this.cbEditora.Leave += new System.EventHandler(this.cb_Leave);
             // 
             // lblEditora
             // 

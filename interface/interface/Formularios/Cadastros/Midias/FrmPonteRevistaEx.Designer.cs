@@ -48,11 +48,6 @@
             this.txtTexto.Lines = new string[0];
             this.txtTexto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTexto_KeyPress);
             // 
-            // lblTexto
-            // 
-            this.lblTexto.Size = new System.Drawing.Size(213, 18);
-            this.lblTexto.Text = "Digite aqui o tombo da Revista:";
-            // 
             // btnAcao
             // 
             this.btnAcao.Click += new System.EventHandler(this.btnAcao_Click);
@@ -66,10 +61,17 @@
             this.lblForm.Size = new System.Drawing.Size(115, 16);
             this.lblForm.Text = "Cadastro: Revista";
             // 
+            // lblTexto
+            // 
+            this.lblTexto.Location = new System.Drawing.Point(63, 83);
+            this.lblTexto.Size = new System.Drawing.Size(201, 19);
+            this.lblTexto.Text = "Digite aqui o tombo da Revista:";
+            // 
             // FrmPonteRevistaEx
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(327, 223);
+            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "FrmPonteRevistaEx";
             this.pnlForm.ResumeLayout(false);
             this.pnlForm.PerformLayout();

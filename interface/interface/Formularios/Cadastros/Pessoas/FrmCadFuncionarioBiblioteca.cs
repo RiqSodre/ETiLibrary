@@ -9,18 +9,18 @@ namespace Interface.Formularios.Cadastros
     public partial class FrmCadFuncionarioBiblioteca : FrmCadBase
     {
         private PessoaBLL pessoaBLL = new PessoaBLL();
-        private AutenticacaoBLL autenticacaoBLL = new AutenticacaoBLL();
-        private Funcionario funcionarioBase = new Funcionario();
-        public Funcionario Funcionario
+        private AutenticacaoBLL autenticaBLL = new AutenticacaoBLL();
+        private Funcionario funcBase = new Funcionario();
+        public Funcionario Func
         {
             get
             {
-                return funcionarioBase;
+                return funcBase;
             }
 
             set
             {
-                funcionarioBase = value;
+                funcBase = value;
             }
         }
 
@@ -32,7 +32,6 @@ namespace Interface.Formularios.Cadastros
                 InitializeComponent();
                 Habilita(true);
                 LimparComponentes();
-                cbCargo.Items.Add("Funcionário Biblioteca");
                 cbCargo.SelectedIndex = 0;
             }
             catch (Exception ex)
@@ -69,13 +68,13 @@ namespace Interface.Formularios.Cadastros
                 }
                 else if (txtNome.Text.Length < 8)
                 {
-                    MessageBox.Show(this, "O campo Nome deve conter no minimo oito letras.", "Atenção", MessageBoxButtons.OK,
+                    MessageBox.Show(this, "O campo Nome deve conter no mínimo oito letras.", "Atenção", MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
                     return;
                 }
                 else
                 {
-                    Funcionario.Nome = txtNome.Text;
+                    Func.Nome = txtNome.Text;
                 }
                 //Validações campo Sexo
                 if (cbSexo.SelectedIndex == -1)
@@ -85,7 +84,7 @@ namespace Interface.Formularios.Cadastros
                 }
                 else
                 {
-                    Funcionario.Sexo = cbSexo.Text;
+                    Func.Sexo = cbSexo.Text;
                 }
                 //Validações campo Cpf
                 if (txtCpf.Text.Length == 0)
@@ -96,25 +95,24 @@ namespace Interface.Formularios.Cadastros
                 }
                 else if (txtCpf.Text.Length != 11)
                 {
-                    MessageBox.Show(this, "O campo CPF deve conter onze caracteres.", "Atenção", MessageBoxButtons.OK,
+                    MessageBox.Show(this, "O campo CPF deve conter onze números.", "Atenção", MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
                     return;
                 }
                 else
                 {
-                    Funcionario.Cpf = txtCpf.Text;
-                    /*if (autenticacaoBLL.ValidarCPF(txtCpf.Text))
-                     {
-                         Funcionario.Cpf = txtCpf.Text;
-                     }
-                     else
-                     {
-                         MessageBox.Show(this, "Informe um CPF válido.", "Atenção", MessageBoxButtons.OK,
-                             MessageBoxIcon.Warning);
-                         return;
-                     }*/
+                    if (autenticaBLL.ValidarCPF(txtCpf.Text))
+                    {
+                        Func.Cpf = txtCpf.Text;
+                    }
+                    else
+                    {
+                        MessageBox.Show(this, "Informe um CPF válido.", "Atenção", MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
+                        return;
+                    }
                 }
-                Funcionario.CodCargo = 3;
+                Func.CodCargo = 3;
                 //Validações campos Telefone e Celular
                 if (txtTelefone.Text.Length == 0 && txtCelular.Text.Length == 0)
                 {
@@ -125,21 +123,21 @@ namespace Interface.Formularios.Cadastros
                 {
                     if (txtTelefone.Text.Length == 0 || txtTelefone.Text.Length == 10)
                     {
-                        Funcionario.Telefone.Numero = txtTelefone.Text;
+                        Func.Telefone.Numero = txtTelefone.Text;
                     }
                     else
                     {
-                        MessageBox.Show(this, "O campo Telefone deve conter dez digitos.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Telefone deve conter dez números.", "Atenção", MessageBoxButtons.OK,
                                MessageBoxIcon.Warning);
                         return;
                     }
                     if (txtCelular.Text.Length == 0 || txtCelular.Text.Length == 11)
                     {
-                        Funcionario.Celular.Numero = txtCelular.Text;
+                        Func.Celular.Numero = txtCelular.Text;
                     }
                     else
                     {
-                        MessageBox.Show(this, "O campo Celular deve conter onze digitos.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Celular deve conter onze números.", "Atenção", MessageBoxButtons.OK,
                                MessageBoxIcon.Warning);
                         return;
                     }
@@ -151,7 +149,7 @@ namespace Interface.Formularios.Cadastros
                         MessageBoxIcon.Warning);
                     return;
                 }
-                else if (!autenticacaoBLL.ValidarEmail(txtEmail.Text))
+                else if (!autenticaBLL.ValidarEmail(txtEmail.Text))
                 {
                     MessageBox.Show(this, "Digite um email valido.", "Atenção",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -159,7 +157,7 @@ namespace Interface.Formularios.Cadastros
                 }
                 else
                 {
-                    Funcionario.Email = txtEmail.Text;
+                    Func.Email = txtEmail.Text;
                 }
                 //Validações campo Login
                 if (txtLogin.Text.Length == 0)
@@ -176,7 +174,7 @@ namespace Interface.Formularios.Cadastros
                 }
                 else
                 {
-                    Funcionario.Login = txtLogin.Text;
+                    Func.Login = txtLogin.Text;
                 }
                 //Validações campo Senha
                 if (txtSenha.Text.Length == 0)
@@ -193,26 +191,25 @@ namespace Interface.Formularios.Cadastros
                 }
                 else
                 {
-                    Funcionario.Senha = autenticacaoBLL.CripSenha(txtSenha.Text);
-                    //Funcionario.Senha = txtSenha.Text;
+                    Func.Senha = autenticaBLL.CripSenha(txtSenha.Text);
                 }
                 //Validações campo Admin
                 if (checkAdmin.Checked)
                 {
-                    Funcionario.Admin = true;
+                    Func.Admin = true;
                 }
                 else
                 {
-                    Funcionario.Admin = false;
+                    Func.Admin = false;
                 }
                 //Execução
                 if (btnAcao.Text == "Salvar")
                 {
-                    resultado = pessoaBLL.FuncionarioBiblioInserir(Funcionario);
+                    resultado = pessoaBLL.FuncionarioBiblioInserir(Func);
                 }//Execução
                 else
                 {
-                    resultado = pessoaBLL.FuncionarioBiblioAlterar(Funcionario);
+                    resultado = pessoaBLL.FuncionarioBiblioAlterar(Func);
                 }
             }
             else
@@ -220,7 +217,7 @@ namespace Interface.Formularios.Cadastros
                 if (MessageBox.Show(this, "Deseja excluir este funcionário(a)?", "Atenção", MessageBoxButtons.YesNo,
                               MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    resultado = pessoaBLL.PessoaExcluir(Funcionario.CodPessoa);
+                    resultado = pessoaBLL.PessoaExcluir(Func.CodPessoa);
                 }
             }
             MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
@@ -259,7 +256,7 @@ namespace Interface.Formularios.Cadastros
                 FrmPonteFuncionario ponteFuncionario = new FrmPonteFuncionario(this, "Alterar");
                 if (ponteFuncionario.ShowDialog() == DialogResult.OK)
                 {
-                    CarregaCampos(Funcionario);
+                    CarregaCampos(Func);
                     btnAcao.Text = "Alterar";
                     Habilita(true);
                     txtNome.Focus();
@@ -278,7 +275,7 @@ namespace Interface.Formularios.Cadastros
                 FrmPonteFuncionario ponteFuncionario = new FrmPonteFuncionario(this, "Excluir");
                 if (ponteFuncionario.ShowDialog() == DialogResult.OK)
                 {
-                    CarregaCampos(Funcionario);
+                    CarregaCampos(Func);
                     btnAcao.Text = "Excluir";
                     Habilita(true);
                     btnAcao.Focus();
@@ -297,7 +294,7 @@ namespace Interface.Formularios.Cadastros
                 if (!char.IsLetter(e.KeyChar) && !(e.KeyChar == (char)Keys.Back) && !(e.KeyChar == (char)Keys.Space))
                 {
                     e.Handled = true;
-                    MessageBox.Show("O campo Nome aceita apenas letras!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("O campo Nome aceita apenas letras.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -313,7 +310,7 @@ namespace Interface.Formularios.Cadastros
                 if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
                 {
                     e.Handled = true;
-                    MessageBox.Show("O campo CPF aceita apenas números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("O campo CPF aceita apenas números.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -329,7 +326,7 @@ namespace Interface.Formularios.Cadastros
                 if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
                 {
                     e.Handled = true;
-                    MessageBox.Show("O campo Telefone aceita apenas números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("O campo Telefone aceita apenas números.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -345,7 +342,7 @@ namespace Interface.Formularios.Cadastros
                 if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
                 {
                     e.Handled = true;
-                    MessageBox.Show("O campo Celular aceita apenas números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("O campo Celular aceita apenas números.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -361,7 +358,7 @@ namespace Interface.Formularios.Cadastros
                 if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)8 && !char.IsLetter(e.KeyChar) && !(e.KeyChar == (char)Keys.Back))
                 {
                     e.Handled = true;
-                    MessageBox.Show("O campo Login aceita apenas letras e números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("O campo Login aceita apenas letras e números.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -377,7 +374,7 @@ namespace Interface.Formularios.Cadastros
                 if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)8 && !char.IsLetter(e.KeyChar) && !(e.KeyChar == (char)Keys.Back))
                 {
                     e.Handled = true;
-                    MessageBox.Show("O campo Senha aceita apenas letras e números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("O campo Senha aceita apenas letras e números.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -415,8 +412,8 @@ namespace Interface.Formularios.Cadastros
             txtCelular.Text = funcionario.Celular.Numero;
             txtEmail.Text = funcionario.Email;
             txtLogin.Text = funcionario.Login;
-            txtSenha.Text = autenticacaoBLL.DecripSenha(funcionario.Senha);
-            if(funcionario.Admin)
+            txtSenha.Text = autenticaBLL.DecripSenha(funcionario.Senha);
+            if (funcionario.Admin)
             {
                 checkAdmin.Checked = true;
             }

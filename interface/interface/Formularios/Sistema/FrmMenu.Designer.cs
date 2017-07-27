@@ -33,55 +33,55 @@ namespace Interface.Formularios.Sistema
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             this.menuPrincipal = new System.Windows.Forms.MenuStrip();
-            this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.alunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.funcionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.funcionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.funcionárioBibliotecaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.acervoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.infraestruturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.áreaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.assuntosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.autoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.extraviosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.genêroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.jornalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.revistaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.alunosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.funcionáriosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.acervoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.emprestimoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.infraestruturaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.cursosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.autoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.editorasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.extraviosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.jornalToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.revistasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.relátoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.confiuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inicioMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.alunoCadMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcMenuCad = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcCadMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcBCadMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.acervoCadMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.infraCadMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.cursoTCadMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolSeparadoCad = new System.Windows.Forms.ToolStripSeparator();
+            this.areaCadMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.assuntoCadMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.autorCadMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.editoraCadMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.extravCadMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.generoCadMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.jornalCadMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.revistaCadMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.pcMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.alunoPCMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcPCMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.acervoPCMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.emprePCMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.reservaPCMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.infraPCMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.cursoTPCMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolSeparadorPC = new System.Windows.Forms.ToolStripSeparator();
+            this.autorPCMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.editoraPCMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.extravPCMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.jornalPCMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.revistaPCMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatiorioMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.configMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlBase = new System.Windows.Forms.Panel();
             this.btnCadAluno = new System.Windows.Forms.Button();
             this.lblData = new MetroFramework.Controls.MetroLabel();
-            this.lblMensagem = new MetroFramework.Controls.MetroLabel();
+            this.lblMsg = new MetroFramework.Controls.MetroLabel();
             this.lblNome = new MetroFramework.Controls.MetroLabel();
             this.lblHora = new MetroFramework.Controls.MetroLabel();
-            this.btnEmprestimo = new System.Windows.Forms.Button();
-            this.btnConfiguracoes = new System.Windows.Forms.Button();
+            this.btnEmpre = new System.Windows.Forms.Button();
+            this.btnConfig = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnAcervo = new System.Windows.Forms.Button();
             this.statusBar = new System.Windows.Forms.StatusStrip();
             this.lblVersao = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblEspaco = new System.Windows.Forms.ToolStripStatusLabel();
             this.hora = new System.Windows.Forms.Timer(this.components);
-            this.miniToolStrip = new System.Windows.Forms.StatusStrip();
+            this.reservaCadMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPrincipal.SuspendLayout();
             this.pnlBase.SuspendLayout();
             this.statusBar.SuspendLayout();
@@ -91,11 +91,11 @@ namespace Interface.Formularios.Sistema
             // 
             this.menuPrincipal.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.inicioToolStripMenuItem,
-            this.cadastrosToolStripMenuItem,
-            this.consultasToolStripMenuItem,
-            this.relátoriosToolStripMenuItem,
-            this.confiuraçõesToolStripMenuItem});
+            this.inicioMenu,
+            this.cadMenu,
+            this.pcMenu,
+            this.relatiorioMenu,
+            this.configMenu});
             this.menuPrincipal.Location = new System.Drawing.Point(0, 0);
             this.menuPrincipal.Name = "menuPrincipal";
             this.menuPrincipal.Size = new System.Drawing.Size(957, 24);
@@ -103,271 +103,272 @@ namespace Interface.Formularios.Sistema
             this.menuPrincipal.TabStop = true;
             this.menuPrincipal.Text = "menuStrip1";
             // 
-            // inicioToolStripMenuItem
-            // 
-            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.inicioToolStripMenuItem.Text = "Inicio";
-            // 
-            // cadastrosToolStripMenuItem
-            // 
-            this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.alunosToolStripMenuItem,
-            this.funcionáriosToolStripMenuItem,
-            this.acervoToolStripMenuItem,
-            this.infraestruturaToolStripMenuItem});
-            this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
-            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.cadastrosToolStripMenuItem.Text = "Cadastros";
-            // 
-            // alunosToolStripMenuItem
-            // 
-            this.alunosToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.alunosToolStripMenuItem.Name = "alunosToolStripMenuItem";
-            this.alunosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.alunosToolStripMenuItem.Text = "Alunos";
-            this.alunosToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.alunosToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.alunosToolStripMenuItem.Click += new System.EventHandler(this.alunosToolStripMenuItem_Click);
-            // 
-            // funcionáriosToolStripMenuItem
-            // 
-            this.funcionáriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.funcionarioToolStripMenuItem,
-            this.funcionárioBibliotecaToolStripMenuItem});
-            this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
-            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.funcionáriosToolStripMenuItem.Text = "Funcionários";
-            // 
-            // funcionarioToolStripMenuItem
-            // 
-            this.funcionarioToolStripMenuItem.Name = "funcionarioToolStripMenuItem";
-            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.funcionarioToolStripMenuItem.Text = "Funcionário";
-            this.funcionarioToolStripMenuItem.Click += new System.EventHandler(this.funcionáriosToolStripMenuItem_Click);
-            // 
-            // funcionárioBibliotecaToolStripMenuItem
+            // inicioMenu
+            // 
+            this.inicioMenu.Name = "inicioMenu";
+            this.inicioMenu.Size = new System.Drawing.Size(48, 20);
+            this.inicioMenu.Text = "Inicio";
+            // 
+            // cadMenu
+            // 
+            this.cadMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.alunoCadMenu,
+            this.funcMenuCad,
+            this.acervoCadMenu,
+            this.reservaCadMenu,
+            this.infraCadMenu});
+            this.cadMenu.Name = "cadMenu";
+            this.cadMenu.Size = new System.Drawing.Size(71, 20);
+            this.cadMenu.Text = "Cadastros";
+            // 
+            // alunoCadMenu
+            // 
+            this.alunoCadMenu.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.alunoCadMenu.Name = "alunoCadMenu";
+            this.alunoCadMenu.Size = new System.Drawing.Size(152, 22);
+            this.alunoCadMenu.Text = "Alunos";
+            this.alunoCadMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.alunoCadMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.alunoCadMenu.Click += new System.EventHandler(this.alunosToolStripMenuItem_Click);
+            // 
+            // funcMenuCad
+            // 
+            this.funcMenuCad.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.funcCadMenu,
+            this.funcBCadMenu});
+            this.funcMenuCad.Name = "funcMenuCad";
+            this.funcMenuCad.Size = new System.Drawing.Size(152, 22);
+            this.funcMenuCad.Text = "Funcionários";
+            // 
+            // funcCadMenu
+            // 
+            this.funcCadMenu.Name = "funcCadMenu";
+            this.funcCadMenu.Size = new System.Drawing.Size(192, 22);
+            this.funcCadMenu.Text = "Funcionário";
+            this.funcCadMenu.Click += new System.EventHandler(this.funcionáriosToolStripMenuItem_Click);
+            // 
+            // funcBCadMenu
+            // 
+            this.funcBCadMenu.Enabled = false;
+            this.funcBCadMenu.Name = "funcBCadMenu";
+            this.funcBCadMenu.Size = new System.Drawing.Size(192, 22);
+            this.funcBCadMenu.Text = "Funcionário Biblioteca";
+            this.funcBCadMenu.Click += new System.EventHandler(this.funcionárioBibliotecaToolStripMenuItem_Click);
+            // 
+            // acervoCadMenu
+            // 
+            this.acervoCadMenu.Name = "acervoCadMenu";
+            this.acervoCadMenu.Size = new System.Drawing.Size(152, 22);
+            this.acervoCadMenu.Text = "Acervo";
+            this.acervoCadMenu.Click += new System.EventHandler(this.acervoToolStripMenuItem_Click);
+            // 
+            // infraCadMenu
+            // 
+            this.infraCadMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cursoTCadMenu,
+            this.toolSeparadoCad,
+            this.areaCadMenu,
+            this.assuntoCadMenu,
+            this.autorCadMenu,
+            this.editoraCadMenu,
+            this.extravCadMenu,
+            this.generoCadMenu,
+            this.jornalCadMenu,
+            this.revistaCadMenu});
+            this.infraCadMenu.Name = "infraCadMenu";
+            this.infraCadMenu.Size = new System.Drawing.Size(152, 22);
+            this.infraCadMenu.Text = "Infraestrutura";
+            // 
+            // cursoTCadMenu
+            // 
+            this.cursoTCadMenu.Enabled = false;
+            this.cursoTCadMenu.Name = "cursoTCadMenu";
+            this.cursoTCadMenu.Size = new System.Drawing.Size(162, 22);
+            this.cursoTCadMenu.Text = "Cursos e Turmas";
+            this.cursoTCadMenu.Click += new System.EventHandler(this.cursosToolStripMenuItem_Click);
+            // 
+            // toolSeparadoCad
+            // 
+            this.toolSeparadoCad.Name = "toolSeparadoCad";
+            this.toolSeparadoCad.Size = new System.Drawing.Size(159, 6);
             // 
-            this.funcionárioBibliotecaToolStripMenuItem.Enabled = false;
-            this.funcionárioBibliotecaToolStripMenuItem.Name = "funcionárioBibliotecaToolStripMenuItem";
-            this.funcionárioBibliotecaToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.funcionárioBibliotecaToolStripMenuItem.Text = "Funcionário Biblioteca";
-            this.funcionárioBibliotecaToolStripMenuItem.Click += new System.EventHandler(this.funcionárioBibliotecaToolStripMenuItem_Click);
-            // 
-            // acervoToolStripMenuItem
-            // 
-            this.acervoToolStripMenuItem.Name = "acervoToolStripMenuItem";
-            this.acervoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.acervoToolStripMenuItem.Text = "Acervo";
-            this.acervoToolStripMenuItem.Click += new System.EventHandler(this.acervoToolStripMenuItem_Click);
-            // 
-            // infraestruturaToolStripMenuItem
-            // 
-            this.infraestruturaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cursosToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.áreaToolStripMenuItem,
-            this.assuntosToolStripMenuItem,
-            this.autoresToolStripMenuItem,
-            this.editoraToolStripMenuItem,
-            this.extraviosToolStripMenuItem,
-            this.genêroToolStripMenuItem,
-            this.jornalToolStripMenuItem,
-            this.revistaToolStripMenuItem});
-            this.infraestruturaToolStripMenuItem.Name = "infraestruturaToolStripMenuItem";
-            this.infraestruturaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.infraestruturaToolStripMenuItem.Text = "Infraestrutura";
-            // 
-            // cursosToolStripMenuItem
-            // 
-            this.cursosToolStripMenuItem.Enabled = false;
-            this.cursosToolStripMenuItem.Name = "cursosToolStripMenuItem";
-            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.cursosToolStripMenuItem.Text = "Cursos e Turmas";
-            this.cursosToolStripMenuItem.Click += new System.EventHandler(this.cursosToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(159, 6);
+            // areaCadMenu
+            // 
+            this.areaCadMenu.Name = "areaCadMenu";
+            this.areaCadMenu.Size = new System.Drawing.Size(162, 22);
+            this.areaCadMenu.Text = "Área";
+            this.areaCadMenu.Click += new System.EventHandler(this.áreaToolStripMenuItem_Click);
             // 
-            // áreaToolStripMenuItem
-            // 
-            this.áreaToolStripMenuItem.Name = "áreaToolStripMenuItem";
-            this.áreaToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.áreaToolStripMenuItem.Text = "Área";
-            this.áreaToolStripMenuItem.Click += new System.EventHandler(this.áreaToolStripMenuItem_Click);
+            // assuntoCadMenu
+            // 
+            this.assuntoCadMenu.Name = "assuntoCadMenu";
+            this.assuntoCadMenu.Size = new System.Drawing.Size(162, 22);
+            this.assuntoCadMenu.Text = "Assuntos";
+            this.assuntoCadMenu.Click += new System.EventHandler(this.assuntosToolStripMenuItem_Click);
             // 
-            // assuntosToolStripMenuItem
+            // autorCadMenu
             // 
-            this.assuntosToolStripMenuItem.Name = "assuntosToolStripMenuItem";
-            this.assuntosToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.assuntosToolStripMenuItem.Text = "Assuntos";
-            this.assuntosToolStripMenuItem.Click += new System.EventHandler(this.assuntosToolStripMenuItem_Click);
+            this.autorCadMenu.Name = "autorCadMenu";
+            this.autorCadMenu.Size = new System.Drawing.Size(162, 22);
+            this.autorCadMenu.Text = "Autores";
+            this.autorCadMenu.Click += new System.EventHandler(this.autoresToolStripMenuItem_Click);
             // 
-            // autoresToolStripMenuItem
+            // editoraCadMenu
             // 
-            this.autoresToolStripMenuItem.Name = "autoresToolStripMenuItem";
-            this.autoresToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.autoresToolStripMenuItem.Text = "Autores";
-            this.autoresToolStripMenuItem.Click += new System.EventHandler(this.autoresToolStripMenuItem_Click);
+            this.editoraCadMenu.Name = "editoraCadMenu";
+            this.editoraCadMenu.Size = new System.Drawing.Size(162, 22);
+            this.editoraCadMenu.Text = "Editora";
+            this.editoraCadMenu.Click += new System.EventHandler(this.editoraToolStripMenuItem_Click);
             // 
-            // editoraToolStripMenuItem
+            // extravCadMenu
             // 
-            this.editoraToolStripMenuItem.Name = "editoraToolStripMenuItem";
-            this.editoraToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.editoraToolStripMenuItem.Text = "Editora";
-            this.editoraToolStripMenuItem.Click += new System.EventHandler(this.editoraToolStripMenuItem_Click);
+            this.extravCadMenu.Name = "extravCadMenu";
+            this.extravCadMenu.Size = new System.Drawing.Size(162, 22);
+            this.extravCadMenu.Text = "Extravios";
+            this.extravCadMenu.Click += new System.EventHandler(this.extraviosToolStripMenuItem_Click);
             // 
-            // extraviosToolStripMenuItem
+            // generoCadMenu
             // 
-            this.extraviosToolStripMenuItem.Name = "extraviosToolStripMenuItem";
-            this.extraviosToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.extraviosToolStripMenuItem.Text = "Extravios";
-            this.extraviosToolStripMenuItem.Click += new System.EventHandler(this.extraviosToolStripMenuItem_Click);
+            this.generoCadMenu.Name = "generoCadMenu";
+            this.generoCadMenu.Size = new System.Drawing.Size(162, 22);
+            this.generoCadMenu.Text = "Gênero";
+            this.generoCadMenu.Click += new System.EventHandler(this.genêroToolStripMenuItem_Click);
             // 
-            // genêroToolStripMenuItem
+            // jornalCadMenu
             // 
-            this.genêroToolStripMenuItem.Name = "genêroToolStripMenuItem";
-            this.genêroToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.genêroToolStripMenuItem.Text = "Gênero";
-            this.genêroToolStripMenuItem.Click += new System.EventHandler(this.genêroToolStripMenuItem_Click);
+            this.jornalCadMenu.Name = "jornalCadMenu";
+            this.jornalCadMenu.Size = new System.Drawing.Size(162, 22);
+            this.jornalCadMenu.Text = "Jornal";
+            this.jornalCadMenu.Click += new System.EventHandler(this.jornalToolStripMenuItem_Click);
             // 
-            // jornalToolStripMenuItem
+            // revistaCadMenu
             // 
-            this.jornalToolStripMenuItem.Name = "jornalToolStripMenuItem";
-            this.jornalToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.jornalToolStripMenuItem.Text = "Jornal";
-            this.jornalToolStripMenuItem.Click += new System.EventHandler(this.jornalToolStripMenuItem_Click);
+            this.revistaCadMenu.Name = "revistaCadMenu";
+            this.revistaCadMenu.Size = new System.Drawing.Size(162, 22);
+            this.revistaCadMenu.Text = "Revista";
+            this.revistaCadMenu.Click += new System.EventHandler(this.revistaToolStripMenuItem_Click);
             // 
-            // revistaToolStripMenuItem
+            // pcMenu
             // 
-            this.revistaToolStripMenuItem.Name = "revistaToolStripMenuItem";
-            this.revistaToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.revistaToolStripMenuItem.Text = "Revista";
-            this.revistaToolStripMenuItem.Click += new System.EventHandler(this.revistaToolStripMenuItem_Click);
+            this.pcMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.alunoPCMenu,
+            this.funcPCMenu,
+            this.acervoPCMenu,
+            this.emprePCMenu,
+            this.reservaPCMenu,
+            this.infraPCMenu});
+            this.pcMenu.Name = "pcMenu";
+            this.pcMenu.Size = new System.Drawing.Size(71, 20);
+            this.pcMenu.Text = "Consultas";
             // 
-            // consultasToolStripMenuItem
+            // alunoPCMenu
             // 
-            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.alunosToolStripMenuItem1,
-            this.funcionáriosToolStripMenuItem1,
-            this.acervoToolStripMenuItem1,
-            this.emprestimoToolStripMenuItem,
-            this.reservasToolStripMenuItem,
-            this.infraestruturaToolStripMenuItem1});
-            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.consultasToolStripMenuItem.Text = "Consultas";
+            this.alunoPCMenu.Name = "alunoPCMenu";
+            this.alunoPCMenu.Size = new System.Drawing.Size(152, 22);
+            this.alunoPCMenu.Text = "Alunos";
+            this.alunoPCMenu.Click += new System.EventHandler(this.alunosToolStripMenuItem1_Click);
             // 
-            // alunosToolStripMenuItem1
+            // funcPCMenu
             // 
-            this.alunosToolStripMenuItem1.Name = "alunosToolStripMenuItem1";
-            this.alunosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.alunosToolStripMenuItem1.Text = "Alunos";
-            this.alunosToolStripMenuItem1.Click += new System.EventHandler(this.alunosToolStripMenuItem1_Click);
+            this.funcPCMenu.Name = "funcPCMenu";
+            this.funcPCMenu.Size = new System.Drawing.Size(152, 22);
+            this.funcPCMenu.Text = "Funcionário";
+            this.funcPCMenu.Click += new System.EventHandler(this.funcionarioToolStripMenuItem_Click);
             // 
-            // funcionáriosToolStripMenuItem1
+            // acervoPCMenu
             // 
-            this.funcionáriosToolStripMenuItem1.Name = "funcionáriosToolStripMenuItem1";
-            this.funcionáriosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.funcionáriosToolStripMenuItem1.Text = "Funcionário";
-            this.funcionáriosToolStripMenuItem1.Click += new System.EventHandler(this.funcionarioToolStripMenuItem_Click);
+            this.acervoPCMenu.Name = "acervoPCMenu";
+            this.acervoPCMenu.Size = new System.Drawing.Size(152, 22);
+            this.acervoPCMenu.Text = "Acervo";
+            this.acervoPCMenu.Click += new System.EventHandler(this.acervoToolStripMenuItem1_Click);
             // 
-            // acervoToolStripMenuItem1
+            // emprePCMenu
             // 
-            this.acervoToolStripMenuItem1.Name = "acervoToolStripMenuItem1";
-            this.acervoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.acervoToolStripMenuItem1.Text = "Acervo";
-            this.acervoToolStripMenuItem1.Click += new System.EventHandler(this.acervoToolStripMenuItem1_Click);
+            this.emprePCMenu.Name = "emprePCMenu";
+            this.emprePCMenu.Size = new System.Drawing.Size(152, 22);
+            this.emprePCMenu.Text = "Empréstimo";
+            this.emprePCMenu.Click += new System.EventHandler(this.emprestimoToolStripMenuItem_Click);
             // 
-            // emprestimoToolStripMenuItem
+            // reservaPCMenu
             // 
-            this.emprestimoToolStripMenuItem.Name = "emprestimoToolStripMenuItem";
-            this.emprestimoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.emprestimoToolStripMenuItem.Text = "Empréstimo";
-            this.emprestimoToolStripMenuItem.Click += new System.EventHandler(this.emprestimoToolStripMenuItem_Click);
+            this.reservaPCMenu.Name = "reservaPCMenu";
+            this.reservaPCMenu.Size = new System.Drawing.Size(152, 22);
+            this.reservaPCMenu.Text = "Reservas";
+            this.reservaPCMenu.Click += new System.EventHandler(this.reservasToolStripMenuItem_Click);
             // 
-            // reservasToolStripMenuItem
+            // infraPCMenu
             // 
-            this.reservasToolStripMenuItem.Name = "reservasToolStripMenuItem";
-            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.reservasToolStripMenuItem.Text = "Reservas";
-            this.reservasToolStripMenuItem.Click += new System.EventHandler(this.reservasToolStripMenuItem_Click);
+            this.infraPCMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cursoTPCMenu,
+            this.toolSeparadorPC,
+            this.autorPCMenu,
+            this.editoraPCMenu,
+            this.extravPCMenu,
+            this.jornalPCMenu,
+            this.revistaPCMenu});
+            this.infraPCMenu.Name = "infraPCMenu";
+            this.infraPCMenu.Size = new System.Drawing.Size(152, 22);
+            this.infraPCMenu.Text = "Infraestrutura";
             // 
-            // infraestruturaToolStripMenuItem1
+            // cursoTPCMenu
             // 
-            this.infraestruturaToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cursosToolStripMenuItem1,
-            this.toolStripSeparator1,
-            this.autoresToolStripMenuItem1,
-            this.editorasToolStripMenuItem,
-            this.extraviosToolStripMenuItem1,
-            this.jornalToolStripMenuItem1,
-            this.revistasToolStripMenuItem});
-            this.infraestruturaToolStripMenuItem1.Name = "infraestruturaToolStripMenuItem1";
-            this.infraestruturaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.infraestruturaToolStripMenuItem1.Text = "Infraestrutura";
+            this.cursoTPCMenu.Name = "cursoTPCMenu";
+            this.cursoTPCMenu.Size = new System.Drawing.Size(162, 22);
+            this.cursoTPCMenu.Text = "Cursos e Turmas";
+            this.cursoTPCMenu.Click += new System.EventHandler(this.cursosToolStripMenuItem1_Click);
             // 
-            // cursosToolStripMenuItem1
+            // toolSeparadorPC
             // 
-            this.cursosToolStripMenuItem1.Name = "cursosToolStripMenuItem1";
-            this.cursosToolStripMenuItem1.Size = new System.Drawing.Size(162, 22);
-            this.cursosToolStripMenuItem1.Text = "Cursos e Turmas";
-            this.cursosToolStripMenuItem1.Click += new System.EventHandler(this.cursosToolStripMenuItem1_Click);
+            this.toolSeparadorPC.Name = "toolSeparadorPC";
+            this.toolSeparadorPC.Size = new System.Drawing.Size(159, 6);
             // 
-            // toolStripSeparator1
+            // autorPCMenu
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(159, 6);
+            this.autorPCMenu.Name = "autorPCMenu";
+            this.autorPCMenu.Size = new System.Drawing.Size(162, 22);
+            this.autorPCMenu.Text = "Autores";
+            this.autorPCMenu.Click += new System.EventHandler(this.autoresToolStripMenuItem1_Click);
             // 
-            // autoresToolStripMenuItem1
+            // editoraPCMenu
             // 
-            this.autoresToolStripMenuItem1.Name = "autoresToolStripMenuItem1";
-            this.autoresToolStripMenuItem1.Size = new System.Drawing.Size(162, 22);
-            this.autoresToolStripMenuItem1.Text = "Autores";
-            this.autoresToolStripMenuItem1.Click += new System.EventHandler(this.autoresToolStripMenuItem1_Click);
+            this.editoraPCMenu.Name = "editoraPCMenu";
+            this.editoraPCMenu.Size = new System.Drawing.Size(162, 22);
+            this.editoraPCMenu.Text = "Editoras";
+            this.editoraPCMenu.Click += new System.EventHandler(this.editorasToolStripMenuItem_Click);
             // 
-            // editorasToolStripMenuItem
+            // extravPCMenu
             // 
-            this.editorasToolStripMenuItem.Name = "editorasToolStripMenuItem";
-            this.editorasToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.editorasToolStripMenuItem.Text = "Editoras";
-            this.editorasToolStripMenuItem.Click += new System.EventHandler(this.editorasToolStripMenuItem_Click);
+            this.extravPCMenu.Name = "extravPCMenu";
+            this.extravPCMenu.Size = new System.Drawing.Size(162, 22);
+            this.extravPCMenu.Text = "Extravios";
+            this.extravPCMenu.Click += new System.EventHandler(this.extraviosToolStripMenuItem1_Click);
             // 
-            // extraviosToolStripMenuItem1
+            // jornalPCMenu
             // 
-            this.extraviosToolStripMenuItem1.Name = "extraviosToolStripMenuItem1";
-            this.extraviosToolStripMenuItem1.Size = new System.Drawing.Size(162, 22);
-            this.extraviosToolStripMenuItem1.Text = "Extravios";
-            this.extraviosToolStripMenuItem1.Click += new System.EventHandler(this.extraviosToolStripMenuItem1_Click);
+            this.jornalPCMenu.Name = "jornalPCMenu";
+            this.jornalPCMenu.Size = new System.Drawing.Size(162, 22);
+            this.jornalPCMenu.Text = "Jornal";
+            this.jornalPCMenu.Click += new System.EventHandler(this.jornalToolStripMenuItem1_Click);
             // 
-            // jornalToolStripMenuItem1
+            // revistaPCMenu
             // 
-            this.jornalToolStripMenuItem1.Name = "jornalToolStripMenuItem1";
-            this.jornalToolStripMenuItem1.Size = new System.Drawing.Size(162, 22);
-            this.jornalToolStripMenuItem1.Text = "Jornal";
-            this.jornalToolStripMenuItem1.Click += new System.EventHandler(this.jornalToolStripMenuItem1_Click);
+            this.revistaPCMenu.Name = "revistaPCMenu";
+            this.revistaPCMenu.Size = new System.Drawing.Size(162, 22);
+            this.revistaPCMenu.Text = "Revistas";
+            this.revistaPCMenu.Click += new System.EventHandler(this.revistasToolStripMenuItem_Click);
             // 
-            // revistasToolStripMenuItem
+            // relatiorioMenu
             // 
-            this.revistasToolStripMenuItem.Name = "revistasToolStripMenuItem";
-            this.revistasToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.revistasToolStripMenuItem.Text = "Revistas";
-            this.revistasToolStripMenuItem.Click += new System.EventHandler(this.revistasToolStripMenuItem_Click);
+            this.relatiorioMenu.Name = "relatiorioMenu";
+            this.relatiorioMenu.Size = new System.Drawing.Size(71, 20);
+            this.relatiorioMenu.Text = "Relatórios";
+            this.relatiorioMenu.Click += new System.EventHandler(this.relátoriosToolStripMenuItem_Click);
             // 
-            // relátoriosToolStripMenuItem
+            // configMenu
             // 
-            this.relátoriosToolStripMenuItem.Name = "relátoriosToolStripMenuItem";
-            this.relátoriosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.relátoriosToolStripMenuItem.Text = "Relatórios";
-            this.relátoriosToolStripMenuItem.Click += new System.EventHandler(this.relátoriosToolStripMenuItem_Click);
-            // 
-            // confiuraçõesToolStripMenuItem
-            // 
-            this.confiuraçõesToolStripMenuItem.Name = "confiuraçõesToolStripMenuItem";
-            this.confiuraçõesToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
-            this.confiuraçõesToolStripMenuItem.Text = "Configurações";
+            this.configMenu.Name = "configMenu";
+            this.configMenu.Size = new System.Drawing.Size(96, 20);
+            this.configMenu.Text = "Configurações";
             // 
             // pnlBase
             // 
@@ -376,11 +377,11 @@ namespace Interface.Formularios.Sistema
             this.pnlBase.BackColor = System.Drawing.Color.White;
             this.pnlBase.Controls.Add(this.btnCadAluno);
             this.pnlBase.Controls.Add(this.lblData);
-            this.pnlBase.Controls.Add(this.lblMensagem);
+            this.pnlBase.Controls.Add(this.lblMsg);
             this.pnlBase.Controls.Add(this.lblNome);
             this.pnlBase.Controls.Add(this.lblHora);
-            this.pnlBase.Controls.Add(this.btnEmprestimo);
-            this.pnlBase.Controls.Add(this.btnConfiguracoes);
+            this.pnlBase.Controls.Add(this.btnEmpre);
+            this.pnlBase.Controls.Add(this.btnConfig);
             this.pnlBase.Controls.Add(this.btnSair);
             this.pnlBase.Controls.Add(this.btnAcervo);
             this.pnlBase.Location = new System.Drawing.Point(834, 12);
@@ -396,6 +397,7 @@ namespace Interface.Formularios.Sistema
             this.btnCadAluno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnCadAluno.FlatAppearance.BorderSize = 0;
             this.btnCadAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadAluno.Font = new System.Drawing.Font("Calibri", 9.75F);
             this.btnCadAluno.Location = new System.Drawing.Point(0, 85);
             this.btnCadAluno.Name = "btnCadAluno";
             this.btnCadAluno.Size = new System.Drawing.Size(123, 96);
@@ -415,16 +417,16 @@ namespace Interface.Formularios.Sistema
             this.lblData.Text = "Data";
             this.lblData.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblMensagem
+            // lblMsg
             // 
-            this.lblMensagem.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblMensagem.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lblMensagem.Location = new System.Drawing.Point(3, 21);
-            this.lblMensagem.Name = "lblMensagem";
-            this.lblMensagem.Size = new System.Drawing.Size(117, 19);
-            this.lblMensagem.TabIndex = 12;
-            this.lblMensagem.Text = "Mensagem";
-            this.lblMensagem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMsg.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblMsg.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblMsg.Location = new System.Drawing.Point(3, 21);
+            this.lblMsg.Name = "lblMsg";
+            this.lblMsg.Size = new System.Drawing.Size(117, 19);
+            this.lblMsg.TabIndex = 12;
+            this.lblMsg.Text = "Mensagem";
+            this.lblMsg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblNome
             // 
@@ -447,39 +449,41 @@ namespace Interface.Formularios.Sistema
             this.lblHora.Text = "Hora";
             this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnEmprestimo
+            // btnEmpre
             // 
-            this.btnEmprestimo.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnEmprestimo.BackColor = System.Drawing.Color.White;
-            this.btnEmprestimo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEmprestimo.BackgroundImage")));
-            this.btnEmprestimo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEmprestimo.FlatAppearance.BorderSize = 0;
-            this.btnEmprestimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmprestimo.Location = new System.Drawing.Point(0, 191);
-            this.btnEmprestimo.Name = "btnEmprestimo";
-            this.btnEmprestimo.Size = new System.Drawing.Size(123, 96);
-            this.btnEmprestimo.TabIndex = 2;
-            this.btnEmprestimo.Text = "&Empréstimo";
-            this.btnEmprestimo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEmprestimo.UseVisualStyleBackColor = false;
-            this.btnEmprestimo.Click += new System.EventHandler(this.btnEmprestimo_Click);
+            this.btnEmpre.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnEmpre.BackColor = System.Drawing.Color.White;
+            this.btnEmpre.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEmpre.BackgroundImage")));
+            this.btnEmpre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEmpre.FlatAppearance.BorderSize = 0;
+            this.btnEmpre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpre.Font = new System.Drawing.Font("Calibri", 9.75F);
+            this.btnEmpre.Location = new System.Drawing.Point(0, 191);
+            this.btnEmpre.Name = "btnEmpre";
+            this.btnEmpre.Size = new System.Drawing.Size(123, 96);
+            this.btnEmpre.TabIndex = 2;
+            this.btnEmpre.Text = "&Empréstimo";
+            this.btnEmpre.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEmpre.UseVisualStyleBackColor = false;
+            this.btnEmpre.Click += new System.EventHandler(this.btnEmprestimo_Click);
             // 
-            // btnConfiguracoes
+            // btnConfig
             // 
-            this.btnConfiguracoes.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnConfiguracoes.BackColor = System.Drawing.Color.White;
-            this.btnConfiguracoes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConfiguracoes.BackgroundImage")));
-            this.btnConfiguracoes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnConfiguracoes.FlatAppearance.BorderSize = 0;
-            this.btnConfiguracoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfiguracoes.Location = new System.Drawing.Point(0, 389);
-            this.btnConfiguracoes.Name = "btnConfiguracoes";
-            this.btnConfiguracoes.Size = new System.Drawing.Size(123, 96);
-            this.btnConfiguracoes.TabIndex = 4;
-            this.btnConfiguracoes.Text = "Configurações";
-            this.btnConfiguracoes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnConfiguracoes.UseVisualStyleBackColor = false;
-            this.btnConfiguracoes.Click += new System.EventHandler(this.btnConfiguracoes_Click);
+            this.btnConfig.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnConfig.BackColor = System.Drawing.Color.White;
+            this.btnConfig.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConfig.BackgroundImage")));
+            this.btnConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnConfig.FlatAppearance.BorderSize = 0;
+            this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfig.Font = new System.Drawing.Font("Calibri", 9.75F);
+            this.btnConfig.Location = new System.Drawing.Point(0, 389);
+            this.btnConfig.Name = "btnConfig";
+            this.btnConfig.Size = new System.Drawing.Size(123, 96);
+            this.btnConfig.TabIndex = 4;
+            this.btnConfig.Text = "Configurações";
+            this.btnConfig.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnConfig.UseVisualStyleBackColor = false;
+            this.btnConfig.Click += new System.EventHandler(this.btnConfiguracoes_Click);
             // 
             // btnSair
             // 
@@ -489,6 +493,7 @@ namespace Interface.Formularios.Sistema
             this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.Font = new System.Drawing.Font("Calibri", 9.75F);
             this.btnSair.Location = new System.Drawing.Point(0, 488);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(123, 96);
@@ -506,6 +511,7 @@ namespace Interface.Formularios.Sistema
             this.btnAcervo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAcervo.FlatAppearance.BorderSize = 0;
             this.btnAcervo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAcervo.Font = new System.Drawing.Font("Calibri", 9.75F);
             this.btnAcervo.Location = new System.Drawing.Point(0, 290);
             this.btnAcervo.Name = "btnAcervo";
             this.btnAcervo.Size = new System.Drawing.Size(123, 96);
@@ -544,16 +550,11 @@ namespace Interface.Formularios.Sistema
             this.hora.Enabled = true;
             this.hora.Tick += new System.EventHandler(this.hora_Tick);
             // 
-            // miniToolStrip
+            // reservaCadMenu
             // 
-            this.miniToolStrip.AutoSize = false;
-            this.miniToolStrip.Dock = System.Windows.Forms.DockStyle.None;
-            this.miniToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.miniToolStrip.Location = new System.Drawing.Point(153, 24);
-            this.miniToolStrip.Name = "miniToolStrip";
-            this.miniToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.miniToolStrip.Size = new System.Drawing.Size(120, 22);
-            this.miniToolStrip.TabIndex = 13;
+            this.reservaCadMenu.Name = "reservaCadMenu";
+            this.reservaCadMenu.Size = new System.Drawing.Size(152, 22);
+            this.reservaCadMenu.Text = "Reserva";
             // 
             // FrmMenu
             // 
@@ -587,54 +588,54 @@ namespace Interface.Formularios.Sistema
         #endregion
 
         private System.Windows.Forms.MenuStrip menuPrincipal;
-        private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cadastrosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem alunosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem funcionáriosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem acervoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem infraestruturaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cursosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem áreaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem jornalToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem revistaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editoraToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem genêroToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem autoresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem extraviosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem assuntosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem alunosToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem funcionáriosToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem acervoToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem infraestruturaToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem cursosToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem autoresToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem editorasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem jornalToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem revistasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem extraviosToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem relátoriosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem confiuraçõesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inicioMenu;
+        private System.Windows.Forms.ToolStripMenuItem cadMenu;
+        private System.Windows.Forms.ToolStripMenuItem alunoCadMenu;
+        private System.Windows.Forms.ToolStripMenuItem funcMenuCad;
+        private System.Windows.Forms.ToolStripMenuItem acervoCadMenu;
+        private System.Windows.Forms.ToolStripMenuItem infraCadMenu;
+        private System.Windows.Forms.ToolStripMenuItem cursoTCadMenu;
+        private System.Windows.Forms.ToolStripSeparator toolSeparadoCad;
+        private System.Windows.Forms.ToolStripMenuItem areaCadMenu;
+        private System.Windows.Forms.ToolStripMenuItem jornalCadMenu;
+        private System.Windows.Forms.ToolStripMenuItem revistaCadMenu;
+        private System.Windows.Forms.ToolStripMenuItem editoraCadMenu;
+        private System.Windows.Forms.ToolStripMenuItem generoCadMenu;
+        private System.Windows.Forms.ToolStripMenuItem autorCadMenu;
+        private System.Windows.Forms.ToolStripMenuItem extravCadMenu;
+        private System.Windows.Forms.ToolStripMenuItem assuntoCadMenu;
+        private System.Windows.Forms.ToolStripMenuItem pcMenu;
+        private System.Windows.Forms.ToolStripMenuItem alunoPCMenu;
+        private System.Windows.Forms.ToolStripMenuItem funcPCMenu;
+        private System.Windows.Forms.ToolStripMenuItem acervoPCMenu;
+        private System.Windows.Forms.ToolStripMenuItem infraPCMenu;
+        private System.Windows.Forms.ToolStripMenuItem cursoTPCMenu;
+        private System.Windows.Forms.ToolStripSeparator toolSeparadorPC;
+        private System.Windows.Forms.ToolStripMenuItem autorPCMenu;
+        private System.Windows.Forms.ToolStripMenuItem editoraPCMenu;
+        private System.Windows.Forms.ToolStripMenuItem jornalPCMenu;
+        private System.Windows.Forms.ToolStripMenuItem revistaPCMenu;
+        private System.Windows.Forms.ToolStripMenuItem extravPCMenu;
+        private System.Windows.Forms.ToolStripMenuItem relatiorioMenu;
+        private System.Windows.Forms.ToolStripMenuItem configMenu;
         private System.Windows.Forms.Panel pnlBase;
-        private System.Windows.Forms.Button btnEmprestimo;
-        private System.Windows.Forms.Button btnConfiguracoes;
+        private System.Windows.Forms.Button btnEmpre;
+        private System.Windows.Forms.Button btnConfig;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnAcervo;
         private System.Windows.Forms.StatusStrip statusBar;
         private System.Windows.Forms.ToolStripStatusLabel lblVersao;
         private System.Windows.Forms.ToolStripStatusLabel lblEspaco;
         private System.Windows.Forms.Timer hora;
-        private System.Windows.Forms.StatusStrip miniToolStrip;
-        private System.Windows.Forms.ToolStripMenuItem funcionarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem funcionárioBibliotecaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem funcCadMenu;
+        private System.Windows.Forms.ToolStripMenuItem funcBCadMenu;
         private MetroFramework.Controls.MetroLabel lblHora;
-        private MetroFramework.Controls.MetroLabel lblMensagem;
+        private MetroFramework.Controls.MetroLabel lblMsg;
         private MetroFramework.Controls.MetroLabel lblNome;
         private MetroFramework.Controls.MetroLabel lblData;
-        private System.Windows.Forms.ToolStripMenuItem emprestimoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reservasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem emprePCMenu;
+        private System.Windows.Forms.ToolStripMenuItem reservaPCMenu;
         private System.Windows.Forms.Button btnCadAluno;
+        private ToolStripMenuItem reservaCadMenu;
     }
 }

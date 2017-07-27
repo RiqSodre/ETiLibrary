@@ -55,13 +55,9 @@
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar2_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Size = new System.Drawing.Size(285, 29);
-            // 
             // btnSelecionar
             // 
-            this.btnSelecionar.Click += new System.EventHandler(this.btnSelecionar_Click);
+            this.btnSelec.Click += new System.EventHandler(this.btnSelecionar_Click);
             // 
             // btnFechar2
             // 
@@ -203,16 +199,15 @@
             // 
             // FrmConsultaEmprestimo
             // 
-            this.AcceptButton = this.btnSelecionar;
+            this.AcceptButton = this.btnSelec;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(658, 440);
             this.Controls.Add(this.dataGridEmprestimo);
             this.Name = "FrmConsultaEmprestimo";
             this.Text = "Consulta: Empréstimo";
-            this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.pnlForm, 0);
-            this.Controls.SetChildIndex(this.btnSelecionar, 0);
+            this.Controls.SetChildIndex(this.btnSelec, 0);
             this.Controls.SetChildIndex(this.btnFechar2, 0);
             this.Controls.SetChildIndex(this.dataGridEmprestimo, 0);
             this.pnlForm.ResumeLayout(false);

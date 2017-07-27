@@ -33,7 +33,7 @@ namespace Interface.Formularios.Cadastros
             try
             {
                 InitializeComponent();
-                txtObservacao.GotFocus += txtObservacao_Focus;
+                txtObs.GotFocus += txtObs_Focus;
                 cbArea.DataSource = areaBLL.CarregaAreas();
                 cbJornal.DataSource = jornalBLL.CarregaJornais();
                 Habilita(true);
@@ -97,15 +97,15 @@ namespace Interface.Formularios.Cadastros
                     //Campo Lingua
                     JornalEx.Lingua = cbLingua.Text;
                     //Validações campo Localização
-                    if (txtLocalizacao.Text.Length != 0)
+                    if (txtLocaliza.Text.Length != 0)
                     {
-                        if (txtLocalizacao.Text.Length < 4)
+                        if (txtLocaliza.Text.Length < 4)
                         {
-                            MessageBox.Show(this, "O campo Localização deve conter no minimo quatro digitos", "Atenção", MessageBoxButtons.OK,
+                            MessageBox.Show(this, "O campo Localização deve conter no mínimo quatro digitos.", "Atenção", MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
                             return;
                         }
-                        JornalEx.Localizacao = txtLocalizacao.Text;
+                        JornalEx.Localizacao = txtLocaliza.Text;
                     }
                     else
                     {
@@ -114,7 +114,7 @@ namespace Interface.Formularios.Cadastros
                     //Validações campo Área
                     if ((int)cbArea.SelectedValue < 0)
                     {
-                        MessageBox.Show(this, "Selecione uma area da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(this, "Selecione uma área da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     else
@@ -134,7 +134,7 @@ namespace Interface.Formularios.Cadastros
                     //CheckBox Disponivel
                     if (btnAcao.Text.Equals("Alterar"))
                     {
-                        if (JornalEx.Disponivel != checkDisponivel.Checked)
+                        if (JornalEx.Disponivel != checkDisp.Checked)
                         {
                             EmprestimoBLL emprestimoBLL = new EmprestimoBLL();
                             EmprestimoList emprestimoList = emprestimoBLL.EmprestimoConsultar_PorTombo(JornalEx.Tombo, "Jornal");
@@ -161,7 +161,7 @@ namespace Interface.Formularios.Cadastros
                             }
                         }
                     }
-                    JornalEx.Disponivel = checkDisponivel.Checked;
+                    JornalEx.Disponivel = checkDisp.Checked;
                     //Validações campo Jornal
                     if ((int)cbJornal.SelectedValue < 0)
                     {
@@ -173,7 +173,7 @@ namespace Interface.Formularios.Cadastros
                         JornalEx.Jornal_.CodJornal = (int)cbJornal.SelectedValue;
                     }
                     //Campo Observação
-                    JornalEx.Observacao = txtObservacao.Text;
+                    JornalEx.Observacao = txtObs.Text;
                     //Execução
                     if (btnAcao.Text.Equals("Salvar"))
                     {
@@ -263,19 +263,19 @@ namespace Interface.Formularios.Cadastros
         {
             txtManchete.Text = jornal.Manchete;
             txtTombo.Text = jornal.Tombo.ToString();
-            txtLocalizacao.Text = jornal.Localizacao;
+            txtLocaliza.Text = jornal.Localizacao;
             cbLingua.SelectedItem = jornal.Lingua;
             cbTipoTombo.SelectedItem = jornal.TipoTombo;
             cbArea.SelectedValue = jornal.Area.CodArea;
             cbJornal.SelectedValue = jornal.Jornal_.CodJornal;
-            txtObservacao.Text = jornal.Observacao;
+            txtObs.Text = jornal.Observacao;
             if (jornal.Disponivel)
             {
-                checkDisponivel.Checked = true;
+                checkDisp.Checked = true;
             }
             else
             {
-                checkDisponivel.Checked = false;
+                checkDisp.Checked = false;
             }
             toolExibe(txtManchete, txtManchete.Text);
         }
@@ -304,9 +304,9 @@ namespace Interface.Formularios.Cadastros
             }
         }
         //Aumenta o tamanho do campo Observação
-        private void txtObservacao_Focus(object sender, EventArgs e)
+        private void txtObs_Focus(object sender, EventArgs e)
         {
-            txtObservacao.Height = 75;
+            txtObs.Height = 75;
             pnlPrincipal.Height = 424;
             this.Height = 495;
             btnAcao.Location = new Point(149, 453);
@@ -315,9 +315,9 @@ namespace Interface.Formularios.Cadastros
         //Retorna o tamanho do campo Observação ao original
         private void txtObservacao_Leave(object sender, EventArgs e)
         {
-            if (txtObservacao.Text == "" || txtObservacao.Text == null)
+            if (txtObs.Text == "" || txtObs.Text == null)
             {
-                txtObservacao.Height = 25;
+                txtObs.Height = 25;
                 pnlPrincipal.Height = 374;
                 this.Height = 445;
                 btnAcao.Location = new Point(149, 403);

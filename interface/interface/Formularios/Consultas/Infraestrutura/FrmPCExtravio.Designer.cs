@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel3.SuspendLayout();
+            this.pnlPC.SuspendLayout();
             this.pnlForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnPesquisa3
             // 
-            this.btnPesquisa3.Text = "Empréstimo";
+            this.btnPesq3.Text = "Empréstimo";
             // 
             // btnPesquisa2
             // 
-            this.btnPesquisa2.Text = "Livro";
+            this.btnPesq2.Text = "Livro";
             // 
             // btnPesquisa1
             // 
-            this.btnPesquisa1.Text = "CD/DVD";
+            this.btnPesq1.Text = "CD/DVD";
             // 
             // lblPesquisa
             // 
@@ -71,8 +71,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(345, 448);
             this.Name = "FrmPCExtravio";
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnlPC.ResumeLayout(false);
+            this.pnlPC.PerformLayout();
             this.pnlForm.ResumeLayout(false);
             this.pnlForm.PerformLayout();
             this.ResumeLayout(false);

@@ -70,7 +70,7 @@
             // 
             // btnSelecionar
             // 
-            this.btnSelecionar.Click += new System.EventHandler(this.btnSelecionar_Click);
+            this.btnSelec.Click += new System.EventHandler(this.btnSelecionar_Click);
             // 
             // btnFechar2
             // 
@@ -363,9 +363,8 @@
             this.ClientSize = new System.Drawing.Size(658, 440);
             this.Controls.Add(this.dataGridLivro);
             this.Name = "FrmConsultaLivro";
-            this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.pnlForm, 0);
-            this.Controls.SetChildIndex(this.btnSelecionar, 0);
+            this.Controls.SetChildIndex(this.btnSelec, 0);
             this.Controls.SetChildIndex(this.btnFechar2, 0);
             this.Controls.SetChildIndex(this.dataGridLivro, 0);
             this.pnlForm.ResumeLayout(false);

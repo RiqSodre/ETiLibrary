@@ -46,7 +46,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                     }
                     else if (txtAssunto.Text.Length < 4)
                     {
-                        MessageBox.Show(this, "O campo Assunto deve conter no minimo 4 caracteres.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Assunto deve conter no mínimo 4 caracteres.", "Atenção", MessageBoxButtons.OK,
                            MessageBoxIcon.Warning);
                         return;
                     }
@@ -167,7 +167,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 LimparComponentes();
                 Habilita(false);
                 cbAssunto.Enabled = true;
-                cbAssunto.Text = "Digite um assunto";
+                cbAssunto.Text = "DIGITE O ASSUNTO";
                 cbAssunto.Focus();
             }
             catch (Exception ex)
@@ -192,7 +192,6 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
             catch (Exception ex)
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Close();
             }
         }
         //Cria o autocomplete da combobox Assuntos
@@ -206,6 +205,19 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
             cbAssunto.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cbAssunto.AutoCompleteSource = AutoCompleteSource.CustomSource;
             cbAssunto.AutoCompleteCustomSource = dicAssunto;
+        }
+        //Retorna o texto para maiusculo
+        private void cbAssunto_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                cbAssunto.Text = cbAssunto.Text.ToUpper();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
+            }
         }
     }
 }

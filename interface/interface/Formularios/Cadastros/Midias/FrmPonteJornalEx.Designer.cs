@@ -47,11 +47,6 @@
             this.txtTexto.CustomButton.Visible = false;
             this.txtTexto.Lines = new string[0];
             // 
-            // lblTexto
-            // 
-            this.lblTexto.Size = new System.Drawing.Size(206, 18);
-            this.lblTexto.Text = "Digite aqui o tombo do Jornal:";
-            // 
             // btnAcao
             // 
             this.btnAcao.Click += new System.EventHandler(this.btnAcao_Click);
@@ -65,11 +60,18 @@
             this.lblForm.Size = new System.Drawing.Size(106, 16);
             this.lblForm.Text = "Cadastro: Jornal";
             // 
+            // lblTexto
+            // 
+            this.lblTexto.Location = new System.Drawing.Point(66, 83);
+            this.lblTexto.Size = new System.Drawing.Size(195, 19);
+            this.lblTexto.Text = "Digite aqui o tombo do Jornal:";
+            // 
             // FrmPonteJornalEx
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(327, 223);
+            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "FrmPonteJornalEx";
             this.pnlForm.ResumeLayout(false);
             this.pnlForm.PerformLayout();

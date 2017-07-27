@@ -53,6 +53,7 @@
             // btnAcao
             // 
             this.btnAcao.Location = new System.Drawing.Point(229, 224);
+            this.btnAcao.TabIndex = 2;
             this.btnAcao.Text = "Salvar";
             this.btnAcao.Click += new System.EventHandler(this.btnAcao_Click);
             // 
@@ -64,6 +65,10 @@
             // 
             this.lblForm.Size = new System.Drawing.Size(108, 16);
             this.lblForm.Text = "Cadastro: Turma";
+            // 
+            // pnlForm
+            // 
+            this.pnlForm.TabIndex = 3;
             // 
             // lblTexto
             // 
@@ -83,7 +88,7 @@
             this.cbPeriodo.Location = new System.Drawing.Point(89, 171);
             this.cbPeriodo.Name = "cbPeriodo";
             this.cbPeriodo.Size = new System.Drawing.Size(149, 23);
-            this.cbPeriodo.TabIndex = 218;
+            this.cbPeriodo.TabIndex = 1;
             // 
             // lblPeriodo
             // 
@@ -95,14 +100,14 @@
             this.lblPeriodo.TabIndex = 219;
             this.lblPeriodo.Text = "Período:";
             // 
-            // FrmCadTurma
+            // FrmPonteTurma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(327, 280);
             this.Controls.Add(this.cbPeriodo);
             this.Controls.Add(this.lblPeriodo);
             this.Location = new System.Drawing.Point(0, 0);
-            this.Name = "FrmCadTurma";
+            this.Name = "FrmPonteTurma";
             this.Controls.SetChildIndex(this.txtTexto, 0);
             this.Controls.SetChildIndex(this.pnlForm, 0);
             this.Controls.SetChildIndex(this.btnAcao, 0);

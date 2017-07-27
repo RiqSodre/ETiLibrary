@@ -42,12 +42,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadLivro));
-            this.txtObservacao = new System.Windows.Forms.TextBox();
+            this.txtObs = new System.Windows.Forms.TextBox();
             this.txtEdicao = new MetroFramework.Controls.MetroTextBox();
             this.txtTitulo = new MetroFramework.Controls.MetroTextBox();
             this.txtColecao = new MetroFramework.Controls.MetroTextBox();
             this.txtLocal = new MetroFramework.Controls.MetroTextBox();
-            this.txtNdePaginas = new MetroFramework.Controls.MetroTextBox();
+            this.txtNPags = new MetroFramework.Controls.MetroTextBox();
             this.txtVolume = new MetroFramework.Controls.MetroTextBox();
             this.txtSubtitulo = new MetroFramework.Controls.MetroTextBox();
             this.cbGenero = new System.Windows.Forms.ComboBox();
@@ -60,15 +60,17 @@
             this.clnCodAssunto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnAssunto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridGeneros = new MetroFramework.Controls.MetroGrid();
+            this.clnCodGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridAutores = new MetroFramework.Controls.MetroGrid();
             this.clnCodAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnGeneroAdd = new MetroFramework.Controls.MetroButton();
-            this.btnGeneroRemover = new MetroFramework.Controls.MetroButton();
-            this.btnAutoresRemover = new MetroFramework.Controls.MetroButton();
-            this.btnAutoresAdd = new MetroFramework.Controls.MetroButton();
-            this.btnAssuntosRemover = new MetroFramework.Controls.MetroButton();
-            this.btnAssuntosAdd = new MetroFramework.Controls.MetroButton();
+            this.btnGAdd = new MetroFramework.Controls.MetroButton();
+            this.btnGRemover = new MetroFramework.Controls.MetroButton();
+            this.btnAutRemover = new MetroFramework.Controls.MetroButton();
+            this.btnAutAdd = new MetroFramework.Controls.MetroButton();
+            this.btnAssRemover = new MetroFramework.Controls.MetroButton();
+            this.btnAssAdd = new MetroFramework.Controls.MetroButton();
             this.cbTipoLivro = new System.Windows.Forms.ComboBox();
             this.cbTipoTombo = new System.Windows.Forms.ComboBox();
             this.txtTombo = new MetroFramework.Controls.MetroTextBox();
@@ -94,14 +96,12 @@
             this.lblTipoTombo = new MetroFramework.Controls.MetroLabel();
             this.lblEditora = new MetroFramework.Controls.MetroLabel();
             this.lblArea = new MetroFramework.Controls.MetroLabel();
-            this.lblDisponivel = new MetroFramework.Controls.MetroLabel();
+            this.lblDisp = new MetroFramework.Controls.MetroLabel();
             this.lblLingua = new MetroFramework.Controls.MetroLabel();
-            this.lblLocalizacao = new MetroFramework.Controls.MetroLabel();
+            this.lblLocaliza = new MetroFramework.Controls.MetroLabel();
             this.cbLingua = new System.Windows.Forms.ComboBox();
-            this.txtLocalizacao = new MetroFramework.Controls.MetroTextBox();
-            this.checkDisponivel = new System.Windows.Forms.CheckBox();
-            this.clnCodGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtLocaliza = new MetroFramework.Controls.MetroTextBox();
+            this.checkDisp = new System.Windows.Forms.CheckBox();
             this.pnl.SuspendLayout();
             this.pnlBase.SuspendLayout();
             this.pnlPrincipal.SuspendLayout();
@@ -174,12 +174,12 @@
             // 
             // pnlPrincipal
             // 
-            this.pnlPrincipal.Controls.Add(this.checkDisponivel);
-            this.pnlPrincipal.Controls.Add(this.txtLocalizacao);
+            this.pnlPrincipal.Controls.Add(this.checkDisp);
+            this.pnlPrincipal.Controls.Add(this.txtLocaliza);
             this.pnlPrincipal.Controls.Add(this.cbLingua);
-            this.pnlPrincipal.Controls.Add(this.lblLocalizacao);
+            this.pnlPrincipal.Controls.Add(this.lblLocaliza);
             this.pnlPrincipal.Controls.Add(this.lblLingua);
-            this.pnlPrincipal.Controls.Add(this.lblDisponivel);
+            this.pnlPrincipal.Controls.Add(this.lblDisp);
             this.pnlPrincipal.Controls.Add(this.lblArea);
             this.pnlPrincipal.Controls.Add(this.lblEditora);
             this.pnlPrincipal.Controls.Add(this.lblTipoTombo);
@@ -204,19 +204,19 @@
             this.pnlPrincipal.Controls.Add(this.txtTombo);
             this.pnlPrincipal.Controls.Add(this.cbTipoTombo);
             this.pnlPrincipal.Controls.Add(this.cbTipoLivro);
-            this.pnlPrincipal.Controls.Add(this.btnAssuntosRemover);
-            this.pnlPrincipal.Controls.Add(this.btnAssuntosAdd);
-            this.pnlPrincipal.Controls.Add(this.btnAutoresRemover);
-            this.pnlPrincipal.Controls.Add(this.btnAutoresAdd);
-            this.pnlPrincipal.Controls.Add(this.btnGeneroRemover);
-            this.pnlPrincipal.Controls.Add(this.btnGeneroAdd);
+            this.pnlPrincipal.Controls.Add(this.btnAssRemover);
+            this.pnlPrincipal.Controls.Add(this.btnAssAdd);
+            this.pnlPrincipal.Controls.Add(this.btnAutRemover);
+            this.pnlPrincipal.Controls.Add(this.btnAutAdd);
+            this.pnlPrincipal.Controls.Add(this.btnGRemover);
+            this.pnlPrincipal.Controls.Add(this.btnGAdd);
             this.pnlPrincipal.Controls.Add(this.dataGridAutores);
             this.pnlPrincipal.Controls.Add(this.dataGridGeneros);
             this.pnlPrincipal.Controls.Add(this.dataGridAssuntos);
-            this.pnlPrincipal.Controls.Add(this.txtObservacao);
+            this.pnlPrincipal.Controls.Add(this.txtObs);
             this.pnlPrincipal.Controls.Add(this.cbAutor);
             this.pnlPrincipal.Controls.Add(this.cbGenero);
-            this.pnlPrincipal.Controls.Add(this.txtNdePaginas);
+            this.pnlPrincipal.Controls.Add(this.txtNPags);
             this.pnlPrincipal.Controls.Add(this.dtDataPublicacao);
             this.pnlPrincipal.Controls.Add(this.cbAssunto);
             this.pnlPrincipal.Controls.Add(this.cbArea);
@@ -229,13 +229,14 @@
             this.pnlPrincipal.Size = new System.Drawing.Size(732, 357);
             this.pnlPrincipal.TabIndex = 0;
             // 
-            // txtObservacao
+            // txtObs
             // 
-            this.txtObservacao.Location = new System.Drawing.Point(275, 159);
-            this.txtObservacao.Multiline = true;
-            this.txtObservacao.Name = "txtObservacao";
-            this.txtObservacao.Size = new System.Drawing.Size(198, 77);
-            this.txtObservacao.TabIndex = 24;
+            this.txtObs.Font = new System.Drawing.Font("Calibri", 10.2F);
+            this.txtObs.Location = new System.Drawing.Point(275, 159);
+            this.txtObs.Multiline = true;
+            this.txtObs.Name = "txtObs";
+            this.txtObs.Size = new System.Drawing.Size(198, 77);
+            this.txtObs.TabIndex = 24;
             // 
             // txtEdicao
             // 
@@ -361,36 +362,36 @@
             this.txtLocal.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txtLocal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLocal_KeyPress);
             // 
-            // txtNdePaginas
+            // txtNPags
             // 
             // 
             // 
             // 
-            this.txtNdePaginas.CustomButton.Image = null;
-            this.txtNdePaginas.CustomButton.Location = new System.Drawing.Point(72, 1);
-            this.txtNdePaginas.CustomButton.Name = "";
-            this.txtNdePaginas.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtNdePaginas.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtNdePaginas.CustomButton.TabIndex = 1;
-            this.txtNdePaginas.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtNdePaginas.CustomButton.UseSelectable = true;
-            this.txtNdePaginas.CustomButton.Visible = false;
-            this.txtNdePaginas.Lines = new string[0];
-            this.txtNdePaginas.Location = new System.Drawing.Point(308, 71);
-            this.txtNdePaginas.MaxLength = 32767;
-            this.txtNdePaginas.Name = "txtNdePaginas";
-            this.txtNdePaginas.PasswordChar = '\0';
-            this.txtNdePaginas.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtNdePaginas.SelectedText = "";
-            this.txtNdePaginas.SelectionLength = 0;
-            this.txtNdePaginas.SelectionStart = 0;
-            this.txtNdePaginas.ShortcutsEnabled = true;
-            this.txtNdePaginas.Size = new System.Drawing.Size(94, 23);
-            this.txtNdePaginas.TabIndex = 7;
-            this.txtNdePaginas.UseSelectable = true;
-            this.txtNdePaginas.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtNdePaginas.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtNdePaginas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNdePaginas_KeyPress);
+            this.txtNPags.CustomButton.Image = null;
+            this.txtNPags.CustomButton.Location = new System.Drawing.Point(72, 1);
+            this.txtNPags.CustomButton.Name = "";
+            this.txtNPags.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtNPags.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtNPags.CustomButton.TabIndex = 1;
+            this.txtNPags.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtNPags.CustomButton.UseSelectable = true;
+            this.txtNPags.CustomButton.Visible = false;
+            this.txtNPags.Lines = new string[0];
+            this.txtNPags.Location = new System.Drawing.Point(308, 71);
+            this.txtNPags.MaxLength = 32767;
+            this.txtNPags.Name = "txtNPags";
+            this.txtNPags.PasswordChar = '\0';
+            this.txtNPags.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtNPags.SelectedText = "";
+            this.txtNPags.SelectionLength = 0;
+            this.txtNPags.SelectionStart = 0;
+            this.txtNPags.ShortcutsEnabled = true;
+            this.txtNPags.Size = new System.Drawing.Size(94, 23);
+            this.txtNPags.TabIndex = 7;
+            this.txtNPags.UseSelectable = true;
+            this.txtNPags.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtNPags.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtNPags.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNdePaginas_KeyPress);
             // 
             // txtVolume
             // 
@@ -461,7 +462,7 @@
             this.cbGenero.Name = "cbGenero";
             this.cbGenero.Size = new System.Drawing.Size(130, 23);
             this.cbGenero.TabIndex = 12;
-            this.cbGenero.Text = "Digite o genero";
+            this.cbGenero.Text = "Digite o gênero";
             this.cbGenero.TextChanged += new System.EventHandler(this.exibe_TextChanged);
             this.cbGenero.Leave += new System.EventHandler(this.cbGenero_Leave);
             // 
@@ -651,6 +652,20 @@
             this.dataGridGeneros.Size = new System.Drawing.Size(196, 77);
             this.dataGridGeneros.TabIndex = 14;
             // 
+            // clnCodGenero
+            // 
+            this.clnCodGenero.HeaderText = "Cod";
+            this.clnCodGenero.Name = "clnCodGenero";
+            this.clnCodGenero.ReadOnly = true;
+            this.clnCodGenero.Visible = false;
+            // 
+            // clnGenero
+            // 
+            this.clnGenero.HeaderText = "Gêneros";
+            this.clnGenero.Name = "clnGenero";
+            this.clnGenero.ReadOnly = true;
+            this.clnGenero.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // dataGridAutores
             // 
             this.dataGridAutores.AllowUserToAddRows = false;
@@ -721,78 +736,78 @@
             this.clnAutor.ReadOnly = true;
             this.clnAutor.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // btnGeneroAdd
+            // btnGAdd
             // 
-            this.btnGeneroAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnGeneroAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGeneroAdd.BackgroundImage")));
-            this.btnGeneroAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnGeneroAdd.Location = new System.Drawing.Point(232, 159);
-            this.btnGeneroAdd.Margin = new System.Windows.Forms.Padding(0);
-            this.btnGeneroAdd.Name = "btnGeneroAdd";
-            this.btnGeneroAdd.Size = new System.Drawing.Size(35, 35);
-            this.btnGeneroAdd.TabIndex = 13;
-            this.btnGeneroAdd.UseSelectable = true;
-            this.btnGeneroAdd.Click += new System.EventHandler(this.btnGeneroAdd_Click);
+            this.btnGAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnGAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGAdd.BackgroundImage")));
+            this.btnGAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnGAdd.Location = new System.Drawing.Point(232, 159);
+            this.btnGAdd.Margin = new System.Windows.Forms.Padding(0);
+            this.btnGAdd.Name = "btnGAdd";
+            this.btnGAdd.Size = new System.Drawing.Size(35, 35);
+            this.btnGAdd.TabIndex = 13;
+            this.btnGAdd.UseSelectable = true;
+            this.btnGAdd.Click += new System.EventHandler(this.btnGeneroAdd_Click);
             // 
-            // btnGeneroRemover
+            // btnGRemover
             // 
-            this.btnGeneroRemover.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGeneroRemover.BackgroundImage")));
-            this.btnGeneroRemover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnGeneroRemover.Location = new System.Drawing.Point(232, 201);
-            this.btnGeneroRemover.Margin = new System.Windows.Forms.Padding(0);
-            this.btnGeneroRemover.Name = "btnGeneroRemover";
-            this.btnGeneroRemover.Size = new System.Drawing.Size(35, 35);
-            this.btnGeneroRemover.TabIndex = 15;
-            this.btnGeneroRemover.UseSelectable = true;
-            this.btnGeneroRemover.Click += new System.EventHandler(this.btnGeneroRemover_Click);
+            this.btnGRemover.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGRemover.BackgroundImage")));
+            this.btnGRemover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnGRemover.Location = new System.Drawing.Point(232, 201);
+            this.btnGRemover.Margin = new System.Windows.Forms.Padding(0);
+            this.btnGRemover.Name = "btnGRemover";
+            this.btnGRemover.Size = new System.Drawing.Size(35, 35);
+            this.btnGRemover.TabIndex = 15;
+            this.btnGRemover.UseSelectable = true;
+            this.btnGRemover.Click += new System.EventHandler(this.btnGeneroRemover_Click);
             // 
-            // btnAutoresRemover
+            // btnAutRemover
             // 
-            this.btnAutoresRemover.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAutoresRemover.BackgroundImage")));
-            this.btnAutoresRemover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAutoresRemover.Location = new System.Drawing.Point(232, 316);
-            this.btnAutoresRemover.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAutoresRemover.Name = "btnAutoresRemover";
-            this.btnAutoresRemover.Size = new System.Drawing.Size(35, 35);
-            this.btnAutoresRemover.TabIndex = 19;
-            this.btnAutoresRemover.UseSelectable = true;
-            this.btnAutoresRemover.Click += new System.EventHandler(this.btnAutoresRemover_Click);
+            this.btnAutRemover.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAutRemover.BackgroundImage")));
+            this.btnAutRemover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAutRemover.Location = new System.Drawing.Point(232, 316);
+            this.btnAutRemover.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAutRemover.Name = "btnAutRemover";
+            this.btnAutRemover.Size = new System.Drawing.Size(35, 35);
+            this.btnAutRemover.TabIndex = 19;
+            this.btnAutRemover.UseSelectable = true;
+            this.btnAutRemover.Click += new System.EventHandler(this.btnAutoresRemover_Click);
             // 
-            // btnAutoresAdd
+            // btnAutAdd
             // 
-            this.btnAutoresAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAutoresAdd.BackgroundImage")));
-            this.btnAutoresAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAutoresAdd.Location = new System.Drawing.Point(232, 274);
-            this.btnAutoresAdd.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAutoresAdd.Name = "btnAutoresAdd";
-            this.btnAutoresAdd.Size = new System.Drawing.Size(35, 35);
-            this.btnAutoresAdd.TabIndex = 17;
-            this.btnAutoresAdd.UseSelectable = true;
-            this.btnAutoresAdd.Click += new System.EventHandler(this.btnAutoresAdd_Click);
+            this.btnAutAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAutAdd.BackgroundImage")));
+            this.btnAutAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAutAdd.Location = new System.Drawing.Point(232, 274);
+            this.btnAutAdd.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAutAdd.Name = "btnAutAdd";
+            this.btnAutAdd.Size = new System.Drawing.Size(35, 35);
+            this.btnAutAdd.TabIndex = 17;
+            this.btnAutAdd.UseSelectable = true;
+            this.btnAutAdd.Click += new System.EventHandler(this.btnAutoresAdd_Click);
             // 
-            // btnAssuntosRemover
+            // btnAssRemover
             // 
-            this.btnAssuntosRemover.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAssuntosRemover.BackgroundImage")));
-            this.btnAssuntosRemover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAssuntosRemover.Location = new System.Drawing.Point(474, 316);
-            this.btnAssuntosRemover.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAssuntosRemover.Name = "btnAssuntosRemover";
-            this.btnAssuntosRemover.Size = new System.Drawing.Size(35, 35);
-            this.btnAssuntosRemover.TabIndex = 23;
-            this.btnAssuntosRemover.UseSelectable = true;
-            this.btnAssuntosRemover.Click += new System.EventHandler(this.btnAssuntosRemover_Click);
+            this.btnAssRemover.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAssRemover.BackgroundImage")));
+            this.btnAssRemover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAssRemover.Location = new System.Drawing.Point(474, 316);
+            this.btnAssRemover.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAssRemover.Name = "btnAssRemover";
+            this.btnAssRemover.Size = new System.Drawing.Size(35, 35);
+            this.btnAssRemover.TabIndex = 23;
+            this.btnAssRemover.UseSelectable = true;
+            this.btnAssRemover.Click += new System.EventHandler(this.btnAssuntosRemover_Click);
             // 
-            // btnAssuntosAdd
+            // btnAssAdd
             // 
-            this.btnAssuntosAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAssuntosAdd.BackgroundImage")));
-            this.btnAssuntosAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAssuntosAdd.Location = new System.Drawing.Point(474, 274);
-            this.btnAssuntosAdd.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAssuntosAdd.Name = "btnAssuntosAdd";
-            this.btnAssuntosAdd.Size = new System.Drawing.Size(35, 35);
-            this.btnAssuntosAdd.TabIndex = 21;
-            this.btnAssuntosAdd.UseSelectable = true;
-            this.btnAssuntosAdd.Click += new System.EventHandler(this.btnAssuntosAdd_Click);
+            this.btnAssAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAssAdd.BackgroundImage")));
+            this.btnAssAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAssAdd.Location = new System.Drawing.Point(474, 274);
+            this.btnAssAdd.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAssAdd.Name = "btnAssAdd";
+            this.btnAssAdd.Size = new System.Drawing.Size(35, 35);
+            this.btnAssAdd.TabIndex = 21;
+            this.btnAssAdd.UseSelectable = true;
+            this.btnAssAdd.Click += new System.EventHandler(this.btnAssuntosAdd_Click);
             // 
             // cbTipoLivro
             // 
@@ -1066,14 +1081,14 @@
             this.lblArea.TabIndex = 205;
             this.lblArea.Text = "Area:";
             // 
-            // lblDisponivel
+            // lblDisp
             // 
-            this.lblDisponivel.AutoSize = true;
-            this.lblDisponivel.Location = new System.Drawing.Point(540, 248);
-            this.lblDisponivel.Name = "lblDisponivel";
-            this.lblDisponivel.Size = new System.Drawing.Size(71, 19);
-            this.lblDisponivel.TabIndex = 206;
-            this.lblDisponivel.Text = "Disponível:";
+            this.lblDisp.AutoSize = true;
+            this.lblDisp.Location = new System.Drawing.Point(540, 248);
+            this.lblDisp.Name = "lblDisp";
+            this.lblDisp.Size = new System.Drawing.Size(71, 19);
+            this.lblDisp.TabIndex = 206;
+            this.lblDisp.Text = "Disponível:";
             // 
             // lblLingua
             // 
@@ -1084,14 +1099,14 @@
             this.lblLingua.TabIndex = 207;
             this.lblLingua.Text = "Lingua:";
             // 
-            // lblLocalizacao
+            // lblLocaliza
             // 
-            this.lblLocalizacao.AutoSize = true;
-            this.lblLocalizacao.Location = new System.Drawing.Point(456, 132);
-            this.lblLocalizacao.Name = "lblLocalizacao";
-            this.lblLocalizacao.Size = new System.Drawing.Size(79, 19);
-            this.lblLocalizacao.TabIndex = 208;
-            this.lblLocalizacao.Text = "Localização:";
+            this.lblLocaliza.AutoSize = true;
+            this.lblLocaliza.Location = new System.Drawing.Point(456, 132);
+            this.lblLocaliza.Name = "lblLocaliza";
+            this.lblLocaliza.Size = new System.Drawing.Size(79, 19);
+            this.lblLocaliza.TabIndex = 208;
+            this.lblLocaliza.Text = "Localização:";
             // 
             // cbLingua
             // 
@@ -1159,61 +1174,47 @@
             this.cbLingua.Size = new System.Drawing.Size(123, 23);
             this.cbLingua.TabIndex = 26;
             // 
-            // txtLocalizacao
+            // txtLocaliza
             // 
             // 
             // 
             // 
-            this.txtLocalizacao.CustomButton.Image = null;
-            this.txtLocalizacao.CustomButton.Location = new System.Drawing.Point(102, 1);
-            this.txtLocalizacao.CustomButton.Name = "";
-            this.txtLocalizacao.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtLocalizacao.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtLocalizacao.CustomButton.TabIndex = 1;
-            this.txtLocalizacao.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtLocalizacao.CustomButton.UseSelectable = true;
-            this.txtLocalizacao.CustomButton.Visible = false;
-            this.txtLocalizacao.Lines = new string[0];
-            this.txtLocalizacao.Location = new System.Drawing.Point(541, 132);
-            this.txtLocalizacao.MaxLength = 32767;
-            this.txtLocalizacao.Name = "txtLocalizacao";
-            this.txtLocalizacao.PasswordChar = '\0';
-            this.txtLocalizacao.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtLocalizacao.SelectedText = "";
-            this.txtLocalizacao.SelectionLength = 0;
-            this.txtLocalizacao.SelectionStart = 0;
-            this.txtLocalizacao.ShortcutsEnabled = true;
-            this.txtLocalizacao.Size = new System.Drawing.Size(124, 23);
-            this.txtLocalizacao.TabIndex = 25;
-            this.txtLocalizacao.UseSelectable = true;
-            this.txtLocalizacao.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtLocalizacao.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtLocaliza.CustomButton.Image = null;
+            this.txtLocaliza.CustomButton.Location = new System.Drawing.Point(102, 1);
+            this.txtLocaliza.CustomButton.Name = "";
+            this.txtLocaliza.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtLocaliza.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtLocaliza.CustomButton.TabIndex = 1;
+            this.txtLocaliza.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtLocaliza.CustomButton.UseSelectable = true;
+            this.txtLocaliza.CustomButton.Visible = false;
+            this.txtLocaliza.Lines = new string[0];
+            this.txtLocaliza.Location = new System.Drawing.Point(541, 132);
+            this.txtLocaliza.MaxLength = 32767;
+            this.txtLocaliza.Name = "txtLocaliza";
+            this.txtLocaliza.PasswordChar = '\0';
+            this.txtLocaliza.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtLocaliza.SelectedText = "";
+            this.txtLocaliza.SelectionLength = 0;
+            this.txtLocaliza.SelectionStart = 0;
+            this.txtLocaliza.ShortcutsEnabled = true;
+            this.txtLocaliza.Size = new System.Drawing.Size(124, 23);
+            this.txtLocaliza.TabIndex = 25;
+            this.txtLocaliza.UseSelectable = true;
+            this.txtLocaliza.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtLocaliza.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // checkDisponivel
+            // checkDisp
             // 
-            this.checkDisponivel.AutoSize = true;
-            this.checkDisponivel.Checked = true;
-            this.checkDisponivel.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkDisponivel.Location = new System.Drawing.Point(627, 252);
-            this.checkDisponivel.Name = "checkDisponivel";
-            this.checkDisponivel.Size = new System.Drawing.Size(15, 14);
-            this.checkDisponivel.TabIndex = 25;
-            this.checkDisponivel.TabStop = false;
-            this.checkDisponivel.UseVisualStyleBackColor = true;
-            // 
-            // clnCodGenero
-            // 
-            this.clnCodGenero.HeaderText = "Cod";
-            this.clnCodGenero.Name = "clnCodGenero";
-            this.clnCodGenero.ReadOnly = true;
-            this.clnCodGenero.Visible = false;
-            // 
-            // clnGenero
-            // 
-            this.clnGenero.HeaderText = "Gêneros";
-            this.clnGenero.Name = "clnGenero";
-            this.clnGenero.ReadOnly = true;
-            this.clnGenero.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.checkDisp.AutoSize = true;
+            this.checkDisp.Checked = true;
+            this.checkDisp.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkDisp.Location = new System.Drawing.Point(627, 252);
+            this.checkDisp.Name = "checkDisp";
+            this.checkDisp.Size = new System.Drawing.Size(15, 14);
+            this.checkDisp.TabIndex = 25;
+            this.checkDisp.TabStop = false;
+            this.checkDisp.UseVisualStyleBackColor = true;
             // 
             // FrmCadLivro
             // 
@@ -1223,6 +1224,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmCadLivro";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cadastro: Livro";
             this.pnl.ResumeLayout(false);
             this.pnl.PerformLayout();
@@ -1238,12 +1240,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtObservacao;
+        private System.Windows.Forms.TextBox txtObs;
         private MetroFramework.Controls.MetroTextBox txtEdicao;
         private MetroFramework.Controls.MetroTextBox txtTitulo;
         private MetroFramework.Controls.MetroTextBox txtColecao;
         private MetroFramework.Controls.MetroTextBox txtLocal;
-        private MetroFramework.Controls.MetroTextBox txtNdePaginas;
+        private MetroFramework.Controls.MetroTextBox txtNPags;
         private MetroFramework.Controls.MetroTextBox txtVolume;
         private MetroFramework.Controls.MetroTextBox txtSubtitulo;
         private System.Windows.Forms.ComboBox cbGenero;
@@ -1255,16 +1257,16 @@
         private MetroFramework.Controls.MetroGrid dataGridGeneros;
         private MetroFramework.Controls.MetroGrid dataGridAssuntos;
         private MetroFramework.Controls.MetroGrid dataGridAutores;
-        private MetroFramework.Controls.MetroButton btnAutoresRemover;
-        private MetroFramework.Controls.MetroButton btnAutoresAdd;
-        private MetroFramework.Controls.MetroButton btnGeneroRemover;
-        private MetroFramework.Controls.MetroButton btnGeneroAdd;
+        private MetroFramework.Controls.MetroButton btnAutRemover;
+        private MetroFramework.Controls.MetroButton btnAutAdd;
+        private MetroFramework.Controls.MetroButton btnGRemover;
+        private MetroFramework.Controls.MetroButton btnGAdd;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnCodAutor;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnAutor;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnCodAssunto;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnAssunto;
-        private MetroFramework.Controls.MetroButton btnAssuntosRemover;
-        private MetroFramework.Controls.MetroButton btnAssuntosAdd;
+        private MetroFramework.Controls.MetroButton btnAssRemover;
+        private MetroFramework.Controls.MetroButton btnAssAdd;
         private System.Windows.Forms.ComboBox cbTipoLivro;
         private MetroFramework.Controls.MetroTextBox txtTombo;
         private System.Windows.Forms.ComboBox cbTipoTombo;
@@ -1290,12 +1292,12 @@
         private MetroFramework.Controls.MetroLabel lblLocal;
         private MetroFramework.Controls.MetroLabel lblVolume;
         private MetroFramework.Controls.MetroLabel lblTitulo;
-        private System.Windows.Forms.CheckBox checkDisponivel;
-        private MetroFramework.Controls.MetroTextBox txtLocalizacao;
+        private System.Windows.Forms.CheckBox checkDisp;
+        private MetroFramework.Controls.MetroTextBox txtLocaliza;
         private System.Windows.Forms.ComboBox cbLingua;
-        private MetroFramework.Controls.MetroLabel lblLocalizacao;
+        private MetroFramework.Controls.MetroLabel lblLocaliza;
         private MetroFramework.Controls.MetroLabel lblLingua;
-        private MetroFramework.Controls.MetroLabel lblDisponivel;
+        private MetroFramework.Controls.MetroLabel lblDisp;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnCodGenero;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnGenero;
     }

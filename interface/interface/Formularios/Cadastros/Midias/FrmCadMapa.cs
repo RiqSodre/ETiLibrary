@@ -32,7 +32,7 @@ namespace Interface.Formularios.Cadastros
             try
             {
                 InitializeComponent();
-                txtObservacao.GotFocus += txtObservacao_Focus;
+                txtObs.GotFocus += txtObservacao_Focus;
                 cbArea.DataSource = areaBLL.CarregaAreas();
                 Habilita(true);
                 LimparComponentes();
@@ -74,7 +74,7 @@ namespace Interface.Formularios.Cadastros
                     }
                     if (txtEspecifica.Text.Length < 6)
                     {
-                        MessageBox.Show(this, "A especificação deve conter no minimo seis digitos.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "A especificação deve conter no mínimo seis digitos.", "Atenção", MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
                         return;
                     }
@@ -85,15 +85,15 @@ namespace Interface.Formularios.Cadastros
                     //Campo Lingua
                     Mapa.Lingua = cbLingua.Text;
                     //Validações campo Localização
-                    if (txtLocalizacao.Text.Length != 0)
+                    if (txtLocaliza.Text.Length != 0)
                     {
-                        if (txtLocalizacao.Text.Length < 4)
+                        if (txtLocaliza.Text.Length < 4)
                         {
-                            MessageBox.Show(this, "O campo Localização deve conter no minimo quatro digitos.", "Atenção", MessageBoxButtons.OK,
+                            MessageBox.Show(this, "O campo Localização deve conter no mínimo quatro digitos.", "Atenção", MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
                             return;
                         }
-                        Mapa.Localizacao = txtLocalizacao.Text;
+                        Mapa.Localizacao = txtLocaliza.Text;
                     }
                     else
                     {
@@ -102,7 +102,7 @@ namespace Interface.Formularios.Cadastros
                     //Validações campo Área
                     if ((int)cbArea.SelectedValue < 0)
                     {
-                        MessageBox.Show(this, "Selecione uma area da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(this, "Selecione uma área da lista de sugestão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     else
@@ -122,7 +122,7 @@ namespace Interface.Formularios.Cadastros
                     //CheckBox Disponivel
                     if (btnAcao.Text.Equals("Alterar"))
                     {
-                        if (Mapa.Disponivel != checkDisponivel.Checked)
+                        if (Mapa.Disponivel != checkDisp.Checked)
                         {
                             EmprestimoBLL emprestimoBLL = new EmprestimoBLL();
                             EmprestimoList emprestimoList = emprestimoBLL.EmprestimoConsultar_PorTombo(Mapa.Tombo, "Mapa");
@@ -149,9 +149,9 @@ namespace Interface.Formularios.Cadastros
                             }
                         }
                     }
-                    Mapa.Disponivel = checkDisponivel.Checked;
+                    Mapa.Disponivel = checkDisp.Checked;
                     //Campo Observação
-                    Mapa.Observacao = txtObservacao.Text;
+                    Mapa.Observacao = txtObs.Text;
                     //Execução
                     if (btnAcao.Text.Equals("Salvar"))
                     {
@@ -241,18 +241,18 @@ namespace Interface.Formularios.Cadastros
         {
             txtEspecifica.Text = mapa.Especificacao;
             txtTombo.Text = mapa.Tombo.ToString();
-            txtLocalizacao.Text = mapa.Localizacao;
+            txtLocaliza.Text = mapa.Localizacao;
             cbLingua.SelectedItem = mapa.Lingua;
             cbTipoTombo.SelectedItem = mapa.TipoTombo;
             cbArea.SelectedValue = mapa.Area.CodArea;
-            txtObservacao.Text = mapa.Observacao;
+            txtObs.Text = mapa.Observacao;
             if (mapa.Disponivel)
             {
-                checkDisponivel.Checked = true;
+                checkDisp.Checked = true;
             }
             else
             {
-                checkDisponivel.Checked = false;
+                checkDisp.Checked = false;
             }
             toolExibe(txtEspecifica, txtEspecifica.Text);
         }
@@ -271,7 +271,7 @@ namespace Interface.Formularios.Cadastros
         //Aumenta o tamanho do campo Observação
         private void txtObservacao_Focus(object sender, EventArgs e)
         {
-            txtObservacao.Height = 75;
+            txtObs.Height = 75;
             pnlPrincipal.Height = 376;
             this.Height = 447;
             btnAcao.Location = new Point(149, 407);
@@ -280,9 +280,9 @@ namespace Interface.Formularios.Cadastros
         //Retorna o tamanho do campo Observação ao original
         private void txtObservacao_Leave(object sender, EventArgs e)
         {
-            if (txtObservacao.Text == "" || txtObservacao.Text == null)
+            if (txtObs.Text == "" || txtObs.Text == null)
             {
-                txtObservacao.Height = 25;
+                txtObs.Height = 25;
                 pnlPrincipal.Height = 326;
                 this.Height = 397;
                 btnAcao.Location = new Point(149, 355);

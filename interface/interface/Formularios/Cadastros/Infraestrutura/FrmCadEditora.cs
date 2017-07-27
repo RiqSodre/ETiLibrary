@@ -59,7 +59,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                     }
                     else if (txtEditora.Text.Length < 4)
                     {
-                        MessageBox.Show(this, "O campo Editora deve conter no minimo 4 caracteres.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Editora deve conter no mínimo 4 caracteres.", "Atenção", MessageBoxButtons.OK,
                            MessageBoxIcon.Warning);
                         return;
                     }
@@ -180,7 +180,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 LimparComponentes();
                 Habilita(false);
                 cbEditora.Enabled = true;
-                cbEditora.Text = "Digite uma editora";
+                cbEditora.Text = "DIGITE A EDITORA";
                 cbEditora.Focus();
             }
             catch (Exception ex)
@@ -219,6 +219,19 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
             cbEditora.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cbEditora.AutoCompleteSource = AutoCompleteSource.CustomSource;
             cbEditora.AutoCompleteCustomSource = dicEditora;
+        }
+        //Retorna o texto para maiusculo
+        private void cbEditora_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                cbEditora.Text = cbEditora.Text.ToUpper();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
+            }
         }
     }
 }

@@ -1,15 +1,16 @@
 ﻿using BLL;
 using DTO.Pessoas;
 using Interface.Properties;
+using MetroFramework.Forms;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
 
 namespace Interface.Formularios.Sistema
 {
-    public partial class FrmLogin : MetroFramework.Forms.MetroForm
+    public partial class FrmLogin : MetroForm
     {
-        private AutenticacaoBLL autenticacaoBLL = new AutenticacaoBLL();
+        private AutenticacaoBLL autenticaBLL = new AutenticacaoBLL();
         private PessoaBLL pessoaBLL = new PessoaBLL();
 
         //Construtor Padrão
@@ -55,21 +56,21 @@ namespace Interface.Formularios.Sistema
                 if (CaixasOK())
                 {
                     int codUsuario;
-                    codUsuario = autenticacaoBLL.AutenticarUsuario(txtNome.Text, autenticacaoBLL.CripSenha(txtSenha.Text));
+                    codUsuario = autenticaBLL.AutenticarUsuario(txtNome.Text, autenticaBLL.CripSenha(txtSenha.Text));
                     if (codUsuario == 0)
                     {
-                        MessageBox.Show(this, "Usuário não cadastrado no sistema", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "Usuário não cadastrado no sistema.", "Atenção", MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
                         return;
                     }
                     else
                     {
-                        Funcionario funcionario = pessoaBLL.FuncionarioBiblioSelect(codUsuario);
-                        Settings.Default.Nome = funcionario.Nome;
-                        Settings.Default.Login = funcionario.Login;
-                        Settings.Default.Senha = funcionario.Senha;
-                        Settings.Default.Admin = funcionario.Admin;
-                        Settings.Default.CodPessoa = (int)funcionario.CodPessoa;
+                        Funcionario func = pessoaBLL.FuncionarioBiblioSelect(codUsuario);
+                        Settings.Default.Nome = func.Nome;
+                        Settings.Default.Login = func.Login;
+                        Settings.Default.Senha = func.Senha;
+                        Settings.Default.Admin = func.Admin;
+                        Settings.Default.CodPessoa = (int)func.CodPessoa;
                         DialogResult = DialogResult.Yes;
                     }
                 }

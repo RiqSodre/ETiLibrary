@@ -28,49 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel3.SuspendLayout();
+            this.pnlPC.SuspendLayout();
             this.pnlForm.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnPesquisa3
+            // btnPesq3
             // 
-            this.btnPesquisa3.Text = "Tombo";
-            this.btnPesquisa3.Click += new System.EventHandler(this.btnPesquisa3_Click);
+            this.btnPesq3.Text = "Tombo";
+            this.btnPesq3.Click += new System.EventHandler(this.btnPesq3_Click);
             // 
-            // btnPesquisa2
+            // btnPesq2
             // 
-            this.btnPesquisa2.Text = "Título";
-            this.btnPesquisa2.Click += new System.EventHandler(this.btnPesquisa2_Click);
+            this.btnPesq2.Text = "Título";
+            this.btnPesq2.Click += new System.EventHandler(this.btnPesq2_Click);
             // 
-            // btnPesquisa1
+            // btnPesq1
             // 
-            this.btnPesquisa1.Text = "Área";
-            this.btnPesquisa1.Click += new System.EventHandler(this.btnPesquisa1_Click);
-            // 
-            // lblPesquisa
-            // 
-            this.lblPesquisa.Location = new System.Drawing.Point(0, 217);
-            this.lblPesquisa.Size = new System.Drawing.Size(348, 16);
+            this.btnPesq1.Text = "Área";
+            this.btnPesq1.Click += new System.EventHandler(this.btnPesq1_Click);
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(92, 275);
+            this.btnPesquisar.Location = new System.Drawing.Point(92, 268);
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
-            // dtPesquisa1
+            // dtPesq1
             // 
-            this.dtPesquisa1.Location = new System.Drawing.Point(71, 241);
+            this.dtPesq1.Location = new System.Drawing.Point(71, 233);
             // 
-            // dtPesquisa2
+            // dtPesq2
             // 
-            this.dtPesquisa2.Location = new System.Drawing.Point(194, 241);
+            this.dtPesq2.Location = new System.Drawing.Point(194, 233);
             // 
-            // cbPesquisa2
+            // cbPesq2
             // 
-            this.cbPesquisa2.Location = new System.Drawing.Point(92, 273);
+            this.cbPesq2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPesq2.Location = new System.Drawing.Point(92, 265);
             // 
-            // cbPesquisa1
+            // lblFrm
             // 
-            this.cbPesquisa1.Location = new System.Drawing.Point(92, 241);
+            this.lblFrm.Size = new System.Drawing.Size(128, 16);
+            this.lblFrm.Text = "Consulta: CD e DVD";
+            // 
+            // cbPesq1
+            // 
+            this.cbPesq1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPesq1.Location = new System.Drawing.Point(92, 233);
             // 
             // txtPesquisa
             // 
@@ -87,15 +90,29 @@
             this.txtPesquisa.CustomButton.UseSelectable = true;
             this.txtPesquisa.CustomButton.Visible = false;
             this.txtPesquisa.Lines = new string[0];
+            this.txtPesquisa.Location = new System.Drawing.Point(92, 233);
+            this.txtPesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesquisa_KeyPress);
             // 
-            // FrmPCCDCVD
+            // btnFechar
             // 
+            this.btnFechar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnFechar.FlatAppearance.BorderSize = 0;
+            // 
+            // lblPesquisa
+            // 
+            this.lblPesquisa.Location = new System.Drawing.Point(2, 207);
+            this.lblPesquisa.Size = new System.Drawing.Size(341, 22);
+            // 
+            // FrmPCCDVD
+            // 
+            this.AcceptButton = this.btnPesquisar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(345, 233);
-            this.Name = "FrmPCCDCVD";
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.CancelButton = this.btnFechar;
+            this.ClientSize = new System.Drawing.Size(345, 235);
+            this.Name = "FrmPCCDVD";
+            this.pnlPC.ResumeLayout(false);
+            this.pnlPC.PerformLayout();
             this.pnlForm.ResumeLayout(false);
             this.pnlForm.PerformLayout();
             this.ResumeLayout(false);

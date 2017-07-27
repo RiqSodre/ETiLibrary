@@ -44,10 +44,10 @@ namespace Interface.Formularios.Consultas
                 LimpaForm();
                 TamanhoForm(345, 358);
                 lblPesquisa.Text = "Selecione o estado do empréstimo:";
-                cbPesquisa1.Items.Add("Aberto");
-                cbPesquisa1.Items.Add("Fechado");
-                HabilitaCombo(92, 310);
-                cbPesquisa1.SelectedIndex = 0;
+                cbPesq1.Items.Add("Aberto");
+                cbPesq1.Items.Add("Fechado");
+                HabilitaCombo(92, 310, cbPesq1);
+                cbPesq1.SelectedIndex = 0;
             }
             catch (Exception ex)
             {
@@ -64,10 +64,10 @@ namespace Interface.Formularios.Consultas
                 LimpaForm();
                 TamanhoForm(345, 358);
                 lblPesquisa.Text = "Selecione se o empréstimo possui multa:";
-                cbPesquisa1.Items.Add("Com multa");
-                cbPesquisa1.Items.Add("Sem multa");
-                HabilitaCombo(92, 310);
-                cbPesquisa1.SelectedIndex = 0;
+                cbPesq1.Items.Add("Com multa");
+                cbPesq1.Items.Add("Sem multa");
+                HabilitaCombo(92, 310, cbPesq1);
+                cbPesq1.SelectedIndex = 0;
             }
             catch (Exception ex)
             {
@@ -117,17 +117,17 @@ namespace Interface.Formularios.Consultas
             {
                 if (lblPesquisa.Text.Contains("data"))
                 {
-                    if (dtPesquisa2.Value < dtPesquisa1.Value)
+                    if (dtPesq2.Value < dtPesq1.Value)
                     {
                         MessageBox.Show(this, "Insira um periodo válido.", "Atenção", MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
                         return;
                     }
-                    emprestimoList = emprestimoBLL.EmprestimoConsultar_PorData(dtPesquisa1.Value, dtPesquisa2.Value);
+                    emprestimoList = emprestimoBLL.EmprestimoConsultar_PorData(dtPesq1.Value, dtPesq2.Value);
                 }
                 else if (lblPesquisa.Text.Contains("estado"))
                 {
-                    if (cbPesquisa1.SelectedIndex == -1)
+                    if (cbPesq1.SelectedIndex == -1)
                     {
                         MessageBox.Show(this, "Selecione o estado do empréstimo.", "Atenção", MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
@@ -135,7 +135,7 @@ namespace Interface.Formularios.Consultas
                     }
                     bool estado = true;
 
-                    if (cbPesquisa1.Text == "Aberto")
+                    if (cbPesq1.Text == "Aberto")
                     {
                         estado = false;
                     }
@@ -143,7 +143,7 @@ namespace Interface.Formularios.Consultas
                 }
                 else if (lblPesquisa.Text.Contains("multa"))
                 {
-                    if (cbPesquisa1.SelectedIndex == -1)
+                    if (cbPesq1.SelectedIndex == -1)
                     {
                         MessageBox.Show(this, "Selecione o estado da multa.", "Atenção", MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
@@ -151,7 +151,7 @@ namespace Interface.Formularios.Consultas
                     }
                     bool estado = false;
 
-                    if (cbPesquisa1.Text == "Com multa")
+                    if (cbPesq1.Text == "Com multa")
                     {
                         estado = true;
                     }

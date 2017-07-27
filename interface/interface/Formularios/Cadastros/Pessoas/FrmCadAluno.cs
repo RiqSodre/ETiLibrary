@@ -11,7 +11,7 @@ namespace Interface.Formularios.Cadastros
         private PessoaBLL pessoaBLL = new PessoaBLL();
         private CursoBLL cursoBLL = new CursoBLL();
         private TurmaBLL turmaBLL = new TurmaBLL();
-        private AutenticacaoBLL autenticacaoBLL = new AutenticacaoBLL();
+        private AutenticacaoBLL autenticaBLL = new AutenticacaoBLL();
         private Aluno alunoBase = new Aluno();
         public Aluno Aluno
         {
@@ -25,7 +25,7 @@ namespace Interface.Formularios.Cadastros
                 alunoBase = value;
             }
         }
-       
+
         //Construtor padrão
         public FrmCadAluno()
         {
@@ -72,7 +72,7 @@ namespace Interface.Formularios.Cadastros
                     }
                     else if (txtNome.Text.Length < 8)
                     {
-                        MessageBox.Show(this, "O campo Nome deve conter no minimo oito letras.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Nome deve conter no mínimo oito letras.", "Atenção", MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
                         return;
                     }
@@ -95,21 +95,20 @@ namespace Interface.Formularios.Cadastros
                     {
                         if (txtCpf.Text.Length != 11)
                         {
-                            MessageBox.Show(this, "O campo CPF deve conter onze caracteres.", "Atenção", MessageBoxButtons.OK,
+                            MessageBox.Show(this, "O campo CPF deve conter onze números.", "Atenção", MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
                             return;
                         }
-                        Aluno.Cpf = txtCpf.Text;
-                        /*if (autenticacaoBLL.ValidarCPF(txtCpf.Text))
-                          {
-                              Aluno.Cpf = txtCpf.Text;
-                          }
-                          else
-                          {
-                              MessageBox.Show(this, "Informe um CPF válido.", "Atenção", MessageBoxButtons.OK,
-                                  MessageBoxIcon.Warning);
-                              return;
-                          }*/
+                        if (autenticaBLL.ValidarCPF(txtCpf.Text))
+                        {
+                            Aluno.Cpf = txtCpf.Text;
+                        }
+                        else
+                        {
+                            MessageBox.Show(this, "Informe um CPF válido.", "Atenção", MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                            return;
+                        }
                     }
                     else
                     {
@@ -154,7 +153,7 @@ namespace Interface.Formularios.Cadastros
                         }
                         else
                         {
-                            MessageBox.Show(this, "O campo Telefone deve conter dez digitos.", "Atenção", MessageBoxButtons.OK,
+                            MessageBox.Show(this, "O campo Telefone deve conter dez números.", "Atenção", MessageBoxButtons.OK,
                                    MessageBoxIcon.Warning);
                             return;
                         }
@@ -164,7 +163,7 @@ namespace Interface.Formularios.Cadastros
                         }
                         else
                         {
-                            MessageBox.Show(this, "O campo Celular deve conter onze digitos.", "Atenção", MessageBoxButtons.OK,
+                            MessageBox.Show(this, "O campo Celular deve conter onze números.", "Atenção", MessageBoxButtons.OK,
                                    MessageBoxIcon.Warning);
                             return;
                         }
@@ -181,11 +180,11 @@ namespace Interface.Formularios.Cadastros
                 }//Execução
                 else
                 {
-                    if(MessageBox.Show(this, "Deseja excluir este aluno(a)?", "Atenção", MessageBoxButtons.YesNo,
+                    if (MessageBox.Show(this, "Deseja excluir este aluno(a)?", "Atenção", MessageBoxButtons.YesNo,
                                MessageBoxIcon.Information) == DialogResult.Yes)
                     {
                         resultado = pessoaBLL.PessoaExcluir(Aluno.CodPessoa);
-                    }                    
+                    }
                 }
                 MessageBox.Show(this, resultado, "Atenção", MessageBoxButtons.OK,
                                    MessageBoxIcon.Information);
@@ -251,7 +250,7 @@ namespace Interface.Formularios.Cadastros
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }       
+        }
         //Carrega as turmas do curso selecionado na combobox de turmas
         private void cbCurso_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -268,7 +267,7 @@ namespace Interface.Formularios.Cadastros
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }       
+        }
         //Faz o campo Nome aceitar apenas letras
         private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -277,7 +276,7 @@ namespace Interface.Formularios.Cadastros
                 if (!char.IsLetter(e.KeyChar) && !(e.KeyChar == (char)Keys.Back) && !(e.KeyChar == (char)Keys.Space))
                 {
                     e.Handled = true;
-                    MessageBox.Show("O campo Nome aceita apenas letras!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("O campo Nome aceita apenas letras.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -293,7 +292,7 @@ namespace Interface.Formularios.Cadastros
                 if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
                 {
                     e.Handled = true;
-                    MessageBox.Show("O campo CPF aceita apenas números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("O campo CPF aceita apenas números.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -309,7 +308,7 @@ namespace Interface.Formularios.Cadastros
                 if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
                 {
                     e.Handled = true;
-                    MessageBox.Show("O campo RM aceita apenas números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("O campo RM aceita apenas números.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -325,7 +324,7 @@ namespace Interface.Formularios.Cadastros
                 if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
                 {
                     e.Handled = true;
-                    MessageBox.Show("O campo Telefone aceita apenas números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("O campo Telefone aceita apenas números.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -341,14 +340,14 @@ namespace Interface.Formularios.Cadastros
                 if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
                 {
                     e.Handled = true;
-                    MessageBox.Show("O campo Celular aceita apenas números!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("O campo Celular aceita apenas números.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }       
+        }
         //Carrega o cadastro do aluno no form
         private void CarregaCampos(Aluno aluno)
         {

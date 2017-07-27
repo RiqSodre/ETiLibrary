@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.picboxLogo = new System.Windows.Forms.PictureBox();
-            this.picBoxSistema = new System.Windows.Forms.PictureBox();
+            this.picBoxETi = new System.Windows.Forms.PictureBox();
             this.btnMin = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.lblUsuario = new MetroFramework.Controls.MetroLabel();
@@ -41,7 +41,7 @@
             this.txtNome = new MetroFramework.Controls.MetroTextBox();
             this.txtSenha = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picboxLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxSistema)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxETi)).BeginInit();
             this.SuspendLayout();
             // 
             // picboxLogo
@@ -54,14 +54,14 @@
             this.picboxLogo.TabIndex = 26;
             this.picboxLogo.TabStop = false;
             // 
-            // picBoxSistema
+            // picBoxETi
             // 
-            this.picBoxSistema.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxSistema.BackgroundImage")));
-            this.picBoxSistema.Location = new System.Drawing.Point(54, 205);
-            this.picBoxSistema.Name = "picBoxSistema";
-            this.picBoxSistema.Size = new System.Drawing.Size(260, 21);
-            this.picBoxSistema.TabIndex = 25;
-            this.picBoxSistema.TabStop = false;
+            this.picBoxETi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxETi.BackgroundImage")));
+            this.picBoxETi.Location = new System.Drawing.Point(54, 205);
+            this.picBoxETi.Name = "picBoxETi";
+            this.picBoxETi.Size = new System.Drawing.Size(260, 21);
+            this.picBoxETi.TabIndex = 25;
+            this.picBoxETi.TabStop = false;
             // 
             // btnMin
             // 
@@ -230,7 +230,7 @@
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(361, 500);
             this.ControlBox = false;
-            this.Controls.Add(this.picBoxSistema);
+            this.Controls.Add(this.picBoxETi);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.btnEntrar);
@@ -249,7 +249,7 @@
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.picboxLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxSistema)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxETi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,7 +257,7 @@
 
         #endregion
         private System.Windows.Forms.PictureBox picboxLogo;
-        private System.Windows.Forms.PictureBox picBoxSistema;
+        private System.Windows.Forms.PictureBox picBoxETi;
         private System.Windows.Forms.Button btnMin;
         private System.Windows.Forms.Button btnFechar;
         private MetroFramework.Controls.MetroLabel lblUsuario;

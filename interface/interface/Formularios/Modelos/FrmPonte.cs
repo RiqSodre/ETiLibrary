@@ -1,10 +1,11 @@
-﻿using System;
+﻿using MetroFramework.Forms;
+using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace Interface.Formularios.Modelos
 {
-    public partial class FrmPonte : MetroFramework.Forms.MetroForm
+    public partial class FrmPonte : MetroForm
     {
         //Variaveis utilizadas para mover o form através dos paineis
         protected int WM_NCLBUTTONDOWN = 0xA1;

@@ -25,9 +25,9 @@ namespace Interface.Formularios.Sistema
                 lblNome.Text = Settings.Default.Nome.Substring(0, Settings.Default.Nome.IndexOf(" "));
                 if(Settings.Default.Admin == true)
                 {
-                    funcionarioToolStripMenuItem.Enabled = true;
-                    funcionárioBibliotecaToolStripMenuItem.Enabled = true;
-                    cursosToolStripMenuItem.Enabled = true;
+                    funcCadMenu.Enabled = true;
+                    funcBCadMenu.Enabled = true;
+                    cursoTCadMenu.Enabled = true;
                 }
             }
             catch (Exception ex)
@@ -58,7 +58,7 @@ namespace Interface.Formularios.Sistema
                 }
                 else
                 {
-                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "Essa janela já esta aberta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception ex)
@@ -83,13 +83,13 @@ namespace Interface.Formularios.Sistema
                 }
                 if (!existe)
                 {
-                    FrmCadFuncionario cadfuncionario = new FrmCadFuncionario();
-                    cadfuncionario.MdiParent = this;
-                    cadfuncionario.Show();
+                    FrmCadFuncionario cadfunc = new FrmCadFuncionario();
+                    cadfunc.MdiParent = this;
+                    cadfunc.Show();
                 }
                 else
                 {
-                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "Essa janela já esta aberta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception ex)
@@ -114,13 +114,13 @@ namespace Interface.Formularios.Sistema
                 }
                 if (!existe)
                 {
-                    FrmCadFuncionarioBiblioteca cadfuncionario = new FrmCadFuncionarioBiblioteca();
-                    cadfuncionario.MdiParent = this;
-                    cadfuncionario.Show();
+                    FrmCadFuncionarioBiblioteca cadfuncB = new FrmCadFuncionarioBiblioteca();
+                    cadfuncB.MdiParent = this;
+                    cadfuncB.Show();
                 }
                 else
                 {
-                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "Essa janela já esta aberta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception ex)
@@ -151,7 +151,7 @@ namespace Interface.Formularios.Sistema
                 }
                 else
                 {
-                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "Essa janela já esta aberta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception ex)
@@ -213,7 +213,7 @@ namespace Interface.Formularios.Sistema
                 }
                 else
                 {
-                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "Essa janela já esta aberta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception ex)
@@ -244,7 +244,7 @@ namespace Interface.Formularios.Sistema
                 }
                 else
                 {
-                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "Essa janela já esta aberta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception ex)
@@ -275,7 +275,7 @@ namespace Interface.Formularios.Sistema
                 }
                 else
                 {
-                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "Essa janela já esta aberta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception ex)
@@ -306,7 +306,7 @@ namespace Interface.Formularios.Sistema
                 }
                 else
                 {
-                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "Essa janela já esta aberta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception ex)
@@ -337,7 +337,7 @@ namespace Interface.Formularios.Sistema
                 }
                 else
                 {
-                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "Essa janela já esta aberta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception ex)
@@ -368,7 +368,7 @@ namespace Interface.Formularios.Sistema
                 }
                 else
                 {
-                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "Essa janela já esta aberta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception ex)
@@ -399,7 +399,7 @@ namespace Interface.Formularios.Sistema
                 }
                 else
                 {
-                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "Essa janela já esta aberta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception ex)
@@ -430,7 +430,7 @@ namespace Interface.Formularios.Sistema
                 }
                 else
                 {
-                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "Essa janela já esta aberta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception ex)
@@ -447,7 +447,7 @@ namespace Interface.Formularios.Sistema
                 existe = false;
                 foreach (Form form in this.MdiChildren)
                 {
-                    if (form.Name == "FrmConsultaAluno")
+                    if (form.Name == "FrmPCAluno")
                     {
                         existe = VerificaForm(form, existe);
                         break;
@@ -455,13 +455,13 @@ namespace Interface.Formularios.Sistema
                 }
                 if (!existe)
                 {
-                    FrmPCAluno ctAluno = new FrmPCAluno();
-                    ctAluno.MdiParent = this;
-                    ctAluno.Show();
+                    FrmPCAluno pcaluno = new FrmPCAluno();
+                    pcaluno.MdiParent = this;
+                    pcaluno.Show();
                 }
                 else
                 {
-                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "Essa janela já esta aberta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception ex)
@@ -478,7 +478,7 @@ namespace Interface.Formularios.Sistema
                 existe = false;
                 foreach (Form form in this.MdiChildren)
                 {
-                    if (form.Name == "FrmConsultaFuncionario")
+                    if (form.Name == "FrmPCFuncionario")
                     {
                         existe = VerificaForm(form, existe);
                         break;
@@ -486,13 +486,13 @@ namespace Interface.Formularios.Sistema
                 }
                 if (!existe)
                 {
-                    FrmConsultaFuncionario ctFuncionario = new FrmConsultaFuncionario();
-                    ctFuncionario.MdiParent = this;
-                    ctFuncionario.Show();
+                    FrmPCFuncionario pcfunc = new FrmPCFuncionario();
+                    pcfunc.MdiParent = this;
+                    pcfunc.Show();
                 }
                 else
                 {
-                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "Essa janela já esta aberta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception ex)
@@ -523,7 +523,7 @@ namespace Interface.Formularios.Sistema
                 }
                 else
                 {
-                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "Essa janela já esta aberta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception ex)
@@ -574,13 +574,13 @@ namespace Interface.Formularios.Sistema
                 }
                 if (!existe)
                 {
-                    FrmPCEmprestimo frmPC = new FrmPCEmprestimo();
-                    frmPC.MdiParent = this;
-                    frmPC.Show();
+                    FrmPCEmprestimo pcempre = new FrmPCEmprestimo();
+                    pcempre.MdiParent = this;
+                    pcempre.Show();
                 }
                 else
                 {
-                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "Essa janela já esta aberta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception ex)
@@ -653,7 +653,20 @@ namespace Interface.Formularios.Sistema
                 MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK,
                                        MessageBoxIcon.Error);
             }
-        }   
+        }
+        //Abre o form ponte de relatórios -Implementar
+        private void relátoriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Implementar
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK,
+                                       MessageBoxIcon.Error);
+            }
+        }
         //Abre o form ponte de empréstimo
         private void btnEmprestimo_Click(object sender, EventArgs e)
         {
@@ -670,13 +683,13 @@ namespace Interface.Formularios.Sistema
                 }
                 if (!existe)
                 {
-                    FrmPonteEmprestimo frmPonteEmprestimo = new FrmPonteEmprestimo();
-                    frmPonteEmprestimo.MdiParent = this;
-                    frmPonteEmprestimo.Show();
+                    FrmPonteEmprestimo frmPtEmpre = new FrmPonteEmprestimo();
+                    frmPtEmpre.MdiParent = this;
+                    frmPtEmpre.Show();
                 }
                 else
                 {
-                    MessageBox.Show(this, "Essa janela já esta aberta!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "Essa janela já esta aberta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception ex)
@@ -702,19 +715,6 @@ namespace Interface.Formularios.Sistema
         private void btnSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-        //Abre o form ponte de relatórios -Implementar
-        private void relátoriosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                //Implementar
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK,
-                                       MessageBoxIcon.Error);
-            }
         }
         //Confirmar saida do programa
         private void FrmMenu_FormClosing(object sender, FormClosingEventArgs e)
@@ -757,15 +757,15 @@ namespace Interface.Formularios.Sistema
                 int hora = Convert.ToInt32(lblHora.Text.Substring(0, 2));
                 if(hora > 17 || hora < 6)
                 {
-                    lblMensagem.Text = "Boa noite";
+                    lblMsg.Text = "Boa noite";
                 }
                 else if (hora > 5 && hora < 12)
                 {
-                    lblMensagem.Text = "Bom dia";
+                    lblMsg.Text = "Bom dia";
                 }
                 else
                 {
-                    lblMensagem.Text = "Bom tarde";
+                    lblMsg.Text = "Bom tarde";
                 }
             }
             catch (Exception ex)

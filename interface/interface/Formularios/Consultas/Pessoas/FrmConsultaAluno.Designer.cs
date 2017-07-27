@@ -38,7 +38,6 @@
             this.clnSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnCPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnRM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnDataCadastro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnCodCurso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnCurso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnCodTurma = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,18 +48,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAlunos)).BeginInit();
             this.SuspendLayout();
             // 
+            // pnlForm
+            // 
+            this.pnlForm.Location = new System.Drawing.Point(-1, 5);
+            this.pnlForm.Size = new System.Drawing.Size(667, 26);
+            this.pnlForm.TabIndex = 3;
+            // 
             // btnFechar
             // 
             this.btnFechar.FlatAppearance.BorderSize = 0;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar2_Click);
+            this.btnFechar.TabIndex = 0;
             // 
-            // btnSelecionar
+            // btnSelec
             // 
-            this.btnSelecionar.Click += new System.EventHandler(this.btnSelecionar_Click);
+            this.btnSelec.TabIndex = 1;
+            this.btnSelec.Click += new System.EventHandler(this.btnSelecionar_Click);
             // 
             // btnFechar2
             // 
-            this.btnFechar2.Click += new System.EventHandler(this.btnFechar2_Click);
+            this.btnFechar2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnFechar2.TabIndex = 2;
             // 
             // lblForm
             // 
@@ -95,7 +102,6 @@
             this.clnSexo,
             this.clnCPF,
             this.clnRM,
-            this.clnDataCadastro,
             this.clnCodCurso,
             this.clnCurso,
             this.clnCodTurma,
@@ -113,7 +119,7 @@
             this.dataGridAlunos.EnableHeadersVisualStyles = false;
             this.dataGridAlunos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dataGridAlunos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dataGridAlunos.Location = new System.Drawing.Point(23, 68);
+            this.dataGridAlunos.Location = new System.Drawing.Point(9, 55);
             this.dataGridAlunos.MultiSelect = false;
             this.dataGridAlunos.Name = "dataGridAlunos";
             this.dataGridAlunos.ReadOnly = true;
@@ -132,8 +138,9 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridAlunos.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridAlunos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridAlunos.Size = new System.Drawing.Size(605, 304);
-            this.dataGridAlunos.TabIndex = 109;
+            this.dataGridAlunos.Size = new System.Drawing.Size(640, 304);
+            this.dataGridAlunos.TabIndex = 0;
+            this.dataGridAlunos.DoubleClick += new System.EventHandler(this.btnSelecionar_Click);
             // 
             // clnCodAluno
             // 
@@ -167,13 +174,6 @@
             this.clnRM.HeaderText = "RM";
             this.clnRM.Name = "clnRM";
             this.clnRM.ReadOnly = true;
-            // 
-            // clnDataCadastro
-            // 
-            this.clnDataCadastro.HeaderText = "Data Cadastro";
-            this.clnDataCadastro.Name = "clnDataCadastro";
-            this.clnDataCadastro.ReadOnly = true;
-            this.clnDataCadastro.Visible = false;
             // 
             // clnCodCurso
             // 
@@ -212,19 +212,18 @@
             this.clnTelefoneTipo.HeaderText = "Tipo Telefone";
             this.clnTelefoneTipo.Name = "clnTelefoneTipo";
             this.clnTelefoneTipo.ReadOnly = true;
-            this.clnTelefoneTipo.Visible = false;
             // 
             // FrmConsultaAluno
             // 
-            this.AcceptButton = this.btnSelecionar;
+            this.AcceptButton = this.btnSelec;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnFechar2;
             this.ClientSize = new System.Drawing.Size(658, 440);
             this.Controls.Add(this.dataGridAlunos);
             this.Name = "FrmConsultaAluno";
-            this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.pnlForm, 0);
-            this.Controls.SetChildIndex(this.btnSelecionar, 0);
+            this.Controls.SetChildIndex(this.btnSelec, 0);
             this.Controls.SetChildIndex(this.btnFechar2, 0);
             this.Controls.SetChildIndex(this.dataGridAlunos, 0);
             this.pnlForm.ResumeLayout(false);
@@ -242,7 +241,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clnSexo;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnCPF;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnRM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clnDataCadastro;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnCodCurso;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnCurso;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnCodTurma;

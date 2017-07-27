@@ -59,7 +59,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                     }
                     else if (txtJornal.Text.Length < 3)
                     {
-                        MessageBox.Show(this, "O campo Jornal deve conter no minimo 3 caracteres.", "Atenção", MessageBoxButtons.OK,
+                        MessageBox.Show(this, "O campo Jornal deve conter no mínimo 3 caracteres.", "Atenção", MessageBoxButtons.OK,
                            MessageBoxIcon.Warning);
                         return;
                     }
@@ -180,7 +180,7 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
                 LimparComponentes();
                 Habilita(false);
                 cbJornal.Enabled = true;
-                cbJornal.Text = "Digite um jornal";
+                cbJornal.Text = "DIGITE O JORNAL";
                 cbJornal.Focus();
             }
             catch (Exception ex)
@@ -219,6 +219,19 @@ namespace Interface.Formularios.Cadastros.Infraestrutura
             cbJornal.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cbJornal.AutoCompleteSource = AutoCompleteSource.CustomSource;
             cbJornal.AutoCompleteCustomSource = dicJornal;
+        }
+        //Retorna o texto para maiusculo
+        private void cbJornal_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                cbJornal.Text = cbJornal.Text.ToUpper();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
+            }
         }
     }
 }

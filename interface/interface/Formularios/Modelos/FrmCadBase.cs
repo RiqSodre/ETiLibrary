@@ -2,10 +2,11 @@
 using System;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using MetroFramework.Forms;
 
 namespace Interface.Formularios.Modelos
 {
-    public partial class FrmCadBase : MetroFramework.Forms.MetroForm
+    public partial class FrmCadBase : MetroForm
     {
         protected string resultado;
         //Variaveis utilizadas para mover o form através dos paineis

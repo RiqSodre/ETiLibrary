@@ -556,6 +556,7 @@
             this.Controls.Add(this.pnlBase);
             this.Name = "FrmCadEmprestimo";
             this.Resizable = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cadastro: Empréstimo";
             this.pnlCabecalho.ResumeLayout(false);
             this.pnlCabecalho.PerformLayout();

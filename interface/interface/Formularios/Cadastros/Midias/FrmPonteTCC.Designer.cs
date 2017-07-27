@@ -48,11 +48,6 @@
             this.txtTexto.Lines = new string[0];
             this.txtTexto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTexto_KeyPress);
             // 
-            // lblTexto
-            // 
-            this.lblTexto.Size = new System.Drawing.Size(196, 18);
-            this.lblTexto.Text = "Digite aqui o tombo do TCC:";
-            // 
             // btnAcao
             // 
             this.btnAcao.Click += new System.EventHandler(this.btnAcao_Click);
@@ -66,10 +61,17 @@
             this.lblForm.Size = new System.Drawing.Size(96, 16);
             this.lblForm.Text = "Cadastro: TCC";
             // 
+            // lblTexto
+            // 
+            this.lblTexto.Location = new System.Drawing.Point(72, 83);
+            this.lblTexto.Size = new System.Drawing.Size(183, 19);
+            this.lblTexto.Text = "Digite aqui o tombo do TCC:";
+            // 
             // FrmPonteTCC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(327, 223);
+            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "FrmPonteTCC";
             this.pnlForm.ResumeLayout(false);
             this.pnlForm.PerformLayout();

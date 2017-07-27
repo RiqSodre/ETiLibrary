@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRecSenha));
             this.lblEmail = new MetroFramework.Controls.MetroLabel();
             this.txtEmail = new MetroFramework.Controls.MetroTextBox();
-            this.btnRecuperar = new MetroFramework.Controls.MetroButton();
+            this.btnRec = new MetroFramework.Controls.MetroButton();
             this.btnFechar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -54,9 +54,9 @@
             // 
             // 
             this.txtEmail.CustomButton.Image = null;
-            this.txtEmail.CustomButton.Location = new System.Drawing.Point(148, 1);
+            this.txtEmail.CustomButton.Location = new System.Drawing.Point(198, 1);
             this.txtEmail.CustomButton.Name = "";
-            this.txtEmail.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.txtEmail.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtEmail.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtEmail.CustomButton.TabIndex = 1;
             this.txtEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -78,19 +78,19 @@
             this.txtEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // btnRecuperar
+            // btnRec
             // 
-            this.btnRecuperar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRecuperar.BackgroundImage")));
-            this.btnRecuperar.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnRecuperar.ForeColor = System.Drawing.Color.White;
-            this.btnRecuperar.Location = new System.Drawing.Point(116, 148);
-            this.btnRecuperar.Name = "btnRecuperar";
-            this.btnRecuperar.Size = new System.Drawing.Size(90, 20);
-            this.btnRecuperar.TabIndex = 1;
-            this.btnRecuperar.Text = "Recuperar";
-            this.btnRecuperar.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnRecuperar.UseSelectable = true;
-            this.btnRecuperar.Click += new System.EventHandler(this.btnRecuperar_Click);
+            this.btnRec.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRec.BackgroundImage")));
+            this.btnRec.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.btnRec.ForeColor = System.Drawing.Color.White;
+            this.btnRec.Location = new System.Drawing.Point(116, 148);
+            this.btnRec.Name = "btnRec";
+            this.btnRec.Size = new System.Drawing.Size(90, 20);
+            this.btnRec.TabIndex = 1;
+            this.btnRec.Text = "Recuperar";
+            this.btnRec.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnRec.UseSelectable = true;
+            this.btnRec.Click += new System.EventHandler(this.btnRecuperar_Click);
             // 
             // btnFechar
             // 
@@ -108,13 +108,13 @@
             // 
             // FrmRecSenha
             // 
-            this.AcceptButton = this.btnRecuperar;
+            this.AcceptButton = this.btnRec;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(320, 205);
             this.Controls.Add(this.btnFechar);
-            this.Controls.Add(this.btnRecuperar);
+            this.Controls.Add(this.btnRec);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblEmail);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -133,7 +133,7 @@
         #endregion
         private MetroFramework.Controls.MetroLabel lblEmail;
         private MetroFramework.Controls.MetroTextBox txtEmail;
-        private MetroFramework.Controls.MetroButton btnRecuperar;
+        private MetroFramework.Controls.MetroButton btnRec;
         private System.Windows.Forms.Button btnFechar;
     }
 }
